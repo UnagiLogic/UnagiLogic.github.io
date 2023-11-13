@@ -1,0 +1,20 @@
+body {
+    background-color: #f3db85;
+    color: #943dd7;
+    font-family: Montserrat, sans-serif;
+    pointer-events: auto;
+  }
+
+  /* Style the main screen */
+.main-screen {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Style the Spawning Pool Title */
+.spawningpool-title {
+    padding: 10px;
+    border: 1px solid #555;
+    margin: 10px;
+    background-color: #323232;
+  }
