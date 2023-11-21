@@ -14,8 +14,10 @@ p {
   font-size: 20px;
 }
 
-img {
-  border: 10px solid #555;
+itemImage {
+  width: 150px;
+  height: 150px;
+  border: 3px solid #555;
 }
 
 #clickButton {
