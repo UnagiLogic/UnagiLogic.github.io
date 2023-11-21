@@ -1,0 +1,37 @@
+This is just a useful guide for myself as I learn to code
+
+Git Repository - Use these commands when you want to commit some changes to the website
+cd UnagiLogic.github.io
+
+git add --all
+git commit -m "add a comment about the commit here"
+git push -u origin main
+
+Node server.js - Use this when you want to start your personal server on your laptop
+
+CSS Reminders
+
+Selector, Property          Value
+P         Color:            Blue;
+Body      Background-color: Orange;
+
+//Below is a rule
+.this-thing {
+    color: black;
+}
+
+[HTML]
+id="thisID" Needs to be unique when used
+Don't overuse these as they will help later with javascript
+class="golden" Does not need to be unique
+
+[CSS]   Example
+#id     #thisID
+.class  .golden
+
+
+font-weight: bold;
+
+padding -   Top     Right   Bottom  Left
+            12      3       6       9
+            20px    0       20px    0
