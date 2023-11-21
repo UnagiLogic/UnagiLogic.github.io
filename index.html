@@ -12,8 +12,8 @@
         
         <center> <!-- Centers everything -->
 
-            <div class="main-screen">
-                <h1 class="spawningpool-title">The Spawning Pool</h1>
+            <div class="mainScreen">
+                <h1 class="spawningPoolTitle">The Spawning Pool</h1>
 
             <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="clickButton" onclick="increment()"> <!--The image you have to click -->
         
@@ -36,13 +36,14 @@
 
                         <div class="buyButtonContainer"> <!-- contains button to buy item-->
 
-                            <button onclick="buyWhiteFish()" class="buyButton">Buy White Fish</button>
+                            <button onclick="buySearchAction()" class="buyButton">Search</button>
 
                         </div>
                     </div>
 
                     <div class="containerText"> <!-- contains stats about item --> 
-                        <p>White Fish: <span id="whiteFishNum">0</span></p>
+                        <p>Clay: <span id="itemClayNum">0</span></p>
+                        <p>Mud: <span id="itemMudNum">0</span></p>
 
                         <p>White Fish Cost: <span id="whiteFishCost">10</span></p>
 

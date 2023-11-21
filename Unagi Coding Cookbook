@@ -28,10 +28,19 @@ class="golden" Does not need to be unique
 [CSS]   Example
 #id     #thisID
 .class  .golden
-
-
-font-weight: bold;
-
 padding -   Top     Right   Bottom  Left
             12      3       6       9
+            North   East    South   West
             20px    0       20px    0
+
+[JS]
+console.log()
+You can place a variable in here to log it
+When you update a value, it forgets its previous value.
+Adding string values together is called an expression
+true; false;
+! is a negation operator. It turns values into their opposite
+=== checks if two numbers are the same
+!== checks if a number isn't equal to another number
+.innerText will make the HTML element contain the text we give it.
+fish = fish + fishPerClick can be written fish += fishPerClick
