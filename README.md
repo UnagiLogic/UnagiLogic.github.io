@@ -21,3 +21,6 @@ Questions to ask:
 I want resource gathering to feel unique. If players can't gather resources that they need fast enough, what else are they doing in the meantime?
 
 Commit 3: Fixed image size for the first item, and added a boarder to check out what it looks like. I'm starting to like the current size of the button (it's quite large at the moment) I"ll see if It feels good when I get the test code into the .js
+
+Commit 4: I need to remember to clear my cache as I'm testing. Some of the updates have applied but old cache is getting in the way. I may also want to look into disabling cache on this website while testing.
+
