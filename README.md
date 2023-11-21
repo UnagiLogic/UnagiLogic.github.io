@@ -9,3 +9,6 @@ After 6 hours I found out Repositories don't like to be placed on exFat File Sys
 which was why I couldn't get past the "record ownership information step"
 
 11/13/2023 - It's 3:45AM and now that I'm using a NTFS File System, everything worked like a charm. I've added an index.html with some bare bones code, an app.js with even less code, and an adventure_theme.css with a little bit of code. With this success, I'm going to commit and go to sleep.
+
+11/20/2023
+Today I worked on getting some more elements in the HTML and CSS for testing purposes. I'm gonna make changes until it looks how I want. I made an initial commit to see the in progress work.
