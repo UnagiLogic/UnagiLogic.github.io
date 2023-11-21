@@ -1,7 +1,7 @@
 # UnagiLogic.github.io
-This is a goal I'm working on.
+This is a goal I'm working on. I'm using the Readme as a Developers Log to showcase and record.
 
-I'm gonna keep track of what I've done in here just for Fun
+I'm gonna keep track of what I've done in here just for fun.
 
 11/12/2023
 I made my Git Repository following the instructions found here https://pages.github.com/
@@ -24,3 +24,14 @@ Commit 3: Fixed image size for the first item, and added a boarder to check out 
 
 Commit 4: I need to remember to clear my cache as I'm testing. Some of the updates have applied but old cache is getting in the way. I may also want to look into disabling cache on this website while testing.
 
+Commit 5: added js to the project. Testing out functions and learning as I go. Thanks to https://replit.com/talk/learn/How-to-Make-a-Responsive-Clicker-Game-in-HTML-CSS-JS/141212 for creating a starting point to jump off of. I'm also using and app Called Mimo at the same time. I'm following the Full-Stack Development path and just got to HTML Intermediate section. I will continue to learn using Mimo and playing around with the code. I've played the game for about 30 seconds, and it works, but it is not fun yet. I'm going to try and figure out a few new things now. I know clicker games are origianlly about bringing your clicks per second up but I want to reinvent the wheel. I want to mess around with the click mechanic with different outcomes.
+
+Goals Next Session: 
+Make a narrator to tell a story. As the players use the Search Button, I want a chance for the narrator to talk.
+Change how the search button works. When the player clicks the button a chance for 3 options will occur. 
+Option 1 is saltWaterResourcesLevelOne at a 95% chance. If you get them you have a 75% chance for Mud and a 25% chance for clay
+Option 2 is spawningPoolLoreLevelOne at a 4% chance. Getting this will advance the story of this location
+Option 3 is weirdObject1 at a 1% chance. Use this to do something different each time to stretch your capabilities and try unique things out.
+
+11/21/23
+Commit 1: I made some new resources to add to the Clay and Mud. These resources are living creatures.
