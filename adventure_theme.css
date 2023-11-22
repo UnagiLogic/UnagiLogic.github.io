@@ -36,22 +36,31 @@ p {
   margin-bottom: 10px;
 }
 
+#inventoryInformation p {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
 .inventoryImage {
   border: 3px solid #000;
   border-radius: 8px;
   padding: 1px;
+  vertical-align: middle;
 }
 
 #fishCounter, #clayCounter, #mudCounter {
   color: #3188cc;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .number {
   color: #3188cc;
   font-size: 20px;
   font-weight: bold;
+  vertical-align: middle;
 }
 
 .itemImage {

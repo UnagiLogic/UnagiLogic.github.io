@@ -43,3 +43,5 @@ Commit 3: background image is placed. Now I want to fix it up so it's not repeat
 Commit 4: Forgot to place the inventory items in the new div. Changed a few more settings to see what they do. Also gonna try to align the text with the images. Wrote a couple classes to make more sense and then incorperated new CSS to test things out.
 
 Commit 5: I didn't add a new rule to text I removed causing unintended issues. Resolving those and going to commit again.
+
+Commit 6-8: Messing around with CSS, working on making the inventory more responsive and looking better.
