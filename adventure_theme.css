@@ -1,6 +1,6 @@
 body, html {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-image: url("C:\A - Unagi Workspace\App Development\Unagi Clicker Game\UnagiLogic.github.io\Images\backgroundImages\theSpawningPool.png");
+  background-image: url("Images/backgroundImages/theSpawningPool.png");
   color: #9c69c3;
   pointer-events: auto;
 }
