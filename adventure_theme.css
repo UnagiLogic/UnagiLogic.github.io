@@ -74,13 +74,24 @@ p {
   border-radius: 8px;
   padding: 10px;
   margin-right: 10px;
-  background-color: #fff;
 }
 
 #fishCounter, #clayCounter, #mudCounter {
   color: #3188cc;
   font-size: 20px;
   font-weight: bold;
+}
+
+#fishBGC {
+  background-color: #309aba;
+}
+
+#clayBGC {
+  background-color: #fbb84c;  
+}
+
+#mudBGC {
+  background-color: #a23b08;  
 }
 
 .number {
