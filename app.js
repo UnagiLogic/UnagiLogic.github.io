@@ -51,5 +51,13 @@ function buySearchAction() {
 function toggleInventory() {
     console.log("Toggle Inventory function called");
     var inventoryContainer = document.getElementById("inventoryContainer");
-    inventoryContainer.classList.toggle("hidden");
+    
+    // Toggle the visibility of the inventory
+    if (inventoryContainer.classList.contains("hidden")) {
+        //If hidden, show the inventory
+        inventoryContainer.classList.remove("hidden");
+    } else {
+        // If visible, hide the inventory
+        inventoryContainer.classList.add("hidden");
+    }
 }
