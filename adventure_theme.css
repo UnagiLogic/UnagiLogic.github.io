@@ -36,16 +36,17 @@ p {
 }
 
 .inventorySlot {
-  display: flex;
+  /* display: flex; */
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .inventoryImage {
   border: 2px solid #000;
   border-radius: 8px;
-  padding: 5px;
+  padding: 10px;
   margin-right: 10px;
+  background-color: #fff;
 }
 
 #fishCounter, #clayCounter, #mudCounter {
