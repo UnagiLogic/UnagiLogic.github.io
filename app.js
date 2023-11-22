@@ -50,11 +50,7 @@ function buySearchAction() {
 
 function toggleContainerVisibility() {
     const containerElement = document.getElementById('containerForInventory');
-    if (containerElement.classList.contains('hidden')) {
-        containerElement.classList.remove('hidden');
-    } else {
-        containerElement.classList.add('hidden');
-    }
+    containerElement.classList.toggle('hidden');
   }
   
   window.addEventListener('DOMContentLoaded', function() {
