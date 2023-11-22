@@ -51,9 +51,9 @@ function buySearchAction() {
 function toggleContainerVisibility() {
     var containerElement = document.getElementById('containerForInventory');
     containerElement.classList.toggle('hidden');
-}
-
-window.addEventListener('DOMContentLoaded', function() {
+  }
+  
+  window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
-});
+  });
 
