@@ -56,8 +56,14 @@ function toggleInventory() {
     if (inventoryContainer.classList.contains("hidden")) {
         //If hidden, show the inventory
         inventoryContainer.classList.remove("hidden");
+
+        // Add class to show button border
+        inventoryContainer.classList.add("visible");
     } else {
         // If visible, hide the inventory
         inventoryContainer.classList.add("hidden");
+
+        //Remove class to hide button boarder
+        inventoryContainer.classList.remove("visible");
     }
 }
