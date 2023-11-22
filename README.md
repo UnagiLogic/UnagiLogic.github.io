@@ -35,3 +35,5 @@ Option 3 is weirdObject1 at a 1% chance. Use this to do something different each
 
 11/21/23
 Commit 1: I made some new resources to add to the Clay and Mud. These resources are living creatures.
+
+Commit 2: Moved around the resources to be on the top of the screen, sized them down. This way in can currently always be in player view without having to move up and down on the webpage. Also changed the icon for search to look more relevant to the terminology used. Removed an unused button and renamed an id to match the search action. Also added a background image so gonna see if it works when I commit.

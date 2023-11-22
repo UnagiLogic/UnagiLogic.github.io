@@ -10,29 +10,33 @@
 
     <body>
         
+        <!-- This holds all information players need in the upper-right corner of the screen-->
+        <div id="info">
+
+
+            <p id="fishCounter"><img src="Images/Resources/fish.png" class="itemImage" style="width:75px; height:75px;">Fish: <span id="showFish" class="number">0</span></p> <!-- Shows number of Fish -->
+            <p><img src="Images/Resources/clay.png" class="itemImage" style="width:75px; height:75px;">Clay: <span id="itemClayNum">0</span></p> <!-- Shows number of Clay -->
+            <p><img src="Images/Resources/mud.png" class="itemImage" style="width:75px; height:75px;">Mud: <span id="itemMudNum">0</span></p> <!-- Shows number of Mud -->
+        
+            <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
+
+            <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
+
+            <p id="gameOver"></p> <!-- for text to appear when you win -->
+        </div>
+
         <center> <!-- Centers everything -->
 
             <div class="mainScreen">
                 <h1 class="spawningPoolTitle">The Spawning Pool</h1>
 
             <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="clickButton" onclick="increment()"> <!--The image you have to click -->
-        
-            <div id="info">
-
-                <p id="fishCounter">Fish = <span id="showFish" class="number">0</span></p> <!-- Shows number of Fish -->
-            
-                <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-
-                <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
-
-                <p id="gameOver"></p> <!-- for text to appear when you win -->
-            </div>
 
             <!-- Items that can be bought -->
             <div class="itemContainer"> <!-- contains 4 items per row-->
                 <div class="item"> <!-- a first item -->
 					<div class="containerImage"> <!-- contains image -->
-                        <img src="Images/Items/whiteFish.png" class="itemImage" style="width:150px; height:150px;">
+                        <img src="Images/Icons/search.png" class="itemImage" style="width:150px; height:150px;">
 
                         <div class="buyButtonContainer"> <!-- contains button to buy item-->
 
@@ -42,12 +46,10 @@
                     </div>
 
                     <div class="containerText"> <!-- contains stats about item --> 
-                        <p><img src="Images/Resources/clay.png" class="itemImage" style="width:75px; height:75px;">Clay: <span id="itemClayNum">0</span></p>
-                        <p><img src="Images/Resources/mud.png" class="itemImage" style="width:75px; height:75px;">Mud: <span id="itemMudNum">0</span></p>
 
-                        <p>White Fish Cost: <span id="whiteFishCost">10</span></p>
+                        <p>Search Cost: <span id="searchActionCost">10</span></p>
 
-                        <p>Effect: +1 Fish per second</p>
+                        <p>Effect: Currently to gain 1 Mud & 1 Clay</p>
                     </div>
 				</div>
 
@@ -64,8 +66,6 @@
 				</div>
 			</div>
             
-
-            <button>Click Me!</button>
         </div>
 
         <script src="app.js"></script>
