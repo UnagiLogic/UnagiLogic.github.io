@@ -47,3 +47,5 @@ Commit 5: I didn't add a new rule to text I removed causing unintended issues. R
 Commit 6-9: Messing around with CSS, working on making the inventory more responsive and looking better.
 
 Commit 10: Working on making the inventory visible and hidden when the user wants.
+
+Commit 11-??: This menu was a lot more challenging then I expected. It's a good thing however because I want to learn by doing and making mistakes.
