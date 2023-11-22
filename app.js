@@ -48,22 +48,9 @@ function buySearchAction() {
     }
 }
 
-function toggleInventory() {
-    console.log("Toggle Inventory function called");
-    var inventoryContainer = document.getElementById("inventoryContainer");
-    
-    // Toggle the visibility of the inventory
-    if (inventoryContainer.classList.contains("hidden")) {
-        //If hidden, show the inventory
-        inventoryContainer.classList.add("hidden");
-
-        // Add class to show button border
-        inventoryContainer.classList.remove("visible");
-    } else {
-        // If visible, hide the inventory
-        inventoryContainer.classList.remove("hidden");
-
-        //Remove class to hide button boarder
-        inventoryContainer.classList.add("visible");
-    }
+function toggleContainerVisibility() {
+    var containerElement = document.getElementById('containerForInventory');
+    containerElement.classList.toggle('hidden');
 }
+
+document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
