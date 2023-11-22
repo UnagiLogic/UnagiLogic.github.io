@@ -14,7 +14,6 @@ let fishPerClick = 1;
 // Cost of Action Variables
 let searchActionCost = 10
 
-
 // Add load EventListeners here
 
 
@@ -49,3 +48,7 @@ function buySearchAction() {
     }
 }
 
+function toggleInventory() {
+    var inventoryContainer = document.getElementById("inventoryContainer");
+    inventoryContainer.classList.toggle("hidden");
+}

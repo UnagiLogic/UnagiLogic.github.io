@@ -10,8 +10,10 @@
 
     <body>
          
-        <div id="inventoryContainer">
+        <div id="inventoryContainer" class="hidden">
             <h2> Inventory</h2>
+
+            <div class="inventoryButton" onclick="toggleInventory()">Inventory</div>
 
             <div class="inventorySlot">
                 <img src="Images/Resources/fish.png" class="inventoryImage" width="100px" height="100px">
@@ -28,7 +30,7 @@
                 <p id="mudCounter">Mud: <span id="showMud" class="number">0</span></p>
             </div>
 
-            <div id="inventoryInformation"> <!-- This may not be needed-->
+            <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
     
                 <p id="gameOver"></p> <!-- for text to appear when you win -->
             </div>

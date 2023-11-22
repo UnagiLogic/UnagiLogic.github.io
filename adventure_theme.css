@@ -28,6 +28,10 @@ p {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+.hidden {
+  display: none;
+}
+
 /* This is my Div with all my information at the moment */
 #inventoryInformation {
   margin: 5px 0 5px 0;
