@@ -33,34 +33,31 @@ p {
   margin: 5px 0 5px 0;
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
-#inventoryInformation p {
-  margin-bottom: 10px;
+.inventorySlot {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .inventoryImage {
-  border: 3px solid #000;
+  border: 2px solid #000;
   border-radius: 8px;
-  padding: 1px;
-  vertical-align: middle;
+  padding: 5px;
+  margin-right: 10px;
 }
 
 #fishCounter, #clayCounter, #mudCounter {
   color: #3188cc;
   font-size: 20px;
   font-weight: bold;
-  margin-left: 10px;
 }
 
 .number {
   color: #3188cc;
   font-size: 20px;
   font-weight: bold;
-  vertical-align: middle;
 }
 
 .itemImage {
