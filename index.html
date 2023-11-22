@@ -10,17 +10,15 @@
 
     <body>
         
-        <!-- This holds all information players need in the upper-right corner of the screen-->
-        <div id="info">
+        
+        <div id="inventoryContainer">
 
-
+        </div>
+        
+        <div id="info"> <!-- This holds all information players need in the upper-right corner of the screen-->
             <p id="fishCounter"><img src="Images/Resources/fish.png" class="itemImage" style="width:75px; height:75px;">Fish: <span id="showFish" class="number">0</span></p> <!-- Shows number of Fish -->
             <p><img src="Images/Resources/clay.png" class="itemImage" style="width:75px; height:75px;">Clay: <span id="itemClayNum">0</span></p> <!-- Shows number of Clay -->
             <p><img src="Images/Resources/mud.png" class="itemImage" style="width:75px; height:75px;">Mud: <span id="itemMudNum">0</span></p> <!-- Shows number of Mud -->
-        
-            <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-
-            <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 
             <p id="gameOver"></p> <!-- for text to appear when you win -->
         </div>
@@ -31,6 +29,10 @@
                 <h1 class="spawningPoolTitle">The Spawning Pool</h1>
 
             <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="clickButton" onclick="increment()"> <!--The image you have to click -->
+
+            <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
+
+            <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 
             <!-- Items that can be bought -->
             <div class="itemContainer"> <!-- contains 4 items per row-->
@@ -49,7 +51,7 @@
 
                         <p>Search Cost: <span id="searchActionCost">10</span></p>
 
-                        <p>Effect: Currently to gain 1 Mud & 1 Clay</p>
+                        <p>Effect: Currently gain 1 Mud & 1 Clay</p>
                     </div>
 				</div>
 

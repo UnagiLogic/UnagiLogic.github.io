@@ -37,3 +37,5 @@ Option 3 is weirdObject1 at a 1% chance. Use this to do something different each
 Commit 1: I made some new resources to add to the Clay and Mud. These resources are living creatures.
 
 Commit 2: Moved around the resources to be on the top of the screen, sized them down. This way in can currently always be in player view without having to move up and down on the webpage. Also changed the icon for search to look more relevant to the terminology used. Removed an unused button and renamed an id to match the search action. Also added a background image so gonna see if it works when I commit.
+
+Commit 3: background image is placed. Now I want to fix it up so it's not repeating. I think I'm going to add another container to the top of the page to hold all the resources in. I'm also going to downsize them some and remove some of the margin between each image to save on space.
