@@ -53,4 +53,7 @@ function toggleContainerVisibility() {
     containerElement.classList.toggle('hidden');
 }
 
-document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
+window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
+});
+
