@@ -50,7 +50,7 @@ function buySearchAction() {
 
 function toggleInventory() {
     var inventoryContainer = document.getElementById("inventoryContainer");
-    var inventoryButton = document.querySelector(".toggleButton");
+    var inventoryButton = document.querySelector(".inventoryButton");
     inventoryContainer.classList.toggle("hidden");
     inventoryButton.classList.toggle("visible");
 }
