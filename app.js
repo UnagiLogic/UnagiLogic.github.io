@@ -54,9 +54,8 @@ function toggleContainerVisibility() {
   }
   
   window.addEventListener('DOMContentLoaded', function() {
-    const inventoryButtons = document.querySelectorAll('.inventoryButton');
-    for (const button of inventoryButtons) {
-        button.addEventListener('click', toggleContainerVisibility);
-    }
-  });
+    const inventoryButton = document.querySelector('.inventoryButton');
+    inventoryButton.addEventListener('click', toggleContainerVisibility);
+    
+    });
 
