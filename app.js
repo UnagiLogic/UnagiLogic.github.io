@@ -49,20 +49,11 @@ function buySearchAction() {
 }
 
 function toggleContainerVisibility() {
-    const containerElement = document.getElementById('containerForInventory');
-    // Check if the hidden class exists
-  if (containerElement.classList.contains('hidden')) {
-    // If it exists, remove it
-    containerElement.classList.remove('hidden');
-  } else {
-    // If it doesn't exist, add it
-    containerElement.classList.add('hidden');
+    var containerElement = document.getElementById('containerForInventory');
+    containerElement.classList.toggle('hidden');
   }
-}
   
   window.addEventListener('DOMContentLoaded', function() {
-    const inventoryButton = document.querySelector('.inventoryButton');
-    inventoryButton.addEventListener('click', toggleContainerVisibility);
-    
-    });
+    document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
+  });
 
