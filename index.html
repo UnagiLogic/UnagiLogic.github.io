@@ -1,87 +1,75 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Spawning Pool</title>
-        <link rel="stylesheet" href="adventure_theme.css">
-        <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png">    
-    </head>
-
-    <body>
-         
-        <div id="containerForInventory">
-            <div id="inventoryContainer" class="hidden">
-                <div class="inventoryButton visible" onclick="toggleInventory()">Basket</div>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spawning Pool</title>
+    <link rel="stylesheet" href="adventure_theme.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon.png">    
+</head>
+<body>
+    
+    <div id="containerForInventory">
+         <div id="inventoryContainer" class="hidden">
+            <div class="inventoryButton visible" onclick="toggleInventory()">Basket</div>
+            <h2>Basket</h2>
+            <div class="inventorySlot">
+                <img src="Images/Resources/fish.png" class="inventoryImage" width="100px" height="100px">
+                <p id="fishCounter">Fish: <span id="showFish" class="number">0</span></p>
+            </div>
                 
-                <h2>Basket</h2>
+            <div class="inventorySlot">
+                <img src="Images/Resources/clay.png" class="inventoryImage" width="100px" height="100px">
+                <p id="clayCounter">Clay: <span id="showClay" class="number">0</span></p>
+            </div>
 
-                <div class="inventorySlot">
-                    <img src="Images/Resources/fish.png" class="inventoryImage" width="100px" height="100px">
-                    <p id="fishCounter">Fish: <span id="showFish" class="number">0</span></p>
-                </div>
-                
-                <div class="inventorySlot">
-                    <img src="Images/Resources/clay.png" class="inventoryImage" width="100px" height="100px">
-                    <p id="clayCounter">Clay: <span id="showClay" class="number">0</span></p>
-                </div>
+            <div class="inventorySlot">
+                <img src="Images/Resources/mud.png" class="inventoryImage" width="100px" height="100px">
+                <p id="mudCounter">Mud: <span id="showMud" class="number">0</span></p>
+            </div>
 
-                <div class="inventorySlot">
-                    <img src="Images/Resources/mud.png" class="inventoryImage" width="100px" height="100px">
-                    <p id="mudCounter">Mud: <span id="showMud" class="number">0</span></p>
-                </div>
-
-                <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
-                    <p id="gameOver"></p> <!-- for text to appear when you win -->
-                </div>
+            <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
+                <p id="gameOver"></p> <!-- for text to appear when you win -->
             </div>
         </div>
+    </div>
 
 
-        <div class="mainScreen">
-            <h1 class="spawningPoolTitle">The Spawning Pool</h1>
+    <div class="mainScreen">
+        <h1 class="spawningPoolTitle">The Spawning Pool</h1>
+        <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="clickButton" onclick="increment()"> <!--The image you have to click -->
+        <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
+        <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 
-            <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="clickButton" onclick="increment()"> <!--The image you have to click -->
-
-            <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-            <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
-
-            <!-- Items that can be bought -->
-            <div class="itemContainer"> <!-- contains 4 items per row-->
-                <div class="item"> <!-- a first item -->
-					<div class="containerImage"> <!-- contains image -->
-                        <img src="Images/Icons/search.png" class="itemImage" style="width:150px; height:150px;">
-
-                        <div class="buyButtonContainer"> <!-- contains button to buy item-->
-
-                            <button onclick="buySearchAction()" class="buyButton">Search</button>
-
-                        </div>
+        <!-- Items that can be bought -->
+        <div class="itemContainer"> <!-- contains 4 items per row-->
+            <div class="item"> <!-- a first item -->
+				<div class="containerImage"> <!-- contains image -->
+                    <img src="Images/Icons/search.png" class="itemImage" style="width:150px; height:150px;">
+                    <div class="buyButtonContainer"> 
+                        <!-- contains button to buy item-->
+                        <button onclick="buySearchAction()" class="buyButton">Search</button>
                     </div>
+                </div>
 
-                    <div class="containerText"> <!-- contains stats about item --> 
-
-                        <p>Search Cost: <span id="searchActionCost">10 Fish</span></p>
-
-                        <p>Effect: Currently gain 1 Mud & 1 Clay</p>
-                    </div>
-				</div>
-
-				<div class="item"> <!-- a second item -->
-					
-				</div>
-
-				<div class="item"> <!-- a third item -->
-					
-				</div>
-				
-				<div class="item"> <!-- a fourth item -->
-					
-				</div>
+                <div class="containerText"> <!-- contains stats about item --> 
+                    <p>Search Cost: <span id="searchActionCost">10 Fish</span></p>
+                    <p>Effect: Currently gain 1 Mud & 1 Clay</p>
+                </div>
 			</div>
-            
-        </div>
 
-        <script src="app.js"></script>
-    </body>
+			<div class="item">
+                <!-- a second item -->
+			</div>
+            <div class="item"> 
+            <!-- a third item -->
+			</div>
+			<div class="item"> 
+            <!-- a fourth item -->
+			</div>
+		</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
 </html>
