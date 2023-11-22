@@ -40,4 +40,6 @@ Commit 2: Moved around the resources to be on the top of the screen, sized them 
 
 Commit 3: background image is placed. Now I want to fix it up so it's not repeating. I think I'm going to add another container to the top of the page to hold all the resources in. I'm also going to downsize them some and remove some of the margin between each image to save on space.
 
-Commit 4: Forgot to place the inventory items in the new div. Changed a few more settings to see what they do. Also gonna try to align the text with the images.
+Commit 4: Forgot to place the inventory items in the new div. Changed a few more settings to see what they do. Also gonna try to align the text with the images. Wrote a couple classes to make more sense and then incorperated new CSS to test things out.
+
+Commit 5: I didn't add a new rule to text I removed causing unintended issues. Resolving those and going to commit again.
