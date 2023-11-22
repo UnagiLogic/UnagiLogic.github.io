@@ -22,9 +22,9 @@ p {
   top: 5px;
   right: 5px;
   background-color: #da9b08;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
@@ -33,12 +33,25 @@ p {
   margin: 5px 0 5px 0;
   font-size: 20px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-#inventoryImage {
-  border: 5px solid #000;
+.inventoryImage {
+  border: 3px solid #000;
   border-radius: 8px;
   padding: 1px;
+}
+
+#fishCounter, #clayCounter, #mudCounter {
+  color: #3188cc;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.number {
+  color: #3188cc;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .itemImage {
@@ -73,18 +86,6 @@ p {
   -ms-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-}
-
-#fishCounter {
-  color: #3188cc;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.number {
-  color: #3188cc;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 #gameOver {
