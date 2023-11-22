@@ -49,8 +49,12 @@ function buySearchAction() {
 }
 
 function toggleContainerVisibility() {
-    var containerElement = document.getElementById('containerForInventory');
-    containerElement.classList.toggle('hidden');
+    const containerElement = document.getElementById('containerForInventory');
+    if (containerElement.classList.contains('hidden')) {
+        containerElement.classList.remove('hidden');
+    } else {
+        containerElement.classList.add('hidden');
+    }
   }
   
   window.addEventListener('DOMContentLoaded', function() {
