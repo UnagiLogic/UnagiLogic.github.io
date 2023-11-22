@@ -43,6 +43,10 @@ p {
   border-radius: 5px;
 }
 
+.visible {
+  border: 2px solid #000;
+}
+
 .hidden {
   display: none;
 }
