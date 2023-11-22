@@ -10,10 +10,11 @@
 
     <body>
          
-        <div id="inventoryContainer" class="hidden">
-            <h2> Inventory</h2>
-
-            <div class="inventoryButton" onclick="toggleInventory()">Inventory</div>
+        <div id="containerForInventory">
+            <div id="inventoryContainer" class="hidden">
+                <div class="inventoryButton" onclick="toggleInventory()">Basket</div>
+                
+                <h2>Inventory</h2>
 
             <div class="inventorySlot">
                 <img src="Images/Resources/fish.png" class="inventoryImage" width="100px" height="100px">
@@ -34,7 +35,8 @@
     
                 <p id="gameOver"></p> <!-- for text to appear when you win -->
             </div>
-
+            
+            </div>
         </div>
 
         <center> <!-- Centers everything -->

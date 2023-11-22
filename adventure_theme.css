@@ -17,6 +17,10 @@ p {
   font-size: 20px;
 }
 
+#containerForInventory {
+  position: relative;
+}
+
 #inventoryContainer {
   position: fixed;
   top: 5px;
@@ -26,6 +30,17 @@ p {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.inventoryButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  cursor: pointer;
+  background-color: #3188cc;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .hidden {
