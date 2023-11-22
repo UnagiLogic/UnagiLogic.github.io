@@ -16,38 +16,34 @@
                 
                 <h2>Basket</h2>
 
-            <div class="inventorySlot">
-                <img src="Images/Resources/fish.png" class="inventoryImage" width="100px" height="100px">
-                <p id="fishCounter">Fish: <span id="showFish" class="number">0</span></p>
-            </div>
+                <div class="inventorySlot">
+                    <img src="Images/Resources/fish.png" class="inventoryImage" width="100px" height="100px">
+                    <p id="fishCounter">Fish: <span id="showFish" class="number">0</span></p>
+                </div>
                 
-            <div class="inventorySlot">
-                <img src="Images/Resources/clay.png" class="inventoryImage" width="100px" height="100px">
-                <p id="clayCounter">Clay: <span id="showClay" class="number">0</span></p>
-            </div>
+                <div class="inventorySlot">
+                    <img src="Images/Resources/clay.png" class="inventoryImage" width="100px" height="100px">
+                    <p id="clayCounter">Clay: <span id="showClay" class="number">0</span></p>
+                </div>
 
-            <div class="inventorySlot">
-                <img src="Images/Resources/mud.png" class="inventoryImage" width="100px" height="100px">
-                <p id="mudCounter">Mud: <span id="showMud" class="number">0</span></p>
-            </div>
+                <div class="inventorySlot">
+                    <img src="Images/Resources/mud.png" class="inventoryImage" width="100px" height="100px">
+                    <p id="mudCounter">Mud: <span id="showMud" class="number">0</span></p>
+                </div>
 
-            <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
-    
-                <p id="gameOver"></p> <!-- for text to appear when you win -->
-            </div>
-            
+                <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
+                    <p id="gameOver"></p> <!-- for text to appear when you win -->
+                </div>
             </div>
         </div>
 
-        <center> <!-- Centers everything -->
 
-            <div class="mainScreen">
-                <h1 class="spawningPoolTitle">The Spawning Pool</h1>
+        <div class="mainScreen">
+            <h1 class="spawningPoolTitle">The Spawning Pool</h1>
 
             <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="clickButton" onclick="increment()"> <!--The image you have to click -->
 
             <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-
             <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 
             <!-- Items that can be bought -->
@@ -87,6 +83,5 @@
         </div>
 
         <script src="app.js"></script>
-        </center>
     </body>
 </html>
