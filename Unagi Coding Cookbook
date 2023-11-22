@@ -20,6 +20,21 @@ Body      Background-color: Orange;
     color: black;
 }
 
+[WHAT I DONT UNDERSTAND]
+ID Selectors:
+Are like unique identifiers for each character, object, or item in the game
+Are specific to a single element and cannot be used to select multiple elements
+Can be used to access a specific element directly
+Example: If you wanted to collect a coin with the ID coin-123, you could use the following code
+var coin = document.getElementById('coin-123');
+
+Class selectors:
+Are like groups of characters, objects, or items in the game
+Can be used to select multiple elements with the same class attribute
+Are often used to apply styles to multiple elements at once
+For example: If you wanted to collect all of the coins with the class coin, you could use the following code:
+var coins = document.getElementsByClassName('coin');
+
 [HTML]
 id="thisID" Needs to be unique when used
 Don't overuse these as they will help later with javascript

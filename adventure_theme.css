@@ -36,6 +36,10 @@ p {
   display: block;
 }
 
+.inventoryContainer.visible {
+  display: block;
+}
+
 .inventoryButton {
   position: fixed;
   top: 5px;
