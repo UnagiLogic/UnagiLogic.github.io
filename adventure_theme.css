@@ -18,9 +18,19 @@ p {
 }
 
 #inventoryContainer {
-  background-color: #555;
+  background-color: #f0b62f;
   width: 335px; /* Added 35 additional px to account for margins and adding a similar margin */
   height: 335px;
+  position: relative; top: 5px; right: 5px;
+  border-top-right-radius: 5px;
+}
+
+#inventoryImage {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #000;
+  border-radius: 8px;
+  padding: 1px;
 }
 
 .itemImage {
@@ -61,6 +71,7 @@ p {
 #info {
   margin: 5px 0 5px 0;
   font-size: 20px;
+  font-weight: bold;
 }
 
 #fishCounter {
@@ -69,9 +80,9 @@ p {
 }
 
 .number {
-  background-color: #555;
-  opacity: 0.5;
   color: #3188cc;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #gameOver {

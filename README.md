@@ -39,3 +39,5 @@ Commit 1: I made some new resources to add to the Clay and Mud. These resources 
 Commit 2: Moved around the resources to be on the top of the screen, sized them down. This way in can currently always be in player view without having to move up and down on the webpage. Also changed the icon for search to look more relevant to the terminology used. Removed an unused button and renamed an id to match the search action. Also added a background image so gonna see if it works when I commit.
 
 Commit 3: background image is placed. Now I want to fix it up so it's not repeating. I think I'm going to add another container to the top of the page to hold all the resources in. I'm also going to downsize them some and remove some of the margin between each image to save on space.
+
+Commit 4: Forgot to place the inventory items in the new div. Changed a few more settings to see what they do. Also gonna try to align the text with the images.
