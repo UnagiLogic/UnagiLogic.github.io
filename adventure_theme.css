@@ -113,6 +113,7 @@ h2 {
   border: 1px solid #8a5a24;
   border-radius: 10px;
   transition: transform 1s;
+  border: 1px solid var(--border-color);
   /* Make initially hidden later with display: none; */
 }
 
@@ -132,17 +133,8 @@ h2 {
   border: 1px solid #8a5a24;
   border-radius: 10px;
   padding: 20px;
-}
-
-/*I want the #leftPageContainer and the #rightPageContainer
-to look like an open book on the screen*/
-#leftPageContainer {
-  transform: rotateY(180deg);
-}
-
-#rightPageContainer {
-  /* Remove the transform property */
-  /* transform: rotateY(-180deg); */
+  border: 1px solid var(--border-color);
+  transform-origin: center center;
 }
 
 #bestiaryContainer.opened #leftPageContainer {
