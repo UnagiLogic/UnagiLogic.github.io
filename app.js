@@ -59,24 +59,11 @@ function toggleContainerVisibility() {
   });
 
 // A Toggle for the Bestiary Book
-  function toggleBestiary() {
-    const bestiaryContainer = document.getElementById('bestiaryContainer');
-    bestiaryContainer.style.display = (bestiaryContainer.style.display === 'none') ? 'block' : 'none';
+  function toggleBestiaryVisibility() {
+    let bestiaryContainer = document.getElementById('bestiaryContainer');
+    bestiaryContainer.classList.toggle('hidden');
 }
 
-const bestiaryContainer = document.getElementById('bestiaryContainer');
-const bestiaryButton = document.getElementById('bestiaryButton');
-
-// Attach event listener to the bestiary button
-bestiaryButton.addEventListener('click', () => {
-  bestiaryContainer.style.display = (bestiaryContainer.style.display === 'none') ? 'block' : 'none';
-});
-
-/* This is not currently working as intended. It flips the content of the page to be backwards.
-The goal is to program it so it flips to the next beast (When I have more beasts created). Also it only flips the left container I believe. It should be flipping both left and right page at the same time.
-Good first try though
-function toggleBestiary() {
-    const bestiaryContainer = document.getElementById('bestiaryContainer');
-    bestiaryContainer.classList.toggle('opened');
-  }
-*/
+  window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
+  });
