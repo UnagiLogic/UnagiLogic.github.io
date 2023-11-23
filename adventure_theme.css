@@ -125,32 +125,20 @@ h2 {
   display: flex; /* Use flexbox to display the pages side by side */
 }
 
-/* I want these two pages to be next to each other on the page*/
+/* I want these two pages to be next to each other both showing on the page*/
 #leftPageContainer, #rightPageContainer {
   flex: 1; /* Make each page container take equal width */
+  position: relative;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   background-image: url('path/to/texture.jpg');
   border: 1px solid #8a5a24;
   border-radius: 10px;
+  margin: 10px;
+  background-color: #be9565;
   padding: 20px;
   border: 1px solid var(--border-color);
   transform-origin: center center;
-}
-
-#bestiaryContainer.opened #leftPageContainer {
-  transform: rotateY(0deg);
-}
-
-#bestiaryContainer.opened #rightPageContainer {
-  transform: rotateY(0deg);
-}
-
-#leftPageContainer {
-  transform-origin: right center; /* Set the transform origin to the right center for the left page */
-}
-
-#rightPageContainer {
-  transform-origin: left center; /* Set the transform origin to the left center for the right page */
+  transition: transform 1s;
 }
 
 .bestiaryPage::before,
