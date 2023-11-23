@@ -1,0 +1,23 @@
+{
+  "name": "unagilogic.github.io",
+  "version": "1.0.0",
+  "description": "This is a package for my clicker game",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "autoprefixer -o dist/style.css src/adventure_theme.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UnagiLogic/UnagiLogic.github.io.git"
+  },
+  "author": "Bryan Bluestone",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/UnagiLogic/UnagiLogic.github.io/issues"
+  },
+  "homepage": "https://github.com/UnagiLogic/UnagiLogic.github.io#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16"
+  }
+}
