@@ -22,6 +22,10 @@ p {
   font-size: 20px;
 }
 
+h2 {
+  align-items: center;
+}
+
 #containerForInventory {
   position: fixed;
   top: 5px;
@@ -118,6 +122,11 @@ p {
 #leftPageContainer {
   float: none;
   width: 100%;
+}
+
+.imageContainer {
+  align-items: center;
+  border: 2px solid #000;
 }
 
 #rightPageContainer {
