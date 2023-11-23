@@ -111,7 +111,7 @@ h2 {
   background-color: #be9565;
   border: 1px solid #8a5a24;
   border-radius: 10px;
-  transition: transform is;
+  transition: transform 1s;
   /* Make initially hidden later with display: none; */
 }
 
