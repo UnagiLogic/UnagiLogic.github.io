@@ -107,7 +107,7 @@ h2 {
   position: fixed;
   top: 50px;
   left: 50px;
-  max-width: 400px;
+  max-width: 600px;
   background-color: #be9565;
   border: 1px solid #8a5a24;
   border-radius: 10px;
@@ -130,9 +130,8 @@ h2 {
 }
 
 #rightPageContainer {
-  float: right;
-  width: 50%;
-  height: 100%;
+  float: none;
+  width: 100%;
 }
 
 /* Style for achievement containers */
