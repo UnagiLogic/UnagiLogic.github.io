@@ -105,6 +105,7 @@ h2 {
 
 /* Style for the bestiary. It holds both the leftPageContainer and the rightPageContainer */
 #bestiaryContainer {
+  display:flex;
   position: fixed;
   top: 50px;
   left: 50px;
@@ -137,7 +138,7 @@ h2 {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #8a5a24;
   border-radius: 10px;
-  margin: 10px;
+  margin-right: 5%;
   background-color: #be9565;
   padding: 20px;
   border: 1px solid var(--border-color);
@@ -147,10 +148,12 @@ h2 {
 
 /* Position the right page container independently */
 #rightPageContainer {
+  flex: 1;
   position: absolute;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   top: 50px;
   right: 50px;
-  max-width: 400px; /* Adjust width to match perspective */
+  max-width: 50%; /* Adjust width to match perspective */
   background-color: #be9565;
   border: 1px solid #8a5a24;
   border-radius: 10px;
