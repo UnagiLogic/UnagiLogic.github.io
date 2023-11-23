@@ -103,6 +103,7 @@ h2 {
   font-weight: bold;
 }
 
+/* Style for the bestiary */
 #bestiaryContainer {
   position: fixed;
   top: 50px;
@@ -123,6 +124,7 @@ h2 {
   display: flex; /* Use flexbox to display the pages side by side */
 }
 
+/* I want these two pages to be next to each other on the page*/
 #leftPageContainer, #rightPageContainer {
   flex: 1; /* Make each page container take equal width */
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
@@ -132,20 +134,27 @@ h2 {
   padding: 20px;
 }
 
-.leftPageContainer {
-  transform-origin: right center; /* Set the transform origin to the right center for the left page */
+/*I want the #leftPageContainer and the #rightPageContainer
+to look like an open book on the screen*/
+#leftPageContainer {
+  transform: rotateY(180deg);
 }
-
-.rightPageContainer {
-  transform-origin: left center; /* Set the transform origin to the left center for the right page */
+#rightPageContainer {
+  transform: rotateY(0deg);
 }
-
 #bestiaryContainer.opened #leftPageContainer {
   transform: rotateY(0deg);
 }
-
 #bestiaryContainer.opened #rightPageContainer {
   transform: rotateY(-180deg);
+}
+
+#leftPageContainer {
+  transform-origin: right center; /* Set the transform origin to the right center for the left page */
+}
+
+#rightPageContainer {
+  transform-origin: left center; /* Set the transform origin to the left center for the right page */
 }
 
 .bestiaryPage::before,
