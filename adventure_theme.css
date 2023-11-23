@@ -103,7 +103,7 @@ h2 {
   font-weight: bold;
 }
 
-/* Style for the bestiary */
+/* Style for the bestiary. It holds both the leftPageContainer and the rightPageContainer */
 #bestiaryContainer {
   position: fixed;
   top: 50px;
@@ -112,6 +112,10 @@ h2 {
   background-color: #be9565;
   border: 1px solid #8a5a24;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transform-style: preserve-3d;
+  transform-origin: center center;
   transition: transform 1s;
   border: 1px solid var(--border-color);
   /* Make initially hidden later with display: none; */
@@ -121,13 +125,43 @@ h2 {
   transform: perspective(2000px) rotateY(180deg);
 }
 
+/* .bestiaryPage is the container for the left and right page */
 #bestiaryContainer .bestiaryPage {
-  display: flex; /* Use flexbox to display the pages side by side */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #be9565;
+  border: 1px solid #8a5a24;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  border: 1px solid var(--border-color);
 }
 
-/* I want these two pages to be next to each other both showing on the page*/
-#leftPageContainer, #rightPageContainer {
+/* This is the left page*/
+#leftPageContainer{
   flex: 1; /* Make each page container take equal width */
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  background-image: url('path/to/texture.jpg');
+  border: 1px solid #8a5a24;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #be9565;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  transform-origin: center center;
+  transition: transform 1s;
+}
+
+/* This is the right page*/
+#rightPageContainer {
+  flex: 1;
   position: relative;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   background-image: url('path/to/texture.jpg');
