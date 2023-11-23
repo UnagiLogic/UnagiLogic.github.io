@@ -119,20 +119,25 @@ h2 {
   transform: perspective(2000px) rotateY(180deg);
 }
 
-.bestiaryPage {
-  /* Make initially hidden later with display: none; */
-  background-color: #f5e1b7;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Adjust values for the desired shadow effect */
-  background-image: url('path/to/texture.jpg'); /* Add texture image */
-  border: 1px solid #8a5a24; /* Border color */
-  border-radius: 10px;
-  padding: 20px; /* Adjust padding for content spacing */
+#bestiaryContainer .bestiaryPage {
+  display: flex; /* Use flexbox to display the pages side by side */
 }
 
-#leftPageContainer {
-  float: none;
-  width: 100%;
-  box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.3);
+.leftPageContainer, .rightPageContainer {
+  flex: 1; /* Make each page container take equal width */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  background-image: url('path/to/texture.jpg');
+  border: 1px solid #8a5a24;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.leftPageContainer {
+  transform-origin: right center; /* Set the transform origin to the right center for the left page */
+}
+
+.rightPageContainer {
+  transform-origin: left center; /* Set the transform origin to the left center for the right page */
 }
 
 #bestiaryContainer.opened #leftPageContainer {
@@ -168,12 +173,6 @@ h2 {
 .imageContainer {
   align-items: center;
   border: 2px solid #000;
-}
-
-#rightPageContainer {
-  float: none;
-  width: 100%;
-  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Style for achievement containers */
