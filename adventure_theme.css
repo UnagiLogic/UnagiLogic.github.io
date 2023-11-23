@@ -127,15 +127,28 @@ h2 {
 }
 
 /* .bestiaryPage is the container for the left and right page */
-#bestiaryContainer .bestiaryPage {
+.bestiaryPage {
   display: flex; /* Use flexbox to display the pages side by side */
+  flex-direction: row; /* Make the pages display side by side */
+  width: 100%; /* Make the pages fill the container */
+  height: 100%; /* Make the pages fill the container */
+  position: relative; /* Make the pages position themselves relative to the container */
+  transform-style: preserve-3d; /* Make the pages 3D */
+  transform-origin: center center; /* Set the origin to the center of the container */
+  transition: transform 1s; /* Add a transition effect */
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: #be9565;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* This is the left page*/
 #leftPageContainer{
   flex: 1;
-  width: 98%;
-  margin-right: 30px;
+  width: 45%;
+  margin-right: 5%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #8a5a24;
   border-radius: 10px;
@@ -200,6 +213,7 @@ h2 {
 .achievementContainer {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .achievementImageContainer {
