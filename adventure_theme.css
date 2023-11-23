@@ -103,7 +103,8 @@ h2 {
   font-weight: bold;
 }
 
-/* Style for the bestiary. It holds both the leftPageContainer and the rightPageContainer */
+/* Style for the bestiary book. It holds the .bestiaryPage layout, and both the leftPageContainer and the rightPageContainer
+The book is colored #be9565 with a border of #8a5a24*/
 #bestiaryContainer {
   display:flex;
   position: fixed;
@@ -122,29 +123,7 @@ h2 {
   /* Make initially hidden later with display: none; */
 }
 
-.opened {
-  transform: perspective(2000px) scale(0.75);
-}
-
-/* .bestiaryPage is the container for the left and right page */
-.bestiaryPage {
-  display: flex; /* Use flexbox to display the pages side by side */
-  flex-direction: row; /* Make the pages display side by side */
-  width: 100%; /* Make the pages fill the container */
-  height: 100%; /* Make the pages fill the container */
-  position: relative; /* Make the pages position themselves relative to the container */
-  transform-style: preserve-3d; /* Make the pages 3D */
-  transform-origin: center center; /* Set the origin to the center of the container */
-  transition: transform 1s; /* Add a transition effect */
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-  background-color: #be9565;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-/* This is the left page*/
+/* This is the left page container. It's placed to the left of the rightPageContainer*/
 #leftPageContainer{
   flex: 1;
   width: 45%;
@@ -156,11 +135,9 @@ h2 {
   background-color: #be9565;
   padding: 20px;
   border: 1px solid var(--border-color);
-  transform-origin: center center;
-  transition: transform 1s;
 }
 
-/* Position the right page container independently */
+/* This is the right page container. It's placed to the right of the leftPageContainer */
 #rightPageContainer {
   flex: 1;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
@@ -173,32 +150,7 @@ h2 {
   transition: transform 1s;
 }
 
-.opened #rightPageContainer {
-  transform: scale(1.5); /* Adjust scale to match perspective */
-}
-
-.bestiaryPage::before,
-.bestiaryPage::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.bestiaryPage::before {
-  border-width: 10px 10px 0 0;
-  border-color: #f5e1b7 transparent transparent transparent; /* Parchment color */
-  left: 10px;
-}
-
-.bestiaryPage::after {
-  border-width: 0 0 10px 10px;
-  border-color: transparent transparent #f5e1b7 transparent; /* Parchment color */
-  right: 10px;
-}
-
+/* This is used to contain the image shown as a beast*/
 .imageContainer {
   display: flex;
   justify-content: center;
