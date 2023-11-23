@@ -139,14 +139,18 @@ to look like an open book on the screen*/
 #leftPageContainer {
   transform: rotateY(180deg);
 }
+
 #rightPageContainer {
-  transform: rotateY(0deg);
+  /* Remove the transform property */
+  /* transform: rotateY(-180deg); */
 }
+
 #bestiaryContainer.opened #leftPageContainer {
   transform: rotateY(0deg);
 }
+
 #bestiaryContainer.opened #rightPageContainer {
-  transform: rotateY(-180deg);
+  transform: rotateY(0deg);
 }
 
 #leftPageContainer {
