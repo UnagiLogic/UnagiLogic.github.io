@@ -24,7 +24,7 @@ function increment() {
     fish += fishPerClick; // adds the number of fish per click to your total fish
     document.getElementById("showFish").innerText = fish; // Uses the Document Object Model to change the number of fish in the HTML
 
-    if (fish >= 10000) {
+    if (fish >= 100000) {
         document.getElementById("gameOver").innerText = "You win the game! for now..."
     } 
 }
@@ -48,6 +48,7 @@ function buySearchAction() {
     }
 }
 
+// A fubctuib to make a button toggle. I need to look at this more and study the elements.
 function toggleContainerVisibility() {
     var containerElement = document.getElementById('containerForInventory');
     containerElement.classList.toggle('hidden');
@@ -57,3 +58,8 @@ function toggleContainerVisibility() {
     document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
   });
 
+// A Toggle for the Bestiary Book
+  function toggleBestiary() {
+    const bestiaryContainer = document.getElementById('bestiaryContainer');
+    bestiaryContainer.style.display = (bestiaryContainer.style.display === 'none') ? 'block' : 'none';
+}
