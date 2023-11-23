@@ -111,17 +111,58 @@ h2 {
   background-color: #be9565;
   border: 1px solid #8a5a24;
   border-radius: 10px;
+  transition: transform is;
   /* Make initially hidden later with display: none; */
+}
+
+.opened {
+  transform: perspective(2000px) rotateY(180deg);
 }
 
 .bestiaryPage {
   /* Make initially hidden later with display: none; */
-  background-color: #be9565;
+  background-color: #f5e1b7;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Adjust values for the desired shadow effect */
+  background-image: url('path/to/texture.jpg'); /* Add texture image */
+  border: 1px solid #8a5a24; /* Border color */
+  border-radius: 10px;
+  padding: 20px; /* Adjust padding for content spacing */
 }
 
 #leftPageContainer {
   float: none;
   width: 100%;
+  box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+#bestiaryContainer.opened #leftPageContainer {
+  transform: rotateY(0deg);
+}
+
+#bestiaryContainer.opened #rightPageContainer {
+  transform: rotateY(-180deg);
+}
+
+.bestiaryPage::before,
+.bestiaryPage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.bestiaryPage::before {
+  border-width: 10px 10px 0 0;
+  border-color: #f5e1b7 transparent transparent transparent; /* Parchment color */
+  left: 10px;
+}
+
+.bestiaryPage::after {
+  border-width: 0 0 10px 10px;
+  border-color: transparent transparent #f5e1b7 transparent; /* Parchment color */
+  right: 10px;
 }
 
 .imageContainer {
@@ -132,6 +173,7 @@ h2 {
 #rightPageContainer {
   float: none;
   width: 100%;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Style for achievement containers */

@@ -49,3 +49,5 @@ Commit 6-9: Messing around with CSS, working on making the inventory more respon
 Commit 10: Working on making the inventory visible and hidden when the user wants.
 
 Commit 11-??: This menu was a lot more challenging then I expected. It's a good thing however because I want to learn by doing and making mistakes.
+
+Commit ??-??: Writing this down each time is too boring, I'm gonna stop for now.

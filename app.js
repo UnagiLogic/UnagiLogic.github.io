@@ -63,3 +63,8 @@ function toggleContainerVisibility() {
     const bestiaryContainer = document.getElementById('bestiaryContainer');
     bestiaryContainer.style.display = (bestiaryContainer.style.display === 'none') ? 'block' : 'none';
 }
+
+function toggleBestiary() {
+    const bestiaryContainer = document.getElementById('bestiaryContainer');
+    bestiaryContainer.classList.toggle('opened');
+  }
