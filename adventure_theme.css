@@ -129,43 +129,37 @@ The book is colored #be9565 with a border of #8a5a24*/
   border-radius: 10px;
   background-color: #be9565;
   padding: 20px;
-  border: 1px solid var(--border-color);
 }
 
 /* This is the right page container. It's placed to the right of the leftPageContainer */
 #rightPageContainer {
   flex: 1;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  top: 50px;
-  right: 50px;
   max-width: 49%; /* Adjust width to match perspective */
   background-color: #be9565;
   border: 1px solid #8a5a24;
+  padding: 20px;
   border-radius: 10px;
-  transition: transform 1s;
 }
 
 /* This is used to contain the image shown as a beast*/
 .imageContainer {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
   border: 2px solid #000; /* I only want this border to go around the image */
   border-radius: 8px;
-  padding: 10px;
 }
 
 /* Style for achievement containers */
 .achievementContainer {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .achievementImageContainer {
   position: relative;
-  margin-right: 10px;
+  margin-right: 5px;
   border: 2px solid #000;
   border-radius: 8px;
   padding: 10px;
@@ -175,7 +169,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 .achievementName:hover::before {
   content: attr(title);
   position: absolute;
-  background-color: #000;
+  background-color: #8a5a24;
   color: #fff;
   padding: 5px;
   border-radius: 5px;
