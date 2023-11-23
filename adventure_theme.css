@@ -109,7 +109,7 @@ h2 {
   position: fixed;
   top: 50px;
   left: 50px;
-  max-width: 500px;
+  max-width: 600px;
   background-color: #be9565;
   border: 1px solid #8a5a24;
   border-radius: 10px;
@@ -134,7 +134,8 @@ h2 {
 /* This is the left page*/
 #leftPageContainer{
   flex: 1;
-  position: relative;
+  width: 98%;
+  margin-right: 30px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border: 1px solid #8a5a24;
   border-radius: 10px;
@@ -149,7 +150,6 @@ h2 {
 /* Position the right page container independently */
 #rightPageContainer {
   flex: 1;
-  position: absolute;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   top: 50px;
   right: 50px;
