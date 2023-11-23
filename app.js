@@ -64,6 +64,14 @@ function toggleContainerVisibility() {
     bestiaryContainer.style.display = (bestiaryContainer.style.display === 'none') ? 'block' : 'none';
 }
 
+const bestiaryContainer = document.getElementById('bestiaryContainer');
+const bestiaryButton = document.getElementById('bestiaryButton');
+
+// Attach event listener to the bestiary button
+bestiaryButton.addEventListener('click', () => {
+  bestiaryContainer.style.display = (bestiaryContainer.style.display === 'none') ? 'block' : 'none';
+});
+
 /* This is not currently working as intended. It flips the content of the page to be backwards.
 The goal is to program it so it flips to the next beast (When I have more beasts created). Also it only flips the left container I believe. It should be flipping both left and right page at the same time.
 Good first try though
