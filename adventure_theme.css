@@ -116,7 +116,6 @@ The book is colored #be9565 with a border of #8a5a24*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
-  pointer-events: none;
 }
 
 #bestiaryContainer.hidden {
@@ -151,8 +150,16 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 20px;
 }
 
+/* This is what is currenly toggling off the left page container of the book. It's not pretty but it works. */
+#bestiaryContainer.opened #leftPageContainer {
+  transform: scale(1.5); /* Adjust scale to match perspective */
+  display: none;
+}
+
+/* This is what is currenly toggling off the right page container of the book. It's not pretty but it works. */
 #bestiaryContainer.opened #rightPageContainer {
   transform: scale(1.5); /* Adjust scale to match perspective */
+  display: none;
 }
 
 /* This is used to contain the image shown as a beast*/
