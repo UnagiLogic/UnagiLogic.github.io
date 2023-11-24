@@ -116,6 +116,11 @@ The book is colored #be9565 with a border of #8a5a24*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
+  pointer-events: none;
+}
+
+#bestiaryContainer.hidden {
+  pointer-events: auto;
 }
 
 #bestiaryContainer.opened {
