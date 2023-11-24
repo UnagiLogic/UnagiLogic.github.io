@@ -147,6 +147,28 @@ The book is colored #be9565 with a border of #8a5a24*/
   transform: perspective(2000px) scale(0.75); /* Remove rotateY and adjust scale */
 }
 
+/* This is the right page container. It's placed to the right of the leftPageContainer */
+#rightPageContainer {
+  flex: 1;
+  width: 49%;
+  margin-right: 2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #8a5a24;
+  border-radius: 10px;
+  background-color: #be9565;
+  padding: 20px; }
+
+/* This is the left page container. It's placed to the left of the rightPageContainer */
+#leftPageContainer {
+  flex: 1;
+  width: 49%;
+  margin-right: 2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #8a5a24;
+  border-radius: 10px;
+  background-color: #be9565;
+  padding: 20px; }
+
 .pageContainer {
   flex: 1;
   width: 49%;
