@@ -48,7 +48,7 @@ function buySearchAction() {
     }
 }
 
-// A fubctuib to make a button toggle. I need to look at this more and study the elements.
+// A function to make a button toggle. I need to look at this more and study the elements.
 function toggleContainerVisibility() {
     var containerElement = document.getElementById('containerForInventory');
     containerElement.classList.toggle('hidden');
@@ -65,5 +65,5 @@ function toggleContainerVisibility() {
 }
 
   window.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bestiaryButton').addEventListener('click', toggleContainerVisibility);
+    document.getElementById('bestiaryButton').addEventListener('click', toggleBestiaryVisibility);
   });
