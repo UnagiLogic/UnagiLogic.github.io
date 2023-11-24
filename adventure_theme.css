@@ -106,7 +106,6 @@ h2 {
 /* Style for the bestiary book. It holds the .bestiaryPage layout, and both the leftPageContainer and the rightPageContainer
 The book is colored #be9565 with a border of #8a5a24*/
 #bestiaryContainer {
-  display: none; /* Initially hide the bestiary */
   position: fixed;
   top: 50px;
   left: 50px;

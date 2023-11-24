@@ -60,8 +60,8 @@ function toggleContainerVisibility() {
 
 // A Toggle for the Bestiary Book
   function toggleBestiaryVisibility() {
-    var bestiaryContainer = document.getElementById('bestiaryContainer');
-    bestiaryContainer.classList.toggle('hidden');
+    var containerElement2 = document.getElementById('bestiaryContainer');
+    containerElement2.classList.toggle('hidden');
 }
 
   window.addEventListener('DOMContentLoaded', function() {
