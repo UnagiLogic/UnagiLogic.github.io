@@ -48,22 +48,23 @@ function buySearchAction() {
     }
 }
 
-// A function to make a button toggle. I need to look at this more and study the elements.
-function toggleContainerVisibility() {
+// A function to make a button toggle the inventory in view and out of view for the player.
+function toggleInventoryContainerVisibility() {
     var containerElement = document.getElementById('containerForInventory');
     containerElement.classList.toggle('hidden');
   }
   
   window.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('inventoryButton').addEventListener('click', toggleContainerVisibility);
+    document.getElementById('inventoryButton').addEventListener('click', toggleInventoryContainerVisibility);
   });
 
 // A Toggle for the Bestiary Book
-  function toggleBestiaryVisibility() {
+  function toggleBestiaryContainerVisibility() {
     var containerElement2 = document.getElementById('bestiaryContainer');
     containerElement2.classList.toggle('hidden');
 }
 
   window.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bestiaryButton').addEventListener('click', toggleBestiaryVisibility);
+    document.getElementById('bestiaryButton').addEventListener('click', toggleBestiaryContainerVisibility);
+    console.log("Bestiary Loaded")
   });
