@@ -59,12 +59,18 @@ function toggleInventoryContainerVisibility() {
   });
 
 // A Toggle for the Bestiary Book
-  function toggleBestiaryContainerVisibility() {
-    var containerElement2 = document.getElementById('bestiaryContainer');
-    containerElement2.classList.toggle('hidden');
+function toggleBestiaryContainerVisibility() {
+  var containerElement2 = document.getElementById('bestiaryContainer');
+  containerElement2.classList.toggle('hidden');
+
+  if (!containerElement2.classList.contains('hidden')) {
+    containerElement2.classList.add('opened');
+  } else {
+    containerElement2.classList.remove('opened');
+  }
 }
 
-  window.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bestiaryButton').addEventListener('click', toggleBestiaryContainerVisibility);
-    console.log("Bestiary Loaded")
-  });
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('bestiaryButton').addEventListener('click', toggleBestiaryContainerVisibility);
+  console.log("Bestiary Loaded");
+});
