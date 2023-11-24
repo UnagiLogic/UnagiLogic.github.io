@@ -22,14 +22,14 @@ let searchActionCost = 10
 
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
-    document.getElementById("showFish").innerText = fish;
-    document.getElementById("showClay").innerText = clay;
-    document.getElementById("showMud").innerText = mud;
+    document.getElementById("showFish").innerText = resources.fish;
+    document.getElementById("showClay").innerText = resources.clay;
+    document.getElementById("showMud").innerText = resources.mud;
 }
 
 // Function that gets called when you click the clickButton
 function increment() {
-  resources.fish += fishPerClick; // adds the number of fish per click to your total fish
+  resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
   updateResourceDisplay(); // Uses the Document Object Model to change the number of fish in the HTML
 
   if (resources.fish >= 100000) {
