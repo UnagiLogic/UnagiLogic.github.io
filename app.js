@@ -7,6 +7,8 @@ let resources = {
     fish: 0,
     clay: 0,
     mud: 0,
+    stone: 0,
+    shrimp: 0,
 }
 
 // Purchased resource Variables
@@ -25,6 +27,8 @@ function updateResourceDisplay() {
     document.getElementById("showFish").innerText = resources.fish;
     document.getElementById("showClay").innerText = resources.clay;
     document.getElementById("showMud").innerText = resources.mud;
+    document.getElementById("showStone").innerText = resources.stone;
+    document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
 // Function that gets called when you click the clickButton

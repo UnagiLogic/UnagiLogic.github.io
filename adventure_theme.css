@@ -114,7 +114,7 @@ h2 {
   margin-right: 10px;
 }
 
-#fishCounter, #clayCounter, #mudCounter {
+#fishCounter, #clayCounter, #mudCounter, #shrimpCounter, #stoneCounter {
   color: #000000;
   font-size: 20px;
   font-weight: bold;
@@ -123,6 +123,8 @@ h2 {
 #fishBGC { background-color: #309aba; }
 #clayBGC { background-color: #fbb84c; }
 #mudBGC { background-color: #a23b08; }
+#shrimpBGC { background-color: #ec7445; }
+#stoneBGC { background-color: #585756; }
 
 .number {
   color: #000000;
