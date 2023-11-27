@@ -1,7 +1,9 @@
+IMPORTANT RULES TO LIVE BY WHEN CODING ------------------------------
+Double check that you've closed off each element.
+
 This is just a useful guide for myself as I learn to code
 
 Git Repository - Use these commands when you want to commit some changes to the website
-cd UnagiLogic.github.io
 
 git add --all
 git commit -m "add a comment about the commit here"

@@ -47,15 +47,22 @@ setInterval(function() {
   updateResourceDisplay(); // Use this when you want to update your HTML
 }, 1000); // Every 1000 milliseconds
 
-// Function that will be called when the user presses the buyActionButton
+// Function that will be called when the user presses the buyActionButton.
+// This fucntion will buySearchAction and then choose 1 of 4 actions to give the player based on percent chance. It can spawn a resource cache at a 25% chance, narrator that gives lore about the area at 25% chance, meeting a stranger or creature at a 25% chance, or, identifying a weird object at a 25% chance. The resource cache will give the player different resources based on the area they are in. The narrator will give the player lore about the area they are in. The stranger or creature will give the player a choice of doing a quest, fighting, or trading. The weird object will give the player a choice of interacting with it or leaving it alone.
 function buySearchAction() {
-  if (resources.fish >= searchActionCost) { //Checks if you have enough fish
-    resources.fish -= searchActionCost; // This subtracts the fish at cost value
-    updateResourceDisplay(); // Use this when you want to update your HTML
-    
-    resources.clay++;
-    resources.mud++;
+  if (resources.fish >= searchActionCost) {
+    resources.fish -= searchActionCost;
     updateResourceDisplay();
+    let randomAction = Math.random();
+    if (randomAction <= 0.25) {
+      console.log("Resource Cache");
+    } else if (randomAction <= 0.5) {
+      console.log("Narrator");
+    } else if (randomAction <= 0.75) {
+      console.log("Stranger or Creature");
+    } else {
+      console.log("Weird Object");
+    }
   }
 }
 
