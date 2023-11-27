@@ -55,6 +55,7 @@ function buySearchAction() {
     updateResourceDisplay();
     let randomAction = Math.random();
     if (randomAction <= 0.25) {
+      resourceCache();
       console.log("Resource Cache");
     } else if (randomAction <= 0.5) {
       console.log("Narrator");
@@ -63,6 +64,21 @@ function buySearchAction() {
     } else {
       console.log("Weird Object");
     }
+  }
+}
+
+// Function that chooses a resource cache based on the area the player is in. The resource cache will give the player different resources based on the area they are in. The first area Title is called "The Spawning Pool" and it is a level 1 saltwater area. The only resources a player can get from this area in a resource cache is clay, mud, and stone.
+function resourceCache() {
+  let randomResource = Math.random();
+  if (randomResource <= 0.33) {
+    resources.clay += 1;
+    updateResourceDisplay();
+  } else if (randomResource <= 0.66) {
+    resources.mud += 1;
+    updateResourceDisplay();
+  } else {
+    resources.stone += 1;
+    updateResourceDisplay();
   }
 }
 
