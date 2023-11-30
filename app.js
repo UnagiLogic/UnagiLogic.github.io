@@ -48,7 +48,7 @@ function increment() {
 // Then the image will float up the screen and disappear after a few seconds.
 function displayFishImage() {
   let fishImage = document.createElement("img");
-  fishImage.src = "images/fish" + Math.floor(Math.random() * 6) + ".png";
+  fishImage.src = "Images/Resources/saltwaterFish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
   document.getElementById("saltwaterAreaFishClickerButton").appendChild(fishImage);
   setTimeout(function() {
