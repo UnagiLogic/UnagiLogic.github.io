@@ -268,7 +268,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   height: 100px; /* Adjust the height as needed */
   opacity: 1;
   z-index: 2; /* Adjust the z-index as needed */
-  /* animation: fishFloatUp 3s linear infinite;  */ /* Currently testing if it is causing issues */
+  animation: fishFloatUp 3s linear infinite;
 }
 /*
 @keyframes fishFloatUp {
