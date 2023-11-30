@@ -255,8 +255,9 @@ The book is colored #be9565 with a border of #8a5a24*/
 
 .fishImage {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100px; /* Adjust the width as needed */
   height: 100px; /* Adjust the height as needed */
   background-color: red;
