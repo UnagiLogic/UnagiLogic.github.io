@@ -35,6 +35,7 @@ function updateResourceDisplay() {
 function increment() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
   updateResourceDisplay(); // Uses the Document Object Model to change the number of fish in the HTML
+  displayFishImage(); // Calls the displayFishImage function
 
   if (resources.fish >= 100000) {
     document.getElementById("gameOver").innerText = "You win the game! for now..."
