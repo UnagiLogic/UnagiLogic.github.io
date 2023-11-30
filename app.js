@@ -45,6 +45,8 @@ function increment() {
 // The image will be randomly selected from the images folder. After the image will be displayed in the same area as the #saltwaterAreaFishClickerButton. 
 // Then the image will float up the screen and disappear after a few seconds.
 function displayFishImage() {
+  console.log("Function called!");  // Add this line for debugging
+  
   let fishImage = document.createElement("img");
   fishImage.src = "Images/Resources/fish.png";
   fishImage.style.width = "100px";
