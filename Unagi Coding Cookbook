@@ -41,6 +41,11 @@ var coins = document.getElementsByClassName('coin');
 id="thisID" Needs to be unique when used
 Don't overuse these as they will help later with javascript
 class="golden" Does not need to be unique
+<a href="/"> [Use this to access local webpages]
+<details> <summary> </summary> </details>
+<figure> <figcaption> </figcaption> </figure>
+<span></span> [Use this to apply styles to part of a text]
+
 
 [CSS]   Example
 #id     #thisID
@@ -49,6 +54,66 @@ padding -   Top     Right   Bottom  Left
             12      3       6       9
             North   East    South   West
             20px    0       20px    0
+
+To position content lower inside an element, add a top padding
+p {font-family: fantasy;} [THIS_IS_A_CSS_RULE]
+When you style a parent element some properties will only effect the parent
+div {
+    border: solid 1px black;
+    padding
+    margin
+}
+CSS Classes let us override inherited properties.
+MARGIN - Increases the spacing around the element
+Gain a DEEP UNDERSTADING of the basics
+
+/* Keyword values */
+flex: auto;
+flex: initial;
+flex: none;
+
+/* One value, unitless number: flex-grow
+flex-basis is then equal to 0. */
+flex: 2;
+
+/* One value, width/height: flex-basis */
+flex: 10em;
+flex: 30%;
+flex: min-content;
+
+/* Two values: flex-grow | flex-basis */
+flex: 1 30px;
+
+/* Two values: flex-grow | flex-shrink */
+flex: 2 2;
+
+/* Three values: flex-grow | flex-shrink | flex-basis */
+flex: 2 2 10%;
+
+/* Global values */
+flex: inherit;
+flex: initial;
+flex: revert;
+flex: revert-layer;
+flex: unset;
+
+initial
+The item is sized according to its width and height properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting "flex: 0 1 auto".
+
+auto
+The item is sized according to its width and height properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting "flex: 1 1 auto".
+
+none
+The item is sized according to its width and height properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting "flex: 0 0 auto".
+
+<'flex-grow'>
+Defines the flex-grow of the flex item. Negative values are considered invalid. Defaults to 1 when omitted. (initial is 0)
+
+<'flex-shrink'>
+Defines the flex-shrink of the flex item. Negative values are considered invalid. Defaults to 1 when omitted. (initial is 1)
+
+<'flex-basis'>
+Defines the flex-basis of the flex item. A preferred size of 0 must have a unit to avoid being interpreted as a flexibility. Defaults to 0 when omitted. (initial is auto)
 
 [JS]
 console.log()
