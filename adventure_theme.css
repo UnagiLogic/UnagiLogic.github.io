@@ -249,7 +249,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   margin-top: 60px;
   box-shadow: 0 4px 8px 0 #3188cc;
   border-radius: 8px;
-  /*  transition-duration: 0.3s; */ /* Currently testing if it is causing issues */
+  transition-duration: 0.3s; /* Currently testing if it is causing issues */
   cursor: pointer;
 }
 
@@ -273,7 +273,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 
 @keyframes fishFloatUp {
   0% {
-    top: 100;
+    top: 150;
     opacity: 1;
   }
   100% {
