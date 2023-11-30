@@ -115,6 +115,8 @@ Defines the flex-shrink of the flex item. Negative values are considered invalid
 <'flex-basis'>
 Defines the flex-basis of the flex item. A preferred size of 0 must have a unit to avoid being interpreted as a flexibility. Defaults to 0 when omitted. (initial is auto)
 
+@keyframes: The @keyframes rule is used to define animations in CSS. It allows you to specify the keyframes of an animation, which are the points in time during the animation when certain CSS properties should be applied.
+
 [JS]
 console.log()
 You can place a variable in here to log it
@@ -126,6 +128,7 @@ true; false;
 !== checks if a number isn't equal to another number
 .innerText will make the HTML element contain the text we give it.
 fish = fish + fishPerClick can be written fish += fishPerClick
+The classList property of an element provides methods for adding, removing, and toggling CSS classes.
 
 SAVE CODE HERE
 function resourceCache() {
