@@ -273,7 +273,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 
 @keyframes fishFloatUp {
   0% {
-    top: 0;
+    top: 100;
     opacity: 1;
   }
   100% {
