@@ -126,3 +126,30 @@ true; false;
 !== checks if a number isn't equal to another number
 .innerText will make the HTML element contain the text we give it.
 fish = fish + fishPerClick can be written fish += fishPerClick
+
+SAVE CODE HERE
+function resourceCache() {
+    let randomResource = Math.random();
+    if (randomResource <= 0.33) {
+      resources.clay += 1;
+      updateResourceDisplay();
+    } else if (randomResource <= 0.66) {
+      resources.mud += 1;
+      updateResourceDisplay();
+    } else {
+      resources.stone += 1;
+      updateResourceDisplay();
+    }
+  }
+
+TEST FUNCTIONS HERE
+//This space is for testing functions. It will be deleted later.
+Function testFunction() {
+    console.log("This is a test function");
+}
+
+//This function will be used to call the randomized let var resourceCacheRandomizedNumber between 1 and 10
+function resourceCacheRandomizedNumber() {
+    let resourceCacheRandomizedNumber = Math.floor(Math.random() * 10) + 1;
+    console.log(resourceCacheRandomizedNumber);
+}
