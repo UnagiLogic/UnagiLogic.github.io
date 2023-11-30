@@ -253,6 +253,12 @@ The book is colored #be9565 with a border of #8a5a24*/
   cursor: pointer;
 }
 
+#containerForResourceIndicator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
 .fishImage {
   position: absolute;
   top: 50%;
