@@ -47,13 +47,17 @@ function increment() {
 // The class fishImage has a CSS
 // The containerForResourceIndicator appears inside the saltwaterAreaFishClickerButton CSS width and height at random places.
 // The fishImage will be displayed in the containerForResourceIndicator CSS width and height.
+// The fishImage needs to be removed after a few seconds.
 function displayFishImage() {
   let fishImage = document.createElement("img");
-  fishImage.src = "Images/Resources/saltwaterFish/fish/fish" + Math.floor(Math.random() * 6) + ".png";
+  fishImage.src = "Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
   document.getElementById("containerForResourceIndicator").appendChild(fishImage);
   fishImage.style.left = Math.floor(Math.random() * 100) + "%";
   fishImage.style.top = Math.floor(Math.random() * 100) + "%";
+  setTimeout(function() {
+    fishImage.remove();
+  }, 3000);
 }
 
 // Function that happens every second
