@@ -83,6 +83,7 @@ function resourceCache() {
     resources.stone += resourceCacheRandomizedNumber;
     updateResourceDisplay();
   }
+}
 
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {
@@ -105,4 +106,4 @@ window.addEventListener('DOMContentLoaded', function() {
     toggleContainerVisibility('bestiaryContainer');
     console.log("Bestiary Loaded");
   });
-});  
+});
