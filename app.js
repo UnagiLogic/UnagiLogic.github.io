@@ -46,7 +46,7 @@ function increment() {
 // Then the image will float up the screen and disappear after a few seconds.
 function displayFishImage() {
   let fishImage = document.createElement("img");
-  fishImage.src = "Images/Resources/Fish.png";
+  fishImage.src = "Images/Resources/fish.png";
   fishImage.style.width = "100px";
   fishImage.style.height = "100px";
   fishImage.style.position = "absolute";
