@@ -58,9 +58,6 @@ function displayFishImage() {
   fishImage.style.transform = "translate(-50%, -50%)";
   fishImage.style.zIndex = "1";
   document.getElementById("saltwaterAreaFishClickerButton").appendChild(fishImage);
-  setTimeout(function() {
-      fishImage.remove();
-  }, 3000);
 }
 
 // Function that happens every second
