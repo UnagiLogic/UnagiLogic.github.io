@@ -41,6 +41,25 @@ function increment() {
   }
 }
 
+// This function is used to display an image each time the saltwaterAreaFishClickerButton is pressed. 
+// The image will be randomly selected from the images folder. After the image will be displayed in the same area as the #saltwaterAreaFishClickerButton. 
+// Then the image will float up the screen and disappear after a few seconds.
+function displayFishImage() {
+  let fishImage = document.createElement("img");
+  fishImage.src = "Images/Fish/fish.png";
+  fishImage.style.width = "100px";
+  fishImage.style.height = "100px";
+  fishImage.style.position = "absolute";
+  fishImage.style.top = "50%";
+  fishImage.style.left = "50%";
+  fishImage.style.transform = "translate(-50%, -50%)";
+  fishImage.style.zIndex = "1";
+  document.getElementById("saltwaterAreaFishClickerButton").appendChild(fishImage);
+  setTimeout(function() {
+      fishImage.remove();
+  }, 3000);
+}
+
 // Function that happens every second
 setInterval(function() {
   resources.fish += purchasedResources.fishPerSecond; //adds the number of fish per second to your total fish
