@@ -24,12 +24,12 @@ body, html {
   --hover-bg-color: #323232; /* This is the color of the buttons when hovered over. */
 }
 
-#containerForInventory, #bestiaryContainer, .achievementImageContainer, #clickButton, .spawningPoolTitle {
+#containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
 }
 
-#clickButton, #bestiaryButton, .inventoryButton, .buyButton {
+#saltwaterAreaFishClickerButton, #bestiaryButton, .inventoryButton, .buyButton {
   background-color: var(--hover-bg-color);
 }
 
@@ -171,6 +171,8 @@ The book is colored #be9565 with a border of #8a5a24*/
   background-color: #be9565;
   padding: 20px; }
 
+
+  /* Testing what this does by removing it
 .pageContainer {
   flex: 1;
   width: 49%;
@@ -185,6 +187,8 @@ The book is colored #be9565 with a border of #8a5a24*/
 #leftPageContainer, #rightPageContainer {
   @extend .pageContainer;
 }
+*/
+
 
 /* This is what is currenly toggling off the left page container of the book. It's not pretty but it works. */
 #bestiaryContainer.opened #leftPageContainer {
@@ -239,7 +243,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 1px;
 }
 
-#clickButton {
+#saltwaterAreaFishClickerButton {
   width: 300px;
   height: 350px;
   margin-top: 60px;
@@ -250,14 +254,14 @@ The book is colored #be9565 with a border of #8a5a24*/
 }
 
 /* When I hover over a button, a box shadow color should change, and be a little rounder */
-#clickButton:hover, #clickButton:active {
+#saltwaterAreaFishClickerButton:hover, #saltwaterAreaFishClickerButton:active {
   box-shadow: 0 4px 8px 0 #979797;
   border-radius: 8px;
   transition-duration: 0.5s;
 }
 
 /* When clicked, I want the box shadow color to change again, more round, and get a little larger */
-#clickButton:active {
+#saltwaterAreaFishClickerButton:active {
   box-shadow: 0 4px 8px 0 #666666;
   border-radius: 20px;
   -ms-transform: scale(1.1);
@@ -313,7 +317,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   }
 }
 
-#clickButton:hover, .buyButton:hover {
+#saltwaterAreaFishClickerButton:hover, .buyButton:hover {
   opacity: 0.7;
 }
 
