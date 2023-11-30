@@ -249,7 +249,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   margin-top: 60px;
   box-shadow: 0 4px 8px 0 #3188cc;
   border-radius: 8px;
-  transition-duration: 0.3s;
+  /*  transition-duration: 0.3s; */ /* Currently testing if it is causing issues */
   cursor: pointer;
 }
 
@@ -260,20 +260,21 @@ The book is colored #be9565 with a border of #8a5a24*/
   width: 100px; /* Adjust the width as needed */
   height: 100px; /* Adjust the height as needed */
   opacity: 1;
-  z-index: 1; /* Adjust the z-index as needed */
-  animation: fishFloatUp 3s linear infinite;
+  z-index: 2; /* Adjust the z-index as needed */
+  /* animation: fishFloatUp 3s linear infinite;  */ /* Currently testing if it is causing issues */
 }
-
+/*
 @keyframes fishFloatUp {
   0% {
     top: 0;
     opacity: 1;
   }
   100% {
-    top: -200px; /* Adjust the value to make the image float up further */
-    opacity: 0;
+    top: -200px; */ /* Adjust the value to make the image float up further */
+/*    opacity: 0;
   }
 }
+*/
 
 /* When I hover over a button, a box shadow color should change, and be a little rounder */
 #saltwaterAreaFishClickerButton:hover, #saltwaterAreaFishClickerButton:active {
