@@ -31,7 +31,7 @@ function updateResourceDisplay() {
     document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// Function that gets called when you click the clickButton
+// Function that gets called when you click the saltwaterAreaFishClickerButton
 function increment() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
   updateResourceDisplay(); // Uses the Document Object Model to change the number of fish in the HTML
@@ -60,7 +60,7 @@ function displayFishImage() {
   }, 3000);
 }
 
-// Function that happens every second
+// Function that happens every second. This adds the number of fish per second to your total fish and updates the HTML every second.
 setInterval(function() {
   resources.fish += purchasedResources.fishPerSecond; //adds the number of fish per second to your total fish
   updateResourceDisplay(); // Use this when you want to update your HTML
@@ -86,22 +86,38 @@ function buySearchAction() {
   }
 }
 
-// Function that chooses a resource cache based on the area the player is in. The resource cache will give the player different resources based on the area they are in. The first area Title is called "The Spawning Pool" and it is a level 1 saltwater area. The only resources a player can get from this area in a resource cache is clay, mud, and stone.
-// This function will also randomize the amount of resources the player gets from the resource cache. The amount of resources the player gets will be between 1 and 10 total but the amount of each resource will be randomized. The player can get 1-10 clay, 1-10 mud, and 1-10 stone but may not recive more then 10 total resources.
+// This is the resourceCache function.
+// This function will choose a resource cache at random.
+// This function will place those resources in a image called resourceCacheImage.
+// The resourceCacheImage in the containerForResourceCacheImage HTML Div.
+// The containerForResourceCacheImage can show up in random places on the screen.
+// The resourceCacheImage will be clickable.
+// When players click on the resourceCacheImage a message will appear on screen that says "You found a resource cache!".
+// When players click on the resourceCacheImage it will disappear and the resources will be added to the players inventory.
+// The resources a player can get from this area is clay, mud, and stone.
+// The amount of resources the player gets will be between 1 and 10 total but the amount of each resource will be randomized. 
+// The player can get 1-10 clay, 1-10 mud, and 1-10 stone but may not recive more then 10 total resources per cache.
 function resourceCache() {
-  let resourceCacheRandomizedNumber = Math.floor(Math.random() * 10) + 1;
-  console.log(resourceCacheRandomizedNumber);
-  let randomResource = Math.random();
-  if (randomResource <= 0.33) {
-    resources.clay += resourceCacheRandomizedNumber;
+  let resourceCacheImage = document.createElement("img");
+  resourceCacheImage.src = "Images/Resources/resourceCache.png";
+  resourceCacheImage.classList.add("resourceCacheImage");
+  document.getElementById("containerForResourceCacheImage").appendChild(resourceCacheImage);
+  resourceCacheImage.style.left = Math.floor(Math.random() * 100) + "%";
+  resourceCacheImage.style.top = Math.floor(Math.random() * 100) + "%";
+  resourceCacheImage.addEventListener("click", function() {
+    resourceCacheImage.remove();
+    let randomClay = Math.floor(Math.random() * 10) + 1;
+    let randomMud = Math.floor(Math.random() * 10) + 1;
+    let randomStone = Math.floor(Math.random() * 10) + 1;
+    resources.clay += randomClay;
+    resources.mud += randomMud;
+    resources.stone += randomStone;
     updateResourceDisplay();
-  } else if (randomResource <= 0.66) {
-    resources.mud += resourceCacheRandomizedNumber;
-    updateResourceDisplay();
-  } else {
-    resources.stone += resourceCacheRandomizedNumber;
-    updateResourceDisplay();
-  }
+    document.getElementById("showResourceCacheMessage").innerText = "You found a resource cache!";
+    setTimeout(function() {
+      document.getElementById("showResourceCacheMessage").innerText = "";
+    }, 3000);
+  });
 }
 
 // A function to make a button toggle the visibility of a container.

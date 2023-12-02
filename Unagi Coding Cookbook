@@ -131,48 +131,31 @@ fish = fish + fishPerClick can be written fish += fishPerClick
 The classList property of an element provides methods for adding, removing, and toggling CSS classes.
 
 SAVE CODE HERE
+//This space is for saving code. It will be deleted later.
 function resourceCache() {
-    let randomResource = Math.random();
-    if (randomResource <= 0.33) {
-      resources.clay += 1;
-      updateResourceDisplay();
-    } else if (randomResource <= 0.66) {
-      resources.mud += 1;
-      updateResourceDisplay();
-    } else {
-      resources.stone += 1;
-      updateResourceDisplay();
-    }
+  let resourceCacheRandomizedNumber = Math.floor(Math.random() * 10) + 1;
+  console.log(resourceCacheRandomizedNumber);
+  let randomResource = Math.random();
+  if (randomResource <= 0.33) {
+    resources.clay += resourceCacheRandomizedNumber;
+    updateResourceDisplay();
+  } else if (randomResource <= 0.66) {
+    resources.mud += resourceCacheRandomizedNumber;
+    updateResourceDisplay();
+  } else {
+    resources.stone += resourceCacheRandomizedNumber;
+    updateResourceDisplay();
   }
+}
 
 TEST FUNCTIONS HERE
 //This space is for testing functions. It will be deleted later.
+
 Function testFunction() {
     console.log("This is a test function");
 }
 
-//This function will be used to call the randomized let var resourceCacheRandomizedNumber between 1 and 10
-function resourceCacheRandomizedNumber() {
-    let resourceCacheRandomizedNumber = Math.floor(Math.random() * 10) + 1;
-    console.log(resourceCacheRandomizedNumber);
-}
 
-// This function is used to display an image each time the saltwaterAreaFishClickerButton is pressed. 
-// The image will be randomly selected from the images folder. After the image will be displayed in the same area as the #saltwaterAreaFishClickerButton. 
-// Then the image will float up the screen and disappear after a few seconds.
-function displayFishImage() {
-    let fishImage = document.createElement("img");
-    fishImage.src = "Images/Fish/fish.png";
-    fishImage.style.width = "100px";
-    fishImage.style.height = "100px";
-    fishImage.style.position = "absolute";
-    fishImage.style.top = "50%";
-    fishImage.style.left = "50%";
-    fishImage.style.transform = "translate(-50%, -50%)";
-    fishImage.style.zIndex = "1";
-    document.getElementById("saltwaterAreaFishClickerButton").appendChild(fishImage);
-    setTimeout(function() {
-        fishImage.remove();
-    }, 3000);
-}
+
+
 
