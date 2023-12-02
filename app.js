@@ -99,7 +99,7 @@ function buySearchAction() {
 // The player can get 1-10 clay, 1-10 mud, and 1-10 stone but may not recive more then 10 total resources per cache.
 function resourceCache() {
   let resourceCacheImage = document.createElement("img");
-  resourceCacheImage.src = "Images/Resources/resourceCache.png";
+  resourceCacheImage.src = "Images/Resources/levelOneSaltwaterResourceCache/resourceCache" + Math.floor(Math.random() * 4) + ".png";
   resourceCacheImage.classList.add("resourceCacheImage");
   document.getElementById("containerForResourceCacheImage").appendChild(resourceCacheImage);
   resourceCacheImage.style.left = Math.floor(Math.random() * 100) + "%";
