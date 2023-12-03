@@ -41,7 +41,7 @@ function updateResourceDisplay() {
 // It will update the energy in the HTML every second.
 function increaseEnergy() {
   if (energy < maxEnergy) {
-    setInterval(function() {
+    setInterval(function(increaseEnergy) {
       energy++;
       updateResourceDisplay();
     }, 1000);
