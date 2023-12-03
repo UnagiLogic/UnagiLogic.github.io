@@ -42,12 +42,15 @@ function updateResourceDisplay() {
 // It will only increase by 1 every second.
 // It will stop increasing energy when energy is equal to maxEnergy.
 // It will update the energy in the HTML
-setInterval(function increaseEnergy() {
-  while (energy < maxEnergy) {
-    energy += 1;
-    updateResourceDisplay();
-  }
-}, 1000);
+function increaseEnergy() {
+  let energyIncrease = setInterval(function() {
+    if (energy < maxEnergy) {
+      energy++;
+      updateResourceDisplay();
+    } else {
+      clearInterval(energyIncrease);
+    }
+  }, 1000);
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
 function increment() {
