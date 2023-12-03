@@ -88,7 +88,7 @@ setInterval(function() {
 // It will also call the searchAction function.
 // It will call the increaseEnergy function to make sure the players energy is recovering after doing this action.
 // ensure players energy is recovering after doing this action.
-function buyAction() {
+function buySearchAction() {
   if (energy >= searchActionCost) {
     energy -= searchActionCost;
     updateResourceDisplay();
