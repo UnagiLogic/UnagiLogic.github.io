@@ -184,12 +184,53 @@ The book is colored #be9565 with a border of #8a5a24*/
   width: 49%;
 }
 
+/* This is the menu container for actions in the game */
+.actionsMenuContainer {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  max-width: 838px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /* This is used to contain the image shown as a beast*/
-.imageContainer {
+.actionContainerImage {
   display: flex;
   justify-content: center;
   border: 2px solid #000; /* I only want this border to go around the image */
   border-radius: 8px;
+}
+
+.action {
+  padding: 10px;
+  flex: 25%;
+}
+
+.actionContainerText {
+	font-size: 16px;
+  text-align: center;
+}
+
+#buySearchActionButton {
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  font-family: "Droid Serif";
+  padding: 4px 11px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* for smaller screens (eg: phones) */
+@media (max-width: 800px) { 
+  .item {
+    flex: 100%;
+  }
 }
 
 /* Style for achievement containers */
@@ -286,42 +327,9 @@ The book is colored #be9565 with a border of #8a5a24*/
   font-style: italic;
 }
 
-.itemContainer {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.item {
-  padding: 10px;
-  flex: 25%;
-}
-
 .itemImage {
 	height: 20%;
 	width: 20%;
-}
-
-.containerText {
-	font-size: 16px;
-  text-align: center;
-}
-
-#buySearchActionButton {
-  cursor: pointer;
-  text-align: center;
-  color: #fff;
-  font-size: 17px;
-  font-family: "Droid Serif";
-  padding: 4px 11px;
-  border-radius: 12px;
-  border: none;
-}
-
-/* for smaller screens (eg: phones) */
-@media (max-width: 800px) { 
-  .item {
-    flex: 100%;
-  }
 }
 
 #saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover {
