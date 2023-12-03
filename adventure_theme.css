@@ -24,6 +24,13 @@ body, html {
   --hover-bg-color: #323232; /* This is the color of the buttons when hovered over. */
 }
 
+#containerForEnergyIndicator {
+  position: fixed;
+  top: 5px;
+  left: 1000px;
+  background-color: gray; 
+}
+
 #containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForActionsMenu {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);

@@ -156,9 +156,12 @@ Function testFunction() {
 }
 
 //This function will increase the players energy by 1 every second
+//It will also only increase the players energy if it is less than the players current max energy
 function increaseEnergy() {
-    energy += 1;
-    updateEnergyDisplay();
+    if (player.energy < player.maxEnergy) {
+        player.energy += 1;
+        updateEnergyDisplay();
+    }
 }
 
 
