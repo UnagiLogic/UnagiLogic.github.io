@@ -31,6 +31,12 @@ body, html {
   background-color: gray; 
 }
 
+#energyIndicator {
+  color: #21459a;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 #containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForActionsMenu {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
