@@ -29,7 +29,7 @@ body, html {
   border: 1px solid var(--secondary-color);
 }
 
-#saltwaterAreaFishClickerButton, #bestiaryButton, .inventoryButton, #buySearchActionButton {
+#saltwaterAreaFishClickerButton, #bestiaryButton, .inventoryButton, #buySearchActionButton, .actionsMenuButton {
   background-color: var(--hover-bg-color);
 }
 
@@ -85,6 +85,17 @@ h2 {
   position: fixed;
   top: 5px;
   right: 100px;
+  cursor: pointer;
+  color: #9c69c3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.actionsMenuButton {
+  position: fixed;
+  top: 5px;
+  right: 200px;  
   cursor: pointer;
   color: #9c69c3;
   padding: 5px 10px;
@@ -213,6 +224,14 @@ The book is colored #be9565 with a border of #8a5a24*/
 .actionContainerText {
 	font-size: 16px;
   text-align: center;
+}
+
+.actionsMenuButton {
+  cursor: pointer;
+  color: #9c69c3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 1;
 }
 
 #buySearchActionButton {
