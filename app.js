@@ -44,9 +44,11 @@ function updateResourceDisplay() {
 // It will update the energy in the HTML
 function increaseEnergy() {
   while (energy < maxEnergy) {
-    energy++;
-    updateResourceDisplay();
-  } 1000;
+    setInterval(function() {
+      energy += 1;
+      updateResourceDisplay();
+    }, 1000);
+  }
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
