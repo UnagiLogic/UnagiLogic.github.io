@@ -67,7 +67,7 @@ h2 {
 }
 
 .hidden {
-  visibility: hidden;
+  display: none;
 }
 
 .inventoryButton {
@@ -172,34 +172,16 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 20px; }
 
 
-  /* Testing what this does by removing it
-.pageContainer {
+/* Someday add this with the below container*/
+#bestiaryContainer.opened #leftPageContainer {
   flex: 1;
   width: 49%;
-  margin-right: 2%;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid #8a5a24;
-  border-radius: 10px;
-  background-color: #be9565;
-  padding: 20px;
 }
 
-#leftPageContainer, #rightPageContainer {
-  @extend .pageContainer;
-}
-*/
-
-
-/* This is what is currenly toggling off the left page container of the book. It's not pretty but it works. */
-#bestiaryContainer.opened #leftPageContainer {
-  transform: scale(1.5); /* Adjust scale to match perspective Currently not needed. */
-  display: none;
-}
-
-/* This is what is currenly toggling off the right page container of the book. It's not pretty but it works. */
+/* Find out at some point why you can't add this to the top one */
 #bestiaryContainer.opened #rightPageContainer {
-  transform: scale(1.5); /* Adjust scale to match perspective. Currently not needed. */
-  display: none;
+  flex: 1;
+  width: 49%;
 }
 
 /* This is used to contain the image shown as a beast*/
@@ -360,12 +342,13 @@ The book is colored #be9565 with a border of #8a5a24*/
 
 .resourceCacheMessage {
   position: absolute;
+  background-color: black;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 20px;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
   z-index: 3;
 }
 
