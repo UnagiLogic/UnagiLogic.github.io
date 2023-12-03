@@ -198,8 +198,10 @@ The book is colored #be9565 with a border of #8a5a24*/
 }
 
 /* This is the menu container for actions in the game */
-.containerForActionsMenu {
+#containerForActionsMenu {
   position: fixed;
+  background-color: #be9565;
+  border: 1px solid #8a5a24;
   top: 50px;
   left: 50px;
   max-width: 838px;
@@ -208,11 +210,6 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-}
-
-#containerForActionsMenu {
-  background-color: #be9565;
-  border: 1px solid #8a5a24;
 }
 
 /* This is used to contain the image shown as a beast*/

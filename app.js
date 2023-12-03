@@ -134,7 +134,7 @@ function toggleContainerVisibility(containerId) {
       containerElement.classList.remove('opened');
     }
   } else {
-    console.log('Container elementnot found.', containerId);
+    console.log('Container element not found.', containerId);
   }
 }    
 
