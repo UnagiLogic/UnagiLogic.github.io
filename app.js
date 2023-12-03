@@ -27,16 +27,6 @@ let searchActionCost = 10
 
 // Functions go here -----------------------------------
 
-//This function will increase the players energy by 1 every second
-//It will also only increase the players energy if it is less than the players current max energy
-//It will also update the energy display in the HTML like a progress bar
-function increaseEnergy() {
-  if (energy < maxEnergy) {
-    energy += 1;
-    document.getElementById("energyIndicator").value = energy;
-  }
-}
-
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
   document.getElementById("energyIndicator").innerText = energy;
@@ -45,6 +35,16 @@ function updateResourceDisplay() {
   document.getElementById("showMud").innerText = resources.mud;
   document.getElementById("showStone").innerText = resources.stone;
   document.getElementById("showShrimp").innerText = resources.shrimp;
+}
+
+//This function will increase the players energy by 1 every second
+//It will also only increase the players energy if it is less than the players current max energy
+//It will also update the energy display in the HTML like a progress bar
+function increaseEnergy() {
+  if (energy < maxEnergy) {
+    energy += 1;
+    document.getElementById("energyIndicator").value = energy;
+  }
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
