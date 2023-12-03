@@ -140,6 +140,10 @@ function hideBestiaryContainer() {
 }
 
 // Event Listeners go here -----------------------------------
+
+// Event listener for hiding the bestiaryContainer when the page loads.
+window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
+
 window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('inventoryButton').addEventListener('click', function() {
     toggleContainerVisibility('containerForInventory');
