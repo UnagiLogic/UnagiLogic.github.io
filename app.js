@@ -37,13 +37,13 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-//This function will increase the players energy by 1 every second its below the max energy
-//It will also update the energy indicator in the html
+//This function will increase the players energy by 1 every second until it reaches the max energy.
+//It will also update the energy indicator in the html every second.
 function increaseEnergy() {
   if (energy < maxEnergy) {
     energy++;
     updateResourceDisplay();
-  }
+  } 1000;
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
