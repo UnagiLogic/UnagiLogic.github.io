@@ -43,7 +43,7 @@ function updateResourceDisplay() {
 // It will update the energy in the HTML
 function increaseEnergy() {
   while (energy < maxEnergy) {
-    energy++;
+    energy += 1;
     updateResourceDisplay();
   }
 }
