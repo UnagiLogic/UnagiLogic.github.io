@@ -134,6 +134,11 @@ function toggleContainerVisibility(containerId) {
   }
 }
 
+// A function to make the bestiaryContainer hidden when the page loads.
+function hideBestiaryContainer() {
+  document.getElementById('bestiaryContainer').classList.add('hidden');
+}
+
 // Event Listeners go here -----------------------------------
 window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('inventoryButton').addEventListener('click', function() {
