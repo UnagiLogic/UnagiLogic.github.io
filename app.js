@@ -135,7 +135,8 @@ function toggleContainerVisibility(containerId) {
     }
   } else {
     console.log('Container elementnot found.', containerId);
-  }    
+  }
+}    
 
 // A function to make the bestiaryContainer hidden when the page loads.
 function hideBestiaryContainer() {
