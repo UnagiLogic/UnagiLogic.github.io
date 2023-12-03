@@ -24,7 +24,7 @@ body, html {
   --hover-bg-color: #323232; /* This is the color of the buttons when hovered over. */
 }
 
-#containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForactionsMenu {
+#containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForActionsMenu {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
 }
