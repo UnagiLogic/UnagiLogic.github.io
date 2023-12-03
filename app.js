@@ -87,35 +87,38 @@ function buySearchAction() {
 }
 
 // This is the resourceCache function.
-// This function will choose a resource cache at random.
+// This function will choose a resource cache at random from 5 images.
 // This function will place those resources in a image called resourceCacheImage.
-// The resourceCacheImage in the containerForResourceCacheImage HTML Div.
-// The containerForResourceCacheImage can show up in random places on the screen.
+// The resourceCacheImage is held in the containerForResourceCacheImage HTML Div.
+// The containerForResourceCacheImage appear in random places on the screen.
 // The resourceCacheImage will be clickable.
-// When players click on the resourceCacheImage a message will appear on screen that says "You found a resource cache!".
+// When players click on the resourceCacheImage a message will appear above the cache that says "You found a resource cache!".
 // When players click on the resourceCacheImage it will disappear and the resources will be added to the players inventory.
 // The resources a player can get from this area is clay, mud, and stone.
-// The amount of resources the player gets will be between 1 and 10 total but the amount of each resource will be randomized. 
-// The player can get 1-10 clay, 1-10 mud, and 1-10 stone but may not recive more then 10 total resources per cache.
+// The amount of resources the player gets will be randomized. 
+// The player can get 1-3 clay, 1-4 mud, and 1-3 stone.
 function resourceCache() {
   let resourceCacheImage = document.createElement("img");
-  resourceCacheImage.src = "Images/Resources/levelOneSaltwaterResourceCache/resourceCache" + Math.floor(Math.random() * 4) + ".png";
+  resourceCacheImage.src = "Images/Resources/levelOneSaltwaterResourceCache/resourceCache" + Math.floor(Math.random() * 5) + ".png";
   resourceCacheImage.classList.add("resourceCacheImage");
   document.getElementById("containerForResourceCacheImage").appendChild(resourceCacheImage);
   resourceCacheImage.style.left = Math.floor(Math.random() * 100) + "%";
   resourceCacheImage.style.top = Math.floor(Math.random() * 100) + "%";
   resourceCacheImage.addEventListener("click", function() {
     resourceCacheImage.remove();
-    let randomClay = Math.floor(Math.random() * 10) + 1;
-    let randomMud = Math.floor(Math.random() * 10) + 1;
-    let randomStone = Math.floor(Math.random() * 10) + 1;
-    resources.clay += randomClay;
-    resources.mud += randomMud;
-    resources.stone += randomStone;
+    let clay = Math.floor(Math.random() * 3) + 1;
+    let mud = Math.floor(Math.random() * 4) + 1;
+    let stone = Math.floor(Math.random() * 3) + 1;
+    resources.clay += clay;
+    resources.mud += mud;
+    resources.stone += stone;
     updateResourceDisplay();
-    document.getElementById("showResourceCacheMessage").innerText = "You found a resource cache!";
+    let resourceCacheMessage = document.createElement("p");
+    resourceCacheMessage.innerText = "You found a resource cache!";
+    resourceCacheMessage.classList.add("resourceCacheMessage");
+    document.getElementById("containerForResourceCacheImage").appendChild(resourceCacheMessage);
     setTimeout(function() {
-      document.getElementById("showResourceCacheMessage").innerText = "";
+      resourceCacheMessage.remove();
     }, 3000);
   });
 }
