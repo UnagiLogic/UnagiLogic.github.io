@@ -131,20 +131,22 @@ fish = fish + fishPerClick can be written fish += fishPerClick
 The classList property of an element provides methods for adding, removing, and toggling CSS classes.
 
 SAVE CODE HERE
-//This space is for saving code. It will be deleted later.
-function resourceCache() {
-  let resourceCacheRandomizedNumber = Math.floor(Math.random() * 10) + 1;
-  console.log(resourceCacheRandomizedNumber);
-  let randomResource = Math.random();
-  if (randomResource <= 0.33) {
-    resources.clay += resourceCacheRandomizedNumber;
+function buySearchAction() {
+  if (energy >= searchActionCost) {
+    energy -= searchActionCost;
     updateResourceDisplay();
-  } else if (randomResource <= 0.66) {
-    resources.mud += resourceCacheRandomizedNumber;
-    updateResourceDisplay();
-  } else {
-    resources.stone += resourceCacheRandomizedNumber;
-    updateResourceDisplay();
+    let randomAction = Math.random();
+    if (randomAction <= 0.25) {
+      resourceCache();
+      console.log("Resource Cache");
+    } else if (randomAction <= 0.5) {
+      narrator()
+      console.log("Narrator");
+    } else if (randomAction <= 0.75) {
+      console.log("Stranger or Creature");
+    } else {
+      console.log("Weird Object");
+    }
   }
 }
 

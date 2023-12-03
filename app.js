@@ -82,30 +82,41 @@ setInterval(function() {
 }, 1000); // Every 1000 milliseconds
 
 // Function that will be called when the user presses the buyActionButton.
-// This fucntion will buySearchAction and then choose 1 of 4 actions to give the player based on percent chance. 
-// It can spawn a resource cache at a 40% chance. 
-// A narrator that gives lore about the area at 20% chance. 
-// Meeting a stranger or creature at a 30% chance. 
-// Identifying a weird object at a 10% chance. 
-// The stranger or creature will give the player a choice of doing a quest, fighting, or trading. 
-// The weird object will give the player a choice of interacting with it or leaving it alone.
-// it costs 10 energy to do this action.
-function buySearchAction() {
+// This function will check if the player has enough energy to do this action.
+// If the player has enough energy it will subtract the cost of the action from the players energy.
+// It will also update showEnergy in the HTML.
+// It will also call the searchAction function.
+// It will call the increaseEnergy function to make sure the players energy is recovering after doing this action.
+// ensure players energy is recovering after doing this action.
+function buyAction() {
   if (energy >= searchActionCost) {
     energy -= searchActionCost;
     updateResourceDisplay();
-    let randomAction = Math.random();
-    if (randomAction <= 0.25) {
-      resourceCache();
-      console.log("Resource Cache");
-    } else if (randomAction <= 0.5) {
-      narrator()
-      console.log("Narrator");
-    } else if (randomAction <= 0.75) {
-      console.log("Stranger or Creature");
-    } else {
-      console.log("Weird Object");
-    }
+    searchAction();
+    increaseEnergy();
+  }
+}
+
+// This is the searchAction function.
+// This function will choose 1 of 4 actions to give the player based on percent chance.
+// It can spawn a resource cache at a 40% chance.
+// It can spawn a narrator that gives lore about the area at 20% chance.
+// It can spawn a stranger or creature at a 30% chance.
+// It can spawn a weird object at a 10% chance.
+function searchAction() {
+  let randomNumber = Math.random();
+  if (randomNumber <= 0.4) {
+    resourceCache();
+    console.log("Resource Cache");
+  } else if (randomNumber <= 0.6) {
+    narrator();
+    console.log("Narrator");
+  } else if (randomNumber <= 0.9) {
+    strangerOrCreature();
+    console.log("Stranger or Creature");
+  } else {
+    weirdObject();
+    console.log("Weird Object");
   }
 }
 
@@ -125,6 +136,11 @@ function narrator() {
   }, 3000);
 }
 
+// This is the function for the stranger or creature.
+// The stranger or creature will give the player a choice of doing a quest, fighting, or trading. 
+
+// This is the function for the weird object.
+// The weird object will give the player a choice of interacting with it or leaving it alone.
 
 // This is the resourceCache function.
 // This function will choose a resource cache at random from 5 images.
