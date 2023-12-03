@@ -39,13 +39,14 @@ function updateResourceDisplay() {
 
 // This function will increase energy towards the maxEnergy.
 // This function will use a while loop to increase energy by 1 every second.
+// It will only increase by 1 every second.
 // It will stop increasing energy when energy is equal to maxEnergy.
 // It will update the energy in the HTML
 function increaseEnergy() {
   while (energy < maxEnergy) {
-    energy += 1;
+    energy++;
     updateResourceDisplay();
-  }
+  } 1000;
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
