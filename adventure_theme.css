@@ -25,10 +25,27 @@ body, html {
 }
 
 #containerForEnergyIndicator {
-  position: fixed;
+  position: relative;
+  height: 25px;
+  background-color: gray;
   top: 5px;
   left: 1500px;
-  background-color: gray; 
+}
+
+.energyBar {
+  position: absolute;
+  height: 100%;
+  background-color: #9d4caf;
+  animation: energyBar 5s linear infinite;
+}
+
+@keyframes energyBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 #energyIndicator {
