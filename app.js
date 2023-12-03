@@ -42,7 +42,10 @@ function updateResourceDisplay() {
 function increaseEnergy() {
   if (energy < maxEnergy) {
     energy++;
-    updateResourceDisplay();
+    setInterval(function() {
+      energy++;
+      updateResourceDisplay();
+    }, 1000);
   }
 }
 
