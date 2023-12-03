@@ -28,8 +28,8 @@ body, html {
   position: fixed;
   height: 25px;
   background-color: gray;
-  top: 5px;
-  left: 1500px;
+  top: 20px;
+  left: 1300px;
 }
 
 .energyBar {

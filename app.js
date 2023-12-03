@@ -43,7 +43,7 @@ function updateResourceDisplay() {
 function increaseEnergy() {
   if (energy < maxEnergy) {
     energy += 1;
-    document.getElementById("energyIndicator").value = energy;
+    document.getElementById("energyIndicator").innerText = energy;
   }
 }
 
