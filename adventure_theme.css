@@ -212,6 +212,10 @@ The book is colored #be9565 with a border of #8a5a24*/
   flex-wrap: wrap;
 }
 
+#containerForActionsMenu.opened {
+  display: none;
+}
+
 /* This is used to contain the image shown as a beast*/
 .actionContainerImage {
   display: flex;

@@ -154,9 +154,9 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 // Event listener for hiding the containerForActionsMenu when the page loads.
-//window.addEventListener('DOMContentLoaded', function() {
-//  document.getElementById('containerForActionsMenu').classList.add('hidden');
-//});
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('containerForActionsMenu').classList.add('hidden');
+});
 
 // Event listener for toggleContainerVisibility for the inventoryButton.
 window.addEventListener('DOMContentLoaded', function() {
