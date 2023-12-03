@@ -37,14 +37,14 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// This function will increase the players energy by 1 every second until it reaches the max energy.
-// It will update the energy in the HTML every second.
+// This function will increase energy towards the maxEnergy.
+// This function will use a while loop to increase energy by 1 every second.
+// It will stop increasing energy when energy is equal to maxEnergy.
+// It will update the energy in the HTML
 function increaseEnergy() {
-  if (energy < maxEnergy) {
-    setInterval(function(increaseEnergy) {
-      energy++;
-      updateResourceDisplay();
-    }, 1000);
+  while (energy < maxEnergy) {
+    energy++;
+    updateResourceDisplay();
   }
 }
 
