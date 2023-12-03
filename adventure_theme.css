@@ -90,7 +90,7 @@ h2 {
 #bestiaryButton {
   position: fixed;
   top: 5px;
-  right: 90px;
+  right: 95px;
   cursor: pointer;
   color: #9c69c3;
   padding: 5px 10px;
@@ -101,7 +101,7 @@ h2 {
 #actionsMenuButton {
   position: fixed;
   top: 5px;
-  right: 175px; 
+  right: 185px; 
   cursor: pointer;
   color: #9c69c3;
   padding: 5px 10px;
