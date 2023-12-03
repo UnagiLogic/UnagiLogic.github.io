@@ -51,6 +51,7 @@ function increaseEnergy() {
       clearInterval(energyIncrease);
     }
   }, 1000);
+}
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
 function increment() {
