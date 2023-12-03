@@ -39,7 +39,7 @@ function increaseEnergy() {
 
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
-  document.getElementById("showEnergy").innerText = energy;
+  document.getElementById("energyIndicator").innerText = energy;
   document.getElementById("showFish").innerText = resources.fish;
   document.getElementById("showClay").innerText = resources.clay;
   document.getElementById("showMud").innerText = resources.mud;
