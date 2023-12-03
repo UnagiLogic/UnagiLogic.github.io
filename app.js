@@ -29,7 +29,7 @@ let searchActionCost = 10
 
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
-  document.getElementById("energyIndicator").innerText = energy;
+  document.getElementById("showEnergy").innerText = energy;
   document.getElementById("showFish").innerText = resources.fish;
   document.getElementById("showClay").innerText = resources.clay;
   document.getElementById("showMud").innerText = resources.mud;
@@ -37,8 +37,7 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-//This function will increase the players energy by 1 every second
-//It will also only increase the players energy if it is currently less than the players current max energy
+//This function will increase the players energy by 1 every second its below the max energy
 //It will also update the energy indicator in the html
 function increaseEnergy() {
   if (energy < maxEnergy) {
@@ -84,9 +83,10 @@ setInterval(function() {
 
 // Function that will be called when the user presses the buyActionButton.
 // This fucntion will buySearchAction and then choose 1 of 4 actions to give the player based on percent chance. 
-// It can spawn a resource cache at a 25% chance, narrator that gives lore about the area at 25% chance. 
-// Meeting a stranger or creature at a 25% chance, or, identifying a weird object at a 25% chance. 
-// The narrator will give the player lore about the area they are in. 
+// It can spawn a resource cache at a 40% chance. 
+// A narrator that gives lore about the area at 20% chance. 
+// Meeting a stranger or creature at a 30% chance. 
+// Identifying a weird object at a 10% chance. 
 // The stranger or creature will give the player a choice of doing a quest, fighting, or trading. 
 // The weird object will give the player a choice of interacting with it or leaving it alone.
 // it costs 10 energy to do this action.
@@ -99,6 +99,7 @@ function buySearchAction() {
       resourceCache();
       console.log("Resource Cache");
     } else if (randomAction <= 0.5) {
+      narrator()
       console.log("Narrator");
     } else if (randomAction <= 0.75) {
       console.log("Stranger or Creature");
@@ -107,6 +108,23 @@ function buySearchAction() {
     }
   }
 }
+
+// This is the function for the narrator.
+// The narrator will give lore about the current area.
+// The messages will be stored in the adventures log.
+// The lore will be displayed as messages in the adventures log.
+// The messages will be chosen at random per area.
+// The messages will be chosen at random per action.
+function narrator() {
+  let narratorMessage = document.createElement("p");
+  narratorMessage.innerText = "You found a resource cache!";
+  narratorMessage.classList.add("narratorMessage");
+  document.getElementById("containerForNarratorMessage").appendChild(narratorMessage);
+  setTimeout(function() {
+    narratorMessage.remove();
+  }, 3000);
+}
+
 
 // This is the resourceCache function.
 // This function will choose a resource cache at random from 5 images.
