@@ -39,7 +39,7 @@ body, html {
 }
 
 /* This is used to hide the actions menu container */
-.containerForactionsMenu.hidden {
+.containerForActionsMenu.hidden {
   display: none;
 }
 
@@ -198,7 +198,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 }
 
 /* This is the menu container for actions in the game */
-.containerForactionsMenu {
+.containerForActionsMenu {
   position: fixed;
   top: 50px;
   left: 50px;
