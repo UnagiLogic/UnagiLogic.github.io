@@ -24,7 +24,7 @@ body, html {
   --hover-bg-color: #323232; /* This is the color of the buttons when hovered over. */
 }
 
-#containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .actionsMenuContainer {
+#containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForactionsMenu {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
 }
@@ -33,7 +33,13 @@ body, html {
   background-color: var(--hover-bg-color);
 }
 
+/* This is used to hide the bestiary container and it's pages*/
 #bestiaryContainer.hidden, .hidden #leftPageContainer, .hidden #rightPageContainer {
+  display: none;
+}
+
+/* This is used to hide the actions menu container */
+.containerForactionsMenu.hidden {
   display: none;
 }
 
@@ -192,7 +198,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 }
 
 /* This is the menu container for actions in the game */
-.actionsMenuContainer {
+.containerForactionsMenu {
   position: fixed;
   top: 50px;
   left: 50px;

@@ -144,6 +144,17 @@ function hideBestiaryContainer() {
 // Event listener for hiding the bestiaryContainer when the page loads.
 window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
 
+// Event listener for hiding the containerForInventory when the page loads.
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('containerForInventory').classList.add('hidden');
+});
+
+// Event listener for hiding the containerForActionsMenu when the page loads.
+window.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('containerForActionsMenu').classList.add('hidden');
+});
+
+// Event listener for toggleContainerVisibility for the inventoryButton.
 window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('inventoryButton').addEventListener('click', function() {
     toggleContainerVisibility('containerForInventory');
@@ -152,5 +163,10 @@ window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('bestiaryButton').addEventListener('click', function() {
     toggleContainerVisibility('bestiaryContainer');
     console.log("Bestiary Loaded");
+  });
+
+// Event listener for toggleContainerVisibility for the actionsMenuButton.
+  document.getElementById('actionsMenuButton').addEventListener('click', function() {
+    toggleContainerVisibility('containerForActionsMenu');
   });
 });

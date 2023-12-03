@@ -16,7 +16,7 @@
     <button id="bestiaryButton">BESTIARY</button>
 
     <!-- Button to Open/Close the Actions Menu -->
-    <button id="actionsMenuButton">ACTIONS</button>
+    <button class="actionsMenuButton" id="actionsMenuButton">ACTIONS</button>
 
     <div id="containerForInventory">
         <h2>Basket</h2>
@@ -134,7 +134,7 @@
         <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 
         <!-- Items that can be bought -->
-        <div class="actionsMenuContainer"> <!-- contains 4 items per row-->
+        <div class="containerForActionsMenu"> <!-- contains 4 items per row-->
             <div class="action"> <!-- a first item -->
 				<div class="actionContainerImage"> <!-- contains image -->
                     <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
@@ -142,7 +142,7 @@
                 <br>
                 <div class="actionContainerText"> <!-- contains stats about item --> 
                     <p>Search Cost: <span id="searchActionCost">10 Fish</span></p>
-                    <p>Effect: Currently gain 1 Mud & 1 Clay</p>
+                    <p>Scour the ocean for supplies</p>
                 </div>
 			</div>
 
