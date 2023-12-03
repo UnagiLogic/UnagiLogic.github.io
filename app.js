@@ -38,12 +38,12 @@ function updateResourceDisplay() {
 }
 
 //This function will increase the players energy by 1 every second
-//It will also only increase the players energy if it is less than the players current max energy
-//It will also update the energy display in the HTML like a progress bar
+//It will also only increase the players energy if it is currently less than the players current max energy
+//It will also update the energy indicator in the html
 function increaseEnergy() {
   if (energy < maxEnergy) {
-    energy += 1;
-    document.getElementById("energyIndicator").innerText = energy;
+    energy++;
+    updateResourceDisplay();
   }
 }
 
