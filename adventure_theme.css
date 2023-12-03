@@ -255,6 +255,8 @@ The book is colored #be9565 with a border of #8a5a24*/
 }
 
 .action {
+  border: solid 2px #8a5a24;
+  border-radius: 8px;
   padding: 10px;
   flex: 25%;
 }
