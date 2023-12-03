@@ -84,7 +84,7 @@ h2 {
 #bestiaryButton {
   position: fixed;
   top: 5px;
-  right: 100px;
+  right: 90px;
   cursor: pointer;
   color: #9c69c3;
   padding: 5px 10px;
@@ -95,16 +95,12 @@ h2 {
 #actionsMenuButton {
   position: fixed;
   top: 5px;
-  right: 200px;  
+  right: 175px; 
   cursor: pointer;
   color: #9c69c3;
   padding: 5px 10px;
   border-radius: 5px;
   z-index: 1;
-}
-
-.visible {
-  border: 2px solid #000;
 }
 
 #inventoryInformation {
@@ -212,7 +208,6 @@ The book is colored #be9565 with a border of #8a5a24*/
 .actionContainerImage {
   display: flex;
   justify-content: center;
-  border: 2px solid #000; /* I only want this border to go around the image */
   border-radius: 8px;
 }
 
