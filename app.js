@@ -112,10 +112,8 @@ function searchAction() {
     narrator();
     console.log("Narrator");
   } else if (randomNumber <= 0.9) {
-    strangerOrCreature();
     console.log("Stranger or Creature");
   } else {
-    weirdObject();
     console.log("Weird Object");
   }
 }
