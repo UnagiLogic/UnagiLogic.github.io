@@ -155,6 +155,11 @@ Function testFunction() {
     console.log("This is a test function");
 }
 
+//This function will increase the players energy by 1 every second
+function increaseEnergy() {
+    energy += 1;
+    updateEnergyDisplay();
+}
 
 
 
