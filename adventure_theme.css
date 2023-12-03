@@ -34,7 +34,7 @@ body, html {
 }
 
 #bestiaryContainer.hidden, .hidden #leftPageContainer, .hidden #rightPageContainer {
-  pointer-events: auto;
+  display: none;
 }
 
 /* I dont know what this does currently. I need to do research. */
