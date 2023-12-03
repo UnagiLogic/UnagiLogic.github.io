@@ -126,13 +126,16 @@ function resourceCache() {
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {
   var containerElement = document.getElementById(containerId);
-  containerElement.classList.toggle('hidden');
-  if (!containerElement.classList.contains('hidden')) {
-    containerElement.classList.add('opened');
+  if (containerElement) {
+    containerElement.classList.toggle('hidden');
+    if (!containerElement.classList.contains('hidden')) {
+      containerElement.classList.add('opened');
+    } else {
+      containerElement.classList.remove('opened');
+    }
   } else {
-    containerElement.classList.remove('opened');
-  }
-}
+    console.log('Container elementnot found.', containerId);
+  }    
 
 // A function to make the bestiaryContainer hidden when the page loads.
 function hideBestiaryContainer() {
@@ -165,8 +168,9 @@ window.addEventListener('DOMContentLoaded', function() {
     console.log("Bestiary Loaded");
   });
 
-// Event listener for toggleContainerVisibility for the actionsMenuButton.
+// Event listener for when actionsMenuButton is clicked toggleContainerVisibility for containerForActionsMenu.
   document.getElementById('actionsMenuButton').addEventListener('click', function() {
-    toggleContainerVisibility('containerForActionsMenu');
+  toggleContainerVisibility('containerForActionsMenu');
+  console.log("Actions Menu Loaded");
   });
 });
