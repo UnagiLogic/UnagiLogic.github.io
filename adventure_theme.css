@@ -27,7 +27,7 @@ body, html {
 #containerForEnergyIndicator {
   position: fixed;
   top: 5px;
-  left: 2000px;
+  left: 1500px;
   background-color: gray; 
 }
 
