@@ -135,12 +135,6 @@
         </div>
     </div>
 
-    <div class="mainScreen">
-        <h1 class="spawningPoolTitle">The Spawning Pool</h1>
-        <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="saltwaterAreaFishClickerButton" onclick="increment()"> <!--The image you have to click -->
-        <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-        <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
-
         <!-- Actions that can be used -->
         <div id="containerForActionsMenu"> <!-- contains 3-4 actions per row-->
             <div class="action"> <!-- a first item -->
@@ -154,16 +148,26 @@
                 </div>
 			</div>
 
-			<div class="item">
-                <!-- a second item -->
+			<div class="action">
+            <!-- a second item -->
 			</div>
-            <div class="item"> 
+
+            <div class="action"> 
             <!-- a third item -->
 			</div>
-			<div class="item"> 
+
+			<div class="action"> 
             <!-- a fourth item -->
 			</div>
+        </div>    
+
+        <div class="mainScreen">
+            <h1 class="spawningPoolTitle">The Spawning Pool</h1>
+            <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="saltwaterAreaFishClickerButton" onclick="increment()"> <!--The image you have to click -->
+            <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
+            <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 		</div>
+
     </div>
 
     <div id="containerForResourceIndicator"></div>
