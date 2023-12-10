@@ -49,6 +49,9 @@ function increaseEnergy() {
     if (energy < maxEnergy || document.getElementById("energyBar").classList.contains("energyBarAnimation")) {
       energy++;
       updateResourceDisplay();
+      if (energy === maxEnergy) {
+        document.getElementById("energyBar").classList.remove("energyBarAnimation");
+      }
       playEnergyAnimation();
     } else {
       clearInterval(energyIncrease);
@@ -60,10 +63,10 @@ function increaseEnergy() {
 // It will add the energyBarAnimation to the energyBar.
 // It will remove the energyBarAnimation when energy is equal to maxEnergy.
 function playEnergyAnimation() {
-  document.getElementById("energyBar").classList.add("energyBarAnimation");
-  setTimeout(function() {
-    document.getElementById("energyBar").classList.remove("energyBarAnimation");
-  }, 1000);
+  const energyPercentage = (energy / maxEnergy) * 100;
+  const remainingTime = 1 - energyPercentage;
+document.getElementById("energyBar").classList.add("energyBarAnimation");
+document.getElementById("energyBar").style.animationDuration = `${remainingTime}s`;
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
