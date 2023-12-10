@@ -59,10 +59,20 @@ function updateEnergyBar() {
 function playEnergyIncreaseAnimation() {
   if (!animationInProgress) {
     animationInProgress = true;
-    increaseEnergy();
-    setTimeout(() => {
-      animationInProgress = false;
-    }, 600);
+
+    function animate() {
+      const energyBar = document.getElementById("energyBar");
+      const energyPercentage = (energy / maxEnergy) * 100;
+      energyBar.style.width = `${energyPercentage}%`;
+
+      if (energyPercentage < 100) {
+        requestAnimationFrame(animate);
+      } else {
+        animationInProgress = false;
+      }
+    }
+
+    animate();
   }
 }
 
@@ -89,15 +99,22 @@ function eatAction() {
 // Update resource display in the HTML.
 // Call playEnergyIncreaseAnimation function
 function eatFish() {
+  if (animationInProgress) {
+    return;
+  }
+
   if (resources.fish >= 1) {
     if (energy >= maxEnergy) {
       console.log("Your no longer hungry.");
     } else {
       resources.fish--;
+      increaseEnergy
+      playEnergyIncreaseAnimation
       console.log("You ate a fish.");
       updateResourceDisplay();
-      playEnergyIncreaseAnimation();
     }
+  } else {
+    console.log("You have no food to eat.");
   }
 }
 
