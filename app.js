@@ -39,34 +39,40 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// This function will increase energy until energy is equal to maxEnergy.
-// It will update the energy in the HTML
-// It will call the playEnergyAnimation function.
-// Adjust the interval based on missing energy.
+// Function the increases energy by 1
+// will update the energy display in the HTML
 function increaseEnergy() {
-  let energyIncrease = setInterval(function() {
-    if (energy < maxEnergy || !animationFinished) {
-      energy++;
-      updateResourceDisplay();
-      playEnergyAnimation();
-    } else {
-      clearInterval(energyIncrease);
-    }
-  }, 1000 / (maxEnergy - energy));
+  if (energy < maxEnergy) {
+    energy++;
+    updateResourceDisplay();
+  }
 }
 
-// Every time the energy increases it will play the energyBarAnimation.
-// The energyBarAnimation will be added to the energyBar.
-// The energyBarAnimation will stop when energy is equal to maxEnergy.
+// As energy increases and decreases the energyBar will change width.
+// At 0 energy the energyBar will be 0% width.
+// At maxEnergy the energyBar will be 100% width.
+// The energyBar will increase and decrease width smoothly.
+// The energyBarIncreaseAnimation will play when energy increases.
+// The energyBarDecreaseAnimation will play when energy decreases.
+// The energyBarIncreaseAnimation will stop when energy is equal to maxEnergy.
+// The energyBarDecreaseAnimation will stop when energy is equal to 0.
 function playEnergyAnimation() {
-  const energyPercentage = energy / maxEnergy * 100;
-  const energyBarElement = document.getElementById('energyBar');
-  energyBarElement.classList.add("animationInProgress");
-  energyBarElement.style.width = `${energyPercentage}%`;
-  if (energyPercentage >= 100) {
-    setTimeout(() => {
-      energyBarElement.classList.remove("animationInProgress");
-    }, 1000);
+  let energyBar = document.getElementById("energyBar");
+  if (energy < maxEnergy) {
+    energyBar.classList.add("energyBarIncreaseAnimation");
+    energyBar.classList.remove("energyBarDecreaseAnimation");
+    animationFinished = false;
+  } else {
+    energyBar.classList.remove("energyBarIncreaseAnimation");
+    animationFinished = true;
+  }
+  if (energy > 0) {
+    energyBar.classList.add("energyBarDecreaseAnimation");
+    energyBar.classList.remove("energyBarIncreaseAnimation");
+    animationFinished = false;
+  } else {
+    energyBar.classList.remove("energyBarDecreaseAnimation");
+    animationFinished = true;
   }
 }
 
@@ -86,11 +92,17 @@ function eatAction() {
 }
 
 // Function that changes fish into energy
+// This function checks if the player has fish.
+// If the player has fish it will subtract 1 fish from the players inventory.
+// it will call increaseEnergy function to increase the players energy by 1.
+// It will also update the resource display in the HTML.
+// It will also call the playEnergyAnimation function
 function eatFish() {
   if (resources.fish >= 1) {
-    resources.fish -= 1;
-    energy += 1;
+    resources.fish--;
+    increaseEnergy();
     updateResourceDisplay();
+    playEnergyAnimation();
   }
 }
 
