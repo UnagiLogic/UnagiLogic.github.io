@@ -58,11 +58,11 @@ function increaseEnergy() {
 // Whenever energy is less then maxEnergy the energy bar will be animated.
 // The animation will be a gradient that will go from light blue to dark blue.
 // The animation will move the bar from left to right until it reaches the maxEnergy.
-// The animation css is in the adventure.css called #energyBarAnimation.
+// It will add the animation to .energyBar 
 function playEnergyAnimation() {
-  document.getElementById("energyBarAnimation").classList.add("playEnergyAnimation");
+  document.getElementById("energyBar").classList.add("energyBarAnimation");
   setTimeout(function() {
-    document.getElementById("energyBarAnimation").classList.remove("playEnergyAnimation");
+    document.getElementById("energyBar").classList.remove("energyBarAnimation");
   }, 1000);
 }
 
