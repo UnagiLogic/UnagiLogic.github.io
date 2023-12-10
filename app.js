@@ -48,38 +48,51 @@ function increaseEnergy() {
   }
 }
 
-// As energy increases and decreases the energyBar will change width.
-// At 0 energy the energyBar will be 0% width.
-// At maxEnergy the energyBar will be 100% width.
-// The energyBar will increase and decrease width smoothly.
-// The energyBarIncreaseAnimation will play when energy increases.
-// The energyBarDecreaseAnimation will play when energy decreases.
-// The energyBarIncreaseAnimation will stop when energy is equal to maxEnergy.
-// The energyBarDecreaseAnimation will stop when energy is equal to 0.
+// Function that calls playEnergyBarIncreaseAnimation
+// When energy increases the energyBar will increase width.
+// The energyBar will increase width smoothly.
+// The width of the energyBar will be 100% when energy is at maxEnery.
+// The width will increase a percentage based on the difference between current energy and maxEnergy.
 function playEnergyAnimation() {
-  let energyBar = document.getElementById("energyBar");
-  let energyPercentage = (energy / maxEnergy) * 100;
-  
-  // Calculate the percentage increase based on the difference between current energy and maxEnergy
-  let percentageIncrease = ((maxEnergy - energy) / maxEnergy) * 100;
-
-  // Ensure the percentage is between 0% and 100%
-  energyPercentage = Math.min(Math.max(energyPercentage, 0), 100);
-
-  // Adjust the width based on the calculated percentage increase
-  energyBar.style.width = `${energyPercentage + percentageIncrease}%`;
-
-  if (energy < maxEnergy) {
-    energyBar.classList.add("energyBarIncreaseAnimation");
-    energyBar.classList.remove("energyBarDecreaseAnimation");
+  if (animationFinished) {
     animationFinished = false;
-  } else if (energy > 0) {
-    energyBar.classList.add("energyBarDecreaseAnimation");
-    energyBar.classList.remove("energyBarIncreaseAnimation");
+    let energyBar = document.getElementById("energyBar");
+    let width = 0;
+    let targetWidth = (energy / maxEnergy) * 100;
+    let id = setInterval(frame, 10);
+    function frame() {
+      if (width >= targetWidth) {
+        clearInterval(id);
+        animationFinished = true;
+      } else {
+        width += 1;
+        energyBar.style.width = width + "%";
+      }
+    }
+  }
+}
+
+// Function that calls playEnergyBarDecreaseAnimation
+// When energy decreses the energyBar will decrease width.
+// The energyBar will decrease width smoothly.
+// The width of the energyBar will be 0% when energy is 0.
+// The width will decrease a percentage based on the difference between current energy and maxEnergy.
+function playEnergyBarDecreaseAnimation() {
+  if (animationFinished) {
     animationFinished = false;
-  } else {
-    energyBar.classList.remove("energyBarIncreaseAnimation", "energyBarDecreaseAnimation");
-    animationFinished = true;
+    let energyBar = document.getElementById("energyBar");
+    let width = 0;
+    let targetWidth = (energy / maxEnergy) * 100;
+    let id = setInterval(frame, 10);
+    function frame() {
+      if (width <= targetWidth) {
+        clearInterval(id);
+        animationFinished = true;
+      } else {
+        width -= 1;
+        energyBar.style.width = width + "%";
+      }
+    }
   }
 }
 
