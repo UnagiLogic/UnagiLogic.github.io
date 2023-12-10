@@ -225,9 +225,14 @@ function hideBestiaryContainer() {
 
 // Event listener to check if energy is less then maxEnergy.
 // If energy is less then maxEnergy it will call the increaseEnergy function.
+// This event listener will be called when the page loads.
+// This should only increase energy if energy is less then maxEnergy.
+// Energy should increase 1 per second.
 window.addEventListener('DOMContentLoaded', function() {
   if (energy < maxEnergy) {
     increaseEnergy();
+  } else {
+    clearInterval(energyIncrease);
   }
 });
 
