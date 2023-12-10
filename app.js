@@ -39,9 +39,42 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// Function the increases energy by 1
-// will update the energy display in the HTML
-// will call the playEnergyBarIncreaseAnimation function
+function updateEnergyBar() {;
+  const energyPercentage = (energy / maxEnergy) * 100;
+  anime({
+    targets: "#energyBar",
+    width: `${energyPercentage}%`,
+    easing: "linear",
+    duration: 1000,
+  });
+}
+
+function playEnergyIncreaseAnimation() {
+  anime({
+    targets: "#energyBar",
+    width: "100%",
+    duration: 1000,
+    easing: "linear",
+    complete: () => {
+      updateEnergyBar();
+    },
+  });
+}
+
+//Function to play the decrease energy animation
+function playEnergyDecreaseAnimation() {
+  anime({
+    targets: "#energyBar",
+    width: "0%",
+    duration: 1000,
+    easing: "linear",
+    complete: () => {
+      updateEnergyBar();
+    },
+  });
+}
+
+// Function to increase energy
 function increaseEnergy() {
   if (energy < maxEnergy) {
     energy++;
@@ -50,33 +83,27 @@ function increaseEnergy() {
   }
 }
 
-function updateEnergyBar() {
-  const energyBar = document.getElementById("energyBar");
-  const energyPercentage = (energy / maxEnergy) * 100;
-  energyBar.style.width = `${energyPercentage}%`;
-}
-
-function playEnergyIncreaseAnimation() {
+// Function to eat a fish and update energy
+function eatFish() {
   if (animationInProgress) {
+    console.log("Animation in progress");
     return;
   }
 
-    animationInProgress = true;
-
-    function animate() {
-      const energyBar = document.getElementById("energyBar");
-      const energyPercentage = (energy / maxEnergy) * 100;
-      energyBar.style.width = `${energyPercentage}%`;
-
-      if (energyPercentage < 100) {
-        requestAnimationFrame(animate);
-      } else {
-        animationInProgress = false;
-      }
+  if (resources.fish >= 1) {
+    if (energy >= maxEnergy) {
+      console.log("You're no longer hungry.");
+    } else {
+      resources.fish--;
+      increaseEnergy();
+      playEnergyIncreaseAnimation();
+      console.log("You ate a fish.");
+      updateResourceDisplay();
     }
-
-    animate();
+  } else {
+    console.log("You have no fish to eat.");
   }
+}
 
 // Function eatAction
 // This function will check what type of food the player has.
@@ -88,33 +115,6 @@ function eatAction() {
     eatFish();
   } else if (resources.shrimp >= 1) {
     eatShrimp();
-  } else {
-    console.log("You have no food to eat.");
-  }
-}
-
-// Function that changes fish into energy
-// This function checks if the player has fish.
-// If the player has fish but energy is full, don't eat fish, and display a message that says "Your no longer hungry."
-// Otherwise, if the player has fish and energy is not full, eat fish, and display a message that says "You ate a fish."
-// energy can never be greater than maxEnergy.
-// Update resource display in the HTML.
-// Call playEnergyIncreaseAnimation function
-function eatFish() {
-  if (animationInProgress) {
-    return;
-  }
-
-  if (resources.fish >= 1) {
-    if (energy >= maxEnergy) {
-      console.log("Your no longer hungry.");
-    } else {
-      resources.fish--;
-      increaseEnergy();
-      playEnergyIncreaseAnimation();
-      console.log("You ate a fish.");
-      updateResourceDisplay();
-    }
   } else {
     console.log("You have no food to eat.");
   }
