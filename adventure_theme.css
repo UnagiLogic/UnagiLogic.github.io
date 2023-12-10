@@ -39,9 +39,10 @@ body, html {
   height: 100%;
   background-color: #9d4caf;
   border-radius: 7px;
+  width: 100%;
 }
 
-/* This is the animation for the energy bar */
+/* This is the animation for the energyBar */
 /* The animation should move from 0% to 100% */
 /* The animation will be a gradient that will go from light purple to dark purple. */
 /* The animation should take 1 second per missing energy from maxEnergy */

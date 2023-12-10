@@ -37,13 +37,10 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// This function will increase energy towards the maxEnergy.
-// This function will use a while loop to increase energy by 1 every second.
-// It will only increase by 1 every second.
-// It will stop increasing energy when energy is equal to maxEnergy.
+// This function will increase energy until energy is equal to maxEnergy.
+// It increases energy by 1 every second.
 // It will update the energy in the HTML
 // It will call the playEnergyAnimation function.
-// It will continue the animation until energy is equal to maxEnergy.
 function increaseEnergy() {
   let energyIncrease = setInterval(function() {
     if (energy < maxEnergy || document.getElementById("energyBar").classList.contains("energyBarAnimation")) {
@@ -59,9 +56,9 @@ function increaseEnergy() {
   }, 1000);
 }
 
-// Whenever energy is less then maxEnergy this function will be called.
-// It will add the energyBarAnimation to the energyBar.
-// It will remove the energyBarAnimation when energy is equal to maxEnergy.
+// Every time the energy increases it will play the energyBarAnimation.
+// The energyBarAnimation will be added to the energyBar.
+// The energyBarAnimation will stop when energy is equal to maxEnergy.
 function playEnergyAnimation() {
   const energyPercentage = (energy / maxEnergy) * 100;
   const remainingTime = 1 - energyPercentage;
