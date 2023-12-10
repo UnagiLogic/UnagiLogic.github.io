@@ -41,10 +41,12 @@ function updateResourceDisplay() {
 
 // Function the increases energy by 1
 // will update the energy display in the HTML
+// will call the playEnergyBarIncreaseAnimation function
 function increaseEnergy() {
   if (energy < maxEnergy) {
     energy++;
     updateResourceDisplay();
+    playEnergyIncreaseAnimation();
   }
 }
 
@@ -53,7 +55,7 @@ function increaseEnergy() {
 // The energyBar will increase width smoothly.
 // The width of the energyBar will be 100% when energy is at maxEnery.
 // The width will increase a percentage based on the difference between current energy and maxEnergy.
-function playEnergyAnimation() {
+function playEnergyIncreaseAnimation() {
   if (animationFinished) {
     animationFinished = false;
     let energyBar = document.getElementById("energyBar");
