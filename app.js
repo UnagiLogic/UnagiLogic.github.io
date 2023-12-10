@@ -223,9 +223,6 @@ function hideBestiaryContainer() {
 
 // Event Listeners go here -----------------------------------
 
-// On page load, increaseEnergy will be called.
-window.addEventListener('DOMContentLoaded', increaseEnergy);
-
 // Event listener for hiding the bestiaryContainer when the page loads.
 window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
 
