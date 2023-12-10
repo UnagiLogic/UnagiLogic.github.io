@@ -38,17 +38,13 @@ function updateResourceDisplay() {
 }
 
 // This function will increase energy until energy is equal to maxEnergy.
-// It increases energy by 1 every second.
 // It will update the energy in the HTML
 // It will call the playEnergyAnimation function.
 function increaseEnergy() {
   let energyIncrease = setInterval(function() {
-    if (energy < maxEnergy || document.getElementById("energyBar").classList.contains("energyBarAnimation")) {
+    if (energy < maxEnergy || !animationFinished) {
       energy++;
       updateResourceDisplay();
-      if (energy === maxEnergy) {
-        document.getElementById("energyBar").classList.remove("energyBarAnimation");
-      }
       playEnergyAnimation();
     } else {
       clearInterval(energyIncrease);
@@ -64,6 +60,7 @@ function playEnergyAnimation() {
   const remainingTime = 1 - energyPercentage;
 document.getElementById("energyBar").classList.add("energyBarAnimation");
 document.getElementById("energyBar").style.animationDuration = `${remainingTime}s`;
+animationFinished = energy === maxEnergy;
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
