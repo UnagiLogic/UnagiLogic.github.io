@@ -58,7 +58,13 @@ function increaseEnergy() {
 // The energyBarDecreaseAnimation will stop when energy is equal to 0.
 function playEnergyAnimation() {
   let energyBar = document.getElementById("energyBar");
+  let energyPercentage = (energy / maxEnergy) * 100;
   
+  // Ensure the percentage is between 0% and 100%
+  energyPercentage = Math.min(Math.max(energyPercentage, 0), 100);
+
+  energyBar.style.width = `${energyPercentage}%`;
+
   if (energy < maxEnergy) {
     energyBar.classList.add("energyBarIncreaseAnimation");
     energyBar.classList.remove("energyBarDecreaseAnimation");
