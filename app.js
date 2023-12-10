@@ -15,9 +15,6 @@ let resources = {
     shrimp: 0,
 }
 
-// Animation Variables
-let animationFinished = false;
-
 // Purchased resource Variables
 let purchasedResources = {
   fishPerSecond: 0,
@@ -51,54 +48,13 @@ function increaseEnergy() {
   }
 }
 
-// Function that calls playEnergyBarIncreaseAnimation
-// When energy increases the energyBar will increase width.
-// The energyBar will increase width smoothly.
-// The width of the energyBar will be 100% when energy is at maxEnery.
-// The width will increase a percentage based on the difference between current energy and maxEnergy.
+// Function that animates the energy bar increasing
 function playEnergyIncreaseAnimation() {
-  if (animationFinished) {
-    animationFinished = false;
-    let energyBar = document.getElementById("energyBar");
-    energyBar.classList.add("energyBarIncreaseAnimation");
-    let width = 0;
-    let targetWidth = (energy / maxEnergy) * 100;
-    let id = setInterval(frame, 10);
-    function frame() {
-      if (width >= targetWidth) {
-        clearInterval(id);
-        animationFinished = true;
-        energyBar.classList.remove("energyBarIncreaseAnimation");
-      } else {
-        width += 1;
-        energyBar.style.width = width + "%";
-      }
-    }
-  }
-}
-
-// Function that calls playEnergyBarDecreaseAnimation
-// When energy decreses the energyBar will decrease width.
-// The energyBar will decrease width smoothly.
-// The width of the energyBar will be 0% when energy is 0.
-// The width will decrease a percentage based on the difference between current energy and maxEnergy.
-function playEnergyBarDecreaseAnimation() {
-  if (animationFinished) {
-    animationFinished = false;
-    let energyBar = document.getElementById("energyBar");
-    let width = 0;
-    let targetWidth = (energy / maxEnergy) * 100;
-    let id = setInterval(frame, 10);
-    function frame() {
-      if (width <= targetWidth) {
-        clearInterval(id);
-        animationFinished = true;
-      } else {
-        width -= 1;
-        energyBar.style.width = width + "%";
-      }
-    }
-  }
+  let energyBar = document.getElementById("energyBar");
+  energyBar.classList.add("energyBarIncreaseAnimation");
+  setTimeout(function() {
+    energyBar.classList.remove("energyBarIncreaseAnimation");
+  }, 1000);
 }
 
 // Function eatAction
