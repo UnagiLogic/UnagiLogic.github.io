@@ -223,6 +223,14 @@ function hideBestiaryContainer() {
 
 // Event Listeners go here -----------------------------------
 
+// Event listener to check if energy is less then maxEnergy.
+// If energy is less then maxEnergy it will call the increaseEnergy function.
+window.addEventListener('DOMContentLoaded', function() {
+  if (energy < maxEnergy) {
+    increaseEnergy();
+  }
+}
+
 // Event listener for hiding the bestiaryContainer when the page loads.
 window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
 
