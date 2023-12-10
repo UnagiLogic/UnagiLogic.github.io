@@ -46,6 +46,7 @@ function increaseEnergy() {
   if (energy < maxEnergy) {
     energy++;
     updateResourceDisplay();
+    console.log("Increasing energy. Calling playEnergyIncreaseAnimation.");
     playEnergyIncreaseAnimation();
   }
 }
