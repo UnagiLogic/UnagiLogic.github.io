@@ -57,7 +57,10 @@ function updateEnergyBar() {
 }
 
 function playEnergyIncreaseAnimation() {
-  if (!animationInProgress) {
+  if (animationInProgress) {
+    return;
+  }
+  
     animationInProgress = true;
 
     function animate() {
