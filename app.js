@@ -124,7 +124,6 @@ function eatFish() {
     resources.fish--;
     increaseEnergy();
     updateResourceDisplay();
-    playEnergyAnimation();
   }
 }
 
