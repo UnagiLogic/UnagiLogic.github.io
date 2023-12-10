@@ -42,10 +42,13 @@ body, html {
 }
 
 /* This is the animation for the energy bar */
-/* The animation should move from 0% to 100% based on amount of current energy away from maxEnergy */
+/* The animation should move from 0% to 100% */
+/* The animation will be a gradient that will go from light purple to dark purple. */
+/* The animation should take 1 second per missing energy from maxEnergy */
 #energyBarAnimation {
   animation-name: energyBar;
   animation-duration: 1s;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 

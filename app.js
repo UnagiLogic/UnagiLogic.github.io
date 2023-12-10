@@ -43,6 +43,7 @@ function updateResourceDisplay() {
 // It will stop increasing energy when energy is equal to maxEnergy.
 // It will update the energy in the HTML
 // It will call the playEnergyAnimation function.
+// It will continue the animation until energy is equal to maxEnergy.
 function increaseEnergy() {
   let energyIncrease = setInterval(function() {
     if (energy < maxEnergy) {
@@ -55,10 +56,9 @@ function increaseEnergy() {
   }, 1000);
 }
 
-// Whenever energy is less then maxEnergy the energy bar will be animated.
-// The animation will be a gradient that will go from light blue to dark blue.
-// The animation will move the bar from left to right until it reaches the maxEnergy.
-// It will add the animation to .energyBar 
+// Whenever energy is less then maxEnergy this function will be called.
+// It will add the energyBarAnimation to the energyBar.
+// It will remove the energyBarAnimation when energy is equal to maxEnergy.
 function playEnergyAnimation() {
   document.getElementById("energyBar").classList.add("energyBarAnimation");
   setTimeout(function() {
