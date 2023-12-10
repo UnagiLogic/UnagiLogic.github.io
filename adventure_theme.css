@@ -42,28 +42,6 @@ body, html {
   width: 0%; /* Sets the initial width of the energy bar to 0 */
 }
 
-/* This indicates the animation that will be used for the energy bar */
-/* This fills the energy bar forwards */
-/* The animation will take 1 second to complete */
-.energyBarIncreaseAnimation {
-  animation-name: energyBarIncrease;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-/* This is the animation for energyBarIncreaseAnimation */
-/* The animation will increase the energyBar width based on amount of energy gained */
-/* This animation will only increase energyBar a percentage of the bar based on current energy and max energy*/
-@keyframes energyBarIncrease {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: calc(var(--energy) / var(--maxEnergy) * 100%);
-  }
-}
-
 #energyIndicator {
   color: #21459a;
   font-size: 20px;

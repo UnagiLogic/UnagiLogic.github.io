@@ -15,6 +15,9 @@ let resources = {
     shrimp: 0,
 }
 
+// Animation Variables
+let animationInProgress = false;
+
 // Purchased resource Variables
 let purchasedResources = {
   fishPerSecond: 0,
@@ -43,18 +46,24 @@ function increaseEnergy() {
   if (energy < maxEnergy) {
     energy++;
     updateResourceDisplay();
-    console.log("Increasing energy. Calling playEnergyIncreaseAnimation.");
-    playEnergyIncreaseAnimation();
+    updateEnergyBar();
   }
 }
 
-// Function that animates the energy bar increasing
+function updateEnergyBar() {
+  const energyBar = document.getElementById("energyBar");
+  const energyPercentage = (energy / maxEnergy) * 100;
+  energyBar.style.width = `${energyPercentage}%`;
+}
+
 function playEnergyIncreaseAnimation() {
-  let energyBar = document.getElementById("energyBar");
-  energyBar.classList.add("energyBarIncreaseAnimation");
-  setTimeout(function() {
-    energyBar.classList.remove("energyBarIncreaseAnimation");
-  }, 1000);
+  if (!animationInProgress) {
+    animationInProgress = true;
+    increaseEnergy();
+    setTimeout(() => {
+      animationInProgress = false;
+    }, 500);
+  }
 }
 
 // Function eatAction
@@ -81,7 +90,7 @@ function eatAction() {
 function eatFish() {
   if (resources.fish >= 1) {
     resources.fish--;
-    increaseEnergy();
+    playEnergyIncreaseAnimation();
     updateResourceDisplay();
   }
 }
