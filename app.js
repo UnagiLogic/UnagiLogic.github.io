@@ -6,7 +6,6 @@
 let energy = 10;
 let maxEnergy = 10;
 
-
 // Resource Variables
 let resources = {
     fish: 0,
@@ -15,6 +14,9 @@ let resources = {
     stone: 0,
     shrimp: 0,
 }
+
+// Animation Variables
+let animationFinished = false;
 
 // Purchased resource Variables
 let purchasedResources = {
