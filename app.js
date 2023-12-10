@@ -83,20 +83,21 @@ function eatAction() {
 
 // Function that changes fish into energy
 // This function checks if the player has fish.
-// If the player has fish, subtract 1 fish inventory.
-// If player energy is full, visually show a message to the player that says "Your no longer hungry."
+// If the player has fish but energy is full, don't eat fish, and display a message that says "Your no longer hungry."
+// Otherwise, if the player has fish and energy is not full, eat fish, and display a message that says "You ate a fish."
 // energy can never be greater than maxEnergy.
 // Update resource display in the HTML.
 // Call playEnergyIncreaseAnimation function
 function eatFish() {
   if (resources.fish >= 1) {
-    resources.fish--;
     if (energy >= maxEnergy) {
       console.log("Your no longer hungry.");
     } else {
+      resources.fish--;
+      console.log("You ate a fish.");
+      updateResourceDisplay();
       playEnergyIncreaseAnimation();
     }
-    updateResourceDisplay();
   }
 }
 
