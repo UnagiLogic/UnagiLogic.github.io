@@ -41,8 +41,12 @@ body, html {
   border-radius: 7px;
 }
 
-#playAnimation {
-  animation: energyBar 5s linear forwards;
+/* This is the animation for the energy bar */
+/* The animation should move from 0% to 100% based on amount of current energy away from maxEnergy */
+#energyBarAnimation {
+  animation-name: energyBar;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes energyBar {

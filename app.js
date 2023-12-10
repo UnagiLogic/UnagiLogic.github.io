@@ -42,20 +42,28 @@ function updateResourceDisplay() {
 // It will only increase by 1 every second.
 // It will stop increasing energy when energy is equal to maxEnergy.
 // It will update the energy in the HTML
+// It will call the playEnergyAnimation function.
 function increaseEnergy() {
   let energyIncrease = setInterval(function() {
     if (energy < maxEnergy) {
       energy++;
       updateResourceDisplay();
+      playEnergyAnimation();
     } else {
       clearInterval(energyIncrease);
     }
   }, 1000);
 }
 
-// Whenever energy is spent, the #playAnimation will be called.
-function playAnimation() {
-  document.getElementById("playAnimation").play();
+// Whenever energy is less then maxEnergy the energy bar will be animated.
+// The animation will be a gradient that will go from light blue to dark blue.
+// The animation will move the bar from left to right until it reaches the maxEnergy.
+// The animation css is in the adventure.css called #energyBarAnimation.
+function playEnergyAnimation() {
+  document.getElementById("energyBarAnimation").classList.add("playEnergyAnimation");
+  setTimeout(function() {
+    document.getElementById("energyBarAnimation").classList.remove("playEnergyAnimation");
+  }, 1000);
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
