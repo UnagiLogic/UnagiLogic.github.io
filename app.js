@@ -229,7 +229,7 @@ window.addEventListener('DOMContentLoaded', function() {
   if (energy < maxEnergy) {
     increaseEnergy();
   }
-}
+});
 
 // Event listener for hiding the bestiaryContainer when the page loads.
 window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
