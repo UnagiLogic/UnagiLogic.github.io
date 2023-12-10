@@ -58,11 +58,10 @@ function increaseEnergy() {
 // The energyBarAnimation will be added to the energyBar.
 // The energyBarAnimation will stop when energy is equal to maxEnergy.
 function playEnergyAnimation() {
-  const energyPercentage = (energy / maxEnergy) * 100;
+  const energyPercentage = energy / maxEnergy * 100;
   const remainingTime = 1 - energyPercentage;
-document.getElementById("energyBar").classList.add("energyBarAnimation");
-document.getElementById("energyBar").style.animationDuration = `${remainingTime}s`;
-animationFinished = energy === maxEnergy;
+  document.getElementById("energyBar").style.width = '${energyPercentage}%';
+  requestAnimationFrame(playEnergyAnimation);
 }
 
 // Function that gets called when you click the saltwaterAreaFishClickerButton
