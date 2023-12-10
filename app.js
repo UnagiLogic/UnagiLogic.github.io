@@ -108,8 +108,8 @@ function eatFish() {
       console.log("Your no longer hungry.");
     } else {
       resources.fish--;
-      increaseEnergy
-      playEnergyIncreaseAnimation
+      increaseEnergy();
+      playEnergyIncreaseAnimation();
       console.log("You ate a fish.");
       updateResourceDisplay();
     }
