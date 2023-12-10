@@ -50,6 +50,7 @@ function updateEnergyBar() {;
 }
 
 function playEnergyAnimation(targetEnergyPercentage) {
+  const currentEnergyPercentage = energy / maxEnergy * 100;
   const absoluteEnergyChange = Math.abs(targetEnergyPercentage - currentEnergyPercentage);  
   const getDuration = (energyChange) => {
     // Adjust this function to your desired animation speed
