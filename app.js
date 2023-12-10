@@ -58,20 +58,17 @@ function increaseEnergy() {
 // The energyBarDecreaseAnimation will stop when energy is equal to 0.
 function playEnergyAnimation() {
   let energyBar = document.getElementById("energyBar");
+  
   if (energy < maxEnergy) {
     energyBar.classList.add("energyBarIncreaseAnimation");
     energyBar.classList.remove("energyBarDecreaseAnimation");
     animationFinished = false;
-  } else {
-    energyBar.classList.remove("energyBarIncreaseAnimation");
-    animationFinished = true;
-  }
-  if (energy > 0) {
+  } else if (energy > 0) {
     energyBar.classList.add("energyBarDecreaseAnimation");
     energyBar.classList.remove("energyBarIncreaseAnimation");
     animationFinished = false;
   } else {
-    energyBar.classList.remove("energyBarDecreaseAnimation");
+    energyBar.classList.remove("energyBarIncreaseAnimation", "energyBarDecreaseAnimation");
     animationFinished = true;
   }
 }
