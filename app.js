@@ -1,6 +1,4 @@
 // Const that don't need to change go here
-const currentEnergyPercentage = energy / maxEnergy * 100;
-const relativeWidthChange = targetEnergyPercentage - currentEnergyPercentage;
 
 // Variables go here -----------------------------------
 
