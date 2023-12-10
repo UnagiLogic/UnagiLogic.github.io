@@ -70,6 +70,15 @@ function playEnergyAnimation() {
   }
 }
 
+// Function that changes fish into energy
+function eatFish() {
+  if (resources.fish >= 1) {
+    resources.fish -= 1;
+    energy += 1;
+    updateResourceDisplay();
+  }
+}
+
 // Function that gets called when you click the saltwaterAreaFishClickerButton
 function increment() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
