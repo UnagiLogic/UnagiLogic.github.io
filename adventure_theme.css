@@ -40,7 +40,7 @@ body, html {
   background-color: #9d4caf;
   border-radius: 7px;
   width: 0; /* Sets the initial width of the energy bar to 0 */
-  transition: width 0.5s; /* Sets the transition speed of the energy bar */
+  transition: width 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Sets the transition speed of the energy bar */
 }
 
 #energyIndicator {

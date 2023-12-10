@@ -62,7 +62,7 @@ function playEnergyIncreaseAnimation() {
     increaseEnergy();
     setTimeout(() => {
       animationInProgress = false;
-    }, 500);
+    }, 600);
   }
 }
 
