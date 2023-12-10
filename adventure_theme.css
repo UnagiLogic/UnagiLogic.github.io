@@ -77,7 +77,7 @@ body, html {
   border: 1px solid var(--secondary-color);
 }
 
-#saltwaterAreaFishClickerButton, #bestiaryButton, .inventoryButton, #buySearchActionButton, #actionsMenuButton {
+#saltwaterAreaFishClickerButton, #bestiaryButton, .inventoryButton, #buySearchActionButton, #eatActionButton, #actionsMenuButton {
   background-color: var(--hover-bg-color);
 }
 
@@ -283,7 +283,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   text-align: center;
 }
 
-#buySearchActionButton {
+#buySearchActionButton, #eatActionButton {
   cursor: pointer;
   text-align: center;
   color: #fff;
@@ -400,7 +400,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 	width: 20%;
 }
 
-#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover {
+#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #actionsMenuButton:hover, #bestiaryButton:hover, .inventoryButton:hover {
   opacity: 0.7;
 }
 
