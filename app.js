@@ -1,4 +1,6 @@
 // Const that don't need to change go here
+const currentEnergyPercentage = energy / maxEnergy * 100;
+const relativeWidthChange = targetEnergyPercentage - currentEnergyPercentage;
 
 // Variables go here -----------------------------------
 
@@ -49,26 +51,20 @@ function updateEnergyBar() {;
   });
 }
 
-function playEnergyIncreaseAnimation() {
-  anime({
-    targets: "#energyBar",
-    width: "100%",
-    duration: 1000,
-    easing: "linear",
-    complete: () => {
-      updateEnergyBar();
-    },
-  });
-}
+function playEnergyAnimation(targetEnergyPercentage) {
+  const absoluteEnergyChange = Math.abs(targetEnergyPercentage - currentEnergyPercentage);  
+  const getDuration = (energyChange) => {
+    // Adjust this function to your desired animation speed
+    // For example, this function makes the animation faster for smaller changes
+    return Math.max(100, 1000 - energyChange * 10);
+  };
 
-//Function to play the decrease energy animation
-function playEnergyDecreaseAnimation() {
   anime({
     targets: "#energyBar",
-    width: "0%",
-    duration: 1000,
+    width: `+=${relativeWidthChange}%`, // Use relative width change with += operator
+    duration: getDuration(absoluteEnergyChange),
     easing: "linear",
-    complete: () => {
+    update: () => {
       updateEnergyBar();
     },
   });
@@ -96,7 +92,7 @@ function eatFish() {
     } else {
       resources.fish--;
       increaseEnergy();
-      playEnergyIncreaseAnimation();
+      playEnergyAnimation();
       console.log("You ate a fish.");
       updateResourceDisplay();
     }
