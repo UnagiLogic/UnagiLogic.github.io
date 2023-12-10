@@ -39,7 +39,8 @@ body, html {
   height: 100%;
   background-color: #9d4caf;
   border-radius: 7px;
-  width: 0%; /* Sets the initial width of the energy bar to 0 */
+  width: 0; /* Sets the initial width of the energy bar to 0 */
+  transition: width 0.5s; /* Sets the transition speed of the energy bar */
 }
 
 #energyIndicator {
