@@ -60,7 +60,7 @@ function playEnergyIncreaseAnimation() {
   if (animationInProgress) {
     return;
   }
-  
+
     animationInProgress = true;
 
     function animate() {
@@ -77,7 +77,6 @@ function playEnergyIncreaseAnimation() {
 
     animate();
   }
-}
 
 // Function eatAction
 // This function will check what type of food the player has.
