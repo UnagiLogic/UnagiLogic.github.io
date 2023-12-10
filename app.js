@@ -53,6 +53,11 @@ function increaseEnergy() {
   }, 1000);
 }
 
+// Whenever energy is spent, the #playAnimation will be called.
+function playAnimation() {
+  document.getElementById("playAnimation").play();
+}
+
 // Function that gets called when you click the saltwaterAreaFishClickerButton
 function increment() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
