@@ -50,6 +50,7 @@ body, html {
   animation-duration: 1s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
+}
 
 /* This is the animation for energyBarIncreaseAnimation */
 /* The animation will increase the energyBar width based on amount of energy gained */
