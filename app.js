@@ -46,7 +46,7 @@ function updateResourceDisplay() {
 // It will continue the animation until energy is equal to maxEnergy.
 function increaseEnergy() {
   let energyIncrease = setInterval(function() {
-    if (energy < maxEnergy) {
+    if (energy < maxEnergy || document.getElementById("energyBar").classList.contains("energyBarAnimation")) {
       energy++;
       updateResourceDisplay();
       playEnergyAnimation();
