@@ -60,10 +60,14 @@ function playEnergyAnimation() {
   let energyBar = document.getElementById("energyBar");
   let energyPercentage = (energy / maxEnergy) * 100;
   
+  // Calculate the percentage increase based on the difference between current energy and maxEnergy
+  let percentageIncrease = ((maxEnergy - energy) / maxEnergy) * 100;
+
   // Ensure the percentage is between 0% and 100%
   energyPercentage = Math.min(Math.max(energyPercentage, 0), 100);
 
-  energyBar.style.width = `${energyPercentage}%`;
+  // Adjust the width based on the calculated percentage increase
+  energyBar.style.width = `${energyPercentage + percentageIncrease}%`;
 
   if (energy < maxEnergy) {
     energyBar.classList.add("energyBarIncreaseAnimation");
