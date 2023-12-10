@@ -25,7 +25,7 @@ body, html {
 }
 
 /* This container should be in the top left corner of the screen. */
-/* It should have a padding of 15px, a border-radius of 10px, and a box-shadow of 0 0 10px rgba(0,0,0,0.1) */
+/* It should have a padding of 15px, a border-radius of 10px */
 #containerForEnergyIndicator {
   position: fixed;
   height: 25px;
@@ -33,7 +33,6 @@ body, html {
   background-color: gray;
   border-radius: 15px;
   padding: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
   top: 5px;
   left: 5px;
 }

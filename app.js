@@ -169,6 +169,7 @@ function buySearchAction() {
   if (energy >= searchActionCost) {
     energy -= searchActionCost;
     updateResourceDisplay();
+    updateEnergyBar()
     searchAction();
   }
 }
