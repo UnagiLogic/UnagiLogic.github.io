@@ -70,6 +70,21 @@ function playEnergyAnimation() {
   }
 }
 
+// Function eatAction
+// This function will check what type of food the player has.
+// If the player has fish it will call the eatFish function.
+// If the player has shrimp it will call the eatShrimp function.
+// If the player has no food it will display a message that says "You have no food to eat."
+function eatAction() {
+  if (resources.fish >= 1) {
+    eatFish();
+  } else if (resources.shrimp >= 1) {
+    eatShrimp();
+  } else {
+    console.log("You have no food to eat.");
+  }
+}
+
 // Function that changes fish into energy
 function eatFish() {
   if (resources.fish >= 1) {
