@@ -60,6 +60,7 @@ function playEnergyIncreaseAnimation() {
   if (animationFinished) {
     animationFinished = false;
     let energyBar = document.getElementById("energyBar");
+    energyBar.classList.add("energyBarIncreaseAnimation");
     let width = 0;
     let targetWidth = (energy / maxEnergy) * 100;
     let id = setInterval(frame, 10);
@@ -67,6 +68,7 @@ function playEnergyIncreaseAnimation() {
       if (width >= targetWidth) {
         clearInterval(id);
         animationFinished = true;
+        energyBar.classList.remove("energyBarIncreaseAnimation");
       } else {
         width += 1;
         energyBar.style.width = width + "%";
