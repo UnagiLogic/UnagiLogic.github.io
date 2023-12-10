@@ -24,21 +24,25 @@ body, html {
   --hover-bg-color: #323232; /* This is the color of the buttons when hovered over. */
 }
 
+/* This container should be in the top left corner of the screen. */
+/* It should have a padding of 15px, a border-radius of 10px, and a box-shadow of 0 0 10px rgba(0,0,0,0.1) */
 #containerForEnergyIndicator {
   position: fixed;
   height: 25px;
   width: 200px;
   background-color: gray;
-  border-radius: 7px;
-  top: 20px;
-  left: 1100px;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  top: 5px;
+  left: 5px;
 }
 
 #energyBar {
   position: absolute;
   height: 100%;
   background-color: #9d4caf;
-  border-radius: 7px;
+  border-radius: 15px;
   width: 0;
 }
 

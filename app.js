@@ -155,14 +155,21 @@ setInterval(function() {
 // If the player has enough energy it will subtract the cost of the action from the players energy.
 // It will also update showEnergy in the HTML.
 // It will also call the searchAction function.
-// It will call the increaseEnergy function to make sure the players energy is recovering after doing this action.
-// ensure players energy is recovering after doing this action.
+function buyAction() {
+  if (energy >= searchActionCost) {
+    energy -= searchActionCost;
+    updateResourceDisplay();
+    searchAction();
+  } else {
+    console.log("You do not have enough energy to do this action.");
+  }
+}
+
 function buySearchAction() {
   if (energy >= searchActionCost) {
     energy -= searchActionCost;
     updateResourceDisplay();
     searchAction();
-    increaseEnergy();
   }
 }
 
