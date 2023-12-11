@@ -344,6 +344,9 @@ function hideBestiaryContainer() {
 
 // Event Listeners go here -----------------------------------
 
+// Event listener for unknownEntityDialog() when the page loads.
+window.addEventListener('DOMContentLoaded', unknownEntityDialog);
+
 // Event listener for hiding the bestiaryContainer when the page loads.
 window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
 
