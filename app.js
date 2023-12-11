@@ -76,6 +76,7 @@ function pauseAudio() {
 // The narrative will pause for a few seconds and then another message will appear that says "... ~~~ ... ~~~ ... ~~~"
 // The narrative will pause for a few seconds and then another message will appear that says "... It seems we're both hungry."
 // The narrative will go silent.
+
 function unknownEntityDialog() {
   let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
   let unknownEntityImage = document.getElementById("unknownEntityImage");
@@ -120,11 +121,9 @@ function unknownEntityDialog() {
     // Pause audio
     pauseAudio();
   }, 36000);
-  });
-} 
+  }
 
-/*
-  // Don't start the dialog until the user clicks the screen once.
+/* // Don't start the dialog until the user clicks the screen once.
   document.addEventListener("click", function() {
     unknownEntityDialogMessage.innerText = "Who are you?";
 
