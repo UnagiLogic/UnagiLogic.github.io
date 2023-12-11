@@ -90,20 +90,16 @@ function updateEnergyBar() {;
   });
 }
 
-const currentEnergyPercentage = energy / maxEnergy * 100;
-const relativeWidthChange = targetEnergyPercentage - currentEnergyPercentage;
-
-function playEnergyAnimation(targetEnergyPercentage, relativeWidthChange) {
-  const absoluteEnergyChange = Math.abs(targetEnergyPercentage - currentEnergyPercentage);  
+function playEnergyAnimation(currentEnergy, relativeWidthChange) {
+  const targetEnergyPercentage = currentEnergy + relativeWidthChange;
+  const absoluteEnergyChange = Math.abs(targetEnergyPercentage - currentEnergy);
   const getDuration = (energyChange) => {
-    // Adjust this function to your desired animation speed
-    // For example, this function makes the animation faster for smaller changes
-    return Math.max(100, 1000 - energyChange * 10);
+    // ...
   };
 
   anime({
     targets: "#energyBar",
-    width: `+=${relativeWidthChange}%`, // Use relative width change with += operator
+    width: `+=${relativeWidthChange}%`,
     duration: getDuration(absoluteEnergyChange),
     easing: "linear",
     update: () => {
