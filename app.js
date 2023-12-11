@@ -122,6 +122,7 @@ function unknownEntityDialog() {
     pauseAudio();
   }, 36000);
   }
+} 
 
 /* // Don't start the dialog until the user clicks the screen once.
   document.addEventListener("click", function() {
