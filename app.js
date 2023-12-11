@@ -1,4 +1,5 @@
 // Const that don't need to change go here
+const audio = document.querySelector("audio");
 
 // Variables go here -----------------------------------
 
@@ -29,6 +30,15 @@ let searchActionCost = 10
 
 // Functions go here -----------------------------------
 
+// Play audio
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+
 // This is the startGame function.
 // as the game starts, the screen will start out black.
 // while the screen is black, a message appears that says "Who are you?"
@@ -51,6 +61,7 @@ let searchActionCost = 10
 // }
 
 // This function controls the unknown entity dialog.
+// audio.play();
 // The narrative will start out in p id="unknownEntityDialog"
 // The narrative will start out with a message that says "Who are you?"
 // The narrative will pause for a few seconds and then another message will appear that says "..."
@@ -62,7 +73,9 @@ let searchActionCost = 10
 // The narrative will go silent.
 function unknownEntityDialog() {
   let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
-  unknownEntityDialogMessage.innerText = "Who are you?";
+  // Play audio  
+  audio.play();
+    unknownEntityDialogMessage.innerText = "Who are you?";
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "...";
   }, 4000);
@@ -96,6 +109,8 @@ function unknownEntityDialog() {
   setTimeout(function() {
     document.getElementById("containerForInitialBlackScreen").classList.add("hidden");
   }, 32000);
+  // Pause audio
+  audio.pause();
   // fade in 
 }
 
