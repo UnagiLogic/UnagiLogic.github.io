@@ -74,7 +74,7 @@ function pauseAudio() {
 function unknownEntityDialog() {
   let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
   // Play audio  
-  audio.play();
+  playAudio();
     unknownEntityDialogMessage.innerText = "Who are you?";
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "...";
@@ -110,7 +110,7 @@ function unknownEntityDialog() {
     document.getElementById("containerForInitialBlackScreen").classList.add("hidden");
   }, 32000);
   // Pause audio
-  audio.pause();
+  pauseAudio();
   // fade in 
 }
 
