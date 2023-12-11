@@ -10,6 +10,27 @@
 </head>
 <body>
     
+    <!-- This is the container for the initial black screen -->
+    <!-- This container holds an image -->
+    <!-- The image will grow on the screen and stop -->
+    <!-- a message will appear in a p element with the id unknownEntity -->
+    <!-- The story will begin to unfold as the unknownEntity continues to talk updating the p element automatically -->
+    <!-- After the initial dialog finished, the mainScreen appears -->
+    <div id="containerForInitialBlackScreen">
+        <img src="Images/backgroundImages/unknownEntity.png" id="unknownEntityImage" width="100px" height="100px">
+        <div id="containerForUnknownEntityDialog">
+            <p id="unknownEntityDialog"></p>
+        </div>
+    </div>
+
+    <div class="mainScreen">
+        <h1 class="spawningPoolTitle">The Spawning Pool</h1>
+        <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="saltwaterAreaFishClickerButton" onclick="increment()"> <!--The image you have to click -->
+        <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
+        <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
+	</div>
+
+
     <!-- Button to Open/Close the Player Inventory -->
     <button class="inventoryButton" id="inventoryButton">BASKET</button>
     
@@ -163,13 +184,6 @@
         <!-- a fourth item -->
 		</div>
     </div>
-
-    <div class="mainScreen">
-        <h1 class="spawningPoolTitle">The Spawning Pool</h1>
-        <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="saltwaterAreaFishClickerButton" onclick="increment()"> <!--The image you have to click -->
-        <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-        <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
-	</div>
 
     <div id="containerForResourceIndicator"></div>
     <div id="containerForResourceCacheImage"></div>

@@ -29,6 +29,47 @@ let searchActionCost = 10
 
 // Functions go here -----------------------------------
 
+// This is the startGame function.
+// as the game starts, the screen will start out black.
+// while the screen is black, a message appears that says "Who are you?"
+// after a few seconds, another message appears that says "..."
+// after a few seconds, another message appars that says "You don't remember?"
+// after a few more seconds, another message appears that says "... ..."
+// after a few more seconds, another message appears that says "Are you hungry?"
+// after a few more seconds, another message appears that says "... ~~~ ... ~~~ ... ~~~"
+// after a few more seconds, another message appears that says "Looks like it. Let's catch some fish."
+// after a few more seconds, the screen fades to The Spawning Pool Scene.
+
+// function startGame() {
+//   let startGameMessage = document.createElement("p");
+//   startGameMessage.innerText = "Who are you?";
+//   startGameMessage.classList.add("startGameMessage");
+//   document.getElementById("containerForStartGameMessage").appendChild(startGameMessage);
+//   setTimeout(function() {
+//     startGameMessage.remove();
+//   }, 3000);
+// }
+
+// This function controls the games narrative
+// The narrative will start out in p id="unknownEntityDialog"
+// The narrative will start out with a message that says "Who are you?"
+// The narrative will pause for a few seconds and then another message will appear that says "..."
+// The narrative will pause for a few seconds and then another message will appear that says "You don't remember?"
+// The narrative will pause for a few seconds and then another message will appear that says "... ..."
+// The narrative will pause for a few seconds and then another message will appear that says "Are you hungry?"
+// The narrative will pause for a few seconds and then another message will appear that says "... ~~~ ... ~~~ ... ~~~"
+// The narrative will pause for a few seconds and then another message will appear that says "... It seems we're both hungry."
+// The narrative will go silent.
+function narrative() {
+  let unknownEntityDialog = document.createElement("p");
+  unknownEntityDialog.innerText = "Who are you?";
+  unknownEntityDialog.classList.add("unknownEntityDialog");
+  document.getElementById("containerForUnknownEntityDialog").appendChild(unknownEntityDialog);
+  setTimeout(function() {
+    unknownEntityDialog.remove();
+  }, 3000);
+}
+
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
   document.getElementById("showEnergy").innerText = energy;
