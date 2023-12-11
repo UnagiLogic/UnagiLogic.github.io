@@ -50,7 +50,7 @@ let searchActionCost = 10
 //   }, 3000);
 // }
 
-// This function controls the games narrative
+// This function controls the unknown entity dialog.
 // The narrative will start out in p id="unknownEntityDialog"
 // The narrative will start out with a message that says "Who are you?"
 // The narrative will pause for a few seconds and then another message will appear that says "..."
@@ -60,14 +60,43 @@ let searchActionCost = 10
 // The narrative will pause for a few seconds and then another message will appear that says "... ~~~ ... ~~~ ... ~~~"
 // The narrative will pause for a few seconds and then another message will appear that says "... It seems we're both hungry."
 // The narrative will go silent.
-function narrative() {
-  let unknownEntityDialog = document.createElement("p");
-  unknownEntityDialog.innerText = "Who are you?";
-  unknownEntityDialog.classList.add("unknownEntityDialog");
-  document.getElementById("containerForUnknownEntityDialog").appendChild(unknownEntityDialog);
+function unknownEntityDialog() {
+  let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
+  unknownEntityDialogMessage.innerText = "Who are you?";
   setTimeout(function() {
-    unknownEntityDialog.remove();
+    unknownEntityDialogMessage.innerText = "...";
   }, 3000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "You don't remember?";
+  }, 6000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "... ...";
+  }, 9000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "Are you hungry?";
+  }, 12000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "... ~~~ ... ~~~ ... ~~~";
+  }, 15000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "... It seems we're both hungry.";
+  }, 18000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "...";
+  }, 21000);
+  // fade away and hide the #containerForUnknownEntityDialog
+  setTimeout(function() {
+    document.getElementById("containerForUnknownEntityDialog").classList.add("hidden");
+  }, 24000);
+  // fade away and hide the #unknownEntityImage
+  setTimeout(function() {
+    document.getElementById("unknownEntityImage").classList.add("hidden");
+  }, 24000);
+  // fade away and hide the #containerForInitialBlackScreen
+  setTimeout(function() {
+    document.getElementById("containerForInitialBlackScreen").classList.add("hidden");
+  }, 24000);
+  // fade in 
 }
 
 // Function to update resource display in the HTML
