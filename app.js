@@ -1,4 +1,6 @@
 // Const that don't need to change go here
+
+// This holds the audio for the start of the game.
 const audio = document.querySelector("audio");
 
 // Variables go here -----------------------------------
