@@ -24,6 +24,17 @@ body, html {
   --hover-bg-color: #323232; /* This is the color of the buttons when hovered over. */
 }
 
+/* Z-index information: 
+z-index: 1 - This is the lowest z-index. It is used for background images.
+z-index: 20 - used for inventory containers, bestiary containers, and actions menu containers.
+z-index: 30 - used for buttons, energy indicator.
+z-index: 50 - used for floating fish image.
+z-index: 51 - used for resource cache image and message.
+z-index: 100 - used for the black screen that appears when the game is first loaded.
+z-index: 101 - used for the unknown entity image.
+z-index: 102 - used for the unknown entity dialog box.
+*/
+
 /* This is the container for scene elements. */
 #containerForSceneElements {
   position: fixed;
@@ -38,6 +49,7 @@ body, html {
   width: 100%;
   height: 100%;
   background-color: black;
+  z-index: 100;
 }
 
 /* This image should fill the screen, and be centered. */
@@ -47,7 +59,7 @@ body, html {
   width: 100%;
   height: 100%;
   padding: 1px;
-  z-index: 3;
+  z-index: 101;
 }
 
 /* This container holds the dialog box for the unknown entity. */
@@ -64,7 +76,7 @@ body, html {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  z-index: 4;
+  z-index: 102;
 }
 
 .unknownEntityDialog {
@@ -79,7 +91,7 @@ body, html {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  z-index: 1;
+  z-index: 102;
 }
 
 /* This container should be in the top left corner of the screen. */
@@ -168,7 +180,7 @@ h2 {
   color: #9c69c3;
   padding: 5px 10px;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 30;
 }
 
 #bestiaryButton {
@@ -179,7 +191,7 @@ h2 {
   color: #9c69c3;
   padding: 5px 10px;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 30;
 }
 
 #actionsMenuButton {
@@ -190,7 +202,7 @@ h2 {
   color: #9c69c3;
   padding: 5px 10px;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 30;
 }
 
 #inventoryInformation {
@@ -359,7 +371,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   color: #fff;
   padding: 5px;
   border-radius: 5px;
-  z-index: 1;
+  z-index: 20;
 }
 
 .itemImage {
@@ -394,7 +406,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   width: 100px; /* Adjust the width as needed */
   height: 100px; /* Adjust the height as needed */
   opacity: 1;
-  z-index: 2; /* Adjust the z-index as needed */
+  z-index: 50;
   animation: fishFloatUp 3s linear infinite;
 }
 
@@ -449,7 +461,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   width: 50px;
   height: 50px;
   padding: 1px;
-  z-index: 3;
+  z-index: 51;
 }
 
 .resourceCacheMessage {
@@ -461,7 +473,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   font-size: 20px;
   font-weight: bold;
   color: #ffffff;
-  z-index: 3;
+  z-index: 51;
 }
 
 .mainScreen {
