@@ -50,12 +50,21 @@ body, html {
   z-index: 3;
 }
 
+/* This container holds the dialog box for the unknown entity. */
+/* It should be bottom center of the screen */ 
 #containerForUnknownEntityDialog {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #be9565;
+  border: 1px solid #8a5a24;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 4;
 }
 
 .unknownEntityDialog {
