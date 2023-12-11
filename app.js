@@ -65,37 +65,37 @@ function unknownEntityDialog() {
   unknownEntityDialogMessage.innerText = "Who are you?";
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "...";
-  }, 3000);
+  }, 4000);
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "You don't remember?";
-  }, 6000);
+  }, 8000);
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "... ...";
-  }, 9000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "Are you hungry?";
   }, 12000);
   setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "Are you hungry?";
+  }, 16000);
+  setTimeout(function() {
     unknownEntityDialogMessage.innerText = "... ~~~ ... ~~~ ... ~~~";
-  }, 15000);
+  }, 20000);
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "... It seems we're both hungry.";
-  }, 18000);
+  }, 24000);
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "...";
-  }, 21000);
+  }, 28000);
   // fade away and hide the #containerForUnknownEntityDialog
   setTimeout(function() {
     document.getElementById("containerForUnknownEntityDialog").classList.add("hidden");
-  }, 24000);
+  }, 32000);
   // fade away and hide the #unknownEntityImage
   setTimeout(function() {
     document.getElementById("unknownEntityImage").classList.add("hidden");
-  }, 24000);
+  }, 32000);
   // fade away and hide the #containerForInitialBlackScreen
   setTimeout(function() {
     document.getElementById("containerForInitialBlackScreen").classList.add("hidden");
-  }, 24000);
+  }, 32000);
   // fade in 
 }
 
