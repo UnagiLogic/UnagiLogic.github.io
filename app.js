@@ -63,7 +63,10 @@ function pauseAudio() {
 // }
 
 // This function controls the unknown entity dialog.
-// audio.play();
+// Hide #unknownEntityImage to start.
+// Don't start the dialog until the user clicks the screen once.
+// after screen is clicked, play audio
+// after audio has played for 4 seconds, unhide the #unknownEntityImage
 // The narrative will start out in p id="unknownEntityDialog"
 // The narrative will start out with a message that says "Who are you?"
 // The narrative will pause for a few seconds and then another message will appear that says "..."
@@ -75,42 +78,52 @@ function pauseAudio() {
 // The narrative will go silent.
 function unknownEntityDialog() {
   let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
-  // Play audio  
+  // Hide #unknownEntityImage to start.
+  document.getElementById("unknownEntityImage").classList.add("hidden");
+  // Don't start the dialog until the user clicks the screen once.
+  document.addEventListener("click", function() {
+    unknownEntityDialogMessage.innerText = "Who are you?";
+  });
+  // after screen is clicked, play audio
   playAudio();
+  // after audio has played for 4 seconds, unhide the #unknownEntityImage
+  setTimeout(function() {
+    document.getElementById("unknownEntityImage").classList.remove("hidden");
+  }, 4000);
     unknownEntityDialogMessage.innerText = "Who are you?";
   setTimeout(function() {
     unknownEntityDialogMessage.innerText = "...";
-  }, 4000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "You don't remember?";
   }, 8000);
   setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "... ...";
+    unknownEntityDialogMessage.innerText = "You don't remember?";
   }, 12000);
   setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "Are you hungry?";
+    unknownEntityDialogMessage.innerText = "... ...";
   }, 16000);
   setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "... ~~~ ... ~~~ ... ~~~";
+    unknownEntityDialogMessage.innerText = "Are you hungry?";
   }, 20000);
   setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "... It seems we're both hungry.";
+    unknownEntityDialogMessage.innerText = "... ~~~ ... ~~~ ... ~~~";
   }, 24000);
   setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "...";
+    unknownEntityDialogMessage.innerText = "... It seems we're both hungry.";
   }, 28000);
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = "...";
+  }, 32000);
   // fade away and hide the #containerForUnknownEntityDialog
   setTimeout(function() {
     document.getElementById("containerForUnknownEntityDialog").classList.add("hidden");
-  }, 32000);
+  }, 36000);
   // fade away and hide the #unknownEntityImage
   setTimeout(function() {
     document.getElementById("unknownEntityImage").classList.add("hidden");
-  }, 32000);
+  }, 36000);
   // fade away and hide the #containerForInitialBlackScreen
   setTimeout(function() {
     document.getElementById("containerForInitialBlackScreen").classList.add("hidden");
-  }, 32000);
+  }, 36000);
   // Pause audio
   pauseAudio();
   // fade in 
