@@ -100,7 +100,8 @@ function unknownEntityDialog() {
     setTimeout(function() {
       unknownEntityDialogMessage.innerText = message;
     }, timeout);
-  }
+  });
+  
 
   // Dialog progression
   showMessage("Who are you?", 0);
@@ -121,59 +122,7 @@ function unknownEntityDialog() {
     // Pause audio
     pauseAudio();
   }, 36000);
-  }
-} 
-
-/* // Don't start the dialog until the user clicks the screen once.
-  document.addEventListener("click", function() {
-    unknownEntityDialogMessage.innerText = "Who are you?";
-
-  // Play audio after user interaction
-  playAudio();
-
-
-  // after audio has played for 4 seconds, unhide the #unknownEntityImage
-  setTimeout(function() {
-    unknownEntityImage.classList.remove("hidden");
-  }, 4000);
-    unknownEntityDialogMessage.innerText = "Who are you?";
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "...";
-  }, 8000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "You don't remember?";
-  }, 12000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "... ...";
-  }, 16000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "Are you hungry?";
-  }, 20000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "... ~~~ ... ~~~ ... ~~~";
-  }, 24000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "... It seems we're both hungry.";
-  }, 28000);
-  setTimeout(function() {
-    unknownEntityDialogMessage.innerText = "...";
-  }, 32000);
-  // fade away and hide the #containerForUnknownEntityDialog
-  setTimeout(function() {
-    document.getElementById("containerForUnknownEntityDialog").classList.add("hidden");
-  }, 36000);
-  // fade away and hide the #unknownEntityImage
-  setTimeout(function() {
-    document.getElementById("unknownEntityImage").classList.add("hidden");
-  }, 36000);
-  // fade away and hide the #containerForInitialBlackScreen
-  setTimeout(function() {
-    document.getElementById("containerForInitialBlackScreen").classList.add("hidden");
-  }, 36000);
-  // Pause audio
-  pauseAudio();
 }
-*/
 
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
