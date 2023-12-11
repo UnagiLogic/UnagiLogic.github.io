@@ -78,17 +78,61 @@ function pauseAudio() {
 // The narrative will go silent.
 function unknownEntityDialog() {
   let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
-  // Hide #unknownEntityImage to start.
-  document.getElementById("unknownEntityImage").classList.add("hidden");
+  let unknownEntityImage = document.getElementById("unknownEntityImage");
+  const containerForUnknownEntityDialog = document.getElementById("containerForUnknownEntityDialog");
+  const containerForInitialBlackScreen = document.getElementById("containerForInitialBlackScreen");
+
+  // Hide elements initially
+  unknownEntityImage.classList.add("hidden");
+  containerForUnknownEntityDialog.classList.add("hidden");
+
+  // Wait here until player clicks the screen
+  document.addEventListener("click", function() {
+    // Unhide elements
+    unknownEntityImage.classList.remove("hidden");
+    containerForUnknownEntityDialog.classList.remove("hidden");
+    playAudio();
+
+
+  function showMessage(message, timeout) {
+    setTimeout(function() {
+      unknownEntityDialogMessage.innerText = message;
+    }, timeout);
+  }
+
+  // Dialog progression
+  showMessage("Who are you?", 0);
+  showMessage("...", 8000);
+  showMessage("You don't remember?", 12000);
+  showMessage("... ...", 16000);
+  showMessage("Are you hungry?", 20000);
+  showMessage("... ~~~ ... ~~~ ... ~~~", 24000);
+  showMessage("... It seems we're both hungry.", 28000);
+  showMessage("...", 32000);
+
+  //Hide elements after dialog
+  setTimeout(function() {
+    containerForUnknownEntityDialog.classList.add("hidden");
+    unknownEntityImage.classList.add("hidden");
+    containerForInitialBlackScreen.classList.add("hidden");
+
+  // Pause audio
+    pauseAudio();
+  }, 36000);
+}
+
+/*
   // Don't start the dialog until the user clicks the screen once.
   document.addEventListener("click", function() {
     unknownEntityDialogMessage.innerText = "Who are you?";
-  });
-  // after screen is clicked, play audio
+
+  // Play audio after user interaction
   playAudio();
+
+
   // after audio has played for 4 seconds, unhide the #unknownEntityImage
   setTimeout(function() {
-    document.getElementById("unknownEntityImage").classList.remove("hidden");
+    unknownEntityImage.classList.remove("hidden");
   }, 4000);
     unknownEntityDialogMessage.innerText = "Who are you?";
   setTimeout(function() {
@@ -126,8 +170,8 @@ function unknownEntityDialog() {
   }, 36000);
   // Pause audio
   pauseAudio();
-  // fade in 
 }
+*/
 
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
