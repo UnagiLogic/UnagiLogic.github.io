@@ -92,6 +92,7 @@ function unknownEntityDialog() {
     // Unhide elements
     unknownEntityImage.classList.remove("hidden");
     containerForUnknownEntityDialog.classList.remove("hidden");
+  });
     
     // Play audio after user interaction
     playAudio();
@@ -100,8 +101,7 @@ function unknownEntityDialog() {
     setTimeout(function() {
       unknownEntityDialogMessage.innerText = message;
     }, timeout);
-  });
-  
+  };
 
   // Dialog progression
   showMessage("Who are you?", 0);
