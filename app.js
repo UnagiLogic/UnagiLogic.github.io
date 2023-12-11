@@ -91,10 +91,11 @@ function unknownEntityDialog() {
     // Unhide elements
     unknownEntityImage.classList.remove("hidden");
     containerForUnknownEntityDialog.classList.remove("hidden");
+    
+    // Play audio after user interaction
     playAudio();
 
-
-  function showMessage(message, timeout) {
+    function showMessage(message, timeout) {
     setTimeout(function() {
       unknownEntityDialogMessage.innerText = message;
     }, timeout);
@@ -116,10 +117,11 @@ function unknownEntityDialog() {
     unknownEntityImage.classList.add("hidden");
     containerForInitialBlackScreen.classList.add("hidden");
 
-  // Pause audio
+    // Pause audio
     pauseAudio();
   }, 36000);
-}
+  });
+} 
 
 /*
   // Don't start the dialog until the user clicks the screen once.
