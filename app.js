@@ -2,6 +2,7 @@
 
 // This holds the audio for the start of the game.
 const audio = document.querySelector("audio");
+let initialClickHappened = false;
 
 // Variables go here -----------------------------------
 
@@ -32,7 +33,7 @@ let searchActionCost = 10
 
 // Functions go here -----------------------------------
 
-// Play audio
+// Play and Pause Audio functions
 function playAudio() {
   audio.play();
 }
@@ -87,15 +88,22 @@ function unknownEntityDialog() {
   unknownEntityImage.classList.add("hidden");
   containerForUnknownEntityDialog.classList.add("hidden");
 
+  // Checks if initial click has happened
+  document.addEventListener("click", function() {
+    initialClickHappened = true;
+  });
+
   // Wait here until player clicks the screen
   document.addEventListener("click", function() {
-    // Unhide elements
+    // Unhide elements and playAudio();
     unknownEntityImage.classList.remove("hidden");
     containerForUnknownEntityDialog.classList.remove("hidden");
-  });
     
-    // Play audio after user interaction
-    playAudio();
+    if (!initialClickHappened) {
+      playAudio();
+    }
+    
+  });
 
     function showMessage(message, timeout) {
     setTimeout(function() {
@@ -368,9 +376,6 @@ function hideBestiaryContainer() {
 }
 
 // Event Listeners go here -----------------------------------
-
-// Event listener for unknownEntityDialog() when the page loads.
-window.addEventListener('DOMContentLoaded', unknownEntityDialog);
 
 // Event listener for hiding the bestiaryContainer when the page loads.
 window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
