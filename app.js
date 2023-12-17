@@ -75,42 +75,45 @@ function showElements() {
   containerForUnknownEntityDialog.classList.remove("hidden");
 }
 
+function handleClick() {
+  if (!initialClickHappened) {
+    initialClickHappened = true;
+    playAudio();
+    showElements(); // Show elements after the initial click
+  }
+}
+
 function startGame() {
+  // Hide elements initially
   hideElements();
 
-  document.addEventListener("click", function() {
-    if (!initialClickHappened) {
-      initialClickHappened = true;
-      playAudio();
-    }
+  // Wait for a click to start the game
+  document.addEventListener("click", handleClick, { once: true });
 
-    showElements();
-});
-
-setTimeout(function() {
-  hideElements();
-  containerForInitialBlackScreen.classList.add("hidden");
-  pauseAudio();
+  // Hide elements after the dialog
+  setTimeout(function () {
+    hideElements();
+    containerForInitialBlackScreen.classList.add("hidden");
+    pauseAudio();
   }, initialBlackScreenDelay);
 }
 
 function handleUnknownEntityDialog() {
+  // Hide elements initially
   hideElements();
 
-  document.addEventListener("click", function() {
-    if (!initialClickHappened) {
-      initialClickHappened = true;
-      playAudio();
-    }
+  // Wait for a click to start the dialog
+  document.addEventListener("click", handleClick, { once: true });
 
-    showElements();
-  });
-
+  // Show dialog messages with timeouts
   dialogMessages.forEach((message, index) => {
-    showMessages(message.text, message.timeout);
+    setTimeout(function () {
+      showMessages(message.text, message.timeout);
+    }, message.timeout);
   });
 
-  setTimeout(function() {
+  // Hide elements after the dialog
+  setTimeout(function () {
     hideElements();
     containerForInitialBlackScreen.classList.add("hidden");
     pauseAudio();
