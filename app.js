@@ -120,6 +120,8 @@ function handleUnknownEntityDialog() {
   }, initialBlackScreenDelay);
 }
 
+startGame();
+
 // Function to update resource display in the HTML
 function updateResourceDisplay() {
   document.getElementById("showEnergy").innerText = energy;
