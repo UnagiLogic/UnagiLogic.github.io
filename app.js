@@ -90,6 +90,9 @@ function unknownEntityDialog() {
 
   // Wait here until player clicks the screen
   document.addEventListener("click", function() {
+    console.log("Screen clicked!");
+    console.log("Target element:", event.target);
+    console.log("Initial click happened?", initialClickHappened);
     // Only play audio if initial click has happened
     if (!initialClickHappened) {
       initialClickHappened = true;
