@@ -1,8 +1,28 @@
-// Const that don't need to change go here
-
-// This holds the audio for the start of the game.
+// Constants and configuration
 const audio = document.querySelector("audio");
+const initialBlackScreenDelay = 36000;
+const dialogMessages = [
+  { text: "Who are you?", timeout: 0 },
+  { text: "...", timeout: 8000 },
+  { text: "You don't remember?", timeout: 12000 },
+  { text: "... ...", timeout: 16000 },
+  { text: "Are you hungry?", timeout: 20000 },
+  { text: "... ~~~ ... ~~~ ... ~~~", timeout: 24000 },
+  { text: "... It seems we're both hungry.", timeout: 28000 },
+  { text: "...", timeout: 32000 }
+];
+
+// Game state variables
 let initialClickHappened = false;
+let animationInProgress = false;
+
+// Configuration objects will go here when I learn more about them.
+
+// Elements
+const unknownEntityImage = document.getElementById("unknownEntityImage");
+const unknownEntityDialog = document.getElementById("unknownEntityDialog");
+const containerForInitialBlackScreen = document.getElementById("containerForInitialBlackScreen");
+const containerForUnknownEntityDialog = document.getElementById("containerForUnknownEntityDialog");
 
 // Variables go here -----------------------------------
 
@@ -18,9 +38,6 @@ let resources = {
     stone: 0,
     shrimp: 0,
 }
-
-// Animation Variables
-let animationInProgress = false;
 
 // Purchased resource Variables
 let purchasedResources = {
@@ -42,93 +59,62 @@ function pauseAudio() {
   audio.pause();
 }
 
-// This is the startGame function.
-// as the game starts, the screen will start out black.
-// while the screen is black, a message appears that says "Who are you?"
-// after a few seconds, another message appears that says "..."
-// after a few seconds, another message appars that says "You don't remember?"
-// after a few more seconds, another message appears that says "... ..."
-// after a few more seconds, another message appears that says "Are you hungry?"
-// after a few more seconds, another message appears that says "... ~~~ ... ~~~ ... ~~~"
-// after a few more seconds, another message appears that says "Looks like it. Let's catch some fish."
-// after a few more seconds, the screen fades to The Spawning Pool Scene.
+function showMessages(message, timeout) {
+  setTimeout(function() {
+    unknownEntityDialogMessage.innerText = message;
+  }, timeout);
+}
 
-// function startGame() {
-//   let startGameMessage = document.createElement("p");
-//   startGameMessage.innerText = "Who are you?";
-//   startGameMessage.classList.add("startGameMessage");
-//   document.getElementById("containerForStartGameMessage").appendChild(startGameMessage);
-//   setTimeout(function() {
-//     startGameMessage.remove();
-//   }, 3000);
-// }
-
-// This function controls the unknown entity dialog.
-// Hide #unknownEntityImage to start.
-// Don't start the dialog until the user clicks the screen once.
-// after screen is clicked, play audio
-// after audio has played for 4 seconds, unhide the #unknownEntityImage
-// The narrative will start out in p id="unknownEntityDialog"
-// The narrative will start out with a message that says "Who are you?"
-// The narrative will pause for a few seconds and then another message will appear that says "..."
-// The narrative will pause for a few seconds and then another message will appear that says "You don't remember?"
-// The narrative will pause for a few seconds and then another message will appear that says "... ..."
-// The narrative will pause for a few seconds and then another message will appear that says "Are you hungry?"
-// The narrative will pause for a few seconds and then another message will appear that says "... ~~~ ... ~~~ ... ~~~"
-// The narrative will pause for a few seconds and then another message will appear that says "... It seems we're both hungry."
-// The narrative will go silent.
-
-function unknownEntityDialog() {
-  let unknownEntityDialogMessage = document.getElementById("unknownEntityDialog");
-  let unknownEntityImage = document.getElementById("unknownEntityImage");
-  const containerForUnknownEntityDialog = document.getElementById("containerForUnknownEntityDialog");
-  const containerForInitialBlackScreen = document.getElementById("containerForInitialBlackScreen");
-
-  // Hide elements initially
+function hideElements() {
   unknownEntityImage.classList.add("hidden");
   containerForUnknownEntityDialog.classList.add("hidden");
+}
 
-  // Wait here until player clicks the screen
+function showElements() {
+  unknownEntityImage.classList.remove("hidden");
+  containerForUnknownEntityDialog.classList.remove("hidden");
+}
+
+function startGame() {
+  hideElements();
+
   document.addEventListener("click", function() {
-    console.log("Screen clicked!");
-    console.log("Target element:", event.target);
-    console.log("Initial click happened?", initialClickHappened);
-    // Only play audio if initial click has happened
     if (!initialClickHappened) {
       initialClickHappened = true;
       playAudio();
     }
-    
-    // Unhide elements
-    unknownEntityImage.classList.remove("hidden");
-    containerForUnknownEntityDialog.classList.remove("hidden");
+
+    showElements();
+});
+
+setTimeout(function() {
+  hideElements();
+  containerForInitialBlackScreen.classList.add("hidden");
+  pauseAudio();
+  }, initialBlackScreenDelay);
+}
+
+function unknownEntityDialog() {
+  hideElements();
+
+  document.addEventListener("click", function() {
+    if (!initialClickHappened) {
+      initialClickHappened = true;
+      playAudio();
+    }
+
+    showElements();
   });
 
-    function showMessage(message, timeout) {
-    setTimeout(function() {
-      unknownEntityDialogMessage.innerText = message;
-    }, timeout);
-  };
+  dialogMessages.forEach((message, index) => {
+    showMessages(message.text, message.timeout);
+  });
 
-  // Dialog progression
-  showMessage("Who are you?", 0);
-  showMessage("...", 8000);
-  showMessage("You don't remember?", 12000);
-  showMessage("... ...", 16000);
-  showMessage("Are you hungry?", 20000);
-  showMessage("... ~~~ ... ~~~ ... ~~~", 24000);
-  showMessage("... It seems we're both hungry.", 28000);
-  showMessage("...", 32000);
-
-  //Hide elements after dialog
   setTimeout(function() {
-    containerForUnknownEntityDialog.classList.add("hidden");
-    unknownEntityImage.classList.add("hidden");
+    hideElements();
     containerForInitialBlackScreen.classList.add("hidden");
-
-    // Pause audio
     pauseAudio();
-  }, 36000);
+  }, initialBlackScreenDelay);
 }
 
 // Function to update resource display in the HTML
