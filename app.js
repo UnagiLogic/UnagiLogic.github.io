@@ -94,7 +94,7 @@ setTimeout(function() {
   }, initialBlackScreenDelay);
 }
 
-function unknownEntityDialog() {
+function handleUnknownEntityDialog() {
   hideElements();
 
   document.addEventListener("click", function() {
