@@ -61,7 +61,7 @@ function pauseAudio() {
 
 function showMessages(message, timeout) {
   setTimeout(function() {
-    unknownEntityDialogMessage.innerText = message;
+    unknownEntityDialog.innerText = message;
   }, timeout);
 }
 
