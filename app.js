@@ -88,21 +88,17 @@ function unknownEntityDialog() {
   unknownEntityImage.classList.add("hidden");
   containerForUnknownEntityDialog.classList.add("hidden");
 
-  // Checks if initial click has happened
-  document.addEventListener("click", function() {
-    initialClickHappened = true;
-  });
-
   // Wait here until player clicks the screen
   document.addEventListener("click", function() {
-    // Unhide elements and playAudio();
-    unknownEntityImage.classList.remove("hidden");
-    containerForUnknownEntityDialog.classList.remove("hidden");
-    
+    // Only play audio if initial click has happened
     if (!initialClickHappened) {
+      initialClickHappened = true;
       playAudio();
     }
     
+    // Unhide elements
+    unknownEntityImage.classList.remove("hidden");
+    containerForUnknownEntityDialog.classList.remove("hidden");
   });
 
     function showMessage(message, timeout) {
