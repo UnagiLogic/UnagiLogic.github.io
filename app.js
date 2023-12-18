@@ -82,12 +82,14 @@ function handleClick() {
     clickToStart.classList.add("hidden");
     playAudio();
     showElements(); // Show elements after the initial click
-  }
+  } else {
+    // do nothing
 }
 
 function startGame() {
 
   // Wait for a click to start the game
+  // If the user has not clicked yet, nothing will happen
   clickToStart.addEventListener("click", handleClick, { once: true });
 
   // Show dialog messages with timeouts
