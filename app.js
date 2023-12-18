@@ -85,6 +85,7 @@ function handleClick() {
   } else {
     // do nothing
 }
+}
 
 function startGame() {
 
