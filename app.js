@@ -1,4 +1,5 @@
 // Constants and configuration
+const clickToStart = document.getElementById("clickToStart");
 const audio = document.querySelector("audio");
 const initialBlackScreenDelay = 36000;
 const dialogMessages = [
@@ -78,39 +79,21 @@ function showElements() {
 function handleClick() {
   if (!initialClickHappened) {
     initialClickHappened = true;
+    clickToStart.classList.add("hidden");
     playAudio();
     showElements(); // Show elements after the initial click
   }
 }
 
 function startGame() {
-  // Hide elements initially
-  hideElements();
 
   // Wait for a click to start the game
-  document.addEventListener("click", handleClick, { once: true });
-
-  // Hide elements after the dialog
-  setTimeout(function () {
-    hideElements();
-    containerForInitialBlackScreen.classList.add("hidden");
-    pauseAudio();
-  }, initialBlackScreenDelay);
-}
-
-function handleUnknownEntityDialog() {
-  // Hide elements initially
-  hideElements();
-
-  // Wait for a click to start the dialog
-  document.addEventListener("click", handleClick, { once: true });
+  clickToStart.addEventListener("click", handleClick, { once: true });
 
   // Show dialog messages with timeouts
   dialogMessages.forEach((message, index) => {
-    setTimeout(function () {
-      showMessages(message.text, message.timeout);
-    }, message.timeout);
-  });
+    setTimeout(() => unknownEntityDialog.innerText = message.text, message.timeout * index);
+  });  
 
   // Hide elements after the dialog
   setTimeout(function () {
@@ -120,6 +103,9 @@ function handleUnknownEntityDialog() {
   }, initialBlackScreenDelay);
 }
 
+// This hides the elements before the function startGame is called.
+hideElements();
+// This starts the game when the page loads.
 startGame();
 
 // Function to update resource display in the HTML

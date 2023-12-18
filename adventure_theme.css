@@ -35,6 +35,17 @@ z-index: 101 - used for the unknown entity image.
 z-index: 102 - used for the unknown entity dialog box.
 */
 
+#clickToStart {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 100;
+}
+
 /* This is the container for scene elements. */
 #containerForSceneElements {
   position: fixed;
