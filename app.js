@@ -112,7 +112,9 @@ function startGame() {
 }
 
 // This hides the elements before the function startGame is called.
-hideElements();
+if (hideElements()) {
+  console.log("Elements hidden");
+}
 
 // Add a short delay before the game starts
 setTimeout(function () {
