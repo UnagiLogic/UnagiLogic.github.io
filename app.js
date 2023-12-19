@@ -84,7 +84,7 @@ function handleClick() {
     clickToStart.classList.add("hidden");
     playAudio();
     showElements(); // Show elements after the initial click
-    currentMessageIndex = 1; // Starts at index 1 after initializing gameplay
+    currentMessageIndex = 0; // Starts at index 1 after initializing gameplay
   } else {
     // do nothing
   }
