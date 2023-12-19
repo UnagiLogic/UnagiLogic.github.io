@@ -113,6 +113,12 @@ function startGame() {
 
 // This hides the elements before the function startGame is called.
 hideElements();
+
+// Add a short delay before the game starts
+setTimeout(function () {
+  startGame();
+}, 6000);
+
 // This starts the game when the page loads.
 startGame();
 
