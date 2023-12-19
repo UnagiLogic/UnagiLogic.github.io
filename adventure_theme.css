@@ -31,7 +31,7 @@ z-index: 30 - used for buttons, energy indicator.
 z-index: 50 - used for floating fish image.
 z-index: 51 - used for resource cache image and message.
 z-index: 100 - used for the initial black loading screen that appears when the game is first loaded.
-z-index: 101 - used for the unknown entity image.
+z-index: 101 - used for the unknown entity image and clickToStart.
 z-index: 102 - used for the unknown entity dialog box.
 */
 
@@ -43,7 +43,7 @@ z-index: 102 - used for the unknown entity dialog box.
   color: #ffffff;
   font-size: 30px;
   font-weight: bold;
-  z-index: 100;
+  z-index: 101;
 }
 
 /* This is the container for scene elements. */

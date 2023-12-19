@@ -76,27 +76,32 @@ function showElements() {
   containerForUnknownEntityDialog.classList.remove("hidden");
 }
 
+let currentMessageIndex = 0;
+
 function handleClick() {
   if (!initialClickHappened) {
     initialClickHappened = true;
     clickToStart.classList.add("hidden");
     playAudio();
     showElements(); // Show elements after the initial click
+    currentMessageIndex = 1; // Starts at index 1 after initializing gameplay
   } else {
     // do nothing
+  }
 }
-}
+
+dialogMessages.forEach((message) => {
+  setTimeout(() => {
+    unknownEntityDialog.innerText = message.text;
+    currentMessageIndex++;
+  }, message.timeout * currentMessageIndex);
+});
 
 function startGame() {
 
   // Wait for a click to start the game
   // If the user has not clicked yet, nothing will happen
   clickToStart.addEventListener("click", handleClick, { once: true });
-
-  // Show dialog messages with timeouts
-  dialogMessages.forEach((message, index) => {
-    setTimeout(() => unknownEntityDialog.innerText = message.text, message.timeout * index);
-  });  
 
   // Hide elements after the dialog
   setTimeout(function () {
