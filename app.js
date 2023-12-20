@@ -111,15 +111,13 @@ function startGame() {
   }, initialBlackScreenDelay);
 }
 
+//Hide elements before the function startGame is called.
+hideElements();
+
 // This hides the elements before the function startGame is called.
 if (hideElements()) {
   console.log("Elements hidden");
 }
-
-// Add a short delay before the game starts
-setTimeout(function () {
-  startGame();
-}, 6000);
 
 // This starts the game when the page loads.
 startGame();
