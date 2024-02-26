@@ -2,6 +2,8 @@
 const clickToStart = document.getElementById("clickToStart");
 const audio = document.querySelector("audio");
 const initialBlackScreenDelay = 36000;
+
+// This is the array of messages that will be displayed in the unknownEntityDialog.
 const dialogMessages = [
   { text: "Who are you?", timeout: 0 },
   { text: "...", timeout: 8000 },
@@ -16,8 +18,6 @@ const dialogMessages = [
 // Game state variables
 let initialClickHappened = false;
 let animationInProgress = false;
-
-// Configuration objects will go here when I learn more about them.
 
 // Elements
 const unknownEntityImage = document.getElementById("unknownEntityImage");
@@ -85,17 +85,19 @@ function handleClick() {
     playAudio();
     showElements(); // Show elements after the initial click
     currentMessageIndex = 0; // Starts at index 1 after initializing gameplay
-  } else {
+
+      dialogMessages.forEach((message) => {
+        setTimeout(() => {
+          unknownEntityDialog.innerText = message.text;
+        }, index * 6000); //Adjusts the timeout for each message
+      });
+
+      //Remove click listener to prevent multiple clicks
+      clickToStart.removeEventListener("click", handleClick);
+    } else {
     // do nothing
   }
 }
-
-dialogMessages.forEach((message) => {
-  setTimeout(() => {
-    unknownEntityDialog.innerText = message.text;
-    currentMessageIndex++;
-  }, message.timeout * currentMessageIndex);
-});
 
 function startGame() {
 
@@ -227,9 +229,30 @@ function displayFishImage() {
   let fishImage = document.createElement("img");
   fishImage.src = "Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
-  document.getElementById("containerForResourceIndicator").appendChild(fishImage);
-  fishImage.style.left = Math.floor(Math.random() * 100) + "%";
-  fishImage.style.top = Math.floor(Math.random() * 100) + "%";
+  let containerForResourceIndicator = document.getElementById("containerForResourceIndicator");
+  containerForResourceIndicator.appendChild(fishImage);
+
+  //Get the dimensions of the containerForResourceIndicator
+  let containerForResourceIndicatorWidth = containerForResourceIndicator.offsetWidth;
+  let containerForResourceIndicatorHeight = containerForResourceIndicator.offsetHeight;
+
+  //Get the dimensions of the fishImage
+  let fishImageWidth = fishImage.offsetWidth;
+  let fishImageHeight = fishImage.offsetHeight;
+
+  //Calculate the maximum position the fish image can have without overflowing the container
+  let maxLeft = containerForResourceIndicatorWidth - fishImageWidth;
+  let maxTop = containerForResourceIndicatorHeight - fishImageHeight;
+
+  //Generate random positions within the container
+  let randomLeft = Math.floor(Math.random() * maxLeft);
+  let randomTop = Math.floor(Math.random() * maxTop);
+
+  //Set tge fish image position
+  fishImage.style.left = randomLeft + "px";
+  fishImage.style.top = randomTop + "px";
+
+  //Remove the fish image after a few seconds
   setTimeout(function() {
     fishImage.remove();
   }, 3000);
