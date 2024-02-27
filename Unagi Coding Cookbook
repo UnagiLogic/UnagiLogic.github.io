@@ -150,6 +150,30 @@ function increaseEnergy() {
     }
 }
 
+// This function is a wip of fixing the issue with the fish image going off screen
+  let containerForResourceIndicator = document.getElementById("containerForResourceIndicator");
+  containerForResourceIndicator.appendChild(fishImage);
+
+  //Get the dimensions of the containerForResourceIndicator
+  let containerForResourceIndicatorWidth = containerForResourceIndicator.offsetWidth;
+  let containerForResourceIndicatorHeight = containerForResourceIndicator.offsetHeight;
+
+  //Get the dimensions of the fishImage
+  let fishImageWidth = fishImage.offsetWidth;
+  let fishImageHeight = fishImage.offsetHeight;
+
+  //Calculate the maximum position the fish image can have without overflowing the container
+  let maxLeft = containerForResourceIndicatorWidth - fishImageWidth;
+  let maxTop = containerForResourceIndicatorHeight - fishImageHeight;
+
+  //Generate random positions within the container
+  let randomLeft = Math.floor(Math.random() * maxLeft);
+  let randomTop = Math.floor(Math.random() * maxTop);
+
+  //Set the fish image position
+  fishImage.style.left = randomLeft + "px";
+  fishImage.style.top = randomTop + "px";
+
 STORY, DIALOGUE, AND LORE GOES HERE
 You are in the spawning pool. 
 This is where the fish spawn. 

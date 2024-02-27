@@ -18,6 +18,7 @@ const dialogMessages = [
 // Game state variables
 let initialClickHappened = false;
 let animationInProgress = false;
+let skipAnimation = false;
 
 // Elements
 const unknownEntityImage = document.getElementById("unknownEntityImage");
@@ -228,28 +229,9 @@ function displayFishImage() {
   let fishImage = document.createElement("img");
   fishImage.src = "Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
-  let containerForResourceIndicator = document.getElementById("containerForResourceIndicator");
-  containerForResourceIndicator.appendChild(fishImage);
-
-  //Get the dimensions of the containerForResourceIndicator
-  let containerForResourceIndicatorWidth = containerForResourceIndicator.offsetWidth;
-  let containerForResourceIndicatorHeight = containerForResourceIndicator.offsetHeight;
-
-  //Get the dimensions of the fishImage
-  let fishImageWidth = fishImage.offsetWidth;
-  let fishImageHeight = fishImage.offsetHeight;
-
-  //Calculate the maximum position the fish image can have without overflowing the container
-  let maxLeft = containerForResourceIndicatorWidth - fishImageWidth;
-  let maxTop = containerForResourceIndicatorHeight - fishImageHeight;
-
-  //Generate random positions within the container
-  let randomLeft = Math.floor(Math.random() * maxLeft);
-  let randomTop = Math.floor(Math.random() * maxTop);
-
-  //Set the fish image position
-  fishImage.style.left = randomLeft + "px";
-  fishImage.style.top = randomTop + "px";
+  document.getElementById("containerForResourceIndicator").appendChild(fishImage);
+  fishImage.style.left = Math.floor(Math.random() * 100) + "%";
+  fishImage.style.top = Math.floor(Math.random() * 100) + "%";
 
   //Remove the fish image after a few seconds
   setTimeout(function() {
