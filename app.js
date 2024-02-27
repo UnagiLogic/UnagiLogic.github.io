@@ -87,6 +87,7 @@ function handleClick() {
     // This will activate dialogMessages inside unknownEntityDialog
     unknownEntityDialog.innerText = dialogMessages;
 
+
       //Remove click listener to prevent multiple clicks
       clickToStart.removeEventListener("click", handleClick);
     } else {
