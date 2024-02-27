@@ -85,7 +85,10 @@ function handleClick() {
     currentMessageIndex = 0; // Starts at index 1 after initializing gameplay
 
     // This will activate dialogMessages inside unknownEntityDialog
-    unknownEntityDialog.innerText = dialogMessages;
+    dialogMessages.forEach((message, index) => {
+      showMessages(message.text, message.timeout);
+    });
+
 
 
       //Remove click listener to prevent multiple clicks
