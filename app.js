@@ -76,8 +76,6 @@ function showElements() {
   containerForUnknownEntityDialog.classList.remove("hidden");
 }
 
-let currentMessageIndex = 0;
-
 function handleClick() {
   if (!initialClickHappened) {
     initialClickHappened = true;
@@ -86,11 +84,8 @@ function handleClick() {
     showElements(); // Show elements after the initial click
     currentMessageIndex = 0; // Starts at index 1 after initializing gameplay
 
-      dialogMessages.forEach((message) => {
-        setTimeout(() => {
-          unknownEntityDialog.innerText = message.text;
-        }, index * 6000); //Adjusts the timeout for each message
-      });
+    // This will activate dialogMessages inside unknownEntityDialog
+    unknownEntityDialog.innerText = dialogMessages;
 
       //Remove click listener to prevent multiple clicks
       clickToStart.removeEventListener("click", handleClick);
@@ -248,7 +243,7 @@ function displayFishImage() {
   let randomLeft = Math.floor(Math.random() * maxLeft);
   let randomTop = Math.floor(Math.random() * maxTop);
 
-  //Set tge fish image position
+  //Set the fish image position
   fishImage.style.left = randomLeft + "px";
   fishImage.style.top = randomTop + "px";
 
