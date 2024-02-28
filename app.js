@@ -1,7 +1,7 @@
 // Constants and configuration
 const clickToStart = document.getElementById("clickToStart");
 const audio = document.querySelector("audio");
-const initialBlackScreenDelay = 60000; Currently not used
+const initialBlackScreenDelay = 60000;
 
 // This is the array of messages that will be displayed in the unknownEntityDialog.
 const dialogMessages = [
