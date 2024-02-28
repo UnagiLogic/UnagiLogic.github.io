@@ -90,7 +90,7 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 102;
 }
 
-.unknownEntityDialog {
+#unknownEntityDialog {
   position: absolute;
   top: 50%;
   left: 50%;
