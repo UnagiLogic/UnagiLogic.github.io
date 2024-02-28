@@ -77,11 +77,11 @@ z-index: 102 - used for the unknown entity dialog box.
 /* It should be bottom center of the screen */ 
 #containerForUnknownEntityDialog {
   position: fixed;
-  bottom: 0;
+  bottom: 5%;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #be9565;
-  border: 1px solid #8a5a24;
+  background-color: #000000;
+  border: 1px solid #8a2424;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
