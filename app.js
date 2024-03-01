@@ -41,6 +41,13 @@ let resources = {
     shrimp: 0,
 }
 
+// Tool Variables
+let tools = {
+    brokenNet: 0,
+    brokenSpoon: 0,
+    brokenShell: 0,
+}
+
 // Purchased resource Variables
 let purchasedResources = {
   fishPerSecond: 0,
