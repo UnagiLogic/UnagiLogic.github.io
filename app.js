@@ -356,7 +356,33 @@ function resourceCache() {
   });
 }
 
-// This function will call the fishingInsightAction function.
+// This is the function for fishingInsightAction.
+// This function will check if the player has enough fish to buy the fishingInsightAction.
+// If the player has enough fish it will subtract the cost of the action from the players fish.
+// It will also update showFish in the HTML.
+// It will also call the fishingInsight function.
+// If the player does not have enough fish it will display a message that says "You do not have enough fish."
+// The fishingInsightAction will cost 10 fish for each attempt.
+// each attempt will give the player a chance to learn a new fishing insight.
+// The fishing insights the player can learn are in an array.
+// The fishing insights each have a percent chance to be learned.
+// Common insights have a 50% chance to be learned.
+// Uncommon insights have a 30% chance to be learned.
+// Rare insights have a 13% chance to be learned.
+// Epic insights have a 4% chance to be learned.
+// Legendary insights have a 2% chance to be learned.
+// Bizare insights have a 1% chance to be learned.
+// if learned, the fishing insight will be added to the bestiary expertise section.
+function fishingInsightAction() {
+  if (resources.fish >= 10) {
+    resources.fish -= 10;
+    updateResourceDisplay();
+    fishingInsight();
+  } else {
+    console.log("You do not have enough fish.");
+  }
+}
+
 
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {

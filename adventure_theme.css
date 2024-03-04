@@ -180,7 +180,7 @@ z-index: 102 - used for the unknown entity dialog box.
   border: 1px solid var(--secondary-color);
 }
 
-#saltwaterAreaFishClickerButton, #bestiaryBookMenuButton, #playerInventoryMenuButton, #buySearchActionButton, #eatActionButton, #actionsMenuButton {
+#saltwaterAreaFishClickerButton, #bestiaryBookMenuButton, #playerInventoryMenuButton, #buySearchActionButton, #eatActionButton, #actionsMenuButton, #insightsMenuButton {
   background-color: var(--hover-bg-color);
 }
 
