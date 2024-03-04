@@ -40,15 +40,13 @@
         <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 	</div>
 
+    <!-- This is a flexbox container for the buttons -->
+    <div id="containerForMenuButtons">
+        <button id="playerInventoryMenuButton">BASKET</button>
+        <button id="bestiaryBookMenuButton">BESTIARY</button>
+        <button id="actionsMenuButton">ACTIONS</button>
+    </div>
 
-    <!-- Button to Open/Close the Player Inventory -->
-    <button class="inventoryButton" id="inventoryButton">BASKET</button>
-    
-    <!-- Button to Open/Close the Bestiary Book -->
-    <button id="bestiaryButton">BESTIARY</button>
-
-    <!-- Button to Open/Close the Actions Menu -->
-    <button id="actionsMenuButton">ACTIONS</button>
 
         <!-- This container is for the energy indicator. It will update like a progress bar -->
     <div id="containerForEnergyIndicator">
@@ -65,8 +63,8 @@
         </div>
                 
         <div class="inventorySlot">
-            <img src="Images/Resources/clay.png" class="inventoryImage" id="clayBGC" width="75px" height="75px">
             <p id="clayCounter">Clay: <span id="showClay" class="number">0</span></p>
+            <img src="Images/Resources/clay.png" class="inventoryImage" id="clayBGC" width="75px" height="75px">
         </div>
 
         <div class="inventorySlot">

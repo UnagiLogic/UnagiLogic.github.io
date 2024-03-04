@@ -391,13 +391,13 @@ window.addEventListener('DOMContentLoaded', function() {
   document.getElementById('containerForActionsMenu').classList.add('hidden');
 });
 
-// Event listener for toggleContainerVisibility for the inventoryButton.
+// Event listener for toggleContainerVisibility for the playerInventoryMenuButton.
 window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('inventoryButton').addEventListener('click', function() {
+  document.getElementById('playerInventoryMenuButton').addEventListener('click', function() {
     toggleContainerVisibility('containerForInventory');
   });
 
-  document.getElementById('bestiaryButton').addEventListener('click', function() {
+  document.getElementById('bestiaryBookMenuButton').addEventListener('click', function() {
     toggleContainerVisibility('bestiaryContainer');
     console.log("Bestiary Loaded");
   });

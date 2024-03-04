@@ -13,6 +13,11 @@ body, html {
   overflow: hidden;
 }
 
+/* This helps to ensure consistent sizing across all elements */
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --main-color: #be9565; /* This is the main color of the game. It is used for the background of the game 
                             so far, and the color of the buttons. */
@@ -74,7 +79,6 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 101;
 }
 
-
 #unknownEntityDialog {
   position: absolute;
   bottom: 5%;
@@ -91,8 +95,6 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 102;
 }
 
-/* This container should be in the top left corner of the screen. */
-/* It should have a padding of 15px, a border-radius of 10px */
 #containerForEnergyIndicator {
   position: fixed;
   height: 25px;
@@ -133,12 +135,23 @@ z-index: 102 - used for the unknown entity dialog box.
   left: 75px;
 }
 
+/* This is the container for Menu Buttons */
+#containerForMenuButtons {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  z-index: 30;
+}
+
 #containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForActionsMenu {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
 }
 
-#saltwaterAreaFishClickerButton, #bestiaryButton, .inventoryButton, #buySearchActionButton, #eatActionButton, #actionsMenuButton {
+#saltwaterAreaFishClickerButton, #bestiaryBookMenuButton, #playerInventoryMenuButton, #buySearchActionButton, #eatActionButton, #actionsMenuButton {
   background-color: var(--hover-bg-color);
 }
 
@@ -152,11 +165,6 @@ z-index: 102 - used for the unknown entity dialog box.
   display: none;
 }
 
-/* I dont know what this does currently. I need to do research. */
-* {
-  box-sizing: border-box;
-}
-
 /* This is the font-family for many elements in the game */
 body, html, p, .containerText, .mainScreen, .spawningPoolTitle {
   font-family: "Droid Serif";
@@ -165,11 +173,6 @@ body, html, p, .containerText, .mainScreen, .spawningPoolTitle {
 /* This is the font size of multiple selectors */
 p, .containerText, .mainScreen {
   font-size: 20px;
-}
-
-/* Test this to see what it does at some point */
-h2 {
-  align-items: center;
 }
 
 #containerForInventory {
@@ -181,11 +184,12 @@ h2 {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
+/* This is used to hide various elements in the game */
 .hidden {
   display: none;
 }
 
-.inventoryButton {
+#playerInventoryMenuButton {
   position: fixed;
   top: 5px;
   right: 5px;
@@ -196,7 +200,7 @@ h2 {
   z-index: 30;
 }
 
-#bestiaryButton {
+#bestiaryBookMenuButton {
   position: fixed;
   top: 5px;
   right: 95px;
@@ -224,16 +228,9 @@ h2 {
   font-weight: bold;
 }
 
-.inventorySlot {
-  align-items: center;
-  margin-bottom: 20px;
-}
-
 .inventoryImage {
   border: 2px solid #000;
   border-radius: 8px;
-  padding: 10px;
-  margin-right: 10px;
 }
 
 #fishCounter, #clayCounter, #mudCounter, #shrimpCounter, #stoneCounter {
@@ -473,7 +470,7 @@ The book is colored #be9565 with a border of #8a5a24*/
 	width: 20%;
 }
 
-#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #actionsMenuButton:hover, #bestiaryButton:hover, .inventoryButton:hover {
+#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #actionsMenuButton:hover, #bestiaryBookMenuButton:hover, #inventoryButton:hover {
   opacity: 0.7;
 }
 
