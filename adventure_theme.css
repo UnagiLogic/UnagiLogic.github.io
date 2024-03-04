@@ -146,6 +146,35 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 30;
 }
 
+#playerInventoryMenuButton {
+  cursor: pointer;
+  color: #9c69c3;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 30;
+}
+
+#bestiaryBookMenuButton {
+  cursor: pointer;
+  color: #9c69c3;
+  border-radius: 5px;
+  z-index: 30;
+}
+
+#actionsMenuButton {
+  cursor: pointer;
+  color: #9c69c3;
+  border-radius: 5px;
+  z-index: 30;
+}
+
+#insightsMenuButton {
+  cursor: pointer;
+  color: #9c69c3;
+  border-radius: 5px;
+  z-index: 30;
+}
+
 #containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForActionsMenu {
   background-color: var(--main-color);
   border: 1px solid var(--secondary-color);
@@ -187,39 +216,6 @@ p, .containerText, .mainScreen {
 /* This is used to hide various elements in the game */
 .hidden {
   display: none;
-}
-
-#playerInventoryMenuButton {
-  position: fixed;
-  top: 5px;
-  right: 5px;
-  cursor: pointer;
-  color: #9c69c3;
-  padding: 5px 10px;
-  border-radius: 5px;
-  z-index: 30;
-}
-
-#bestiaryBookMenuButton {
-  position: fixed;
-  top: 5px;
-  right: 95px;
-  cursor: pointer;
-  color: #9c69c3;
-  padding: 5px 10px;
-  border-radius: 5px;
-  z-index: 30;
-}
-
-#actionsMenuButton {
-  position: fixed;
-  top: 5px;
-  right: 185px; 
-  cursor: pointer;
-  color: #9c69c3;
-  padding: 5px 10px;
-  border-radius: 5px;
-  z-index: 30;
 }
 
 #inventoryInformation {

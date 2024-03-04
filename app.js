@@ -356,6 +356,8 @@ function resourceCache() {
   });
 }
 
+// This function will call the fishingInsightAction function.
+
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {
   var containerElement = document.getElementById(containerId);
@@ -407,4 +409,10 @@ window.addEventListener('DOMContentLoaded', function() {
   toggleContainerVisibility('containerForActionsMenu');
   console.log("Actions Menu Loaded");
   });
+
+// Event listener for when insightsMenuButton is clicked toggleContainerVisibility for containerForInsightsMenu.
+  document.getElementById('insightsMenuButton').addEventListener('click', function() {
+  toggleContainerVisibility('containerForInsightsMenu');
+  console.log("Insights Menu Loaded");
+  });  
 });
