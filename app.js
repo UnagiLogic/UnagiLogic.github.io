@@ -88,6 +88,8 @@ function handleClick() {
   if (!initialClickHappened) {
     initialClickHappened = true;
     clickToStart.classList.add("hidden");
+    // hide containerForInitialText
+    containerForInitialText.classList.add("hidden");
     playAudio();
     showElements(); // Show elements after the initial click
     currentMessageIndex = 0; // Starts at index 1 after initializing gameplay

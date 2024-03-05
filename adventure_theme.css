@@ -41,11 +41,19 @@ z-index: 101 - used for the unknown entity image and clickToStart.
 z-index: 102 - used for the unknown entity dialog box.
 */
 
-#clickToStart {
+#containerForInitialText {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  color: #ffffff;
+  background-color: #000000;
+  border: 2px solid #8a2424;
+  padding: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 102;
+}
+
+#clickToStart {
   color: #ffffff;
   font-size: 30px;
   font-weight: bold;
