@@ -43,7 +43,6 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #containerForInitialText {
   position: fixed;
-  display: flex;
   color: #ffffff;
   background-color: #000000;
   border: 2px solid #8a2424;
@@ -60,15 +59,6 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 101;
 }
 
-/* This is the container for scene elements. */
-#containerForSceneElements {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 #containerForInitialBlackScreen {
   position: fixed;
   width: 100%;
@@ -77,7 +67,6 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 100;
 }
 
-/* This image should fill the screen, and be centered. */
 #unknownEntityImage {
   position: absolute;
   align-content: center;
@@ -87,21 +76,64 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 101;
 }
 
-#unknownEntityDialog {
+#containerForUnknownEntityDialog {
   position: absolute;
   bottom: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #000000;
   border: 1px solid #8a2424;
-  color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
   z-index: 102;
 }
+
+#unknownEntityDialog {
+  color: #ffffff;
+  z-index: 102;
+}
+
+.mainScreen {
+  font-weight: bold;
+  text-align: center;
+}
+
+.spawningPoolTitle {
+  color: #9c69c3;    
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #323232;
+}
+
+#saltwaterAreaFishClickerButton {
+  width: 300px;
+  height: 350px;
+  margin-top: 60px;
+  box-shadow: 0 4px 8px 0 #3188cc;
+  border-radius: 8px;
+  transition-duration: 0.3s; /* Currently testing if it is causing issues */
+  cursor: pointer;
+}
+
+.number {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* This is the container for scene elements. */
+#containerForSceneElements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* This image should fill the screen, and be centered. */
+
 
 #containerForEnergyIndicator {
   position: fixed;
@@ -248,12 +280,6 @@ p, .containerText, .mainScreen {
 #mudBGC { background-color: #a23b08; }
 #shrimpBGC { background-color: #ec7445; }
 #stoneBGC { background-color: #585756; }
-
-.number {
-  color: #000000;
-  font-size: 20px;
-  font-weight: bold;
-}
 
 /* Style for the bestiary book. It holds the .bestiaryPage layout, and both the leftPageContainer and the rightPageContainer
 The book is colored #be9565 with a border of #8a5a24*/
@@ -408,16 +434,6 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 1px;
 }
 
-#saltwaterAreaFishClickerButton {
-  width: 300px;
-  height: 350px;
-  margin-top: 60px;
-  box-shadow: 0 4px 8px 0 #3188cc;
-  border-radius: 8px;
-  transition-duration: 0.3s; /* Currently testing if it is causing issues */
-  cursor: pointer;
-}
-
 #containerForResourceIndicator {
   display: flex;
   align-items: center;
@@ -500,17 +516,4 @@ The book is colored #be9565 with a border of #8a5a24*/
   font-weight: bold;
   color: #ffffff;
   z-index: 51;
-}
-
-.mainScreen {
-    font-weight: bold;
-    text-align: center;
-  }
-
-.spawningPoolTitle {
-  color: #9c69c3;    
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  background-color: #323232;
 }
