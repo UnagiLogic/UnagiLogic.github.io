@@ -400,52 +400,41 @@ function toggleContainerVisibility(containerId) {
   }
 }    
 
-// A function to make the bestiaryContainer hidden when the page loads.
-function hideBestiaryContainer() {
-  document.getElementById('bestiaryContainer').classList.add('hidden');
+// A function to hide containers when the page loads.
+function hideContainer(containerId) {
+  document.getElementById(containerId).classList.add('hidden');
+}
+
+// A function to toggle the visibility of a container.
+function addToggleVisibilityListener(buttonId, containerId) {
+  document.getElementById(buttonId).addEventListener('click', function() {
+    toggleContainerVisibility(containerId);
+    console.log(`${containerId} loaded`);
+  });
 }
 
 // Event Listeners go here -----------------------------------
 
-// Event listener for hiding the bestiaryContainer when the page loads.
-window.addEventListener('DOMContentLoaded', hideBestiaryContainer);
-
-// Event listener for hiding the containerForInventory when the page loads.
+// Event listener for hiding containers when the page loads.
 window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('containerForInventory').classList.add('hidden');
-});
+  hideContainer('containerForInventory');
+  hideContainer('containerForLocationMenu');
+  hideContainer('bestiaryContainer');
+  hideContainer('containerForActionsMenu');
+  hideContainer('containerForInsightsMenu');
 
-// Event listener for hiding the containerForActionsMenu when the page loads.
-window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('containerForActionsMenu').classList.add('hidden');
-});
+// Event listener to toggleContainerVisibility when playerInventoryMenuButton is clicked.
+  addToggleVisibilityListener('playerInventoryMenuButton', 'containerForInventory');
 
-// Event listener for toggleContainerVisibility for the playerInventoryMenuButton.
-window.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('playerInventoryMenuButton').addEventListener('click', function() {
-    toggleContainerVisibility('containerForInventory');
-  });
+// Event listener to toggleContainerVisibility when containerForLocationMenu is clicked.
+  addToggleVisibilityListener('locationMenuButton', 'containerForLocationMenu');
 
-// Event listener for when locationMenuButton is clicked toggleContainerVisibility for containerForLocationMenu.
-  document.getElementById('locationMenuButton').addEventListener('click', function() {
-    toggleContainerVisibility('containerForLocationMenu');
-    console.log("Location Menu Loaded");
-  });
+// Event listener to toggleContainerVisibility when bestiaryBookMenuButton is clicked.
+  addToggleVisibilityListener('bestiaryBookMenuButton', 'bestiaryContainer');
 
-  document.getElementById('bestiaryBookMenuButton').addEventListener('click', function() {
-    toggleContainerVisibility('bestiaryContainer');
-    console.log("Bestiary Loaded");
-  });
+// Event listener to toggleContainerVisibility when actionsMenuButton is clicked.
+  addToggleVisibilityListener('actionsMenuButton', 'containerForActionsMenu');
 
-// Event listener for when actionsMenuButton is clicked toggleContainerVisibility for containerForActionsMenu.
-  document.getElementById('actionsMenuButton').addEventListener('click', function() {
-  toggleContainerVisibility('containerForActionsMenu');
-  console.log("Actions Menu Loaded");
-  });
-
-// Event listener for when insightsMenuButton is clicked toggleContainerVisibility for containerForInsightsMenu.
-  document.getElementById('insightsMenuButton').addEventListener('click', function() {
-  toggleContainerVisibility('containerForInsightsMenu');
-  console.log("Insights Menu Loaded");
-  });  
+// Event listener to toggleContainerVisibility when insightsMenuButton is clicked.
+  addToggleVisibilityListener('insightsMenuButton', 'containerForInsightsMenu');
 });
