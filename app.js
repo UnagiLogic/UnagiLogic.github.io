@@ -387,15 +387,21 @@ function fishingInsightAction() {
 
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {
+  // Get the container element.
   var containerElement = document.getElementById(containerId);
+  
+  // Check if the container element exists.
   if (containerElement) {
+    // Toggle the 'hidden' class.
     containerElement.classList.toggle('hidden');
-    if (!containerElement.classList.contains('hidden')) {
-      containerElement.classList.add('opened');
-    } else {
-      containerElement.classList.remove('opened');
-    }
+
+    // If 'hidden' class is not present, add the 'opened' class.
+    // Otherwise, remove the 'opened' class.
+    containerElement.classList.contains('hidden')
+      ? containerElement.classList.remove('opened')
+      : containerElement.classList.add('opened');
   } else {
+    // Log an error message if the container element is not found.
     console.log('Container element not found.', containerId);
   }
 }    
