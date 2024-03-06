@@ -426,6 +426,12 @@ window.addEventListener('DOMContentLoaded', function() {
     toggleContainerVisibility('containerForInventory');
   });
 
+// Event listener for when locationMenuButton is clicked toggleContainerVisibility for containerForLocationMenu.
+  document.getElementById('locationMenuButton').addEventListener('click', function() {
+    toggleContainerVisibility('containerForLocationMenu');
+    console.log("Location Menu Loaded");
+  });
+
   document.getElementById('bestiaryBookMenuButton').addEventListener('click', function() {
     toggleContainerVisibility('bestiaryContainer');
     console.log("Bestiary Loaded");

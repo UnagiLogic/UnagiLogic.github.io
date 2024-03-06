@@ -18,6 +18,21 @@ body, html {
   box-sizing: border-box;
 }
 
+/* This is the font-family for many elements*/
+body, html, p, .containerText, .mainScreenContainer, .spawningPoolTitle {
+  font-family: "Droid Serif";
+}
+
+/* This is the font size for many selectors */
+p, .containerText, .mainScreenContainer {
+  font-size: 20px;
+}
+
+/* This is the font weight for many elements */
+h1, h2, h3, h4, h5, h6, .mainScreenContainer, .spawningPoolTitle {
+  font-weight: bold;
+}
+
 :root {
   --main-bg-color: #323232; /* Used for: Menus, buttons, and container background color. */
   --main-border-color: #C0C0C0; /* Used for: Primary border color. */
@@ -25,6 +40,29 @@ body, html {
   --secondary-border-color: #A0522D; /* Used for: Secondary border color. */
   --hover-bg-color: #323232; /* Used for: Primary hovor color. */
 }
+
+/*h1, h2, p Text Color*/
+h1, h2, p {
+  color: var(--main-text-color);
+ }
+
+/*Button BG Color*/
+#playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+}
+
+/*Button Opacity*/
+#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover {
+  opacity: 0.7;
+}
+
+/*Inventory Item BG Color*/
+#fishBGC { background-color: #309aba; }
+#clayBGC { background-color: #fbb84c; }
+#mudBGC { background-color: #a23b08; }
+#shrimpBGC { background-color: #ec7445; }
+#stoneBGC { background-color: #585756; }
 
 /* Z-index information: 
 z-index: 1 - This is the lowest z-index. It is used for background images.
@@ -91,15 +129,12 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 102;
 }
 
-.mainScreen {
-  font-weight: bold;
+.mainScreenContainer {
   text-align: center;
 }
 
 .spawningPoolTitle {
-  color: var(--main-text-color); 
-  background-color: var(--main-bg-color);  
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   margin: 10px;
 }
@@ -133,29 +168,31 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #playerInventoryMenuButton {
   cursor: pointer;
-  color: #9c69c3;
   padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 30;
+}
+
+#locationMenuButton {
+  cursor: pointer;
   border-radius: 5px;
   z-index: 30;
 }
 
 #bestiaryBookMenuButton {
   cursor: pointer;
-  color: #9c69c3;
   border-radius: 5px;
   z-index: 30;
 }
 
 #actionsMenuButton {
   cursor: pointer;
-  color: #9c69c3;
   border-radius: 5px;
   z-index: 30;
 }
 
 #insightsMenuButton {
   cursor: pointer;
-  color: #9c69c3;
   border-radius: 5px;
   z-index: 30;
 }
@@ -214,10 +251,6 @@ z-index: 102 - used for the unknown entity dialog box.
   border: 1px solid var(--main-border-color);
 }
 
-#saltwaterAreaFishClickerButton, #bestiaryBookMenuButton, #playerInventoryMenuButton, #buySearchActionButton, #eatActionButton, #actionsMenuButton, #insightsMenuButton {
-  background-color: var(--hover-bg-color);
-}
-
 /* This is used to hide the bestiary container and it's pages*/
 #bestiaryContainer.hidden, .hidden #leftPageContainer, .hidden #rightPageContainer {
   display: none;
@@ -226,16 +259,6 @@ z-index: 102 - used for the unknown entity dialog box.
 /* This is used to hide the actions menu container */
 .containerForActionsMenu.hidden {
   display: none;
-}
-
-/* This is the font-family for many elements in the game */
-body, html, p, .containerText, .mainScreen, .spawningPoolTitle {
-  font-family: "Droid Serif";
-}
-
-/* This is the font size of multiple selectors */
-p, .containerText, .mainScreen {
-  font-size: 20px;
 }
 
 #containerForInventory {
@@ -264,16 +287,8 @@ p, .containerText, .mainScreen {
 }
 
 #fishCounter, #clayCounter, #mudCounter, #shrimpCounter, #stoneCounter {
-  color: #000000;
-  font-size: 20px;
   font-weight: bold;
 }
-
-#fishBGC { background-color: #309aba; }
-#clayBGC { background-color: #fbb84c; }
-#mudBGC { background-color: #a23b08; }
-#shrimpBGC { background-color: #ec7445; }
-#stoneBGC { background-color: #585756; }
 
 /* Style for the bestiary book. It holds the .bestiaryPage layout, and both the leftPageContainer and the rightPageContainer
 The book is colored #be9565 with a border of #8a5a24*/
@@ -482,10 +497,6 @@ The book is colored #be9565 with a border of #8a5a24*/
 .itemImage {
 	height: 20%;
 	width: 20%;
-}
-
-#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #actionsMenuButton:hover, #bestiaryBookMenuButton:hover, #inventoryButton:hover {
-  opacity: 0.7;
 }
 
 /* Style for the resource cache. This should appear randomly on the screen */

@@ -30,7 +30,6 @@
     <!-- The image will grow on the screen and stop -->
     <!-- a message will appear in a p element with the id unknownEntity -->
     <!-- The story will begin to unfold as the unknownEntity continues to talk updating the p element automatically -->
-    <!-- After the initial dialog finished, the mainScreen appears -->
     <div id="containerForInitialBlackScreen">
         <img src="Images/backgroundImages/unknownEntity.png" id="unknownEntityImage">
         <div id="containerForUnknownEntityDialog">
@@ -38,16 +37,17 @@
         </div>
     </div>
 
-    <div class="mainScreen">
+    <div class="mainScreenContainer">
         <h1 class="spawningPoolTitle">The Spawning Pool</h1>
         <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="saltwaterAreaFishClickerButton" onclick="increment()"> <!--The image you have to click -->
         <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
         <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 	</div>
 
-    <!-- This is a flexbox container for the buttons -->
+    <!-- This is a flexbox container for the menu buttons -->
     <div id="containerForMenuButtons">
         <button id="playerInventoryMenuButton">BASKET</button>
+        <button id="locationMenuButton">LOCATION</button>
         <button id="bestiaryBookMenuButton">BESTIARY</button>
         <button id="actionsMenuButton">ACTIONS</button>
         <button id="insightsMenuButton">INSIGHTS</button>
@@ -91,6 +91,12 @@
         <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
             <p id="gameOver"></p> <!-- for text to appear when you win -->
         </div>
+    </div>
+
+    <div id="containerForLocationMenu">
+        <h2>Areas</h2>
+        <p>Location: Saltwater Area</p>
+        <p>Location Description: This is the saltwater area. It is a vast ocean with many fish.</p>
     </div>
 
     <div id="bestiaryContainer">
