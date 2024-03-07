@@ -20,6 +20,10 @@
         <source src="Audio/audio.mp3" type="audio/mp3">
     </audio>
 
+    <!-- This is a tooltip-container for the spawningPoolLocationButton -->
+    <div class="tooltip-container">
+        <span class="tooltip-text">Tooltip for Spawning Pool</span>
+
     <!-- This is the text that will show up at game start-->
     <div id="containerForInitialText">
         <p id="clickToStart">Click To Start</p>
@@ -31,7 +35,7 @@
     <!-- a message will appear in a p element with the id unknownEntity -->
     <!-- The story will begin to unfold as the unknownEntity continues to talk updating the p element automatically -->
     <div id="containerForInitialBlackScreen">
-        <img src="Images/backgroundImages/unknownEntity.png" id="unknownEntityImage">
+        <img src="Images/Backgrounds/unknownEntity.png" id="unknownEntityImage">
         <div id="containerForUnknownEntityDialog">
             <p id="unknownEntityDialog"></p>
         </div>
@@ -41,7 +45,7 @@
     <div class="mainScreenContainer">
         <h1 class="mainScreenTitle">The Spawning Pool</h1>
     <!-- Create a background image for theSpawningPool-->
-        <img src="Images/backgroundImages/theSpawningPool.png" id="currentBackgroundImage">
+        <img src="Images/Backgrounds/theSpawningPool.png" id="currentBackgroundImage">
         <img src="Images/Buttons/saltwaterAreaButton.png" width="300px" height="350px" id="currentButtonImage" onclick="increment()"> <!--The image you have to click -->
         <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
         <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
@@ -67,30 +71,29 @@
     </div>
 
     <div id="containerForInventory">
-        <h2>Basket</h2>
         <div class="inventorySlot">
             <img src="Images/Resources/fish.png" class="inventoryImage"  id="fishBGC" width="75px" height="75px">
-            <p id="fishCounter">Fish: <span id="showFish" class="number">0</span></p>
+            <p id="fishCounter"><span id="showFish" class="number">0</span></p>
         </div>
                 
         <div class="inventorySlot">
-            <p id="clayCounter">Clay: <span id="showClay" class="number">0</span></p>
             <img src="Images/Resources/clay.png" class="inventoryImage" id="clayBGC" width="75px" height="75px">
+            <p id="clayCounter"><span id="showClay" class="number">0</span></p>
         </div>
 
         <div class="inventorySlot">
             <img src="Images/Resources/mud.png" class="inventoryImage" id="mudBGC" width="75px" height="75px">
-            <p id="mudCounter">Mud: <span id="showMud" class="number">0</span></p>
+            <p id="mudCounter"><span id="showMud" class="number">0</span></p>
         </div>
 
         <div class="inventorySlot">
             <img src="Images/Resources/stone.png" class="inventoryImage" id="stoneBGC" width="75px" height="75px">
-            <p id="stoneCounter">Stone: <span id="showStone" class="number">0</span></p>
+            <p id="stoneCounter"><span id="showStone" class="number">0</span></p>
         </div>
 
         <div class="inventorySlot">
             <img src="Images/Resources/shrimp.png" class="inventoryImage" id="shrimpBGC" width="75px" height="75px">
-            <p id="shrimpCounter">Shrimp: <span id="showShrimp" class="number">0</span></p>
+            <p id="shrimpCounter"><span id="showShrimp" class="number">0</span></p>
         </div>
 
         <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->

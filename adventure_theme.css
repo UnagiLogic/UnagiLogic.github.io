@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6, .mainScreenContainer, .mainScreenTitle {
 }
 
 /*h1, h2, p Text Color*/
-h1, h2, p, #energyIndicatorText, #showEnergy, .number {
+h1, h2, p, #energyIndicatorText, #showEnergy {
   color: var(--main-text-color);
  }
 
@@ -49,6 +49,11 @@ h1, h2, p, #energyIndicatorText, #showEnergy, .number {
 #playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
+}
+
+/* Border Color for images */
+.inventoryImage {
+  border: 2px solid var(--main-border-color);
 }
 
 /* Container BG Color and Border Color*/
@@ -171,8 +176,14 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 .number {
+  position: absolute;
+  color: black;
+  bottom: 0;
+  right: 0;
   font-size: 20px;
   font-weight: bold;
+  padding: 1px 4px;
+}
 }
 
 /* This is the container for scene elements. */
@@ -258,28 +269,25 @@ z-index: 102 - used for the unknown entity dialog box.
   left: 75px;
 }
 
-/* This is used to hide the actions menu container */
-.containerForActionsMenu.hidden {
-  display: none;
-}
-
 #containerForInventory {
   position: fixed;
-  top: 5px;
+  top: 33px;
   right: 5px;
-  padding: 15px;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-#inventoryInformation {
-  margin: 5px 0 5px 0;
-  font-size: 20px;
-  font-weight: bold;
+.inventorySlot {
+  position: relative;
+  display: flex;
+  width: 75px;
+  height: 75px;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 .inventoryImage {
-  border: 2px solid #000;
   border-radius: 8px;
 }
 
@@ -484,6 +492,35 @@ The book is colored #be9565 with a border of #8a5a24*/
   z-index: 51;
 }
 
+/* This is the css for the .tooltip container and text */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip text*/
+  position: absolute;
+  z-index: 1;
+  /* Place the tooltip to the right of the button */
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 /* This is used to hide various elements in the game */
 .hidden {
   display: none;
@@ -491,5 +528,10 @@ The book is colored #be9565 with a border of #8a5a24*/
 
 /* This is used to hide the bestiary container and it's pages*/
 #bestiaryContainer.hidden, .hidden #leftPageContainer, .hidden #rightPageContainer {
+  display: none;
+}
+
+/* This is used to hide the actions menu container */
+.containerForActionsMenu.hidden {
   display: none;
 }
