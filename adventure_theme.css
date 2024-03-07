@@ -42,7 +42,7 @@ h1, h2, h3, h4, h5, h6, .mainScreenContainer, .spawningPoolTitle {
 }
 
 /*h1, h2, p Text Color*/
-h1, h2, p {
+h1, h2, p, #energyIndicatorText, #showEnergy {
   color: var(--main-text-color);
  }
 
@@ -50,6 +50,12 @@ h1, h2, p {
 #playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
+}
+
+/* Container BG Color and Border Color*/
+#containerForInventory, #containerForLocationMenu, #bestiaryContainer, #leftPageContainer, #rightPageContainer, .achievementImageContainer, #containerForActionsMenu, #containerForInsightsMenu, #saltwaterAreaFishClickerButton, .spawningPoolTitle {
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-border-color);
 }
 
 /*Button Opacity*/
@@ -155,7 +161,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-weight: bold;
 }
 
-/* This is the container for Menu Buttons */
+/* This is the Menu Buttons container section */
 #containerForMenuButtons {
   position: fixed;
   top: 5px;
@@ -197,20 +203,11 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 30;
 }
 
-/* This is the container for scene elements. */
-#containerForSceneElements {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
 #containerForEnergyIndicator {
   position: fixed;
   height: 25px;
   width: 200px;
-  background-color: gray;
+  background-color: #323232;
   border-radius: 15px;
   top: 5px;
   left: 5px;
@@ -219,21 +216,14 @@ z-index: 102 - used for the unknown entity dialog box.
 #energyBar {
   position: absolute;
   height: 100%;
-  background-color: #9d4caf;
+  background-color: #3c1e5a;
   border-radius: 15px;
   width: 0;
-}
-
-#energyIndicator {
-  color: #21459a;
-  font-size: 20px;
-  font-weight: bold;
 }
 
 #energyIndicatorText {
   position: absolute;
   font-weight: bold;
-  color:#450262;
   margin: 0px;
   left: 48px;
 }
@@ -241,14 +231,17 @@ z-index: 102 - used for the unknown entity dialog box.
 #showEnergy {
   position: absolute;
   font-weight: bold;
-  color:#450262;
   margin: 0px;
   left: 75px;
 }
 
-#containerForInventory, #bestiaryContainer, .achievementImageContainer, #saltwaterAreaFishClickerButton, .spawningPoolTitle, .containerForActionsMenu {
-  background-color: var(--main-bg-color);
-  border: 1px solid var(--main-border-color);
+/* This is the container for scene elements. */
+#containerForSceneElements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* This is used to hide the bestiary container and it's pages*/

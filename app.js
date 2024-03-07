@@ -97,9 +97,6 @@ function handleClick() {
     dialogMessages.forEach((message, index) => {
       showMessages(message.text, message.timeout);
     });
-
-
-
       //Remove click listener to prevent multiple clicks
       clickToStart.removeEventListener("click", handleClick);
     } else {
