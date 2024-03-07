@@ -37,12 +37,17 @@
         </div>
     </div>
 
+    <!-- This is the container for the main screen. When location buttons are clicked, this screen changes to the corresponding location. -->
     <div class="mainScreenContainer">
-        <h1 class="spawningPoolTitle">The Spawning Pool</h1>
-        <img src="Images/Buttons/clickButton.png" width="300px" height="350px" id="saltwaterAreaFishClickerButton" onclick="increment()"> <!--The image you have to click -->
+        <h1 class="mainScreenTitle">The Spawning Pool</h1>
+    <!-- Create a background image for theSpawningPool-->
+        <img src="Images/backgroundImages/theSpawningPool.png" id="currentBackgroundImage">
+        <img src="Images/Buttons/saltwaterAreaButton.png" width="300px" height="350px" id="currentButtonImage" onclick="increment()"> <!--The image you have to click -->
         <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
         <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
 	</div>
+
+
 
     <!-- This is a flexbox container for the menu buttons -->
     <div id="containerForMenuButtons">
@@ -95,8 +100,18 @@
 
     <div id="containerForLocationMenu">
         <h2>Areas</h2>
+        <!-- Create a button called The Spawning Pool. It has a tooltop with Biome information-->
+        <button id="spawningPoolLocationButton" title="Tooltip for Spawning Pool">The Spawning Pool</button> 
         <p>Location: Saltwater Area</p>
         <p>Location Description: This is the saltwater area. It is a vast ocean with many fish.</p>
+    </div>
+
+    <!-- Create a containerForSpawningPool -->
+    <div id="containerForSpawningPool">
+        <h2>Spawning Pool</h2>
+        <p>Spawning Pool Description: This is the spawning pool. It is a place where fish spawn.</p>
+        <p>Spawning Pool Biome: Saltwater</p>
+        <p>Spawning Pool Fish: Fish</p>
     </div>
 
     <div id="bestiaryContainer">

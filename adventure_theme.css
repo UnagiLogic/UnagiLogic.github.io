@@ -1,5 +1,4 @@
 body, html {
-  background-image: url("Images/backgroundImages/theSpawningPool.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -19,7 +18,7 @@ body, html {
 }
 
 /* This is the font-family for many elements*/
-body, html, p, .containerText, .mainScreenContainer, .spawningPoolTitle {
+body, html, p, .containerText, .mainScreenContainer, .mainScreenTitle {
   font-family: "Droid Serif";
 }
 
@@ -29,7 +28,7 @@ p, .containerText, .mainScreenContainer {
 }
 
 /* This is the font weight for many elements */
-h1, h2, h3, h4, h5, h6, .mainScreenContainer, .spawningPoolTitle {
+h1, h2, h3, h4, h5, h6, .mainScreenContainer, .mainScreenTitle {
   font-weight: bold;
 }
 
@@ -42,7 +41,7 @@ h1, h2, h3, h4, h5, h6, .mainScreenContainer, .spawningPoolTitle {
 }
 
 /*h1, h2, p Text Color*/
-h1, h2, p, #energyIndicatorText, #showEnergy {
+h1, h2, p, #energyIndicatorText, #showEnergy, .number {
   color: var(--main-text-color);
  }
 
@@ -53,7 +52,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /* Container BG Color and Border Color*/
-#containerForInventory, #containerForLocationMenu, #bestiaryContainer, #leftPageContainer, #rightPageContainer, .achievementImageContainer, #containerForActionsMenu, #containerForInsightsMenu, #saltwaterAreaFishClickerButton, .spawningPoolTitle {
+#containerForInventory, #containerForLocationMenu, #bestiaryContainer, #leftPageContainer, #rightPageContainer, .achievementImageContainer, #containerForActionsMenu, #containerForInsightsMenu, #saltwaterAreaFishClickerButton, .mainScreenTitle {
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
 }
@@ -139,13 +138,13 @@ z-index: 102 - used for the unknown entity dialog box.
   text-align: center;
 }
 
-.spawningPoolTitle {
+.mainScreenTitle {
   padding: 5px;
   border-radius: 5px;
   margin: 10px;
 }
 
-#saltwaterAreaFishClickerButton {
+#currentButtonImage {
   width: 300px;
   height: 350px;
   margin-top: 60px;
@@ -155,10 +154,34 @@ z-index: 102 - used for the unknown entity dialog box.
   cursor: pointer;
 }
 
+/* When I hover over a button, a box shadow color should change, and be a little rounder */
+#currentButtonImage:hover, #currentButtonImage:active {
+  box-shadow: 0 4px 8px 0 #979797;
+  border-radius: 8px;
+  transition-duration: 0.5s;
+}
+
+/* When clicked, I want the box shadow color to change again, more round, and get a little larger */
+#currentButtonImage:active {
+  box-shadow: 0 4px 8px 0 #666666;
+  border-radius: 20px;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .number {
-  color: var(--main-text-color); 
   font-size: 20px;
   font-weight: bold;
+}
+
+/* This is the container for scene elements. */
+#containerForSceneElements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* This is the Menu Buttons container section */
@@ -235,20 +258,6 @@ z-index: 102 - used for the unknown entity dialog box.
   left: 75px;
 }
 
-/* This is the container for scene elements. */
-#containerForSceneElements {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* This is used to hide the bestiary container and it's pages*/
-#bestiaryContainer.hidden, .hidden #leftPageContainer, .hidden #rightPageContainer {
-  display: none;
-}
-
 /* This is used to hide the actions menu container */
 .containerForActionsMenu.hidden {
   display: none;
@@ -261,11 +270,6 @@ z-index: 102 - used for the unknown entity dialog box.
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* This is used to hide various elements in the game */
-.hidden {
-  display: none;
 }
 
 #inventoryInformation {
@@ -287,6 +291,7 @@ z-index: 102 - used for the unknown entity dialog box.
 The book is colored #be9565 with a border of #8a5a24*/
 #bestiaryContainer {
   position: fixed;
+  transform: perspective(2000px) scale(0.75);
   top: 50px;
   left: 50px;
   max-width: 838px;
@@ -296,43 +301,22 @@ The book is colored #be9565 with a border of #8a5a24*/
   display: flex;
 }
 
-#bestiaryContainer.opened {
-  transform: perspective(2000px) scale(0.75); /* Remove rotateY and adjust scale */
-}
-
 /* This is the right page container. It's placed to the right of the leftPageContainer */
 #rightPageContainer {
+  width: 49%;
+  text-align: center;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid #8a5a24;
   border-radius: 10px;
-  background-color: #be9565;
   padding: 20px; }
 
 /* This is the left page container. It's placed to the left of the rightPageContainer */
 #leftPageContainer {
+  width: 49%;
+  text-align: center;
   margin-right: 2%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  border: 1px solid #8a5a24;
   border-radius: 10px;
-  background-color: #be9565;
   padding: 20px; }
-
-
-/* Someday add this with the below container*/
-#bestiaryContainer.opened #leftPageContainer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 49%;
-}
-
-/* Find out at some point why you can't add this to the top one */
-#bestiaryContainer.opened #rightPageContainer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  width: 49%;
-}
 
 .bestiaryName {
   font-size: 24px;
@@ -465,22 +449,6 @@ The book is colored #be9565 with a border of #8a5a24*/
   }
 }
 
-/* When I hover over a button, a box shadow color should change, and be a little rounder */
-#saltwaterAreaFishClickerButton:hover, #saltwaterAreaFishClickerButton:active {
-  box-shadow: 0 4px 8px 0 #979797;
-  border-radius: 8px;
-  transition-duration: 0.5s;
-}
-
-/* When clicked, I want the box shadow color to change again, more round, and get a little larger */
-#saltwaterAreaFishClickerButton:active {
-  box-shadow: 0 4px 8px 0 #666666;
-  border-radius: 20px;
-  -ms-transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
 #gameOver {
   font-size: 30px;
   color: #3188cc;
@@ -514,4 +482,14 @@ The book is colored #be9565 with a border of #8a5a24*/
   font-weight: bold;
   color: #ffffff;
   z-index: 51;
+}
+
+/* This is used to hide various elements in the game */
+.hidden {
+  display: none;
+}
+
+/* This is used to hide the bestiary container and it's pages*/
+#bestiaryContainer.hidden, .hidden #leftPageContainer, .hidden #rightPageContainer {
+  display: none;
 }

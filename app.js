@@ -139,6 +139,18 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
+// Create a function that changes multiple img elements to new images
+// we will change the currentBackgroundImage to a new image
+// we will change the currentButtonImage to a new image
+function changeImages() {
+  let currentBackgroundImage = document.getElementById("currentBackgroundImage");
+  let currentButtonImage = document.getElementById("currentButtonImage");
+  currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
+  currentButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+}
+
+
+
 function updateEnergyBar() {;
   const energyPercentage = (energy / maxEnergy) * 100;
   anime({
@@ -213,7 +225,7 @@ function eatAction() {
   }
 }
 
-// Function that gets called when you click the saltwaterAreaFishClickerButton
+// Function that gets called when you click the saltwaterAreaFishClickerButton (currentButtonImage)
 function increment() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
   updateResourceDisplay(); // Uses the Document Object Model to change the number of fish in the HTML
@@ -224,10 +236,10 @@ function increment() {
   }
 }
 
-// This function is used to display an image in the containerForResourceIndicator each time the saltwaterAreaFishClickerButton is pressed.
+// This function is used to display an image in the containerForResourceIndicator each time the saltwaterAreaFishClickerButton (currentButtonImage) is pressed.
 // The image will be randomly selected from the Images/Resources/saltwaterFish/fish folder of 6 images. 
 // The class fishImage has a CSS
-// The containerForResourceIndicator appears inside the saltwaterAreaFishClickerButton CSS width and height at random places.
+// The containerForResourceIndicator appears inside the saltwaterAreaFishClickerButton (currentButtonImage) CSS width and height at random places.
 // The fishImage will be displayed in the containerForResourceIndicator CSS width and height.
 // The fishImage needs to be removed after a few seconds.
 function displayFishImage() {
@@ -441,3 +453,6 @@ window.addEventListener('DOMContentLoaded', function() {
 // Event listener to toggleContainerVisibility when insightsMenuButton is clicked.
   addToggleVisibilityListener('insightsMenuButton', 'containerForInsightsMenu');
 });
+
+// Event listener to toggleContainerVisibility when spawningPoolButton is clicked.
+  addToggleVisibilityListener('spawningPoolLocationButton', 'containerForSpawningPool');
