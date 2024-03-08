@@ -328,20 +328,19 @@ z-index: 102 - used for the unknown entity dialog box.
   margin-top: -5px;
 }
 
-/* This is the css for the .tooltip container and text */
-.tooltip-container {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+#spawningPoolLocationButton {
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* This is the css for the .tooltip container and text */
-.tooltip-container {
-  display: flex;
+.containerForTooltip {
+  display: none;
+  position: fixed;
   flex-direction: column;
 }
 
-.tooltip-text {
+.tooltipName, .tooltipDescription, .tooltipBiome, .tooltipSpecies {
   visibility: hidden;
   width: 120px;
   background-color: #323232;
@@ -350,22 +349,13 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 6px;
   padding: 5px 0;
   
-  /* Remove the absolute positioning */
-  /* position: absolute; */
-  z-index: 1;
-  
-  /* Adjust the tooltip position */
-  /* top: 125%; */
-  /* left: 50%; */
-  
   /* Fade in the tooltip */
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.tooltip-container:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
+#spawningPoolLocationButton:hover .containerForTooltip {
+  display: block;
 }
 
 #containerForSpawningPool {
