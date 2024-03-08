@@ -337,7 +337,6 @@ z-index: 102 - used for the unknown entity dialog box.
 .containerForTooltip {
   display: none;
   position: fixed;
-  flex-direction: column;
 }
 
 .tooltipName, .tooltipDescription, .tooltipBiome, .tooltipSpecies {
@@ -352,10 +351,6 @@ z-index: 102 - used for the unknown entity dialog box.
   /* Fade in the tooltip */
   opacity: 0;
   transition: opacity 0.3s;
-}
-
-#spawningPoolLocationButton:hover .containerForTooltip {
-  display: block;
 }
 
 #containerForSpawningPool {

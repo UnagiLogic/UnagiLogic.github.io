@@ -394,6 +394,16 @@ function fishingInsightAction() {
   }
 }
 
+var button = document.getElementById('spawningPoolLocationButton');
+var tooltip = document.querySelector('.containerForTooltip');
+
+button.addEventListener('mouseover', function() {
+  tooltip.style.display = 'block';
+});
+
+button.addEventListener('mouseout', function() {
+  tooltip.style.display = 'none';
+});
 
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {
