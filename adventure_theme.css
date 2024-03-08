@@ -184,7 +184,6 @@ z-index: 102 - used for the unknown entity dialog box.
   font-weight: bold;
   padding: 1px 4px;
 }
-}
 
 /* This is the container for scene elements. */
 #containerForSceneElements {
