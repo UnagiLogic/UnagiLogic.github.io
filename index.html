@@ -20,11 +20,6 @@
         <source src="Audio/audio.mp3" type="audio/mp3">
     </audio>
 
-    <!-- This is a tooltip-container for the spawningPoolLocationButton -->
-    <div class="tooltip-container">
-        <span class="tooltip-text">Tooltip for Spawning Pool</span>
-    </div>
-
     <!-- This is the text that will show up at game start-->
     <div id="containerForInitialText">
         <p id="clickToStart">Click To Start</p>
@@ -104,9 +99,11 @@
     <div id="containerForLocationMenu">
         <h2 class="categoryName">Areas</h2>
         <!-- Create a button called The Spawning Pool. It has a tooltop with Biome information-->
-        <button id="spawningPoolLocationButton" title="Tooltip for Spawning Pool">The Spawning Pool</button> 
-        <p>Location: Saltwater Area</p>
-        <p>Location Description: This is the saltwater area. It is a vast ocean with many fish.</p>
+            <!-- This is a tooltip-container for the spawningPoolLocationButton -->
+        <div class="tooltip-container">
+            <button id="spawningPoolLocationButton" title="Location: Saltwater Area. Location Description: This is the saltwater area. It is a vast ocean with many fish.">The Spawning Pool</button> 
+            <span class="tooltip-text">Tooltip for Spawning Pool</span>
+        </div>
     </div>
 
     <!-- Create a containerForSpawningPool -->

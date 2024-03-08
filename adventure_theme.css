@@ -165,9 +165,9 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #currentButtonImage {
   position: fixed;
-  top: 24%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 8%;
+  left: 41%;
+  transform: translate(-10%, -10%);
   width: 300px;
   height: 350px;
   margin-top: 60px;
@@ -326,6 +326,35 @@ z-index: 102 - used for the unknown entity dialog box.
   font-weight: bold;
   font-size: 20px;
   margin-top: -5px;
+}
+
+/* This is the css for the .tooltip container and text */
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #000000;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip text*/
+  position: absolute;
+  z-index: 1;
+  /* Place the tooltip to the right of the button */
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 #containerForSpawningPool {
@@ -546,35 +575,6 @@ The book is colored #be9565 with a border of #8a5a24*/
   font-weight: bold;
   color: #ffffff;
   z-index: 51;
-}
-
-/* This is the css for the .tooltip container and text */
-.tooltip-container {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  width: 120px;
-  background-color: #000000;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  
-  /* Position the tooltip text*/
-  position: absolute;
-  z-index: 1;
-  /* Place the tooltip to the right of the button */
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
-  
-  /* Fade in the tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
 }
 
 /* This is used to hide various elements in the game */
