@@ -47,7 +47,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /* Border Color for images */
-.inventoryImage {
+.inventoryImage, .action {
   border: 1px solid var(--main-border-color);
 }
 
@@ -315,8 +315,8 @@ z-index: 102 - used for the unknown entity dialog box.
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
-  top: 34px;
-  left: 1094px;
+  top: 496px;
+  left: 900px;
   max-width: 145px;
   border-radius: 10px;
   padding: 5px;
@@ -325,17 +325,7 @@ z-index: 102 - used for the unknown entity dialog box.
 .categoryName {
   font-weight: bold;
   font-size: 20px;
-}
-
-#containerForInsightsMenu {
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  top: 34px;
-  left: 914px;
-  border-radius: 10px;
-  padding: 5px;
+  margin-top: -5px;
 }
 
 #containerForSpawningPool {
@@ -343,14 +333,12 @@ z-index: 102 - used for the unknown entity dialog box.
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  top: 480px;
-  left: 1094px;
+  align-items: center;
+  justify-content: center;
+  top: 520px;
+  left: 1044px;
   border-radius: 10px;
   padding: 5px;
-}
-
-#fishCounter, #clayCounter, #mudCounter, #shrimpCounter, #stoneCounter {
-  font-weight: bold;
 }
 
 /* Style for the bestiary book. It holds the .bestiaryPage layout, and both the leftPageContainer and the rightPageContainer
@@ -368,19 +356,19 @@ The book is colored #be9565 with a border of #8a5a24*/
   z-index: 1;
 }
 
-/* This is the right page container. It's placed to the right of the leftPageContainer */
-#rightPageContainer {
-  width: 49%;
-  text-align: center;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  padding: 20px; }
-
 /* This is the left page container. It's placed to the left of the rightPageContainer */
 #leftPageContainer {
   width: 49%;
   text-align: center;
   margin-right: 2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 20px; }
+
+/* This is the right page container. It's placed to the right of the leftPageContainer */
+#rightPageContainer {
+  width: 49%;
+  text-align: center;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 20px; }
@@ -401,8 +389,6 @@ The book is colored #be9565 with a border of #8a5a24*/
 /* This is the menu container for actions in the game */
 #containerForActionsMenu {
   position: fixed;
-  background-color: #be9565;
-  border: 1px solid #8a5a24;
   top: 50px;
   left: 50px;
   max-width: 838px;
@@ -422,7 +408,6 @@ The book is colored #be9565 with a border of #8a5a24*/
 }
 
 .action {
-  border: solid 2px #8a5a24;
   border-radius: 8px;
   padding: 10px;
   flex: 25%;
@@ -442,6 +427,21 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 4px 11px;
   border-radius: 12px;
   border: none;
+}
+
+#containerForInsightsMenu {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  top: 34px;
+  left: 914px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#fishCounter, #clayCounter, #mudCounter, #shrimpCounter, #stoneCounter {
+  font-weight: bold;
 }
 
 /* for smaller screens (eg: phones) */
