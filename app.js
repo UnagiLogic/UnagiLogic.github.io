@@ -110,10 +110,11 @@ function startGame() {
   // If the user has not clicked yet, nothing will happen
   clickToStart.addEventListener("click", handleClick, { once: true });
 
-  // Hide elements after the dialog
+  // Hide elements after the dialog and images are shown
   setTimeout(function () {
     hideElements();
     containerForInitialBlackScreen.classList.add("hidden");
+    changeImages();
     pauseAudio();
   },initialBlackScreenDelay);
 }

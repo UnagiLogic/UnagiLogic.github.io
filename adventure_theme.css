@@ -1,14 +1,9 @@
 body, html {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+  display: flex;
+  min-height: 100vh;
   color: var(--main-text-color);
   pointer-events: auto;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -87,6 +82,9 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #containerForInitialText {
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #ffffff;
   background-color: #000000;
   border: 2px solid #8a2424;
