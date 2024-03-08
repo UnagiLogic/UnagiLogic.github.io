@@ -335,22 +335,28 @@ z-index: 102 - used for the unknown entity dialog box.
   border-bottom: 1px dotted black;
 }
 
+/* This is the css for the .tooltip container and text */
+.tooltip-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .tooltip-text {
   visibility: hidden;
   width: 120px;
-  background-color: #000000;
-  color: #fff;
+  background-color: #323232;
+  color: #9c69c3;
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
   
-  /* Position the tooltip text*/
-  position: absolute;
+  /* Remove the absolute positioning */
+  /* position: absolute; */
   z-index: 1;
-  /* Place the tooltip to the right of the button */
-  top: 100%;
-  left: 50%;
-  margin-left: -60px;
+  
+  /* Adjust the tooltip position */
+  /* top: 125%; */
+  /* left: 50%; */
   
   /* Fade in the tooltip */
   opacity: 0;
