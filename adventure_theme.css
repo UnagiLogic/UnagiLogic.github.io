@@ -360,6 +360,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
   display: flex;
+  z-index: 1;
 }
 
 /* This is the right page container. It's placed to the right of the leftPageContainer */
@@ -405,10 +406,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-}
-
-#containerForActionsMenu.hidden {
-  display: none;
+  z-index: 1;
 }
 
 /* This is used to contain the image shown as a beast*/
@@ -584,8 +582,7 @@ The book is colored #be9565 with a border of #8a5a24*/
   display: none;
 }
 
-/* This is used to hide the actions menu container */
-.containerForActionsMenu.hidden {
+#containerForActionsMenu.hidden {
   display: none;
 }
 
@@ -598,3 +595,9 @@ The book is colored #be9565 with a border of #8a5a24*/
 .containerForSpawningPool.hidden {
   display: none;
 }
+
+/* This is used to hide the containerForLocationMenu */
+.containerForLocationMenu.hidden {
+  display: none;
+}
+
