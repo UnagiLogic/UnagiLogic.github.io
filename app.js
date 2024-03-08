@@ -398,7 +398,7 @@ var button = document.getElementById('spawningPoolLocationButton');
 var tooltip = document.querySelector('.containerForTooltip');
 
 button.addEventListener('mouseover', function() {
-  tooltip.style.display = 'block';
+  tooltip.style.display = 'flex';
 });
 
 button.addEventListener('mouseout', function() {

@@ -333,24 +333,26 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 5px;
 }
 
-/* This is the css for the .tooltip container and text */
 .containerForTooltip {
   display: none;
   position: fixed;
+  flex-direction: column;
+  top: 104px;
+  right: 70px;
+  border-radius: 10px;
+  padding: 4px;
 }
 
 .tooltipName, .tooltipDescription, .tooltipBiome, .tooltipSpecies {
-  visibility: hidden;
-  width: 120px;
+  width: 200px;
+  height: 75px;
   background-color: #323232;
+  border: 1px solid var(--main-border-color);
   color: #9c69c3;
   text-align: center;
-  border-radius: 6px;
+  border-radius: 10px;
   padding: 5px 0;
-  
-  /* Fade in the tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
+  margin: 3px;
 }
 
 #containerForSpawningPool {
