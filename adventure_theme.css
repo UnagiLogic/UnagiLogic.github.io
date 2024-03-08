@@ -315,8 +315,8 @@ z-index: 102 - used for the unknown entity dialog box.
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
-  top: 496px;
-  left: 900px;
+  top: 34px;
+  left: 1118px;
   max-width: 145px;
   border-radius: 10px;
   padding: 5px;
@@ -357,6 +357,11 @@ z-index: 102 - used for the unknown entity dialog box.
   transition: opacity 0.3s;
 }
 
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 #containerForSpawningPool {
   position: fixed;
   display: flex;
@@ -364,8 +369,9 @@ z-index: 102 - used for the unknown entity dialog box.
   text-align: center;
   align-items: center;
   justify-content: center;
-  top: 520px;
-  left: 1044px;
+  top: 37px;
+  left: 944px;
+  max-width: 175px;
   border-radius: 10px;
   padding: 5px;
 }
