@@ -453,7 +453,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // Event listener to toggleContainerVisibility when insightsMenuButton is clicked.
   addToggleVisibilityListener('insightsMenuButton', 'containerForInsightsMenu');
-});
 
 // Event listener to toggleContainerVisibility when spawningPoolButton is clicked.
-  addToggleVisibilityListener('spawningPoolLocationButton', 'containerForSpawningPool');
+addToggleVisibilityListener('spawningPoolLocationButton', 'containerForSpawningPool');  
+});

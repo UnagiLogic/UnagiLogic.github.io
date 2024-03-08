@@ -70,7 +70,8 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 #stoneBGC { background-color: #585756; }
 
 /* Z-index information: 
-z-index: 1 - This is the lowest z-index. It is used for background images.
+z-index: 0 - This is the lowest z-index. It is used for background images.
+z-index: 1 - used for the main game screen.
 z-index: 20 - used for inventory containers, bestiary containers, and actions menu containers.
 z-index: 30 - used for buttons, energy indicator.
 z-index: 50 - used for floating fish image.
@@ -138,23 +139,43 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 .mainScreenContainer {
+  display: flex;
   text-align: center;
 }
 
 .mainScreenTitle {
+  position: fixed;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 5px;
   border-radius: 5px;
   margin: 10px;
+  z-index: 1;
+}
+
+#currentBackgroundImage {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 #currentButtonImage {
+  position: fixed;
+  top: 24%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 300px;
   height: 350px;
   margin-top: 60px;
   box-shadow: 0 4px 8px 0 #3188cc;
   border-radius: 8px;
-  transition-duration: 0.3s; /* Currently testing if it is causing issues */
+  transition-duration: 0.3s;
   cursor: pointer;
+  z-index: 1;
 }
 
 /* When I hover over a button, a box shadow color should change, and be a little rounder */
@@ -286,6 +307,30 @@ z-index: 102 - used for the unknown entity dialog box.
 
 .inventoryImage {
   border-radius: 8px;
+}
+
+#containerForLocationMenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+  top: 34px;
+  left: 1094px;
+  max-width: 145px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#containerForInsightsMenu {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  top: 34px;
+  left: 914px;
+  border-radius: 10px;
+  padding: 5px;
 }
 
 #fishCounter, #clayCounter, #mudCounter, #shrimpCounter, #stoneCounter {
