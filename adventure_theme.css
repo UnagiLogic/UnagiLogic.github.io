@@ -41,14 +41,14 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
  }
 
 /*Button BG Color*/
-#playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton {
+#playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton, #spawningPoolLocationButton {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
 }
 
 /* Border Color for images */
 .inventoryImage {
-  border: 2px solid var(--main-border-color);
+  border: 1px solid var(--main-border-color);
 }
 
 /* Container BG Color and Border Color*/
@@ -58,7 +58,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /*Button Opacity*/
-#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover {
+#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover, #spawningPoolLocationButton:hover {
   opacity: 0.7;
 }
 
@@ -194,16 +194,6 @@ z-index: 102 - used for the unknown entity dialog box.
   transform: scale(1.1);
 }
 
-.number {
-  position: absolute;
-  color: black;
-  bottom: 0;
-  right: 0;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 1px 4px;
-}
-
 /* This is the container for scene elements. */
 #containerForSceneElements {
   position: fixed;
@@ -289,7 +279,7 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #containerForInventory {
   position: fixed;
-  top: 33px;
+  top: 34px;
   right: 5px;
   padding: 5px;
   border-radius: 10px;
@@ -302,11 +292,21 @@ z-index: 102 - used for the unknown entity dialog box.
   width: 75px;
   height: 75px;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .inventoryImage {
   border-radius: 8px;
+}
+
+.inventoryNumber {
+  position: absolute;
+  color: black;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1px 4px;
 }
 
 #containerForLocationMenu {
@@ -320,6 +320,11 @@ z-index: 102 - used for the unknown entity dialog box.
   max-width: 145px;
   border-radius: 10px;
   padding: 5px;
+}
+
+.categoryName {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #containerForInsightsMenu {
@@ -582,22 +587,23 @@ The book is colored #be9565 with a border of #8a5a24*/
   display: none;
 }
 
+/* This is used to hide/show the Actions menu container */
 #containerForActionsMenu.hidden {
   display: none;
 }
 
-/* This is used to hide the insights menu container */
-.containerForInsightsMenu.hidden {
+/* This is used to hide/show the Insights menu container */
+#containerForInsightsMenu.hidden {
   display: none;
 }
 
-/* This is used to hide the spawning pool container */
-.containerForSpawningPool.hidden {
+/* This is used to hide/show the spawning pool location container */
+#containerForSpawningPool.hidden {
   display: none;
 }
 
-/* This is used to hide the containerForLocationMenu */
-.containerForLocationMenu.hidden {
+/* This is used to hide/show the containerForLocationMenu */
+#containerForLocationMenu.hidden {
   display: none;
 }
 
