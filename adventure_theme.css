@@ -52,7 +52,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /* Container BG Color and Border Color*/
-#containerForInventory, #containerForLocationMenu, #bestiaryContainer, #leftPageContainer, #rightPageContainer, .achievementImageContainer, #containerForActionsMenu, #containerForInsightsMenu, #saltwaterAreaFishClickerButton, .mainScreenTitle {
+#containerForInventory, #containerForLocationMenu, #bestiaryContainer, #leftPageContainer, #rightPageContainer, .achievementImageContainer, #containerForActionsMenu, #containerForInsightsMenu, #saltwaterAreaFishClickerButton, .mainScreenTitle, #containerForSpawningPool {
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
 }
@@ -329,6 +329,17 @@ z-index: 102 - used for the unknown entity dialog box.
   text-align: center;
   top: 34px;
   left: 914px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#containerForSpawningPool {
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  top: 480px;
+  left: 1094px;
   border-radius: 10px;
   padding: 5px;
 }
