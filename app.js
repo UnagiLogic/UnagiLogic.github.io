@@ -438,6 +438,7 @@ window.addEventListener('DOMContentLoaded', function() {
   hideContainer('bestiaryContainer');
   hideContainer('containerForActionsMenu');
   hideContainer('containerForInsightsMenu');
+  hideContainer('containerForSpawningPool');
 
 // Event listener to toggleContainerVisibility when playerInventoryMenuButton is clicked.
   addToggleVisibilityListener('playerInventoryMenuButton', 'containerForInventory');

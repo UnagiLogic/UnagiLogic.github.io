@@ -588,3 +588,13 @@ The book is colored #be9565 with a border of #8a5a24*/
 .containerForActionsMenu.hidden {
   display: none;
 }
+
+/* This is used to hide the insights menu container */
+.containerForInsightsMenu.hidden {
+  display: none;
+}
+
+/* This is used to hide the spawning pool container */
+.containerForSpawningPool.hidden {
+  display: none;
+}
