@@ -352,18 +352,6 @@ z-index: 102 - used for the unknown entity dialog box.
   padding: 4px;
 }
 
-.tooltipDescription, .tooltipBiome, .tooltipSpecies {
-  width: 200px;
-  height: 75px;
-  background-color: #323232;
-  border: 1px solid var(--main-border-color);
-  color: #9c69c3;
-  text-align: center;
-  border-radius: 10px;
-  padding: 5px 0;
-  margin: 3px;
-}
-
 .tooltipName {
   position: fixed;
   top: 99px;
@@ -375,6 +363,18 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 10px;
   padding: 5px 0;
   margin: 3px;	
+}
+
+.tooltipDescription, .tooltipBiome, .tooltipSpecies {
+  width: 200px;
+  height: 75px;
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  color: #9c69c3;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 3px;
 }
 
 #containerForSpawningPool {
