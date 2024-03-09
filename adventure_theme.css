@@ -391,8 +391,6 @@ z-index: 102 - used for the unknown entity dialog box.
   padding: 5px;
 }
 
-/* Style for the bestiary book. It holds the .bestiaryPage layout, and both the leftPageContainer and the rightPageContainer
-The book is colored #be9565 with a border of #8a5a24*/
 #bestiaryContainer {
   position: fixed;
   transform: perspective(2000px) scale(0.75);
@@ -406,22 +404,23 @@ The book is colored #be9565 with a border of #8a5a24*/
   z-index: 1;
 }
 
-/* This is the left page container. It's placed to the left of the rightPageContainer */
 #leftPageContainer {
   width: 49%;
   text-align: center;
   margin-right: 2%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  padding: 20px; }
+  padding: 20px; 
+}
 
-/* This is the right page container. It's placed to the right of the leftPageContainer */
+
 #rightPageContainer {
   width: 49%;
   text-align: center;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
-  padding: 20px; }
+  padding: 20px; 
+}
 
 .bestiaryName {
   font-size: 24px;
