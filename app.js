@@ -146,8 +146,18 @@ function updateResourceDisplay() {
 function changeImages() {
   let currentBackgroundImage = document.getElementById("currentBackgroundImage");
   let currentButtonImage = document.getElementById("currentButtonImage");
-  currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
-  currentButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+  let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
+  let swampLocationButton = document.getElementById("swampLocationButton");
+
+  spawningPoolLocationButton.addEventListener("click", function() {
+    currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
+    currentButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+  });
+
+  swampLocationButton.addEventListener("click", function() {
+    currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
+    currentButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
+  });
 }
 
 
@@ -448,6 +458,7 @@ window.addEventListener('DOMContentLoaded', function() {
   hideContainer('bestiaryContainer');
   hideContainer('containerForActionsMenu');
   hideContainer('containerForInsightsMenu');
+  hideContainer('bestiaryCreatureTypeContainer');
 
 // Event listener to toggleContainerVisibility when playerInventoryMenuButton is clicked.
   addToggleVisibilityListener('playerInventoryMenuButton', 'containerForInventory');
@@ -463,4 +474,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // Event listener to toggleContainerVisibility when insightsMenuButton is clicked.
   addToggleVisibilityListener('insightsMenuButton', 'containerForInsightsMenu');
+
+// Event listener to toggleContainerVisibility when bestiaryCreatureTypeButton is clicked.
+  addToggleVisibilityListener('bestiaryCreatureTypeButton', 'bestiaryCreatureTypeContainer');
 });

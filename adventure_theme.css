@@ -47,7 +47,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /* Border Color for images */
-.inventoryImage, .action {
+.inventoryImage, .action, .bestiaryImage {
   border: 1px solid var(--main-border-color);
 }
 
@@ -339,6 +339,11 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 5px;
 }
 
+#swampTrailLocationButton {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 .containerForTooltip {
   display: none;
   position: fixed;
@@ -380,7 +385,7 @@ z-index: 102 - used for the unknown entity dialog box.
   color: #b57ae2;
   text-align: center;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: 6px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 3px;
@@ -412,7 +417,6 @@ z-index: 102 - used for the unknown entity dialog box.
   color: #b57ae2;
   text-align: center;
   border-radius: 5px;
-  margin-top: 20px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 5px;
@@ -444,7 +448,6 @@ z-index: 102 - used for the unknown entity dialog box.
   color: #b57ae2;
   text-align: center;
   border-radius: 5px;
-  margin-top: 20px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 5px;
@@ -461,20 +464,6 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 10px;
   padding: 5px 0;
   margin: 3px;
-}
-
-#containerForSpawningPool {
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  top: 37px;
-  left: 944px;
-  max-width: 175px;
-  border-radius: 10px;
-  padding: 5px;
 }
 
 #bestiaryContainer {
@@ -511,12 +500,10 @@ z-index: 102 - used for the unknown entity dialog box.
 .bestiaryName {
   font-size: 24px;
   font-weight: bold;
-  color: #000000;
 }
 
 .bestiaryImage {
   height: 100px;
-  border: 3px solid #000;
   border-radius: 8px;
   padding: 1px;
 }

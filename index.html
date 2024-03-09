@@ -99,10 +99,11 @@
     <div id="containerForLocationMenu">
         <h2 class="categoryName">LOCATIONS</h2>
         <button id="spawningPoolLocationButton" onclick="changeImages()">The Spawning Pool</button>
+        <button id="swampTrailLocationButton" onclick="changeImages()">The Swamp Trail</button>
     </div>
 
     <div class="containerForTooltip">
-        <div class="tooltipName">The Spawning Pool</div>
+        <div class="tooltipName">THE SPAWNING POOL</div>
             <div class="containerForLocationDescription">
                 <div class="categoryDescriptionLabel">DESCRIPTION</div>
                 <div class="tooltipDescription">This is the saltwater area. It is a vast ocean with many fish.</div>
@@ -122,29 +123,34 @@
     <div id="bestiaryContainer">
         <!-- Left Page Container -->
         <div id="leftPageContainer" class="bestiaryPage">
+            <div class="bestiaryMenuContainer">
+                <button id="bestiaryCreatureTypeButton">Bestiary</button>                
+            </div>
+
+            <div class="bestiaryCreatureTypeContainer">
+                <!-- Beast Name -->
+                <div class="bestiaryName">Fish</div> <!-- I want this text to show at the top of this container -->
             
-            <!-- Beast Name -->
-            <h2 class="bestiaryName">Fish</h2> <!-- I want this text to show at the top of this container -->
-            
-            <!-- Beast Image -->
-            <div class="bestiaryImage">
-                <img src="Images/Resources/fish.png" alt="Fish Beast Image" width="100px" height="100px" >
-            </div>
+                <!-- Beast Image -->
+                <div class="bestiaryImage">
+                    <img src="Images/Resources/fish.png" alt="Fish Beast Image" width="100px" height="100px" >
+                </div>
 
-            <!-- Beast Description -->
-            <div class="bestiaryDescription">
-                <p>It looks like a fish.</p>
-            </div>
+                <!-- Beast Description -->
+                <div class="bestiaryDescription">
+                    <p>It looks like a fish.</p>
+                </div>
 
-            <!-- Beast Notes -->
-            <div class="bestiaryNotes">
-                <p>Adventure Notes 1: Whoa! You can eat fish raw!!</p>
-                <p>Adventure Notes 2: This fish is abundent around here. </p>
-            </div>
+                <!-- Beast Notes -->
+                <div class="bestiaryNotes">
+                    <p>Adventure Notes 1: Whoa! You can eat fish raw!!</p>
+                    <p>Adventure Notes 2: This fish is abundent around here. </p>
+                </div>
 
-            <!-- Beast Statistics -->
-            <div class="bestiaryStatistics">
-                <p>Catch Percentage: 100%</p>
+                <!-- Beast Statistics -->
+                <div class="bestiaryStatistics">
+                    <p>Catch Percentage: 100%</p>
+                </div>
             </div>
         </div>
     
