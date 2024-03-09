@@ -147,18 +147,17 @@ function changeImages() {
   let currentBackgroundImage = document.getElementById("currentBackgroundImage");
   let currentButtonImage = document.getElementById("currentButtonImage");
   let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
-  let swampLocationButton = document.getElementById("swampLocationButton");
+  let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
 
-  // Commented out the code below because it was not working.
-  //spawningPoolLocationButton.addEventListener("click", function() {
-  //  currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
-  //  currentButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
-  //});
+  spawningPoolLocationButton.addEventListener("click", function() {
+    currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
+    currentButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+  });
 
-  //swampLocationButton.addEventListener("click", function() {
-  //  currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
-  //  currentButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
-  //});
+  swampTrailLocationButton.addEventListener("click", function() {
+    currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
+    currentButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
+  });
 }
 
 
