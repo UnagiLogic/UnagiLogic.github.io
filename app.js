@@ -140,9 +140,9 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// Create a function that changes multiple img elements to new images
-// we will change the currentBackgroundImage to a new image
-// we will change the currentButtonImage to a new image
+// Create a function that changes multiple img elements to new img elements
+// if player clicks on spawnPoolLocationButton the currentBackgroundImage and currentButtonImage will change to saltwaterAreaBackground and saltwaterAreaFishClickerButton
+// if player clicks on swampLocationButton the currentBackgroundImage and currentButtonImage will change to swampAreaBackground and swampAreaClickerButton
 function changeImages() {
   let currentBackgroundImage = document.getElementById("currentBackgroundImage");
   let currentButtonImage = document.getElementById("currentButtonImage");
@@ -448,7 +448,6 @@ window.addEventListener('DOMContentLoaded', function() {
   hideContainer('bestiaryContainer');
   hideContainer('containerForActionsMenu');
   hideContainer('containerForInsightsMenu');
-  hideContainer('containerForSpawningPool');
 
 // Event listener to toggleContainerVisibility when playerInventoryMenuButton is clicked.
   addToggleVisibilityListener('playerInventoryMenuButton', 'containerForInventory');
@@ -464,7 +463,4 @@ window.addEventListener('DOMContentLoaded', function() {
 
 // Event listener to toggleContainerVisibility when insightsMenuButton is clicked.
   addToggleVisibilityListener('insightsMenuButton', 'containerForInsightsMenu');
-
-// Event listener to toggleContainerVisibility when spawningPoolButton is clicked.
-addToggleVisibilityListener('spawningPoolLocationButton', 'containerForSpawningPool');  
 });

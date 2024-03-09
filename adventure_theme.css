@@ -360,6 +360,7 @@ z-index: 102 - used for the unknown entity dialog box.
   background-color: #262626;
   border: 1px solid var(--main-border-color);
   color: #9c69c3;
+  font-weight: bold;
   text-align: center;
   border-radius: 10px;
   padding: 5px 0;
@@ -369,6 +370,7 @@ z-index: 102 - used for the unknown entity dialog box.
 .containerForLocationDescription {
   border: 1px solid var(--main-border-color);
   border-radius: 5px;
+  margin: 3px;
 }
 
 .categoryDescriptionLabel {
@@ -378,20 +380,19 @@ z-index: 102 - used for the unknown entity dialog box.
   color: #b57ae2;
   text-align: center;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
 }
 
 .tooltipDescription {
   width: 200px;
-  height: 75px;
   background-color: #323232;
-  border: 1px solid var(--main-border-color);
   color: #9c69c3;
+  justify-content: center;
   text-align: center;
   border-radius: 10px;
   padding: 5px 0;
@@ -401,6 +402,7 @@ z-index: 102 - used for the unknown entity dialog box.
 .containerForLocationBiome {
   border: 1px solid var(--main-border-color);
   border-radius: 5px;
+  margin: 3px;
 }
 
 .categoryBiomeLabel {
@@ -422,7 +424,6 @@ z-index: 102 - used for the unknown entity dialog box.
   width: 200px;
   height: 75px;
   background-color: #323232;
-  border: 1px solid var(--main-border-color);
   color: #9c69c3;
   text-align: center;
   border-radius: 10px;
@@ -433,6 +434,7 @@ z-index: 102 - used for the unknown entity dialog box.
 .containerForLocationSpecies {
   border: 1px solid var(--main-border-color);
   border-radius: 5px;
+  margin: 3px;
 }
 
 .categorySpeciesLabel {
@@ -454,7 +456,6 @@ z-index: 102 - used for the unknown entity dialog box.
   width: 200px;
   height: 75px;
   background-color: #323232;
-  border: 1px solid var(--main-border-color);
   color: #9c69c3;
   text-align: center;
   border-radius: 10px;
