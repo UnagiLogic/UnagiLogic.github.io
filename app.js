@@ -420,11 +420,11 @@ var buttonTwo = document.getElementById('swampTrailLocationButton');
 var tooltipTwo = document.querySelector('.containerForTooltipTwo');
 
 buttonTwo.addEventListener('mouseover', function() {
-  tooltip.style.display = 'flex';
+  tooltipTwo.style.display = 'flex';
 });
 
 buttonTwo.addEventListener('mouseout', function() {
-  tooltip.style.display = 'none';
+  tooltipTwo.style.display = 'none';
 });
 
 
