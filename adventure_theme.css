@@ -41,7 +41,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
  }
 
 /*Button BG Color*/
-#playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton, #spawningPoolLocationButton {
+#playerInventoryMenuButton, #locationMenuButton, #bestiaryBookMenuButton, #actionsMenuButton, #insightsMenuButton, #spawningPoolLocationButton, #swampTrailLocationButton {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
 }
@@ -58,7 +58,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /*Button Opacity*/
-#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover, #spawningPoolLocationButton:hover {
+#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover, #spawningPoolLocationButton:hover, #swampTrailLocationButton:hover {
   opacity: 0.7;
 }
 
@@ -317,7 +317,7 @@ z-index: 102 - used for the unknown entity dialog box.
   text-align: center;
   top: 34px;
   left: 1118px;
-  max-width: 145px;
+  max-width: 165px;
   border-radius: 10px;
   padding: 5px;
 }
@@ -336,15 +336,17 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #spawningPoolLocationButton {
   cursor: pointer;
+  font-size: 15px;
   border-radius: 5px;
 }
 
 #swampTrailLocationButton {
   cursor: pointer;
+  font-size: 15px;
   border-radius: 5px;
 }
 
-.containerForTooltip {
+.containerForTooltipOne {
   display: none;
   position: fixed;
   flex-direction: column;
@@ -358,7 +360,7 @@ z-index: 102 - used for the unknown entity dialog box.
   padding: 4px;
 }
 
-.tooltipName {
+.tooltipNameOne {
   position: fixed;
   top: 99px;
   width: 200px;
@@ -372,13 +374,13 @@ z-index: 102 - used for the unknown entity dialog box.
   margin: 3px;	
 }
 
-.containerForLocationDescription {
+.containerForLocationDescriptionOne {
   border: 1px solid var(--main-border-color);
   border-radius: 5px;
   margin: 3px;
 }
 
-.categoryDescriptionLabel {
+.categoryDescriptionLabelOne {
   font-weight: bold;
   background-color: #262626;
   border: 1px solid var(--main-border-color);
@@ -393,7 +395,7 @@ z-index: 102 - used for the unknown entity dialog box.
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
 }
 
-.tooltipDescription {
+.tooltipDescriptionOne {
   width: 200px;
   background-color: #323232;
   color: #9c69c3;
@@ -404,13 +406,13 @@ z-index: 102 - used for the unknown entity dialog box.
   margin: 3px;
 }
 
-.containerForLocationBiome {
+.containerForLocationBiomeOne {
   border: 1px solid var(--main-border-color);
   border-radius: 5px;
   margin: 3px;
 }
 
-.categoryBiomeLabel {
+.categoryBiomeLabelOne {
   font-weight: bold;
   background-color: #262626;
   border: 1px solid var(--main-border-color);
@@ -424,7 +426,7 @@ z-index: 102 - used for the unknown entity dialog box.
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
 }
 
-.tooltipBiome {
+.tooltipBiomeOne {
   width: 200px;
   height: 75px;
   background-color: #323232;
@@ -435,13 +437,13 @@ z-index: 102 - used for the unknown entity dialog box.
   margin: 3px;
 }
 
-.containerForLocationSpecies {
+.containerForLocationSpeciesOne {
   border: 1px solid var(--main-border-color);
   border-radius: 5px;
   margin: 3px;
 }
 
-.categorySpeciesLabel {
+.categorySpeciesLabelOne {
   font-weight: bold;
   background-color: #262626;
   border: 1px solid var(--main-border-color);
@@ -455,7 +457,129 @@ z-index: 102 - used for the unknown entity dialog box.
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
 }
 
-.tooltipSpecies {
+.tooltipSpeciesOne {
+  width: 200px;
+  height: 75px;
+  background-color: #323232;
+  color: #9c69c3;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 3px;
+}
+
+.containerForTooltipTwo {
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #323232;
+  top: 120px;
+  right: 20px;
+  border-radius: 10px;
+  padding: 4px;
+}
+
+.tooltipNameTwo {
+  position: fixed;
+  top: 99px;
+  width: 200px;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #9c69c3;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 3px;	
+}
+
+.containerForLocationDescriptionTwo {
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.categoryDescriptionLabelTwo {
+  font-weight: bold;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #b57ae2;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 6px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+}
+
+.tooltipDescriptionTwo {
+  width: 200px;
+  background-color: #323232;
+  color: #9c69c3;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 3px;
+}
+
+.containerForLocationBiomeTwo {
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.categoryBiomeLabelTwo {
+  font-weight: bold;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #b57ae2;
+  text-align: center;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+}
+
+.tooltipBiomeTwo {
+  width: 200px;
+  height: 75px;
+  background-color: #323232;
+  color: #9c69c3;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px 0;
+  margin: 3px;
+}
+
+.containerForLocationSpeciesTwo {
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
+  margin: 3px;
+}
+
+.categorySpeciesLabelTwo {
+  font-weight: bold;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #b57ae2;
+  text-align: center;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+}
+
+.tooltipSpeciesTwo {
   width: 200px;
   height: 75px;
   background-color: #323232;

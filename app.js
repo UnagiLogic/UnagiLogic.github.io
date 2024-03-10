@@ -404,16 +404,30 @@ function fishingInsightAction() {
   }
 }
 
-var button = document.getElementById('spawningPoolLocationButton');
-var tooltip = document.querySelector('.containerForTooltip');
 
-button.addEventListener('mouseover', function() {
+var buttonOne = document.getElementById('spawningPoolLocationButton');
+var tooltipOne = document.querySelector('.containerForTooltipOne');
+
+buttonOne.addEventListener('mouseover', function() {
+  tooltipOne.style.display = 'flex';
+});
+
+buttonOne.addEventListener('mouseout', function() {
+  tooltipOne.style.display = 'none';
+});
+
+var buttonTwo = document.getElementById('swampTrailLocationButton');
+var tooltipTwo = document.querySelector('.containerForTooltipTwo');
+
+buttonTwo.addEventListener('mouseover', function() {
   tooltip.style.display = 'flex';
 });
 
-button.addEventListener('mouseout', function() {
+buttonTwo.addEventListener('mouseout', function() {
   tooltip.style.display = 'none';
 });
+
+
 
 // A function to make a button toggle the visibility of a container.
 function toggleContainerVisibility(containerId) {
