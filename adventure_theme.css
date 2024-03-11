@@ -354,15 +354,15 @@ z-index: 102 - used for the unknown entity dialog box.
   align-items: center;
   justify-content: center;
   background-color: #323232;
-  top: 120px;
-  right: 20px;
+  top: 150px;
+  right: 15px;
   border-radius: 10px;
   padding: 4px;
 }
 
 .tooltipNameOne {
   position: fixed;
-  top: 99px;
+  top: 125px;
   width: 200px;
   background-color: #262626;
   border: 1px solid var(--main-border-color);
@@ -476,15 +476,15 @@ z-index: 102 - used for the unknown entity dialog box.
   align-items: center;
   justify-content: center;
   background-color: #323232;
-  top: 120px;
-  right: 20px;
+  top: 150px;
+  right: 15px;
   border-radius: 10px;
   padding: 4px;
 }
 
 .tooltipNameTwo {
   position: fixed;
-  top: 99px;
+  top: 125px;
   width: 200px;
   background-color: #262626;
   border: 1px solid var(--main-border-color);
@@ -612,6 +612,15 @@ z-index: 102 - used for the unknown entity dialog box.
   padding: 20px; 
 }
 
+.bestiaryLeftPageMenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  margin-bottom: 10px;
+}
 
 #rightPageContainer {
   width: 49%;
@@ -619,6 +628,16 @@ z-index: 102 - used for the unknown entity dialog box.
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 20px; 
+}
+
+.bestiaryCreatureTypeContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  margin-bottom: 10px;
 }
 
 .bestiaryName {
