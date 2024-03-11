@@ -138,7 +138,7 @@
         <!-- Left Page Container -->
         <div id="leftPageContainer" class="bestiaryPage">
             <div class="bestiaryLeftPageMenu">
-                <button id="bestiaryCreatureTypeButton">Bestiary</button>
+                <button id="bestiaryCreatureTypeButton">BESTIARY</button>
             </div>
 
             <div id="bestiaryCreatureTypeContainer">
@@ -171,15 +171,14 @@
         <!-- Right Page Container -->
         <div id="rightPageContainer" class="bestiaryPage">
             
-            <!-- Expertise Title -->
-            <h2>Expertise</h2>
+            <div class="bestiaryExpertiseLabel">Expertise</div>
 
             <!-- Achievement Container -->
             <div class="achievementContainer">
                 <div class="achievementImageContainer">
                     <img src="Images/Achievements/Bestiary Fish/fishCaught10.png" alt="Achievement 1 Image" width="50px" height="50px"">
                 </div>
-                <p class="achievementName" title="Tooltip for Achievement 1">Achievement 1</p>
+                <p class="achievementName" title="You can catch a new type of fish">I caught 10!</p>
             </div>
             <div class="achievementContainer">
                 <div class="achievementImageContainer">
@@ -215,22 +214,23 @@
     </div>
 
     <!-- Actions that can be used -->
-    <div id="containerForActionsMenu"> <!-- contains 3-4 actions per row-->
-            
-        <div class="action"> <!-- Eat Fish Action -->
-            <div class="actionContainerImage"> <!-- contains image -->
+    <div id="containerForActionsMenu">
+        <div class="action"> <!-- Feed Entity Action -->
+            <div class="feedEntityActionLabel">FEED</div>
+            <div class="actionContainerImage">
                 <img src="Images/Icons/eat.png" width="150px" height="150px" id="eatActionButton" onclick="eatAction()">
             </div>
         </div>
             
         <div class="action"> <!-- Search Action -->
-			<div class="actionContainerImage"> <!-- contains image -->
+			<div class="searchActionLabel">SEARCH</div>
+            <div class="actionContainerImage">
                 <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
             </div>
             <br>
-            <div class="actionContainerText"> <!-- contains stats about item --> 
-                <p>Search Cost: <span id="searchActionCost">10 Fish</span></p>
-                <p>Scour the ocean for supplies</p>
+            <div class="actionContainerText">
+                <p>Search around.</p>
+                <p>Costs: <span id="searchActionCost">10 Energy</span></p>
             </div>
 		</div>
 
@@ -245,7 +245,7 @@
 
     <!-- Insights that can be used -->
     <div id="containerForInsightsMenu">
-        <div class="insight">
+        <div class="fishingInsightLabel">FISHING INSIGHT</div>
             <div class="insightContainerImage">
                 <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="fishingInsightAction()">
             </div>
