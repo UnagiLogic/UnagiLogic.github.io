@@ -605,7 +605,8 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #leftPageContainer {
   width: 49%;
-  display: flex; 
+  display: flex;
+  flex-direction: column;
   margin-right: 2%;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -631,20 +632,79 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 #bestiaryCreatureTypeContainer {
+  text-align: center;
   background-color: #323232;
   border: 1px solid var(--main-border-color);
+  border-radius: 10px;
   margin-bottom: 10px;
 }
 
 .bestiaryName {
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
   font-size: 24px;
   font-weight: bold;
 }
 
 .bestiaryImage {
   height: 100px;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 1px;
+}
+
+.bestiaryDescriptionLabel {
+  font-weight: bold;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #b57ae2;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bestiaryDescription {
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bestiaryNotesLabel {
+  font-weight: bold;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #b57ae2;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bestiaryNotes {
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bestiaryStatisticLabel {
+  font-weight: bold;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  color: #b57ae2;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.bestiaryStatistic {
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* This is the menu container for actions in the game */
