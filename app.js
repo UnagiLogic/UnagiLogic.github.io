@@ -84,6 +84,25 @@ function showElements() {
   containerForUnknownEntityDialog.classList.remove("hidden");
 }
 
+// Create a function that shows pop up notifications.
+// This function will notify when an achievement is unlocked.
+// This function will notify when a new insight is learned.
+// This function will notify when a new creature is discovered.
+// This function will notify when a new area is discovered.
+// This function will notify when a new resource is discovered.
+// This function will notify when a new tool is discovered.
+// This function will notify when a new item is discovered.
+// This function will inform when a quest is completed.
+function showNotification() {
+  let notification = document.createElement("p");
+  notification.innerText = "You found a resource cache!";
+  notification.classList.add("notification");
+  document.getElementById("containerForNotification").appendChild(notification);
+  setTimeout(function() {
+    notification.remove();
+  }, 3000);
+}
+
 function handleClick() {
   if (!initialClickHappened) {
     initialClickHappened = true;
@@ -199,8 +218,26 @@ function increaseEnergy() {
   }
 }
 
+// Create a function that floats a number on the screen.
+// This function will create a p element with a number inside it.
+// The number represents the amount of any resource the player has gained.
+// The number will float on the screen for a few seconds.
+// The number will disappear after a few seconds.
+// The number will be placed next to the cursor when the player gains a resource.
+function floatNumber(event) {
+  let number = document.createElement("p");
+  number.innerText = "+1";
+  number.classList.add("number");
+  document.getElementById("containerForNumber").appendChild(number);
+  number.style.left = event.clientX + 'px';
+  number.style.top = event.clientY + 'px';
+  setTimeout(function() {
+    number.remove();
+  }, 3000);
+}
+
 // Function to eat a fish and update energy
-function eatFish() {
+function eatFish(event) {
   if (animationInProgress) {
     console.log("Animation in progress");
     return;
@@ -215,18 +252,19 @@ function eatFish() {
       playEnergyAnimation();
       console.log("You ate a fish.");
       updateResourceDisplay();
+      floatNumber(event);
     }
   } else {
     console.log("You have no fish to eat.");
   }
 }
 
-// Function eatAction
+// Function feedAction
 // This function will check what type of food the player has.
 // If the player has fish it will call the eatFish function.
 // If the player has shrimp it will call the eatShrimp function.
 // If the player has no food it will display a message that says "You have no food to eat."
-function eatAction() {
+function feedAction() {
   if (resources.fish >= 1) {
     eatFish();
   } else if (resources.shrimp >= 1) {

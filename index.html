@@ -37,16 +37,16 @@
         </div>
     </div>
 
+
+
     <!-- This is the container for the main screen. When location buttons are clicked, this screen changes to the corresponding location. -->
     <div class="mainScreenContainer">
         <h1 class="mainScreenTitle">The Spawning Pool</h1>
         <img src="Images/Backgrounds/saltwaterAreaBackground.png" id="currentBackgroundImage">
-        <img src="Images/Buttons/saltwaterAreaFishClickerButton.png" width="300px" height="350px" id="currentButtonImage" onclick="increment()"> <!--The image you have to click -->
-        <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-        <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
+        <img src="Images/Buttons/saltwaterAreaFishClickerButton.png" width="300px" height="350px" id="currentButtonImage" onclick="increment()">
 	</div>
 
-
+    <div id="containerForNumber"></div>
 
     <!-- This is a flexbox container for the menu buttons -->
     <div id="containerForMenuButtons">
@@ -164,6 +164,8 @@
                 <div class="bestiaryStatisticsLabel">STATISTICS</div>
                 <div class="bestiaryStatistics">
                     <p>Catch Percentage: 100%</p>
+                    <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
+                    <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
                 </div>
             </div>
         </div>
@@ -217,8 +219,10 @@
     <div id="containerForActionsMenu">
         <div class="action"> <!-- Feed Entity Action -->
             <div class="feedEntityActionLabel">FEED</div>
+                <p>Bring me food and I shall give you powerful energy...</p>
+                <p>Fish = +1 Energy</p>
             <div class="actionContainerImage">
-                <img src="Images/Icons/eat.png" width="150px" height="150px" id="eatActionButton" onclick="eatAction()">
+                <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction(event)">
             </div>
         </div>
             

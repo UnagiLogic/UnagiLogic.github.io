@@ -94,7 +94,7 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /*Button Opacity*/
-#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #eatActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover, #spawningPoolLocationButton:hover, #swampTrailLocationButton:hover, #bestiaryCreatureTypeButton:hover {
+#saltwaterAreaFishClickerButton:hover, #buySearchActionButton:hover, #feedActionButton:hover, #playerInventoryMenuButton:hover, #locationMenuButton:hover, #bestiaryBookMenuButton:hover, #actionsMenuButton:hover, #insightsMenuButton:hover, #spawningPoolLocationButton:hover, #swampTrailLocationButton:hover, #bestiaryCreatureTypeButton:hover {
   opacity: 0.7;
 }
 
@@ -849,20 +849,23 @@ z-index: 102 - used for the unknown entity dialog box.
   text-align: center;
 }
 
-#buySearchActionButton, #eatActionButton {
+#buySearchActionButton, #feedActionButton {
   cursor: pointer;
   padding: 4px 1px;
 }
 
 #containerForInsightsMenu {
   position: fixed;
+  top: 34px;
+  left: 914px;
+  height: 210px;
+  width: 160px;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  top: 34px;
-  left: 914px;
   border-radius: 10px;
   padding: 5px;
+  z-index: 30;
 }
 
 .fishingInsightLabel {
@@ -873,6 +876,8 @@ z-index: 102 - used for the unknown entity dialog box.
   color: #b57ae2;
   text-align: center;
   border-radius: 10px;
+  padding-left: 6px;
+  padding-right: 6px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
