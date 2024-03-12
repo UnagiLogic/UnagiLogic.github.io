@@ -223,14 +223,12 @@ function increaseEnergy() {
 // The number represents the amount of any resource the player has gained.
 // The number will float on the screen for a few seconds.
 // The number will disappear after a few seconds.
-// The number will be placed next to the cursor when the player gains a resource.
+// The number will be placed next to the button that was clicked.
 function floatNumber() {
   let number = document.createElement("p");
   number.innerText = "+1";
   number.classList.add("number");
   document.getElementById("containerForNumber").appendChild(number);
-  number.style.left = Math.floor(Math.random() * 100) + "%";
-  number.style.top = Math.floor(Math.random() * 100) + "%";
   setTimeout(function() {
     number.remove();
   }, 3000);

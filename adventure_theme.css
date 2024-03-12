@@ -56,6 +56,18 @@ h1, h2, h3, h4, h5, h6, .mainScreenContainer, .mainScreenTitle, #fishCounter, #c
   }
 }
 
+/* Create an animation for gaining energy. Animation floats up. */
+@keyframes energyFloatUp {
+  0% {
+    top: 150;
+    opacity: 1;
+  }
+  100% {
+    top: -200px; /* Adjust the value to make the image float up further */
+    opacity: 0;
+  }
+}
+
 /* for smaller screens (eg: phones) */
 @media (max-width: 800px) { 
   .item {
@@ -116,6 +128,24 @@ z-index: 100 - used for the initial black loading screen that appears when the g
 z-index: 101 - used for the unknown entity image and clickToStart.
 z-index: 102 - used for the unknown entity dialog box.
 */
+
+#containerForNumber {
+  z-index: 50;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+  color: #9c69c3;
+  z-index: 50;
+  animation: energyFloatUp 3s linear infinite;
+  font-size: 20px;
+  z-index: 50;
+}
 
 #containerForInitialText {
   position: fixed;
