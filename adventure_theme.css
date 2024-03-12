@@ -312,35 +312,35 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 #containerForEnergyIndicator {
-  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
   height: 25px;
   width: 200px;
   background-color: #323232;
   border-radius: 15px;
-  top: 5px;
-  left: 5px;
+  margin-top: 5px;
+  z-index: 5;
 }
 
 #energyBar {
-  position: absolute;
   height: 100%;
   background-color: #3c1e5a;
   border-radius: 15px;
   width: 0;
 }
 
-#energyIndicatorText {
+.energyIndicatorText {
   position: absolute;
   font-weight: bold;
   margin: 0px;
-  left: 48px;
+  left: 40px;
 }
 
-#showEnergy {
+#showMaxEnergy {
   position: absolute;
   font-weight: bold;
   margin: 0px;
-  left: 75px;
+  left: 150px;
 }
 
 #containerForInventory {
