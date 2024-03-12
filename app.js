@@ -224,20 +224,20 @@ function increaseEnergy() {
 // The number will float on the screen for a few seconds.
 // The number will disappear after a few seconds.
 // The number will be placed next to the cursor when the player gains a resource.
-function floatNumber(event) {
+function floatNumber() {
   let number = document.createElement("p");
   number.innerText = "+1";
   number.classList.add("number");
   document.getElementById("containerForNumber").appendChild(number);
-  number.style.left = event.clientX + 'px';
-  number.style.top = event.clientY + 'px';
+  number.style.left = Math.floor(Math.random() * 100) + "%";
+  number.style.top = Math.floor(Math.random() * 100) + "%";
   setTimeout(function() {
     number.remove();
   }, 3000);
 }
 
 // Function to eat a fish and update energy
-function eatFish(event) {
+function eatFish() {
   if (animationInProgress) {
     console.log("Animation in progress");
     return;
@@ -252,7 +252,7 @@ function eatFish(event) {
       playEnergyAnimation();
       console.log("You ate a fish.");
       updateResourceDisplay();
-      floatNumber(event);
+      floatNumber();
     }
   } else {
     console.log("You have no fish to eat.");
