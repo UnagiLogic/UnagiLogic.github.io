@@ -293,6 +293,7 @@ function displayFishImage() {
   let fishImage = document.createElement("img");
   fishImage.src = "Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
+  fishImage.classList.add("number")
   document.getElementById("containerForResourceIndicator").appendChild(fishImage);
   fishImage.style.left = Math.floor(Math.random() * 100) + "%";
   fishImage.style.top = Math.floor(Math.random() * 100) + "%";
