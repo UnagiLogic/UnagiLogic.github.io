@@ -224,9 +224,25 @@ function increaseEnergy() {
 // The number will float on the screen for a few seconds.
 // The number will disappear after a few seconds.
 // The number will be placed next to the button that was clicked.
-function floatNumber() {
+function floatEnergyGainNumber() {
   let number = document.createElement("p");
   number.innerText = "+1";
+  number.classList.add("number");
+  document.getElementById("containerForNumber").appendChild(number);
+  setTimeout(function() {
+    number.remove();
+  }, 3000);
+}
+
+// Create a function that floats the search cost number on the screen
+// This function will create a p element with a number inside it.
+// The number represents the cost of the search action.
+// The number will float on the screen for a few seconds.
+// The number will disappear after a few seconds.
+// The number will be placed next to the button that was clicked.
+function floatSearchCostNumber() {
+  let number = document.createElement("p");
+  number.innerText = "-10";
   number.classList.add("number");
   document.getElementById("containerForNumber").appendChild(number);
   setTimeout(function() {
@@ -250,7 +266,7 @@ function eatFish() {
       playEnergyAnimation();
       console.log("You ate a fish.");
       updateResourceDisplay();
-      floatNumber();
+      floatEnergyGainNumber();
     }
   } else {
     console.log("You have no fish to eat.");
@@ -293,7 +309,6 @@ function displayFishImage() {
   let fishImage = document.createElement("img");
   fishImage.src = "Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
-  fishImage.classList.add("number")
   document.getElementById("containerForResourceIndicator").appendChild(fishImage);
   fishImage.style.left = Math.floor(Math.random() * 100) + "%";
   fishImage.style.top = Math.floor(Math.random() * 100) + "%";
@@ -330,6 +345,7 @@ function buySearchAction() {
     energy -= searchActionCost;
     updateResourceDisplay();
     updateEnergyBar()
+    floatSearchCostNumber();
     searchAction();
   }
 }
