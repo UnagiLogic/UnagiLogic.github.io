@@ -447,6 +447,31 @@ function resourceCache() {
 // Legendary insights have a 2% chance to be learned.
 // Bizare insights have a 1% chance to be learned.
 // if learned, the fishing insight will be added to the bestiary expertise section.
+function fishingInsight() {
+  let fishingInsights = [
+    { name: "Common Insight", chance: 0.5 },
+    { name: "Uncommon Insight", chance: 0.3 },
+    { name: "Rare Insight", chance: 0.13 },
+    { name: "Epic Insight", chance: 0.04 },
+    { name: "Legendary Insight", chance: 0.02 },
+    { name: "Bizare Insight", chance: 0.01 },
+  ];
+  let randomNumber = Math.random();
+  for (let i = 0; i < fishingInsights.length; i++) {
+    if (randomNumber <= fishingInsights[i].chance) {
+      console.log("You learned a new fishing insight!");
+      let fishingInsightMessage = document.createElement("p");
+      fishingInsightMessage.innerText = "You learned a new fishing insight!";
+      fishingInsightMessage.classList.add("fishingInsightMessage");
+      document.getElementById("containerForFishingInsightMessage").appendChild(fishingInsightMessage);
+      setTimeout(function() {
+        fishingInsightMessage.remove();
+      }, 3000);
+      break;
+    }
+  }
+}
+
 function fishingInsightAction() {
   if (resources.fish >= 10) {
     resources.fish -= 10;
