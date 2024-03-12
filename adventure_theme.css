@@ -329,11 +329,18 @@ z-index: 102 - used for the unknown entity dialog box.
   width: 0;
 }
 
-.energyIndicatorText {
+.energyIndicatorTextOne {
   position: absolute;
   font-weight: bold;
   margin: 0px;
   left: 40px;
+}
+
+.energyIndicatorTextTwo {
+  position: absolute;
+  font-weight: bold;
+  margin: 0px;
+  left: 150px;
 }
 
 #showMaxEnergy {
