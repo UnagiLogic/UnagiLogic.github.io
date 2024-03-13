@@ -491,15 +491,29 @@ function fishingInsight() {
   }
 }
 
-function fishingInsightAction() {
-  if (resources.fish >= 10) {
+
+// The is the function for gaining fishing insight.
+// This function will check if the player has enough fish to buy the fishingInsightAction.
+// This function will check if the player has enough energy to buy the fishingInsightAction.
+// If the player has enough fish and energy it will subtract the cost of the action from the players fish.
+// It will also update the Resource Display.
+// It will also update the Energy Bar.
+// It will also call the fishingInsight function.
+// It will also call the floatFishingInsightCostNumber function.
+// If the player does not have enough fish it will display a message that says "You do not have enough fish."
+// If the player does not have enough energy it will display a message that says "You do not have enough energy."
+function gainFishingInsight() {
+  if (resources.fish >= 10 && energy >= 1) {
     resources.fish -= 10;
+    energy -= 1;
     updateResourceDisplay();
     updateEnergyBar();
     floatFishingInsightCostNumber();
     fishingInsight();
-  } else {
+  } else if (resources.fish < 10) {
     console.log("You do not have enough fish.");
+  } else {
+    console.log("You do not have enough energy.");
   }
 }
 
