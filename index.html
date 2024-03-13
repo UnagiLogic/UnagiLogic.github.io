@@ -41,24 +41,36 @@
     <div class="mainScreenContainer">
         <h1 class="mainScreenTitle">The Spawning Pool</h1>
         <img src="Images/Backgrounds/saltwaterAreaBackground.png" id="currentBackgroundImage">
-        <img src="Images/Buttons/saltwaterAreaFishClickerButton.png" width="300px" height="350px" id="currentButtonImage" onclick="increment()">
 	</div>
 
     <div id="containerForLocation">
         <div id="locationNameLabelContainer">
-            <div id="locationNameLabel"></div>
+            <div id="locationNameLabel">Current Name</div>
         </div>
         <div id="locationExploreContainer">
-            <div id="locationExploreLabel"></div>
-            <div id="locationExploreButton"></div>
-            <div id="locationActionsLabel"></div>
-            <div id="locationActions"></div>
-            <div id="locationInsightsLabel"></div>
-            <div id="locationInsights"></div>
+            <div id="locationExploreLabel">EXPLORE</div>
+            <div id="locationExploreButton">
+                <img src="Images/Buttons/saltwaterAreaFishClickerButton.png" width="300px" height="350px" id="currentLocationButtonImage" onclick="increment()">
+            </div>
+            <div id="locationActionsLabel">ACTIONS</div>
+            <div id="locationActionsContainer">
+                <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
+                <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
+            </div>
+            <div id="locationInsightsLabel">INSIGHTS</div>
+            <!-- Create a method for players to place earned insights here for ease of use or otherwise-->
+            <div id="locationInsightsContainer">
+                <div id="locationInsightSlotOne">
+                    <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="gainFishingInsight()">
+                </div>
+                <div id="locationInsightSlotTwo"></div>
+                <div id="locationInsightSlotThree"></div>
+                <div id="locationInsightSlotFour"></div>
+            </div>
         </div>
         <div id="locationInformationContainer">
-            <div id="adventureLog"></div>
-            <div id="notifactionArea"></div>
+            <div id="adventureLog">Placeholder Text. This should be about two sentences on 2-3 seperate lines</div>
+            <div id="notifactionArea">Place holder Text. This should be about two sentences on 2-3 seperate lines</div>
         </div>
     </div>
 

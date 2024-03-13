@@ -162,27 +162,54 @@ function updateResourceDisplay() {
   document.getElementById("showShrimp").innerText = resources.shrimp;
 }
 
-// Create a function that changes multiple img elements to new img elements
-// if player clicks on spawnPoolLocationButton the currentBackgroundImage and currentButtonImage will change to saltwaterAreaBackground and saltwaterAreaFishClickerButton
-// if player clicks on swampLocationButton the currentBackgroundImage and currentButtonImage will change to swampAreaBackground and swampAreaClickerButton
-function changeImages() {
+// Create a function that changes multiple elements to new elements when the player clicks on a location button.
+// if player clicks spawningPoolLocationButton, currentBackgroundImage change to saltwaterAreaBackground
+// if player clicks spawningPoolLocationButton, currentLocationButtonImage change to saltwaterAreaFishClickerButton
+// if player clicks spawningPoolLocationButton, locationNameLabel change to The Spawning Pool
+// if player clicks spawningPoolLocationButton, increment function will be replaced with increment function
+// if player clicks swampTrailLocationButton, currentBackgroundImage change to swampAreaBackground
+// if player clicks swampTrailLocationButton, currentLocationButtonImage change to swampAreaClickerButton
+// if player clicks swampTrailLocationButton, locationNameLabel change to The Swamp Trail
+// if player clicks swampTrailLocationButton, increment function will be replaced with incrementMud function
+function changeLocation() {
   let currentBackgroundImage = document.getElementById("currentBackgroundImage");
-  let currentButtonImage = document.getElementById("currentButtonImage");
+  let currentLocationButtonImage = document.getElementById("currentLocationButtonImage");
+  let locationNameLabel = document.getElementById("locationNameLabel");
   let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
   let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
 
-  spawningPoolLocationButton.addEventListener("click", function() {
+  spawnPoolLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
-    currentButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+    currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+    locationNameLabel.innerText = "The Spawning Pool";
+    increment = increment;
   });
 
   swampTrailLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
-    currentButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
+    currentLocationButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
+    locationNameLabel.innerText = "The Swamp Trail";
+    increment = incrementMud;
   });
 }
 
-
+// Old function to change images. commenting out until I know the new function works.
+//function changeImages() {
+//  let currentBackgroundImage = document.getElementById("currentBackgroundImage");
+//  let currentLocationButtonImage = document.getElementById("currentLocationButtonImage");
+//  let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
+//  let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
+//
+//  spawningPoolLocationButton.addEventListener("click", function() {
+//    currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
+//    currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
+//  });
+//
+//  swampTrailLocationButton.addEventListener("click", function() {
+//    currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
+//    currentLocationButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
+//  });
+//}
 
 function updateEnergyBar() {;
   const energyPercentage = (energy / maxEnergy) * 100;
@@ -307,7 +334,7 @@ function feedAction() {
   }
 }
 
-// Function that gets called when you click the saltwaterAreaFishClickerButton (currentButtonImage)
+// Function that gets called when you click the saltwaterAreaFishClickerButton (currentLocationButtonImage)
 function increment() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
   updateResourceDisplay(); // Uses the Document Object Model to change the number of fish in the HTML
@@ -318,10 +345,19 @@ function increment() {
   }
 }
 
-// This function is used to display an image in the containerForResourceIndicator each time the saltwaterAreaFishClickerButton (currentButtonImage) is pressed.
+// increment function for when the player clicks the swampAreaClickerButton
+// This function will add the number of mud per click to your total mud
+// This function will use the Document Object Model to change the number of mud in the HTML
+function incrementMud() {
+  resources.mud += 1;
+  updateResourceDisplay();
+  displayMudImage();
+}
+
+// This function is used to display an image in the containerForResourceIndicator each time the saltwaterAreaFishClickerButton (currentLocationButtonImage) is pressed.
 // The image will be randomly selected from the Images/Resources/saltwaterFish/fish folder of 6 images. 
 // The class fishImage has a CSS
-// The containerForResourceIndicator appears inside the saltwaterAreaFishClickerButton (currentButtonImage) CSS width and height at random places.
+// The containerForResourceIndicator appears inside the saltwaterAreaFishClickerButton (currentLocationButtonImage) CSS width and height at random places.
 // The fishImage will be displayed in the containerForResourceIndicator CSS width and height.
 // The fishImage needs to be removed after a few seconds.
 function displayFishImage() {
@@ -335,6 +371,21 @@ function displayFishImage() {
   //Remove the fish image after a few seconds
   setTimeout(function() {
     fishImage.remove();
+  }, 3000);
+}
+
+// Create a function that displays an image in the containerForResourceIndicator each time the swampAreaClickerButton is pressed.
+function displayMudImage() {
+  let mudImage = document.createElement("img");
+  mudImage.src = "Images/Resources/swampMud/mud" + Math.floor(Math.random() * 6) + ".png";
+  mudImage.classList.add("mudImage");
+  document.getElementById("containerForResourceIndicator").appendChild(mudImage);
+  mudImage.style.left = Math.floor(Math.random() * 100) + "%";
+  mudImage.style.top = Math.floor(Math.random() * 100) + "%";
+
+  //Remove the mud image after a few seconds
+  setTimeout(function() {
+    mudImage.remove();
   }, 3000);
 }
 

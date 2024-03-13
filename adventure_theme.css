@@ -264,7 +264,7 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 0;
 }
 
-#currentButtonImage {
+#currentLocationButtonImage {
   position: fixed;
   top: 8%;
   left: 41%;
@@ -280,14 +280,14 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 /* When I hover over a button, a box shadow color should change, and be a little rounder */
-#currentButtonImage:hover, #currentButtonImage:active {
+#currentLocationButtonImage:hover, #currentLocationButtonImage:active {
   box-shadow: 0 4px 8px 0 #979797;
   border-radius: 8px;
   transition-duration: 0.5s;
 }
 
 /* When clicked, I want the box shadow color to change again, more round, and get a little larger */
-#currentButtonImage:active {
+#currentLocationButtonImage:active {
   box-shadow: 0 4px 8px 0 #666666;
   border-radius: 20px;
   -ms-transform: scale(1.1);
@@ -298,6 +298,7 @@ z-index: 102 - used for the unknown entity dialog box.
 #containerForLocation {
   display: flex;
   position: fixed;
+  flex-direction: column;
   top: 34px;
   left: 5px;
   padding: 5px;
@@ -353,7 +354,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-size: 20px;
 }
 
-#locationActions {
+#locationActionsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -371,7 +372,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-size: 20px;
 }
 
-#locationInsights {
+#locationInsightsContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -380,6 +381,34 @@ z-index: 102 - used for the unknown entity dialog box.
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
   padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInsightSlotOne {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInsightSlotTwo {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInsightSlotThree {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInsightSlotFour {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
