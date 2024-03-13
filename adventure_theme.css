@@ -346,35 +346,32 @@ z-index: 102 - used for the unknown entity dialog box.
   z-index: 30;
 }
 
-#containerForEnergyIndicator {
-  display: flex;
-  height: 50px;
-  background-color: #323232;
-  border-radius: 15px;
-  margin-top: 5px;
-  z-index: 5;
-}
-
 #energyBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
   height: 100%;
   background-color: #3c1e5a;
   border-radius: 15px;
+  padding-right: 10px;
+  z-index: 5;
 }
 
 .imageWrapper {
   display: flex;
+  z-index: 5;
 }
 
 #energyImage {
-  display: block;
   height: 50px;
-  border-radius: 15px;
+  margin-left: -10px;
   z-index: 5;
 }
 
 .energyIndicatorText {
-  display: inline-block;
   font-weight: bold;
+  white-space: nowrap;
   z-index: 5;
 }
 
