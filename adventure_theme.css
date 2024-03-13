@@ -353,7 +353,6 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 15px;
   margin-top: 5px;
   z-index: 5;
-  align-items: center;
 }
 
 #energyBar {
@@ -362,7 +361,12 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 15px;
 }
 
+.imageWrapper {
+  display: flex;
+}
+
 #energyImage {
+  display: block;
   height: 50px;
   border-radius: 15px;
   z-index: 5;
@@ -375,7 +379,6 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 #showMaxEnergy {
-  font-size: 20px;
   font-weight: bold;
   z-index: 5;
 }
