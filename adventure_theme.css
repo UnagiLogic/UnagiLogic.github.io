@@ -295,6 +295,130 @@ z-index: 102 - used for the unknown entity dialog box.
   transform: scale(1.1);
 }
 
+#containerForLocation {
+  display: flex;
+  position: fixed;
+  top: 34px;
+  left: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#locationNameLabelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationNameLabel {
+  font-weight: bold;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
+#locationExploreContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationExploreLabel {
+  font-weight: bold;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
+#locationExploreButton {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationActionsLabel {
+  font-weight: bold;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
+#locationActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInsightsLabel {
+  font-weight: bold;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
+#locationInsights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInformationContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#adventureLog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#notificationArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* This is the container for scene elements. */
 #containerForSceneElements {
   position: fixed;
@@ -344,6 +468,16 @@ z-index: 102 - used for the unknown entity dialog box.
   cursor: pointer;
   border-radius: 5px;
   z-index: 30;
+}
+
+#containerForEnergyIndicator {
+  display: flex;
+  height: 25px;
+  background-color: #323232;
+  border-radius: 15px;
+  margin-top: 5px;
+  z-index: 5;
+  align-items: center;
 }
 
 #energyBar {
