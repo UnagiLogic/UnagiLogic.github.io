@@ -495,8 +495,8 @@ function fishingInsightAction() {
   if (resources.fish >= 10) {
     resources.fish -= 10;
     updateResourceDisplay();
-    updateEnergyBar()
-    floatFishingInsightCostNumber()
+    updateEnergyBar();
+    floatFishingInsightCostNumber();
     fishingInsight();
   } else {
     console.log("You do not have enough fish.");
@@ -572,6 +572,8 @@ window.addEventListener('DOMContentLoaded', function() {
   hideContainer('containerForActionsMenu');
   hideContainer('containerForInsightsMenu');
   hideContainer('bestiaryCreatureTypeContainer');
+  hideContainer('containerForFishingInsightMessage');
+  hideContainer('containerForNotification');
 
 // Event listener to toggleContainerVisibility when playerInventoryMenuButton is clicked.
   addToggleVisibilityListener('playerInventoryMenuButton', 'containerForInventory');
