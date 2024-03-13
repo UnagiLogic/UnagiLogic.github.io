@@ -58,7 +58,8 @@
 
         <!-- This container is for the energy indicator. It will update like a progress bar -->
     <div id="containerForEnergyIndicator">
-        <div id="energyBar">    
+        <div id="energyBar">
+            <img src="Images/Icons/energy.png" id="energyImage">
         <p class="energyIndicatorTextOne">Energy: <span id="showEnergy">0</span><p class="energyIndicatorTextTwo">/</p><span id="showMaxEnergy">10</span></p>
         </div>
     </div>
@@ -249,7 +250,7 @@
     <div id="containerForInsightsMenu">
         <div class="fishingInsightLabel">FISHING INSIGHT</div>
             <div class="insightContainerImage">
-                <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="fishingInsightAction()">
+                <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="gainFishingInsight()">
             </div>
         </div>
     </div>
