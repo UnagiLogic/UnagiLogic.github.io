@@ -85,14 +85,17 @@ function showElements() {
 }
 
 // Create a function that shows pop up notifications.
-// This function will notify when an achievement is unlocked.
-// This function will notify when a new insight is learned.
-// This function will notify when a new creature is discovered.
-// This function will notify when a new area is discovered.
-// This function will notify when a new resource is discovered.
-// This function will notify when a new tool is discovered.
-// This function will notify when a new item is discovered.
-// This function will inform when a quest is completed.
+// If achievement onlocked, the function will change the notification message.
+// If a new insight is learned, the function will change the notification message.
+// If a new creature is discovered, the function will change the notification message.
+// If a new area is discovered, the function will change the notification message.
+// If a new resource is discovered, the function will change the notification message.
+// If a new tool is discovered, the function will change the notification message.
+// If a new item is discovered, the function will change the notification message.
+// If a quest is completed, the function will change the notification message.
+// If a quest is failed, the function will change the notification message.
+// If a quest is accepted, the function will change the notification message.
+// If the player finds a resource cache, the function will change the notification message.
 function showNotification() {
   let notification = document.createElement("p");
   notification.innerText = "You found a resource cache!";
@@ -227,7 +230,7 @@ function increaseEnergy() {
 function floatEnergyGainNumber() {
   let number = document.createElement("p");
   number.innerText = "+1";
-  number.classList.add("number");
+  number.classList.add("floatingNumber");
   document.getElementById("containerForNumber").appendChild(number);
   setTimeout(function() {
     number.remove();
@@ -243,7 +246,23 @@ function floatEnergyGainNumber() {
 function floatSearchCostNumber() {
   let number = document.createElement("p");
   number.innerText = "-10";
-  number.classList.add("number");
+  number.classList.add("floatingNumber");
+  document.getElementById("containerForNumber").appendChild(number);
+  setTimeout(function() {
+    number.remove();
+  }, 3000);
+}
+
+// Create a function that floats the cost of the fishing insight action on the screen
+// This function will create a p element with a number inside it.
+// The number represents the cost of the fishing insight action.
+// The number will float on the screen for a few seconds.
+// The number will disappear after a few seconds.
+// The number will be placed next to the button that was clicked.
+function floatFishingInsightCostNumber() {
+  let number = document.createElement("p");
+  number.innerText = "-10";
+  number.classList.add("floatingNumber");
   document.getElementById("containerForNumber").appendChild(number);
   setTimeout(function() {
     number.remove();
@@ -476,6 +495,8 @@ function fishingInsightAction() {
   if (resources.fish >= 10) {
     resources.fish -= 10;
     updateResourceDisplay();
+    updateEnergyBar()
+    floatFishingInsightCostNumber()
     fishingInsight();
   } else {
     console.log("You do not have enough fish.");

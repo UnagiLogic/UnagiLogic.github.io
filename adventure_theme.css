@@ -129,11 +129,20 @@ z-index: 101 - used for the unknown entity image and clickToStart.
 z-index: 102 - used for the unknown entity dialog box.
 */
 
+/* containers that currently don't have a home or don't need a home */
 #containerForNumber {
   z-index: 50;
 }
 
 .number {
+  font-size: 20px;
+  font-weight: bold;
+  color: #9c69c3;
+  font-size: 20px;
+  z-index: 50;
+}
+
+.floatingNumber {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -145,6 +154,32 @@ z-index: 102 - used for the unknown entity dialog box.
   animation: energyFloatUp 3s linear infinite;
   font-size: 20px;
   z-index: 50;
+}
+
+#containerForFishingInsightMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  border: 1px solid #8a2424;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 102;
+}
+
+#containerForNotification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  border: 1px solid #8a2424;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  z-index: 102;
 }
 
 #containerForInitialText {
@@ -340,14 +375,15 @@ z-index: 102 - used for the unknown entity dialog box.
   position: absolute;
   font-weight: bold;
   margin: 0px;
-  left: 150px;
+  left: 145px;
 }
 
 #showMaxEnergy {
   position: absolute;
+  font-size: 20px;
   font-weight: bold;
   margin: 0px;
-  left: 150px;
+  left: 155px;
 }
 
 #containerForInventory {
