@@ -136,7 +136,7 @@ function startGame() {
   setTimeout(function () {
     hideElements();
     containerForInitialBlackScreen.classList.add("hidden");
-    changeImages();
+    changeLocation();
     pauseAudio();
   },initialBlackScreenDelay);
 }
