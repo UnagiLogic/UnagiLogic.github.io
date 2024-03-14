@@ -178,7 +178,7 @@ function changeLocation() {
   let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
   let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
 
-  spawnPoolLocationButton.addEventListener("click", function() {
+  spawningPoolLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
     locationNameLabel.innerText = "The Spawning Pool";
