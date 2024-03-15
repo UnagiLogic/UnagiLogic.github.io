@@ -244,17 +244,6 @@ z-index: 102 - used for the unknown entity dialog box.
   text-align: center;
 }
 
-.mainScreenTitle {
-  position: fixed;
-  top: 6%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 5px;
-  border-radius: 5px;
-  margin: 10px;
-  z-index: 1;
-}
-
 #currentBackgroundImage {
   width: 100%;
   height: 100%;
@@ -332,7 +321,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-size: 20px;
 }
 
-#locationActionsLabel {
+.locationActionsLabel {
   font-weight: bold;
   text-align: center;
   border: 1px solid var(--main-border-color);
@@ -341,7 +330,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-size: 20px;
 }
 
-#locationActionsButtonContainer {
+.locationActionsButtonContainer {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--main-border-color);
@@ -350,7 +339,7 @@ z-index: 102 - used for the unknown entity dialog box.
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#locationActionsButtonLabel {
+.locationActionsButtonLabel {
   font-weight: bold;
   text-align: center;
   border: 1px solid var(--main-border-color);
@@ -359,29 +348,21 @@ z-index: 102 - used for the unknown entity dialog box.
   font-size: 20px;
 }
 
-#locationActionsButton {
+.locationActionsButton {
   cursor: pointer;
-  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-#locationActionsButtonCostContainer {
+.locationActionsButtonCost {
   display: flex;
-  flex-direction: column;
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
-  padding: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-#locationActionsButtonCost {
+  align-items: center;
+  justify-content: center;
   font-weight: bold;
   text-align: center;
-  border: 1px solid var(--main-border-color);
   border-radius: 10px;
   color: #b57ae2;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 #locationInsightsLabel {
@@ -514,13 +495,13 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 #containerForEnergyIndicator {
-  display: flex;
+  position: fixed;
   height: 25px;
+  left: 3px;
   background-color: #323232;
   border-radius: 15px;
   margin-top: 5px;
   z-index: 5;
-  align-items: center;
 }
 
 #energyBar {

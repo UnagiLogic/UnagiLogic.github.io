@@ -39,7 +39,6 @@
 
     <!-- This is the container for the main screen. When location buttons are clicked, this screen changes to the corresponding location. -->
     <div class="mainScreenContainer">
-        <h1 class="mainScreenTitle">The Spawning Pool</h1>
         <img src="Images/Backgrounds/saltwaterAreaBackground.png" id="currentBackgroundImage">
 	</div>
 
@@ -52,20 +51,32 @@
         </div>
         
         <div class="activity">
-            <div id="locationActionsLabel">ACTIONS</div>
-            <div id="locationActionsButtonContainer">
-                <div id="locationActionsButtonLabel">FEED</div>
-                <div id="locationActionsButton">
+            <div class="locationActionsLabel">ACTIONS</div>
+            <div class="locationActionsButtonContainer">
+                <div class="locationActionsButtonLabel">FEED</div>
+                <div class="locationActionsButton">
                     <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
                 </div>
-                <div id="locationActionsButtonCostContainer">
-                    <div id="locationActionsButtonCost">
-                        <img src="Images/Resources/fish.png" width="75px" height="75px"><span id="feedActionCost">1</span>
-                    </div>
+
+                <div class="locationActionsButtonCost">
+                    <img src="Images/Resources/fish.png" width="75px" height="75px" title="Fish: Feed the entity to gain energy">
+                    <span id="feedActionFishCost">1</span>
                 </div>   
             </div>
 
-            <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
+            <div class="locationActionsButtonContainer">
+                <div class="locationActionsButtonLabel">SEARCH</div>
+                <div class="locationActionsButton">
+                    <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
+                </div>
+
+                <div class="locationActionsButtonCost">
+                    <img src="Images/Icons/energy.png" width="75px" height="75px" title="Energy: Used to perform actions">
+                    <span id="searchActionEnergyCost">1</span>
+                    <img src="Images/Resources/fish.png" width="75px" height="75px" title="Fish: Feed the entity to gain energy">
+                    <span id="searchActionFishCost">10</span>
+                </div>   
+            </div>
         </div>
 
         <div class="activity">
