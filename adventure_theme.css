@@ -366,6 +366,24 @@ z-index: 102 - used for the unknown entity dialog box.
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+#locationActionsButtonCostContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationActionsButtonCost {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
 #locationInsightsLabel {
   font-weight: bold;
   text-align: center;
