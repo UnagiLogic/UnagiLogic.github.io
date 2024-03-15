@@ -294,9 +294,10 @@ z-index: 102 - used for the unknown entity dialog box.
 #containerForLocation {
   display: flex;
   position: fixed;
-  flex-direction: column;
   top: 200px;
   left: 300px;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--main-border-color);
   padding: 5px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -342,9 +343,7 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationActionsButtonContainer {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
   padding: 5px;
