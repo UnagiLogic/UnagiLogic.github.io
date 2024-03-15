@@ -111,11 +111,11 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /*Inventory Item BG Color*/
-.fishBGC { background-color: #309aba; }
-.clayBGC { background-color: #fbb84c; }
-.mudBGC { background-color: #a23b08; }
-.shrimpBGC { background-color: #ec7445; }
-.stoneBGC { background-color: #585756; }
+#fishBGC { background-color: #309aba; }
+#clayBGC { background-color: #fbb84c; }
+#mudBGC { background-color: #a23b08; }
+#shrimpBGC { background-color: #ec7445; }
+#stoneBGC { background-color: #585756; }
 
 /* Z-index information: 
 z-index: 0 - This is the lowest z-index. It is used for background images.
