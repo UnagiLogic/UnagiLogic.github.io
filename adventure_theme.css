@@ -303,7 +303,7 @@ z-index: 102 - used for the unknown entity dialog box.
   top: 58px;
   left: 300px;
   text-align: center;
-  width: 755px;
+  width: 750px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
@@ -315,6 +315,7 @@ z-index: 102 - used for the unknown entity dialog box.
 #locationExploreContainer {
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
+  max-width: 320px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -326,6 +327,29 @@ z-index: 102 - used for the unknown entity dialog box.
   border-radius: 10px;
   color: #b57ae2;
   font-size: 20px;
+}
+
+#locationExploreInventoryLabel {
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
+#locationExploreInventoryContainer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 320px;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+}
+
+.locationExploreInventorySlot {
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  margin: 4px;
 }
 
 .locationActionsLabel {
@@ -457,9 +481,9 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInformationSlotOne {
   position: fixed;
-  top: 683px;
+  top: 708px;
   left: 300px;
-  max-width: 377px;
+  max-width: 375px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
@@ -469,9 +493,9 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInformationSlotTwo {
   position: fixed;
-  top: 683px;
-  right: 300px;
-  max-width: 377px;
+  top: 708px;
+  right: 318px;
+  max-width: 375px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
@@ -613,6 +637,16 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 .inventoryNumber {
+  position: absolute;
+  color: black;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1px 4px;
+}
+
+.locationInventoryNumber {
   position: absolute;
   color: black;
   bottom: 0;
