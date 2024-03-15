@@ -55,7 +55,7 @@ let purchasedResources = {
 }
 
 // Cost of Action Variables
-let searchActionCost = 10
+let searchActionCost = 1;
 
 // Functions go here -----------------------------------
 
@@ -395,21 +395,6 @@ setInterval(function() {
   updateResourceDisplay(); // Use this when you want to update your HTML
 }, 1000); // Every 1000 milliseconds
 
-// Function that will be called when the user presses the buyActionButton.
-// This function will check if the player has enough energy to do this action.
-// If the player has enough energy it will subtract the cost of the action from the players energy.
-// It will also update showEnergy in the HTML.
-// It will also call the searchAction function.
-function buyAction() {
-  if (energy >= searchActionCost) {
-    energy -= searchActionCost;
-    updateResourceDisplay();
-    searchAction();
-  } else {
-    console.log("You do not have enough energy to do this action.");
-  }
-}
-
 function buySearchAction() {
   if (energy >= searchActionCost) {
     energy -= searchActionCost;
@@ -417,6 +402,8 @@ function buySearchAction() {
     updateEnergyBar()
     floatSearchCostNumber();
     searchAction();
+  } else {
+    console.log("You do not have enough energy to do this action.");
   }
 }
 
