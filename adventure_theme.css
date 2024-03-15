@@ -440,16 +440,13 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInsightSlotOne {
   border: 1px solid var(--main-border-color);
-  cursor: pointer;
-  padding: 5px;
+  margin: 8px 5px 5px 5px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #locationInsightOneLabel {
   font-weight: bold;
   text-align: center;
-  margin-top: -6px;
   padding-top: 3px;
   padding-bottom: 3px;
   background-color: #262626;
@@ -464,6 +461,7 @@ z-index: 102 - used for the unknown entity dialog box.
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
   padding: 5px;
@@ -478,29 +476,24 @@ z-index: 102 - used for the unknown entity dialog box.
   font-weight: bold;
   text-align: center;
   border-radius: 10px;
+  padding-right: 5px;
   color: #b57ae2;
   font-size: 25px;
 }
 
 #locationInsightSlotTwo {
-  cursor: pointer;
-  padding: 5px;
+  margin: 8px 5px 5px 5px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #locationInsightSlotThree {
-  cursor: pointer;
-  padding: 5px;
+  margin: 8px 5px 5px 5px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #locationInsightSlotFour {
-  cursor: pointer;
-  padding: 5px;
+  margin: 8px 5px 5px 5px;
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 #locationInformationSlotOne {
