@@ -111,11 +111,11 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /*Inventory Item BG Color*/
-#fishBGC { background-color: #309aba; }
-#clayBGC { background-color: #fbb84c; }
-#mudBGC { background-color: #a23b08; }
-#shrimpBGC { background-color: #ec7445; }
-#stoneBGC { background-color: #585756; }
+.fishBGC { background-color: #309aba; }
+.clayBGC { background-color: #fbb84c; }
+.mudBGC { background-color: #a23b08; }
+.shrimpBGC { background-color: #ec7445; }
+.stoneBGC { background-color: #585756; }
 
 /* Z-index information: 
 z-index: 0 - This is the lowest z-index. It is used for background images.
@@ -313,13 +313,9 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 #locationExploreContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -385,7 +381,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-size: 25px;
 }
 
-#locationInsightsLabel {
+#locationInsightsNameLabel {
   font-weight: bold;
   text-align: center;
   border: 1px solid var(--main-border-color);
@@ -400,6 +396,42 @@ z-index: 102 - used for the unknown entity dialog box.
   padding: 5px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#locationInsightOneLabel {
+  font-weight: bold;
+  text-align: center;
+  margin-top: -6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
+  color: #b57ae2;
+  font-size: 20px;
+}
+
+#locationInsightsButtonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 7px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.locationInsightButtonCost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  color: #b57ae2;
+  font-size: 25px;
 }
 
 #locationInsightSlotTwo {
