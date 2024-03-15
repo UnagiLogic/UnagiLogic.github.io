@@ -53,7 +53,13 @@
         
         <div class="activity">
             <div id="locationActionsLabel">ACTIONS</div>
-            <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
+            <div id="locationActionsButtonContainer">
+                <div id="locationActionsButtonLabel">FEED</div>
+                <div id="locationActionsButton">
+                    <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
+                </div>
+            </div>
+
             <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
         </div>
 
@@ -66,15 +72,14 @@
             <div id="locationInsightSlotThree"></div>
             <div id="locationInsightSlotFour"></div>
         </div>
-            
-        <div class="activity">
-            <div id="locationInformationSlotOne">
-                <div id="adventureLog">Placeholder Text. This should be about two sentences on 2-3 seperate lines</div>
-            </div>
-            <div id="locationInformationSlotTwo">
-                <div id="notifactionArea">Place holder Text. This should be about two sentences on 2-3 seperate lines</div>
-            </div>
+        
+        <div id="locationInformationSlotOne">
+            <div id="adventureLog">Placeholder Text. This should be about two sentences on 2-3 seperate lines</div>
         </div>
+        <div id="locationInformationSlotTwo">
+            <div id="notificationArea">Place holder Text. This should be about two sentences on 2-3 seperate lines</div>
+        </div>
+        
     </div>
 
     <!-- This is a flexbox container for the menu buttons -->
