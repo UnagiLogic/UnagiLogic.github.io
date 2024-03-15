@@ -347,9 +347,19 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 .locationExploreInventorySlot {
-  border: 1px solid var(--main-border-color);
+  position: relative;
   border-radius: 10px;
   margin: 4px;
+}
+
+.locationInventoryNumber {
+  position: absolute;
+  color: black;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1px 4px;
 }
 
 .locationActionsLabel {
@@ -481,7 +491,7 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInformationSlotOne {
   position: fixed;
-  top: 708px;
+  top: 731px;
   left: 300px;
   max-width: 375px;
   background-color: var(--main-bg-color);
@@ -493,7 +503,7 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInformationSlotTwo {
   position: fixed;
-  top: 708px;
+  top: 731px;
   right: 318px;
   max-width: 375px;
   background-color: var(--main-bg-color);

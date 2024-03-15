@@ -158,13 +158,13 @@ function updateResourceDisplay() {
   document.getElementById("showFish").innerText = resources.fish;
   document.getElementById("showLocationFish").innerText = resources.fish;
   document.getElementById("showClay").innerText = resources.clay;
-  document.getElementById("showLocationClay").innerText = resources.fish;
+  document.getElementById("showLocationClay").innerText = resources.clay;
   document.getElementById("showMud").innerText = resources.mud;
-  document.getElementById("showLocationMud").innerText = resources.fish;
+  document.getElementById("showLocationMud").innerText = resources.mud;
   document.getElementById("showStone").innerText = resources.stone;
-  document.getElementById("showLocationStone").innerText = resources.fish;
+  document.getElementById("showLocationStone").innerText = resources.stone;
   document.getElementById("showShrimp").innerText = resources.shrimp;
-  document.getElementById("showLocationShrimp").innerText = resources.fish;
+  document.getElementById("showLocationShrimp").innerText = resources.shrimp;
 }
 
 // Create a function that changes multiple elements to new elements when the player clicks on a location button.
