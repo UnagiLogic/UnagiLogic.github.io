@@ -111,11 +111,11 @@ h1, h2, p, #energyIndicatorText, #showEnergy {
 }
 
 /*Inventory Item BG Color*/
-#fishBGC { background-color: #309aba; }
-#clayBGC { background-color: #fbb84c; }
-#mudBGC { background-color: #a23b08; }
-#shrimpBGC { background-color: #ec7445; }
-#stoneBGC { background-color: #585756; }
+.fishBGC { background-color: #309aba; }
+.clayBGC { background-color: #fbb84c; }
+.mudBGC { background-color: #a23b08; }
+.shrimpBGC { background-color: #ec7445; }
+.stoneBGC { background-color: #585756; }
 
 /* Z-index information: 
 z-index: 0 - This is the lowest z-index. It is used for background images.
@@ -313,28 +313,34 @@ z-index: 102 - used for the unknown entity dialog box.
 }
 
 #locationExploreContainer {
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
   max-width: 320px;
-  padding: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  margin: 5px;
 }
 
 #locationExploreLabel {
   font-weight: bold;
-  text-align: center;
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
   color: #b57ae2;
+  text-align: center;
+  margin-top: -6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
   font-size: 20px;
 }
 
 #locationExploreInventoryLabel {
   font-weight: bold;
-  text-align: center;
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
   color: #b57ae2;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
   font-size: 20px;
 }
 
@@ -342,8 +348,8 @@ z-index: 102 - used for the unknown entity dialog box.
   display: flex;
   flex-wrap: wrap;
   max-width: 320px;
-  border: 1px solid var(--main-border-color);
   border-radius: 10px;
+  margin: 3px 5px 5px 5px;
 }
 
 .locationExploreInventorySlot {
@@ -364,10 +370,14 @@ z-index: 102 - used for the unknown entity dialog box.
 
 .locationActionsLabel {
   font-weight: bold;
-  text-align: center;
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
   color: #b57ae2;
+  text-align: center;
+  margin-top: -6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
   font-size: 20px;
 }
 
@@ -417,10 +427,14 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInsightsNameLabel {
   font-weight: bold;
-  text-align: center;
-  border: 1px solid var(--main-border-color);
-  border-radius: 10px;
   color: #b57ae2;
+  text-align: center;
+  margin-top: -6px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
   font-size: 20px;
 }
 
@@ -491,7 +505,7 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInformationSlotOne {
   position: fixed;
-  top: 731px;
+  top: 742px;
   left: 300px;
   max-width: 375px;
   background-color: var(--main-bg-color);
@@ -503,7 +517,7 @@ z-index: 102 - used for the unknown entity dialog box.
 
 #locationInformationSlotTwo {
   position: fixed;
-  top: 731px;
+  top: 742px;
   right: 318px;
   max-width: 375px;
   background-color: var(--main-bg-color);
