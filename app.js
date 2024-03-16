@@ -176,6 +176,13 @@ function updateResourceDisplay() {
 // if player clicks swampTrailLocationButton, currentLocationButtonImage change to swampAreaClickerButton
 // if player clicks swampTrailLocationButton, locationNameLabel change to The Swamp Trail
 // if player clicks swampTrailLocationButton, increment function will be replaced with incrementMud function
+
+// Creat a function that changes the location of the player.
+// This function will change the background image to the new location.
+// This function will change the location button image to the new location.
+// This function will change the location name label to the new location.
+// This function will change the increment function to the new location increment function.
+
 function changeLocation() {
   let currentBackgroundImage = document.getElementById("currentBackgroundImage");
   let currentLocationButtonImage = document.getElementById("currentLocationButtonImage");
@@ -183,19 +190,25 @@ function changeLocation() {
   let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
   let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
 
+  // This is the starting location of the game.
   spawningPoolLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
     locationNameLabel.innerText = "The Spawning Pool";
-    increment = increment;
+    incrementMud = incrementFish;
   });
 
+  // This is the second location of the game.
   swampTrailLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
     locationNameLabel.innerText = "The Swamp Trail";
-    increment = incrementMud;
+    incrementFish = incrementMud;
   });
+
+  // This is the third location of the game.
+  // This is the fourth location of the game.
+  // This is the fifth location of the game.
 }
 
 // Old function to change images. commenting out until I know the new function works.
@@ -339,8 +352,9 @@ function feedAction() {
   }
 }
 
+
 // Function that gets called when you click the saltwaterAreaFishClickerButton (currentLocationButtonImage)
-function increment() {
+function incrementFish() {
   resources.fish += purchasedResources.fishPerClick; // adds the number of fish per click to your total fish
   updateResourceDisplay(); // Uses the Document Object Model to change the number of fish in the HTML
   displayFishImage(); // Calls the displayFishImage function

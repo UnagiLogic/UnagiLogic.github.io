@@ -45,6 +45,19 @@ h1, h2, h3, h4, h5, h6, .mainScreenContainer, .mainScreenTitle, #fishCounter, #c
   animation: fishFloatUp 3s linear infinite;
 }
 
+/* This controls what the floating mud images look like */
+.mudImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  opacity: 1;
+  z-index: 50;
+  animation: mudFloatUp 3s linear infinite;
+}
+
 @keyframes fishFloatUp {
   0% {
     top: 150;
@@ -58,6 +71,18 @@ h1, h2, h3, h4, h5, h6, .mainScreenContainer, .mainScreenTitle, #fishCounter, #c
 
 /* Create an animation for gaining energy. Animation floats up. */
 @keyframes energyFloatUp {
+  0% {
+    top: 150;
+    opacity: 1;
+  }
+  100% {
+    top: -200px; /* Adjust the value to make the image float up further */
+    opacity: 0;
+  }
+}
+
+/* Create an animation for gaining mud. Animation floats up. */
+@keyframes mudFloatUp {
   0% {
     top: 150;
     opacity: 1;
@@ -303,7 +328,7 @@ z-index: 102 - used for the unknown entity dialog box.
   top: 58px;
   left: 300px;
   text-align: center;
-  width: 750px;
+  width: 765px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
@@ -393,7 +418,7 @@ z-index: 102 - used for the unknown entity dialog box.
   font-weight: bold;
   color: #b57ae2;
   text-align: center;
-  margin-top: -6px;
+  margin-top: 8px;
   padding-top: 3px;
   padding-bottom: 3px;
   background-color: #262626;
@@ -500,7 +525,7 @@ z-index: 102 - used for the unknown entity dialog box.
   position: fixed;
   top: 742px;
   left: 300px;
-  max-width: 375px;
+  max-width: 383px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
@@ -511,8 +536,8 @@ z-index: 102 - used for the unknown entity dialog box.
 #locationInformationSlotTwo {
   position: fixed;
   top: 742px;
-  right: 318px;
-  max-width: 375px;
+  right: 302px;
+  max-width: 383px;
   background-color: var(--main-bg-color);
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
