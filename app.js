@@ -189,13 +189,15 @@ function changeLocation() {
   let locationNameLabel = document.getElementById("locationNameLabel");
   let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
   let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
+  let incrementFish = document.getElementById("incrementFish");
+  let incrementMud = document.getElementById("incrementMud");
 
   // This is the starting location of the game.
   spawningPoolLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
     locationNameLabel.innerText = "The Spawning Pool";
-    incrementMud = incrementFish;
+    incrementFish.setAttribute("onclick", "incrementFish()");
   });
 
   // This is the second location of the game.
@@ -203,31 +205,13 @@ function changeLocation() {
     currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
     locationNameLabel.innerText = "The Swamp Trail";
-    incrementFish = incrementMud;
+    incrementMud.setAttribute("onclick", "incrementMud()");
   });
 
   // This is the third location of the game.
   // This is the fourth location of the game.
   // This is the fifth location of the game.
 }
-
-// Old function to change images. commenting out until I know the new function works.
-//function changeImages() {
-//  let currentBackgroundImage = document.getElementById("currentBackgroundImage");
-//  let currentLocationButtonImage = document.getElementById("currentLocationButtonImage");
-//  let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
-//  let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
-//
-//  spawningPoolLocationButton.addEventListener("click", function() {
-//    currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
-//    currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
-//  });
-//
-//  swampTrailLocationButton.addEventListener("click", function() {
-//    currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
-//    currentLocationButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
-//  });
-//}
 
 function updateEnergyBar() {;
   const energyPercentage = (energy / maxEnergy) * 100;
