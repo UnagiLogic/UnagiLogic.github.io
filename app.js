@@ -189,15 +189,14 @@ function changeLocation() {
   let locationNameLabel = document.getElementById("locationNameLabel");
   let spawningPoolLocationButton = document.getElementById("spawningPoolLocationButton");
   let swampTrailLocationButton = document.getElementById("swampTrailLocationButton");
-  let incrementFish = document.getElementById("incrementFish");
-  let incrementMud = document.getElementById("incrementMud");
+  let incrementButton = document.querySelector("[onclick='incrementFish()']");
 
   // This is the starting location of the game.
   spawningPoolLocationButton.addEventListener("click", function() {
     currentBackgroundImage.src = "Images/Backgrounds/saltwaterAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/saltwaterAreaFishClickerButton.png";
     locationNameLabel.innerText = "The Spawning Pool";
-    incrementFish.setAttribute("onclick", "incrementFish()");
+    incrementButton.setAttribute("onclick", "incrementFish()");
   });
 
   // This is the second location of the game.
@@ -205,7 +204,7 @@ function changeLocation() {
     currentBackgroundImage.src = "Images/Backgrounds/swampAreaBackground.png";
     currentLocationButtonImage.src = "Images/Buttons/swampAreaClickerButton.png";
     locationNameLabel.innerText = "The Swamp Trail";
-    incrementMud.setAttribute("onclick", "incrementMud()");
+    incrementButton.setAttribute("onclick", "incrementMud()");
   });
 
   // This is the third location of the game.
