@@ -6,6 +6,9 @@
 const clickToStart = document.getElementById("clickToStart");
 const audio = document.querySelector("audio");
 
+// Variables go here -----------------------------------
+let currentMessageIndex = 0;
+
 // This is the array of messages that will be displayed in the unknownEntityDialog.
 const dialogMessages = [
     { text: "Who are you?", timeout: 0 },
