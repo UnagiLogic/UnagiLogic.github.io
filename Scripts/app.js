@@ -1,8 +1,8 @@
-// Imports go here -----------------------------------
-import * as initialScreen from "./initialScreen.js";
+// Imports go here if you change to modules----------------------------------
+// This line is not updating serverside so I'm changing it manually.
+// Changing another line becuse the issue still exists.
 
 // Constants and configuration
-const audio = document.querySelector("audio");
 const initialBlackScreenDelay = 60000;
 
 // Game state variables
@@ -48,15 +48,10 @@ let searchActionCost = 1;
 
 // Functions go here -----------------------------------
 
-//import and initialize functions here
-import { handleClick } from "./initialScreen.js";
+//initialize functions here
 handleClick();
 
-// Play and Pause Audio functions
-function playAudio() {
-  audio.play();
-}
-
+// Pause Audio function
 function pauseAudio() {
   audio.pause();
 }
@@ -64,11 +59,6 @@ function pauseAudio() {
 function hideElements() {
   unknownEntityImage.classList.add("hidden");
   containerForUnknownEntityDialog.classList.add("hidden");
-}
-
-function showElements() {
-  unknownEntityImage.classList.remove("hidden");
-  containerForUnknownEntityDialog.classList.remove("hidden");
 }
 
 // Create a function that shows pop up notifications.
