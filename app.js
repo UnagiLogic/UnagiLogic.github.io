@@ -45,7 +45,8 @@ let searchActionCost = 1;
 
 // Functions go here -----------------------------------
 
-//initializize functions here
+//import and initialize functions here
+import { handleClick } from "./initialScreen.js";
 handleClick();
 
 // Play and Pause Audio functions
