@@ -1,5 +1,4 @@
-// Imports go here -----------------------------------
-import * as initialScreen from "./initialScreen.js";
+// Imports go here if you change to modules----------------------------------
 
 // Constants and configuration
 const initialBlackScreenDelay = 60000;
@@ -47,8 +46,7 @@ let searchActionCost = 1;
 
 // Functions go here -----------------------------------
 
-//import and initialize functions here
-import { handleClick } from "./initialScreen.js";
+//initialize functions here
 handleClick();
 
 // Pause Audio function
