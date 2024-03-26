@@ -60,7 +60,6 @@ let purchasedResources = {
 let searchActionCost = 1;
 
 // Other Variables
-let currentMessageIndex = 0;
 
 // Functions go here -----------------------------------
 
