@@ -46,6 +46,8 @@ let searchActionCost = 1;
 // Functions go here -----------------------------------
 
 //import and initialize functions here
+<script type="module"> src="initialScreen.js"</script>
+
 import { handleClick } from "./initialScreen.js";
 handleClick();
 
