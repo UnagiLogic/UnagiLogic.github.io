@@ -27,7 +27,7 @@ function showMessages(message, timeout) {
     }, timeout);
   }
 
-function handleClick() {
+export function handleClick() {
     if (!initialClickHappened) {
       initialClickHappened = true;
       clickToStart.classList.add("hidden");
