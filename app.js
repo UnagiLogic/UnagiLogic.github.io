@@ -1,3 +1,6 @@
+// Imports go here -----------------------------------
+import * as initialScreen from "./initialScreen.js";
+
 // Constants and configuration
 const audio = document.querySelector("audio");
 const initialBlackScreenDelay = 60000;
@@ -46,8 +49,6 @@ let searchActionCost = 1;
 // Functions go here -----------------------------------
 
 //import and initialize functions here
-<script type="module"> src="initialScreen.js"</script>
-
 import { handleClick } from "./initialScreen.js";
 handleClick();
 
