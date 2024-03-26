@@ -2,7 +2,6 @@
 import * as initialScreen from "./initialScreen.js";
 
 // Constants and configuration
-const audio = document.querySelector("audio");
 const initialBlackScreenDelay = 60000;
 
 // Game state variables
