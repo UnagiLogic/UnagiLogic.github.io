@@ -20,6 +20,15 @@ const dialogMessages = [
 // Game state variables
 let initialClickHappened = false;
 
+// Play Audio function
+function playAudio() {
+    audio.play();
+  }
+
+function showElements() {
+    unknownEntityImage.classList.remove("hidden");
+    containerForUnknownEntityDialog.classList.remove("hidden");
+}
 
 function showMessages(message, timeout) {
     setTimeout(function() {
