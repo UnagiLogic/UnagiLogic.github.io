@@ -63,8 +63,8 @@ let searchActionCost = 1;
 
 // Functions go here -----------------------------------
 
-//initialize functions here
-handleClick();
+//initialize functions here (if/when needed)
+
 
 // Play Audio function
 function playAudio() {
