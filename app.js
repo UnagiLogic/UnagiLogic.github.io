@@ -45,6 +45,9 @@ let searchActionCost = 1;
 
 // Functions go here -----------------------------------
 
+//initializize functions here
+handleClick();
+
 // Play and Pause Audio functions
 function playAudio() {
   audio.play();
