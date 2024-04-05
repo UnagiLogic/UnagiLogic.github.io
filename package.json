@@ -19,5 +19,8 @@
   "homepage": "https://github.com/UnagiLogic/UnagiLogic.github.io#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.16"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
