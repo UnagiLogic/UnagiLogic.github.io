@@ -16,13 +16,13 @@ html, body {
 
 #splash-screen h1 {
     /*Font should have a shadow effect*/
-    text-shadow: 3px 7px 0 #000;
+    text-shadow: 3px 5px 0 #000;
     font-size: 7em;
     font-weight: bold;
 }
 
 #splash-screen h2 {
-    text-shadow: 5px 5px 0 #000;
+    text-shadow: 3px 5px 0 #000;
     font-size: 5em;
     font-weight: bold;
 }
@@ -63,7 +63,7 @@ html, body {
 
 #inventory-menu {
     border : 3px solid #841cd8;
-    z-index: 1000;
+    z-index: 1001;
 }
 
 .row {
