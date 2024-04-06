@@ -14,16 +14,20 @@ import { toggleDisplay, button, buttons, containers, container, container2 } fro
 
 // This check if buttons with .toggle-button class are clicked
 // If they are clicked, it toggles the corresponding container
+console.log(buttons); // Check if buttons is defined and is a NodeList
+
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
+        console.log('button clicked'); // Check if button is clicked
+        
         let containerName = button.getAttribute('data-container');
-        console.log(containerName);
+        console.log(containerName); // Check if containerName is correct
         
         let container = document.getElementById(containerName);
-        console.log(container);
+        console.log(container); // Check if container is correct
 
         toggleDisplay(container);
-        console.log('button clicked');
+        console.log('container toggled'); // Check if container is toggled
     });
 });
 
