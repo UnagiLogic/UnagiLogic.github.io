@@ -29,14 +29,7 @@ export function toggleDisplay() {
           console.log('Button clicked');
         });
       });
-
-document.querySelectorAll('.toggle-button').forEach(button => {
-    button.addEventListener('click', () => {
-      const container = document.getElementById(button.dataset.container);
-      container.classList.toggle('d-none'); // Toggle d-none class
-      console.log('Button clicked');
-    });
-  });
+}
 
 
 
