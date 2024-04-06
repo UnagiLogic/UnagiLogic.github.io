@@ -1,3 +1,4 @@
+import { sayHelloAgain } from './splash-screen.js';
 //create a function that checks if gameState is in the splash screen state
 //if it is, call splashScreen
 //if it is not, do nothing
@@ -18,3 +19,4 @@ function sayHello() {
 
 // call function sayHello
 sayHello();
+sayHelloAgain();

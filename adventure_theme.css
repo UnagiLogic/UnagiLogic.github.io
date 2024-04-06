@@ -11,9 +11,15 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*text should have a deep box shadow*/
-    box-shadow: 0 0 10px 5px #000;
     z-index: 1000;
+}
+
+#splash-screen h1 {
+    box-shadow: 0 0 10px 5px #000;
+}
+
+#splash-screen h2 {
+    box-shadow: 0 0 10px 5px #000;
 }
 
 /* THIS IS THE IN GAME MENU*/
