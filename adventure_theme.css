@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     /*text should be center aligned*/
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 1000;
