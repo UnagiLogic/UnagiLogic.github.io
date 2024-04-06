@@ -5,7 +5,8 @@ html, body {
 .visible {
     visibility: visible !important;
   }
-  .invisible {
+
+.invisible {
     visibility: hidden !important;
   }
 
@@ -18,7 +19,7 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 500;
 }
 
 #splash-screen h1 {
@@ -70,7 +71,7 @@ html, body {
 
 #inventory-menu {
     border : 3px solid #841cd8;
-    z-index: 1001;
+    z-index: 900;
 }
 
 .row {
