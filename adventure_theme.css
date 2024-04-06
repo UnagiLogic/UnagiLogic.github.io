@@ -6,7 +6,7 @@ html, body {
     background-color: #323232;
     position: fixed;
     height: 100%;
-    z-index: 1001;
+    z-index: 1000;
 }
 
 /* THIS IS THE IN GAME MENU*/
