@@ -89,6 +89,10 @@ html, body {
     z-index: 20;
 }
 
+.inventory-menu-background {
+    background-color: #323232;
+  }
+
 .row {
     background-color: #323232;
 }
