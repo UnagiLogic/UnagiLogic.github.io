@@ -84,25 +84,7 @@ html, body {
   }
 
 /* THIS IS THE INVENTORY MENU*/
-#inventory-menu {
-    border : 3px solid #C0C0C0;
-    z-index: 20;
-}
 
-.inventory-menu-background {
-    background-color: #323232;
-  }
-
-.row {
-    background-color: #323232;
-}
-
-.row h2 {
-    background-color: #323232;
-    color: #fff;
-    font-weight: bold;
-    z-index: 20;
-}
 
 .card.col-sm-12.col-md-2.col-lg-3 {
     background-color: #323232;
