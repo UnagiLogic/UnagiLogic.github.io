@@ -16,7 +16,7 @@
 
 // Variables go here -----------------------------------
 export let button = document.getElementById('toggleButton');
-export let container = document.getElementById('inventory-menu');
+export let container = document.getElementById('splash-screen');
 
 
 
