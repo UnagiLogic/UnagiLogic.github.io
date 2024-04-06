@@ -15,11 +15,18 @@ html, body {
 }
 
 #splash-screen h1 {
-    box-shadow: 0 0 10px 5px #000;
+    /*Font should have a shadow effect*/
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    font-size: 7em;
+    font-weight: bold;
 }
 
 #splash-screen h2 {
-    box-shadow: 0 0 10px 5px #000;
+    text-shadow: 0 0 10px #000;
+    color: #fff;
+    font-size: 5em;
+    font-weight: bold;
 }
 
 /* THIS IS THE IN GAME MENU*/
