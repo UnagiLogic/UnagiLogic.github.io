@@ -74,13 +74,7 @@ html, body {
 }
 
 /* THIS IS THE MAIN GAME SCREEN */
-#game-screen {
-    background-image: url(../UnagiLogic.github.io/Images/Backgrounds/saltwaterAreaBackground.png);
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
+
 
 /* THIS IS THE INVENTORY MENU*/
 #inventory-menu {
