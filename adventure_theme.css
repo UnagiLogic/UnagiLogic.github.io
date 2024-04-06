@@ -38,7 +38,7 @@ html, body {
 
 #in-game-menu .dropdown-menu {
     background-color: #323232;
-    border: 1px solid #841cd8;
+    border: 1px solid #C0C0C0;
 }
 
 #in-game-menu .dropdown-item {
@@ -48,7 +48,7 @@ html, body {
 }
 
 #in-game-menu .dropdown-toggle:hover {
-    background-color: #841cd8;
+    background-color: #C0C0C0;
     color: #fff;
 }
 
@@ -57,12 +57,12 @@ html, body {
 }
 
 #in-game-menu .dropdown-item:hover {
-    background-color: #841cd8;
+    background-color: #C0C0C0;
     color: #fff;
 }
 
 #inventory-menu {
-    border : 3px solid #841cd8;
+    border : 3px solid #C0C0C0;
     z-index: 900;
 }
 
@@ -77,5 +77,5 @@ html, body {
 
 .card.col-sm-12.col-md-2.col-lg-3 {
     background-color: transparent;
-    border : 1px solid #841cd8;
+    border : 1px solid #C0C0C0;
 }
