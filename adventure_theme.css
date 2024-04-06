@@ -6,6 +6,10 @@ html, body {
     background-color: #323232;
     position: fixed;
     height: 100%;
+    /*text should be center aligned*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
 }
 
@@ -45,6 +49,7 @@ html, body {
 
 #inventory-menu {
     border : 3px solid #841cd8;
+    z-index: 1000;
 }
 
 .row {
