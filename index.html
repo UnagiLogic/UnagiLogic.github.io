@@ -4,358 +4,111 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Spawning Pool</title>
-    <link rel="stylesheet" href="adventure_theme.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Droid+Serif" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">    
+    <link rel="stylesheet" href="adventure_theme.css"> 
 </head>
 <body>
     
-    <!-- This is a clicker adventure game
-        Players will begin their adventure by collecting fish
-        Players will later gain tools that will take them down different paths
+    <!-- This is a clicker adventure game (Overviews of the game's features and mechanics)
+    Players will begin their adventure by collecting the most important resource in the game: fish
+    Players will be able to use fish to gain energy.
+    Players will be able to use energy for a majority of activities in the game.
+    Players will be able to collect resources, fight monsters, and complete quests.
+    Players will be able to unlock achievements and earn rewards.
+    Players will be able to view their progress and stats.
+    Players will be able to save their progress and continue their adventure later.
+    Players will be able to trade resources with other players.
+    Players will be able to compete with other players in leaderboards.
+    Players will be able to customize their character and characters name
+    Players will be able to view the bestiary and learn about the monsters they have encountered.
+    Players will be able to view the achievements they have unlocked.
+    Players will be able to view the quests they have completed.
+    Players will be able to view the resources they have collected.
+    Players will be able to view the energy they have collected.
+    Players will be able to view the fish they have collected.
+    Players will be able to view the items they have collected.
+    Players will be able to view the weapons they have collected.
+    Players will be able to view the armor they have collected.
+    Players will be able to view the accessories they have collected.
+    Players will be able to view the tools they have collected.
+    Players will be able to view the consumables they have collected.
+    Players will be able to view the materials they have collected.
+    Players will be able to view the currency they have collected.
+    Players will be able to view the locations they have visited.
+    Players will be able to view the insights they have discovered.
+    Players will be able to view the notifications they have received.
     -->
 
-    <!-- This audio does not need a control bar or container -->
-    <audio>
-        <source src="Audio/audio.mp3" type="audio/mp3">
-    </audio>
+    <div id="splash-screen" class="container-fluid"> <!-- container-fluid -->
+        <h1>Presented and Developed by</h1>
+        <br>
+        <h2>UnagiLogic</h2>
+    </div> <!-- container-fluid -->
 
-    <!-- This is the text that will show up at game start-->
-    <div id="containerForInitialText">
-        <p id="clickToStart">Click To Start</p>
+    <div id="in-game-menu" class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+        </button>
+        <ul class="dropdown-menu">
+            <li><button class="dropdown-item" type="button">Inventory</button></li>
+            <li><button class="dropdown-item" type="button">Character</button></li>
+            <li><button class="dropdown-item" type="button">Locations</button></li>
+            <li><button class="dropdown-item" type="button">Action</button></li>
+            <li><button class="dropdown-item" type="button">Insights</button></li>
+            <li><button class="dropdown-item" type="button">Bestiary</button></li>
+            <li><button class="dropdown-item" type="button">Skills</button></li>
+            <li><button class="dropdown-item" type="button">Stats</button></li>
+            <li><button class="dropdown-item" type="button">Adventure Log</button></li>
+            <li><button class="dropdown-item" type="button">Stats</button></li>
+            <li><button class="dropdown-item" type="button">Save</button></li>
+            <li><button class="dropdown-item" type="button">Load</button></li>
+            <li><button class="dropdown-item" type="button">Settings</button></li>
+            <li><button class="dropdown-item" type="button">Exit</button></li>
+        </ul>
     </div>
 
-    <!-- This is the container for the initial black screen -->
-    <!-- This container holds an image -->
-    <!-- The image will grow on the screen and stop -->
-    <!-- a message will appear in a p element with the id unknownEntity -->
-    <!-- The story will begin to unfold as the unknownEntity continues to talk updating the p element automatically -->
-    <div id="containerForInitialBlackScreen">
-        <img src="Images/Backgrounds/unknownEntity.png" id="unknownEntityImage">
-        <div id="containerForUnknownEntityDialog">
-            <p id="unknownEntityDialog"></p>
-        </div>
-    </div>
-
-    <!-- This is the container for the main screen. When location buttons are clicked, this screen changes to the corresponding location. -->
-    <div class="mainScreenContainer">
-        <img src="Images/Backgrounds/saltwaterAreaBackground.png" id="currentBackgroundImage">
-	</div>
-
-    <div id="containerForLocation">
-        <div id="locationNameLabel">Spawning Pool</div>
-        
-        <div class="activity">
-            <div id="locationExploreLabel">EXPLORE</div>
-            <div id="locationExploreContainer">
-                <img src="Images/Buttons/saltwaterAreaFishClickerButton.png" width="300px" height="350px" id="currentLocationButtonImage" onclick="incrementFish()">
-            </div>
-            
-            <div id="locationExploreInventoryLabel">INVENTORY</div>
-            <div id="locationExploreInventoryContainer">
-                <div class="locationExploreInventorySlot">
-                    <img src="Images/Resources/fish.png" width="75px" height="75px" class="inventoryImage fishBGC">
-                    <span id="showLocationFish" class="locationInventoryNumber">0</span>
+    <div id="inventory-menu" class="container"> <!-- container -->
+        <div class="row"> <!-- row -->
+            <h2>Inventory</h2>
+                <div class="card col-sm-12 col-md-2 col-lg-3" style="width: 13rem;">
+                    <div class="card-body"> 
+                        <img src="Images/Items/fish.png" class="card-img-top" alt="Fish">
+                    </div>
                 </div>
-                <div class="locationExploreInventorySlot">
-                    <img src="Images/Resources/clay.png" width="75px" height="75px" class="inventoryImage clayBGC">
-                    <span id="showLocationClay" class="locationInventoryNumber">0</span>
+                <div class="card col-sm-12 col-md-2 col-lg-3" style="width: 13rem;">
+                    <div class="card-body"> 
+                        <img src="Images/Items/fish.png" class="card-img-top" alt="Fish">
+                    </div>
                 </div>
-                <div class="locationExploreInventorySlot">
-                    <img src="Images/Resources/mud.png" width="75px" height="75px" class="inventoryImage mudBGC">
-                    <span id="showLocationMud" class="locationInventoryNumber">0</span>
+                <div class="card col-sm-12 col-md-2 col-lg-3" style="width: 13rem;">
+                    <div class="card-body"> 
+                        <img src="Images/Items/fish.png" class="card-img-top" alt="Fish">
+                    </div>
                 </div>
-                <div class="locationExploreInventorySlot">
-                    <img src="Images/Resources/stone.png" width="75px" height="75px" class="inventoryImage stoneBGC">
-                    <span id="showLocationStone" class="locationInventoryNumber">0</span>
+                <div class="card col-sm-12 col-md-2 col-lg-3" style="width: 13rem;">
+                    <div class="card-body"> 
+                        <img src="Images/Items/fish.png" class="card-img-top" alt="Fish">
+                    </div>
                 </div>
-                <div class="locationExploreInventorySlot">
-                    <img src="Images/Resources/shrimp.png" width="75px" height="75px" class="inventoryImage shrimpBGC">
-                    <span id="showLocationShrimp" class="locationInventoryNumber">0</span>
+                <div class="card col-sm-12 col-md-2 col-lg-3" style="width: 13rem;">
+                    <div class="card-body"> 
+                        <img src="Images/Items/fish.png" class="card-img-top" alt="Fish">
+                    </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="activity">
-            <div class="locationActionsLabel">ACTIONS</div>
-            <div class="locationActionsButtonLabel">FEED</div>
-            <div class="locationActionsButtonContainer">
-                <div class="locationActionsButton">
-                    <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
+                <div class="card col-sm-12 col-md-2 col-lg-3" style="width: 13rem;">
+                    <div class="card-body"> 
+                        <img src="Images/Items/fish.png" class="card-img-top" alt="Fish">
+                    </div>
                 </div>
 
-                <div class="locationActionsButtonCost">
-                    <img src="Images/Resources/fish.png" width="75px" height="75px" title="Fish: Feed the entity to gain energy">
-                    <span id="feedActionFishCost">1</span>
-                </div>   
-            </div>
-
-            <div class="locationActionsButtonLabel">SEARCH</div>
-            <div class="locationActionsButtonContainer">
-                <div class="locationActionsButton">
-                    <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
-                </div>
-
-                <div class="locationActionsButtonCost">
-                    <img src="Images/Icons/energy.png" width="75px" height="75px" title="Energy: Used to perform actions">
-                    <span id="searchActionEnergyCost">1</span>
-                </div>   
-            </div>
-        </div>
-
-        <div class="activity">
-            <div id="locationInsightsNameLabel">INSIGHTS</div>
-            <div id="locationInsightOneLabel">FISHING INSIGHT</div>
-            <div id="locationInsightSlotOne">
-                <div id="locationInsightsButtonContainer">
-                <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="gainFishingInsight()">
-                </div>
-                <div class="locationInsightButtonCost">
-                    <img src="Images/Icons/energy.png" width="75px" height="75px" title="Energy: Used to perform actions">
-                    <span id="searchActionEnergyCost">1</span>
-                    <img src="Images/Resources/fish.png" width="75px" height="75px" title="Fish: Feed the entity to gain energy">
-                    <span id="searchActionFishCost">10</span>
-                </div> 
-            </div>
-            <div id="locationInsightSlotTwo"></div>
-            <div id="locationInsightSlotThree"></div>
-            <div id="locationInsightSlotFour"></div>
-        </div>
-        
-        <div id="locationInformationSlotOne">
-            <div id="adventureLog">Placeholder Text. This should be about two sentences on 2-3 seperate lines</div>
-        </div>
-        <div id="locationInformationSlotTwo">
-            <div id="notificationArea">Place holder Text. This should be about two sentences on 2-3 seperate lines</div>
-        </div>
-        
-    </div>
-
-    <!-- This is a flexbox container for the menu buttons -->
-    <div id="containerForMenuButtons">
-        <button id="playerInventoryMenuButton">BASKET</button>
-        <button id="locationMenuButton">LOCATION</button>
-        <button id="bestiaryBookMenuButton">BESTIARY</button>
-        <button id="actionsMenuButton">ACTIONS</button>
-        <button id="insightsMenuButton">INSIGHTS</button>
-    </div>
-
-    <!-- This container is for the energy indicator. It will update like a progress bar -->
-    <div id="containerForEnergyIndicator">
-        <div id="energyBar">
-            <div class="imageWrapper">
-                <img src="Images/Icons/energy.png" id="energyImage">
-            </div>
-            <p class="energyIndicatorText">Energy: <span id="showEnergy">0</span> / <span id="showMaxEnergy">10</span></p>
-        </div>
-    </div>
-
-    <div id="containerForInventory">
-        <div class="inventorySlot">
-            <img src="Images/Resources/fish.png" class="inventoryImage fishBGC" width="75px" height="75px">
-            <p id="fishCounter"><span id="showFish" class="inventoryNumber">0</span></p>
-        </div>
-                
-        <div class="inventorySlot">
-            <img src="Images/Resources/clay.png" class="inventoryImage clayBGC" width="75px" height="75px">
-            <p id="clayCounter"><span id="showClay" class="inventoryNumber">0</span></p>
-        </div>
-
-        <div class="inventorySlot">
-            <img src="Images/Resources/mud.png" class="inventoryImage mudBGC" width="75px" height="75px">
-            <p id="mudCounter"><span id="showMud" class="inventoryNumber">0</span></p>
-        </div>
-
-        <div class="inventorySlot">
-            <img src="Images/Resources/stone.png" class="inventoryImage stoneBGC" width="75px" height="75px">
-            <p id="stoneCounter"><span id="showStone" class="inventoryNumber">0</span></p>
-        </div>
-
-        <div class="inventorySlot">
-            <img src="Images/Resources/shrimp.png" class="inventoryImage shrimpBGC" width="75px" height="75px">
-            <p id="shrimpCounter"><span id="showShrimp" class="inventoryNumber">0</span></p>
-        </div>
-
-        <div id="inventoryInformation"> <!-- At some point, move this section somewhere else -->
-            <p id="gameOver"></p> <!-- for text to appear when you win -->
-        </div>
-    </div>
-
-    <div id="containerForLocationMenu">
-        <h2 class="categoryName">LOCATIONS</h2>
-        <button id="spawningPoolLocationButton">The Spawning Pool</button>
-        <button id="swampTrailLocationButton">The Swamp Trail</button>
-    </div>
-
-    <div class="containerForTooltipOne">
-        <div class="tooltipNameOne">THE SPAWNING POOL</div>
-            <div class="containerForLocationDescriptionOne">
-                <div class="categoryDescriptionLabelOne">DESCRIPTION</div>
-                <div class="tooltipDescriptionOne">This is the saltwater area. It is a vast ocean with many fish.</div>
-            </div>
-            <div class="containerForLocationBiomeOne">
-                <div class="categoryBiomeLabelOne">BIOME</div>
-                <div class="tooltipBiomeOne">Saltwater</div>
-            </div>
-            <div class="containerForLocationSpeciesOne">
-                <div class="categorySpeciesLabelOne">SPECIES</div>
-                <div class="tooltipSpeciesOne">Fish</div>
-            </div>
-    </div>
-
-    <div class="containerForTooltipTwo">
-        <div class="tooltipNameTwo">THE SWAMP TRAIL</div>
-            <div class="containerForLocationDescriptionTwo">
-                <div class="categoryDescriptionLabelTwo">DESCRIPTION</div>
-                <div class="tooltipDescriptionTwo">This is the swamp trail. It is a dangerous place that many don't dare to venture through.</div>
-            </div>
-            <div class="containerForLocationBiomeTwo">
-                <div class="categoryBiomeLabelTwo">BIOME</div>
-                <div class="tooltipBiomeTwo">Swamp</div>
-            </div>
-            <div class="containerForLocationSpeciesTwo">
-                <div class="categorySpeciesLabelTwo">SPECIES</div>
-                <div class="tooltipSpeciesTwo">Mud</div>
-            </div>
-    </div>
-
-    <div id="bestiaryContainer">
-        <!-- Left Page Container -->
-        <div id="leftPageContainer" class="bestiaryPage">
-            <div class="bestiaryLeftPageMenu">
-                <button id="bestiaryCreatureTypeButton">BESTIARY</button>
-            </div>
-
-            <div id="bestiaryCreatureTypeContainer">
-                <!-- Beast Name -->
-                <div class="bestiaryName">FISH</div> <!-- I want this text to show at the top of this container -->
-                    
-                <!-- Beast Image -->
-                <div class="bestiaryImage">
-                    <img src="Images/Resources/fish.png" alt="Fish Beast Image" width="100px" height="100px" >
-                </div>
-                
-                <div class="bestiaryDescriptionLabel">DESCRIPTION</div>
-                <div class="bestiaryDescription">
-                    <p>It looks like a fish.</p>
-                </div>
-        
-                <div class="bestiaryNotesLabel">ADVENTURE NOTES</div>
-                <div class="bestiaryNotes">
-                    <p>Adventure Notes 1: Whoa! You can eat fish raw!!</p>
-                    <p>Adventure Notes 2: This fish is abundent around here. </p>
-                </div>
-        
-                <div class="bestiaryStatisticsLabel">STATISTICS</div>
-                <div class="bestiaryStatistics">
-                    <p>Catch Percentage: 100%</p>
-                    <p>Fish Per Second = <span id="showFishPerSecond" class="number">0</span></p> <!-- Shows fish per second -->
-                    <p>Fish per click = <span id="showFishPerClick" class="number">1</span></p> <!-- Shows fish per click-->
-                </div>
-            </div>
-        </div>
-    
-        <!-- Right Page Container -->
-        <div id="rightPageContainer" class="bestiaryPage">
-            
-            <div class="bestiaryExpertiseLabel">Expertise</div>
-
-            <!-- Achievement Container -->
-            <div class="achievementContainer">
-                <div class="achievementImageContainer">
-                    <img src="Images/Achievements/Bestiary Fish/fishCaught10.png" alt="Achievement 1 Image" width="50px" height="50px"">
-                </div>
-                <p class="achievementName" title="You can catch a new type of fish">I caught 10!</p>
-            </div>
-            <div class="achievementContainer">
-                <div class="achievementImageContainer">
-                    <img src="Images/Achievements/Bestiary Fish/fishCaught100.png" alt="Achievement 2 Image" width="50px" height="50px"">
-                </div>
-                <p class="achievementName" title="Tooltip for Achievement 2">Achievement 2</p>
-            </div>
-            <div class="achievementContainer">
-                <div class="achievementImageContainer">
-                    <img src="Images/Achievements/Bestiary Fish/fishCaught1000.png" alt="Achievement 3 Image" width="50px" height="50px"">
-                </div>
-                <p class="achievementName" title="Tooltip for Achievement 3">Achievement 3</p>
-            </div>
-            <div class="achievementContainer">
-                <div class="achievementImageContainer">
-                    <img src="Images/Achievements/Bestiary Fish/fishCaught10000.png" alt="Achievement 4 Image" width="50px" height="50px">
-                </div>
-                <p class="achievementName" title="Tooltip for Achievement 4">Achievement 4</p>
-            </div>
-            <div class="achievementContainer">
-                <div class="achievementImageContainer">
-                    <img src="Images/Achievements/Bestiary Fish/fishCaught25000.png" alt="Achievement 5 Image" width="50px" height="50px"">
-                </div>
-                <p class="achievementName" title="Tooltip for Achievement 5">Achievement 5</p>
-            </div>
-            <div class="achievementContainer">
-                <div class="achievementImageContainer">
-                    <img src="Images/Achievements/Bestiary Fish/fishCaught50000.png" alt="Achievement 6 Image" width="50px" height="50px"">
-                </div>
-                <p class="achievementName" title="Tooltip for Achievement 6">Achievement 6</p>
-            </div>   
-        </div>
-    </div>
-
-    <!-- Actions that can be used -->
-    <div id="containerForActionsMenu">
-        <div class="action"> <!-- Feed Entity Action -->
-            <div class="feedEntityActionLabel">FEED</div>
-                <p>Bring me food and I shall give you powerful energy...</p>
-                <p>Fish = +1 Energy</p>
-            <div class="actionContainerImage">
-                <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
-            </div>
-        </div>
-            
-        <div class="action"> <!-- Search Action -->
-			<div class="searchActionLabel">SEARCH</div>
-            <div class="actionContainerImage">
-                <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
-            </div>
-            <br>
-            <div class="actionContainerText">
-                <p>Search around.</p>
-                <p>Costs: <span id="searchActionCost">10 Energy</span></p>
-            </div>
-		</div>
-
-        <div class="action"> 
-        <!-- a third item -->
-		</div>
-
-		<div class="action"> 
-        <!-- a fourth item -->
-		</div>
-    </div>
-
-    <!-- Insights that can be used -->
-    <div id="containerForInsightsMenu">
-        <div class="fishingInsightLabel">FISHING INSIGHT</div>
-            <div class="insightContainerImage">
-                <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="gainFishingInsight()">
-            </div>
-        </div>
-    </div>
-
-    <!-- These are the containers for the resource indicators -->
-    <div id="containerForResourceIndicator"></div>
-    <div id="containerForResourceCacheImage"></div>
-    <div id="containerForNumber"></div>
-    <div id="containerForFishingInsightMessage"></div>
-    <div id="containerForNotification"></div>
+        </div> <!-- row -->     
+    </div> <!-- container -->
 
     <!-- Include Anime.js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
     
-    <!-- Include the main app.js file -->
-    <script src="Scripts/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Include app.js JS that inside the Scripts folder -->
+    <script type="module"src="Scripts/app.js"></script>
 
-    <script src="Scripts/initialScreen.js"></script>
 
     <!--
     <script src="Scripts/initialBlackScreen.js"></script>
@@ -376,8 +129,6 @@
     <script src="Scripts/notifications.js"></script>
     -->
 
-    <script>
-        console.log("Script loaded and executed.");
-    </script>
+    <script> console.log("Scripts have loaded!");</script>
 </body>
 </html>
