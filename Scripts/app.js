@@ -17,8 +17,13 @@ import { toggleDisplay, button, buttons, containers, container, container2 } fro
 buttons.forEach(function(button) {
     button.addEventListener('click', function() {
         let containerName = button.getAttribute('data-container');
+        console.log(containerName);
+        
         let container = document.getElementById(containerName);
+        console.log(container);
+
         toggleDisplay(container);
+        console.log('button clicked');
     });
 });
 
