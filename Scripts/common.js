@@ -23,6 +23,19 @@ export let container = document.getElementById('splash-screen');
 // Functions go here -----------------------------------
 
 // What do I want the fucntion to do?
+// Create a function called toggleDisplay
+// this function first checks if the container has the class d-none.
+// if it does, it removes the class d-none.
+// if it doesn't, it adds the class d-none.
+
+export function toggleDisplay(container) {
+    if (container.classList.contains('d-none')) {
+        container.classList.remove('d-none');
+    } else {
+        container.classList.add('d-none');
+    }
+}
+
 // I want the function to check if a container has the visible class.
 // If not, I want the function to add the invisible class to the container.
 // after adding the invisible class, I want the function to remove the invisible class from the container.

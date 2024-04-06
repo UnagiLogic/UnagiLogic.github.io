@@ -1,5 +1,5 @@
 import { sayHelloAgain } from './splash-screen.js';
-import { toggleVisibility, button, container } from './common.js';
+import { toggleDisplay, toggleVisibility, button, container } from './common.js';
 //create a function that checks if gameState is in the splash screen state
 //if it is, call splashScreen
 //if it is not, do nothing
@@ -13,7 +13,7 @@ import { toggleVisibility, button, container } from './common.js';
 //}
 
 button.addEventListener('click', function() {
-    toggleVisibility(container);
+    toggleDisplay(container);
 });
 
 
