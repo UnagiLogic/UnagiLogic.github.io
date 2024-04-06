@@ -1,7 +1,19 @@
+/* Z-index information: 
+z-index: 0 - This is the lowest z-index. It is used for background images.
+z-index: 1 - used for the main game screen.
+z-index: 20 - used for containers and menus.
+z-index: 30 - used for buttons, energy indicator.
+z-index: 50 - used for floating images.
+z-index: 51 - used for resource cache image and message.
+z-index: 500 - used for the splash screen.
+z-index: 1000 - used for the in-game menu developer tools
+*/
+
 html, body {
     background-color: #323232 !important;
 }
 
+/* THIS IS THE SPLASH SCREEN */
 #splash-screen {
     background-color: #323232;
     position: fixed;
@@ -61,9 +73,19 @@ html, body {
     color: #fff;
 }
 
+/* THIS IS THE MAIN GAME SCREEN */
+#game-screen {
+    background-image: url(../UnagiLogic.github.io/Images/Backgrounds/saltwaterAreaBackground.png);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* THIS IS THE INVENTORY MENU*/
 #inventory-menu {
     border : 3px solid #C0C0C0;
-    z-index: 900;
+    z-index: 20;
 }
 
 .row {
