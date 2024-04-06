@@ -1,5 +1,5 @@
 import { sayHelloAgain } from './splash-screen.js';
-import { toggleDisplay, toggleVisibility, button, container } from './common.js';
+import { toggleDisplay, button, container } from './common.js';
 //create a function that checks if gameState is in the splash screen state
 //if it is, call splashScreen
 //if it is not, do nothing

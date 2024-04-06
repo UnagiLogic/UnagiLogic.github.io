@@ -2,14 +2,6 @@ html, body {
     background-color: #323232;
 }
 
-.visible {
-    visibility: visible !important;
-  }
-
-.invisible {
-    visibility: hidden !important;
-  }
-
 #splash-screen {
     background-color: #323232;
     position: fixed;
