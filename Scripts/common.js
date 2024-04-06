@@ -17,10 +17,15 @@
 // Variables go here -----------------------------------
 export let button = document.getElementById('toggleButton');
 export let container = document.getElementById('splash-screen');
-
-
+export let container2 = document.getElementById('inventory-menu');
+//This is an array of buttons
+export let buttons = document.querySelectorAll('button');
 
 // Functions go here -----------------------------------
+
+// What do I want the function to do?
+
+// this function checks in an array of buttons wher
 
 // What do I want the fucntion to do?
 // Create a function called toggleDisplay
