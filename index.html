@@ -74,35 +74,35 @@
         <img src="Images/Backgrounds/saltwaterAreaBackground.png" id="currentBackgroundImage">
     </div>
 
-    <div id="inventory-menu" class="container toggle-container inventory-menu col-6"> <!-- container -->
+    <div id="inventory-menu" class="container toggle-container col-6"> <!-- container -->
         <div id="inventoryNameLabel">INVENTORY</div>
         <div class="row"> <!-- row -->
-            <div class="card" style="width: 13rem;">
+            <div class="card">
                 <div class="card-body"> 
                     <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card">
                 <div class="card-body"> 
                     <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card">
                 <div class="card-body"> 
                     <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card">
                 <div class="card-body"> 
                     <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card">
                 <div class="card-body"> 
                     <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
                 </div>
             </div>
-            <div class="card" style="width: 13rem;">
+            <div class="card">
                 <div class="card-body"> 
                     <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
                 </div>
@@ -111,6 +111,100 @@
         </div> <!-- row -->     
     </div> <!-- container -->
 
+    <div id="location-menu" class="container toggle-container">
+        <div id="locationNameLabel">Spawning Pool</div>
+                    
+        <div class="locationActivityMenu">
+            <div class="row">
+                <div class="col-4 activity">
+                    <div id="locationExploreLabel">EXPLORE</div>
+                    <div id="locationExploreContainer">
+                        <img src="Images/Buttons/saltwaterAreaFishClickerButton.png" width="300px" height="350px" id="currentLocationButtonImage" onclick="incrementFish()">
+                    </div>
+            
+                    <div id="locationExploreInventoryLabel">INVENTORY</div>
+                    <div id="locationExploreInventoryContainer">
+                        <div class="locationExploreInventorySlot">
+                            <img src="Images/Resources/fish.png" width="75px" height="75px" class="inventoryImage fishBGC">
+                            <span id="showLocationFish" class="locationInventoryNumber">0</span>
+                        </div>
+                        <div class="locationExploreInventorySlot">
+                            <img src="Images/Resources/clay.png" width="75px" height="75px" class="inventoryImage clayBGC">
+                            <span id="showLocationClay" class="locationInventoryNumber">0</span>
+                        </div>
+                        <div class="locationExploreInventorySlot">
+                            <img src="Images/Resources/mud.png" width="75px" height="75px" class="inventoryImage mudBGC">
+                            <span id="showLocationMud" class="locationInventoryNumber">0</span>
+                        </div>
+                        <div class="locationExploreInventorySlot">
+                            <img src="Images/Resources/stone.png" width="75px" height="75px" class="inventoryImage stoneBGC">
+                            <span id="showLocationStone" class="locationInventoryNumber">0</span>
+                        </div>
+                        <div class="locationExploreInventorySlot">
+                            <img src="Images/Resources/shrimp.png" width="75px" height="75px" class="inventoryImage shrimpBGC">
+                            <span id="showLocationShrimp" class="locationInventoryNumber">0</span>
+                        </div>
+                </div>
+            </div>
+
+                <div class="col-4 activity">
+                    <div class="locationActionsLabel">ACTIONS</div>
+            <div class="locationActionsButtonLabel">FEED</div>
+            <div class="locationActionsButtonContainer">
+                <div class="locationActionsButton">
+                    <img src="Images/Icons/eat.png" width="150px" height="150px" id="feedActionButton" onclick="feedAction()">
+                </div>
+
+                <div class="locationActionsButtonCost">
+                    <img src="Images/Resources/fish.png" width="75px" height="75px" title="Fish: Feed the entity to gain energy">
+                    <span id="feedActionFishCost">1</span>
+                </div>   
+            </div>
+
+            <div class="locationActionsButtonLabel">SEARCH</div>
+            <div class="locationActionsButtonContainer">
+                <div class="locationActionsButton">
+                    <img src="Images/Icons/search.png" width="150px" height="150px" id="buySearchActionButton" onclick="buySearchAction()">
+                </div>
+
+                <div class="locationActionsButtonCost">
+                    <img src="Images/Icons/energy.png" width="75px" height="75px" title="Energy: Used to perform actions">
+                    <span id="searchActionEnergyCost">1</span>
+                </div>   
+            </div>
+                </div>
+                <div class="col-4 activity">
+                    <div id="locationInsightsNameLabel">INSIGHTS</div>
+                    <div id="locationInsightOneLabel">FISHING INSIGHT</div>
+                    <div id="locationInsightSlotOne">
+                        <div id="locationInsightsButtonContainer">
+                        <img src="Images/Icons/fishingInsight.png" width="150px" height="150px" id="fishingInsightActionButton" onclick="gainFishingInsight()">
+                        </div>
+                        <div class="locationInsightButtonCost">
+                            <img src="Images/Icons/energy.png" width="75px" height="75px" title="Energy: Used to perform actions">
+                            <span id="searchActionEnergyCost">1</span>
+                            <img src="Images/Resources/fish.png" width="75px" height="75px" title="Fish: Feed the entity to gain energy">
+                            <span id="searchActionFishCost">10</span>
+                        </div> 
+                    </div>
+                    <div id="locationInsightSlotTwo"></div>
+                    <div id="locationInsightSlotThree"></div>
+                    <div id="locationInsightSlotFour"></div>
+                </div>
+
+                <div class="container">
+                    <div id="locationInformationSlotOne">
+                        <div id="adventureLog">Placeholder Text. This should be about two sentences on 2-3 seperate lines</div>
+                    </div>
+                    <div id="locationInformationSlotTwo">
+                        <div id="notificationArea">Place holder Text. This should be about two sentences on 2-3 seperate lines</div>
+                    </div>  
+                </div>
+
+
+            </div>
+        </div>
+    </div>
 
     <!-- Include Anime.js -->
     <script src="https://cdn.jsdelivr.net/npm/animejs"></script>
