@@ -13,15 +13,17 @@ import { updateResourceDisplay, incrementFish, displayFishImage } from './clicke
 //    return;
 //}
 
+// Order of function calls go here -----------------------------------
 
+updateResourceDisplay();
+displayFishImage();
 
+// This adds an event listener to the currentLocationButtonImage 
+// which calls the incrementFish function when clicked.
+const image = document.getElementById("currentLocationButtonImage");
+image.addEventListener("click", incrementFish);
 
-
-
-
-// call function here
 sayHelloAgain();
 toggleDisplay();
-updateResourceDisplay();
-incrementFish();
-displayFishImage();
+
+// End of order of function calls -----------------------------------
