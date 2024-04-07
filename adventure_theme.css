@@ -118,9 +118,9 @@ div.card {
     border : 1px solid #C0C0C0;
 }
 
-/* THIS IS THE LOCATIONS MENU*/
+/* THIS IS THE ADVENTURE MENU*/
 
-#locations-menu {
+#adventure-menu {
     color: #fff;
     background-color: #323232;
     border: 1px solid var(--main-border-color);
