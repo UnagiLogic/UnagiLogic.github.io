@@ -15,7 +15,7 @@ let resources = {
 // Function to update the resource display
 // Function to update resource display in the HTML
 export function updateResourceDisplay() {
-    document.getElementById("showEnergy").innerText = energy;
+    // document.getElementById("showEnergy").innerText = energy;
     document.getElementById("showFish").innerText = resources.fish;
     document.getElementById("showLocationFish").innerText = resources.fish;
     document.getElementById("showClay").innerText = resources.clay;
