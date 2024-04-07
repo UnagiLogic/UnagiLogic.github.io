@@ -23,3 +23,5 @@ import { updateResourceDisplay, incrementFish, displayFishImage } from './clicke
 sayHelloAgain();
 toggleDisplay();
 updateResourceDisplay();
+incrementFish();
+displayFishImage();
