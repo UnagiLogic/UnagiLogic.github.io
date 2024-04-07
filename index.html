@@ -49,6 +49,7 @@
             Menu
         </button>
         <ul class="dropdown-menu">
+            <li><button class="dropdown-item toggle-button" data-container="adventure-menu" type="button">EXPLORE</button></li>
             <li><button class="dropdown-item toggle-button" data-container="inventory-menu" type="button">INVENTORY</button></li>
             <li><button class="dropdown-item toggle-button" data-container="character-menu" type="button">CHARACTER</button></li>
             <li><button class="dropdown-item toggle-button" data-container="locations-menu" type="button">LOCATIONS</button></li>
@@ -79,27 +80,32 @@
         <div class="row"> <!-- row -->
             <div class="card" style="width: 10rem;">
                 <div class="card-body"> 
-                    <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
+                    <img src="Images/Resources/fish.png" class="inventoryImage fishBGC card-img-top" width="75px" height="75px">
+                    <p id="fishCounter"><span id="showFish" class="inventoryNumber">0</span></p>
                 </div>
             </div>
             <div class="card" style="width: 10rem;">
                 <div class="card-body"> 
-                    <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
+                    <img src="Images/Resources/clay.png" class="inventoryImage clayBGC" width="75px" height="75px">
+                    <p id="clayCounter"><span id="showClay" class="inventoryNumber">0</span></p>
                 </div>
             </div>
             <div class="card" style="width: 10rem;">
                 <div class="card-body"> 
-                    <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
+                    <img src="Images/Resources/mud.png" class="inventoryImage mudBGC" width="75px" height="75px">
+                    <p id="mudCounter"><span id="showMud" class="inventoryNumber">0</span></p>
                 </div>
             </div>
             <div class="card" style="width: 10rem;">
                 <div class="card-body"> 
-                    <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
+                    <img src="Images/Resources/stone.png" class="inventoryImage stoneBGC" width="75px" height="75px">
+                    <p id="stoneCounter"><span id="showStone" class="inventoryNumber">0</span></p>
                 </div>
             </div>
             <div class="card" style="width: 10rem;">
                 <div class="card-body"> 
-                    <img src="Images/Resources/fish.png" class="card-img-top" alt="Fish">
+                    <img src="Images/Resources/shrimp.png" class="inventoryImage shrimpBGC" width="75px" height="75px">
+            <p id="shrimpCounter"><span id="showShrimp" class="inventoryNumber">0</span></p>
                 </div>
             </div>
             <div class="card" style="width: 10rem;">
@@ -111,7 +117,7 @@
         </div> <!-- row -->     
     </div> <!-- container -->
 
-    <div id="locations-menu" class="container toggle-container">
+    <div id="adventure-menu" class="container toggle-container">
         <div id="locationNameLabel">THE SPAWNING POOL</div>
                     
         <div class="locationActivityMenu">
