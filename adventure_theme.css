@@ -9,6 +9,14 @@ z-index: 500 - used for the splash screen.
 z-index: 1000 - used for the in-game menu developer tools
 */
 
+:root {
+    --main-bg-color: #323232; /* Used for: Menus, buttons, and container background color. */
+    --main-border-color: #C0C0C0; /* Used for: Primary border color. */
+    --main-text-color: #9c69c3; /* Used for: Primary text color. */
+    --secondary-border-color: #A0522D; /* Used for: Secondary border color. */
+    --hover-bg-color: #323232; /* Used for: Primary hovor color. */
+  }
+
 html, body {
     background-color: #323232 !important;
 }
@@ -85,7 +93,7 @@ html, body {
 
 /* THIS IS THE INVENTORY MENU*/
 #inventory-menu {
-    min-height: 600px;
+    min-height: 300px;
     min-width: 400px;
     color: #fff;
     background-color: #323232;
@@ -108,4 +116,188 @@ html, body {
 div.card {
     background-color: #323232;
     border : 1px solid #C0C0C0;
+}
+
+/* THIS IS THE LOCATIONS MENU*/
+
+#locations-menu {
+    color: #fff;
+    background-color: #323232;
+    border: 1px solid var(--main-border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+}
+
+  #locationNameLabel {
+    background-color: var(--main-bg-color);
+    font-weight: bold;
+    color: #b57ae2;
+    font-size: 35px;
+  }
+
+.activity {
+    background-color: #30302f;
+    border: 1px solid #C0C0C0;
+
+}
+
+#locationExploreContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#locationExploreLabel {
+    font-weight: bold;
+    color: #b57ae2;
+    text-align: center;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+  
+#locationExploreInventoryLabel {
+    font-weight: bold;
+    color: #b57ae2;
+    text-align: center;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    font-size: 20px;
+}
+  
+#locationExploreInventoryContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px; /* adjust as needed */
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#currentLocationButtonImage {
+    padding-bottom: 10px;
+}
+  
+.locationExploreInventorySlot {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+}
+
+.locationInventoryNumber {
+    position: absolute;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 0;
+    right: 0;
+    padding-right: 3px;
+}
+
+.locationActionsLabel {
+    font-weight: bold;
+    color: #b57ae2;
+    text-align: center;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+  
+.locationActionsButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+}
+  
+.locationActionsButtonLabel {
+    font-weight: bold;
+    color: #b57ae2;
+    text-align: center;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+  
+.locationActionsButton {
+    border: 1px solid var(--main-border-color);
+    cursor: pointer;
+    box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.5);
+}
+  
+.locationActionsButtonCost {
+    font-weight: bold;
+    color: #b57ae2;
+    font-size: 25px;
+}
+
+#locationInsightsNameLabel {
+    font-weight: bold;
+    color: #b57ae2;
+    text-align: center;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 5px;
+}
+  
+.locationInsightSlot {
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+}
+  
+#locationInsightOneLabel {
+    font-weight: bold;
+    text-align: center;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    color: #b57ae2;
+    font-size: 20px;
+    margin-top: 10px;
+}
+  
+#locationInsightsButtonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.5);
+}
+  
+.locationInsightButtonCost {
+    font-weight: bold;
+    text-align: center;
+    color: #b57ae2;
+    font-size: 25px;
+}
+
+#locationInformationActivity {
+    display: flex;
+    align-items: center; 
+}
+
+.locationInformationSlot {
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
