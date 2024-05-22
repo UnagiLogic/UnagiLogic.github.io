@@ -1,5 +1,15 @@
-export default {
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig(({ command, mode }) => {
+  const isBuild = command === 'build'; // Determine if it's a production build
+  const isDev = command === 'serve'; // Determine if it's a development server
+
+  return {
+    plugins: [react()],
+    base: isBuild ? 'https://unagilogic.github.io/' : '/', // Set base path conditionally
     server: {
-      host: "192.168.50.175",
+      host: isDev ? 'myURL' : '192.168.50.175', // Conditional host
     },
   };
+});
