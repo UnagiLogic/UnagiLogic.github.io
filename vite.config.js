@@ -9,7 +9,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: [react()],
     base: isBuild ? 'https://unagilogic.github.io/' : '/', // Set base path conditionally
     server: {
-      host: isDev ? 'myURL' : '192.168.50.175', // Conditional host
+      host: isDev ? '0.0.0.0' : '192.168.50.175', // Use 0.0.0.0 for dev, specific IP for prod
     },
   };
 });
