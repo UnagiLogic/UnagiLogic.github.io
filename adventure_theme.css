@@ -17,8 +17,29 @@ z-index: 1000 - used for the in-game menu developer tools
     --hover-bg-color: #323232; /* Used for: Primary hovor color. */
   }
 
-html, body {
-    background-color: #323232 !important;
+/* THIS IS THE GAME SCREEN CONTAINER */
+.gameScreenContainer {
+  display: flex;
+  max-width: 90%;  
+  background-color: #323232;
+  border: 1px solid #C0C0C0;
+  color: #fff;
+  z-index: 20;
+}
+
+/* THIS IS THE DIALOGUE BOX */
+.dialogue-box {
+    background-color: #323232;
+    border: 1px solid #C0C0C0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 83%;
+    left: 42%;
+    z-index: 20;
 }
 
 /* THIS IS THE SPLASH SCREEN */
@@ -26,7 +47,6 @@ html, body {
     background-color: #323232;
     position: fixed;
     height: 100%;
-    /*text should be center aligned*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -35,16 +55,19 @@ html, body {
 }
 
 #splash-screen h1 {
-    /*Font should have a shadow effect*/
+    color: #9c69c3;
     text-shadow: 3px 5px 0 #000;
     font-size: 7em;
     font-weight: bold;
+    z-index: 500;
 }
 
 #splash-screen h2 {
+    color: #9c69c3;
     text-shadow: 3px 5px 0 #000;
     font-size: 5em;
     font-weight: bold;
+    z-index: 500;
 }
 
 /* THIS IS THE IN GAME MENU*/
@@ -81,13 +104,68 @@ html, body {
     color: #fff;
 }
 
+/* THIS IS THE ENERGY INDICATOR */
+#containerForEnergyIndicator {
+    position: fixed;
+    height: 25px;
+    left: 3px;
+    background-color: #323232;
+    border-radius: 15px;
+    margin-top: 5px;
+    z-index: 5;
+  }
+  
+  #energyBar {
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    background-color: #3c1e5a;
+    border-radius: 15px;
+    padding-right: 10px;
+    z-index: 5;
+  }
+  
+  #energyImage {
+    height: 50px;
+    margin-left: -10px;
+    margin-top: -12px;
+    z-index: 5;
+  }
+  
+  .energyIndicatorText {
+    font-weight: bold;
+    z-index: 5;
+  }
+
+/* THIS IS THE RESOURCE CACHE IMAGE */
+.resourceCacheImage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    padding: 1px;
+    z-index: 51;
+  }
+  
+  .resourceCacheMessage {
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    z-index: 51;
+  }
+
 /* THIS IS THE MAIN GAME SCREEN */
 #currentBackgroundImage {
     width: 100%;
     height: 100%;
     position: fixed;
-    top: 0;
-    left: 0;
     z-index: 0;
   }
 
@@ -109,7 +187,6 @@ html, body {
 }
 
 .row {
-    display: flex;
     justify-content: center;
 }
 
@@ -121,14 +198,22 @@ div.card {
 /* THIS IS THE ADVENTURE MENU*/
 
 #adventure-menu {
-    color: #fff;
-    background-color: #323232;
-    border: 1px solid var(--main-border-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    z-index: 20;
+  max-width: 50%;
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  z-index: 20;
+}
+
+#explore-area {
+  flex: 1;
+  width: 100px;
+  height: 720px;
+  background-color: #323232;
+  border: 1px solid var(--main-border-color);
+  z-index: 20;
+  position: relative;
+  overflow: hidden;
+  cursor: url('Images/Cursors/hand-cursor.png'), auto;
 }
 
   #locationNameLabel {
@@ -139,26 +224,25 @@ div.card {
   }
 
 .activity {
-    background-color: #30302f;
-    border: 1px solid #C0C0C0;
-
+  background-color: #30302f;
+  border: 1px solid #C0C0C0;
 }
 
 #locationExploreContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;  
+  display: flex;
+  justify-content: center;
 }
 
 #locationExploreLabel {
-    font-weight: bold;
-    color: #b57ae2;
-    text-align: center;
-    background-color: #262626;
-    border: 1px solid var(--main-border-color);
-    border-radius: 5px;
-    font-size: 20px;
-    margin-top: 5px;
+  font-weight: bold;
+  color: #b57ae2;
+  text-align: center;
+  background-color: #262626;
+  border: 1px solid var(--main-border-color);
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 5px;
 }
   
 #locationExploreInventoryLabel {
@@ -169,6 +253,7 @@ div.card {
     border: 1px solid var(--main-border-color);
     border-radius: 5px;
     font-size: 20px;
+    margin-top: 10px;
 }
   
 #locationExploreInventoryContainer {
@@ -181,7 +266,8 @@ div.card {
 }
 
 #currentLocationButtonImage {
-    padding-bottom: 10px;
+  height: 95%;
+  width: 95%;
 }
 
 #currentLocationButtonImage {
@@ -201,14 +287,23 @@ div.card {
     border-radius: 10px;
 }
 
+.inventoryImage {
+    width: 100%; /* Adjust the width as needed */
+    height: 100%; /* Adjust the height as needed */
+    z-index: 50;
+
+}
+
 .locationInventoryNumber {
     position: absolute;
-    color: black;
+    background-color: #262626;
+    color: #b57ae2;
     font-size: 20px;
     font-weight: bold;
     bottom: 0;
     right: 0;
     padding-right: 3px;
+    z-index: 51;
 }
 
 .locationActionsLabel {
@@ -247,6 +342,24 @@ div.card {
     cursor: pointer;
     box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.5);
 }
+
+#feedActionButton {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  cursor: pointer;
+}
+
+#feedActionButton:hover {
+  background-color: #C0C0C0;
+}
+
+#buySearchActionButton {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  cursor: pointer;
+}
   
 .locationActionsButtonCost {
     font-weight: bold;
@@ -268,6 +381,9 @@ div.card {
 .locationInsightSlot {
     border: 1px solid var(--main-border-color);
     border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
   
 #locationInsightOneLabel {
@@ -290,6 +406,13 @@ div.card {
     border-radius: 10px;
     box-shadow: 3px 5px 1px rgba(0, 0, 0, 0.5);
 }
+
+#fishingInsightActionButton {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  cursor: pointer;
+}
   
 .locationInsightButtonCost {
     font-weight: bold;
@@ -310,4 +433,529 @@ div.card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     margin-right: 5px;
     padding-left: 5px;
+}
+
+/* THIS IS THE LOCATION MENU */
+#locations-menu {
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 30;
+  }
+
+#containerForLocationMenu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    top: 34px;
+    left: 1118px;
+    max-width: 165px;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .categoryName {
+    position: fixed;
+    top: 46px;
+    right: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -5px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  #spawningPoolLocationButton {
+    position: fixed;
+    top: 70px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #323232;
+    color: #9c69c3;
+    font-weight: bold;
+  }
+  
+  #swampTrailLocationButton {
+    position: fixed;
+    top: 100px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: #323232;
+    color: #9c69c3;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+  
+  .containerForTooltipOne {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+    top: 150px;
+    right: 15px;
+    border-radius: 10px;
+    padding: 4px;
+  }
+  
+  .tooltipNameOne {
+    position: fixed;
+    top: 125px;
+    width: 200px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #9c69c3;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;	
+  }
+  
+  .containerForLocationDescriptionOne {
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .categoryDescriptionLabelOne {
+    font-weight: bold;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  .tooltipDescriptionOne {
+    width: 200px;
+    background-color: #323232;
+    color: #9c69c3;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;
+  }
+  
+  .containerForLocationBiomeOne {
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .categoryBiomeLabelOne {
+    font-weight: bold;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  .tooltipBiomeOne {
+    width: 200px;
+    height: 75px;
+    background-color: #323232;
+    color: #9c69c3;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;
+  }
+  
+  .containerForLocationSpeciesOne {
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .categorySpeciesLabelOne {
+    font-weight: bold;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  .tooltipSpeciesOne {
+    width: 200px;
+    height: 75px;
+    background-color: #323232;
+    color: #9c69c3;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;
+  }
+  
+  .containerForTooltipTwo {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    background-color: #323232;
+    top: 150px;
+    right: 15px;
+    border-radius: 10px;
+    padding: 4px
+  }
+  
+  .tooltipNameTwo {
+    position: fixed;
+    top: 125px;
+    width: 200px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #9c69c3;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;	
+  }
+  
+  .containerForLocationDescriptionTwo {
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .categoryDescriptionLabelTwo {
+    font-weight: bold;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 6px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  .tooltipDescriptionTwo {
+    width: 200px;
+    background-color: #323232;
+    color: #9c69c3;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;
+  }
+  
+  .containerForLocationBiomeTwo {
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .categoryBiomeLabelTwo {
+    font-weight: bold;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  .tooltipBiomeTwo {
+    width: 200px;
+    height: 75px;
+    background-color: #323232;
+    color: #9c69c3;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;
+  }
+  
+  .containerForLocationSpeciesTwo {
+    border: 1px solid var(--main-border-color);
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .categorySpeciesLabelTwo {
+    font-weight: bold;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  .tooltipSpeciesTwo {
+    width: 200px;
+    height: 75px;
+    background-color: #323232;
+    color: #9c69c3;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    margin: 3px;
+  }
+
+  .bestiaryContainer {
+    position: fixed;
+    background-color: #323232;
+    transform: perspective(200px) scale(0.75);
+    top: 50px;
+    left: 50px;
+    min-width: 838px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    z-index: 1;
+  }
+  
+  #leftPageContainer {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px; 
+  }
+  
+  .bestiaryLeftPageMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background-color: #323232;
+    border: 1px solid var(--main-border-color);
+    margin-bottom: 10px;
+  }
+  
+  #bestiaryCreatureTypeButton {
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);	
+  }
+  
+  #bestiaryCreatureTypeContainer {
+    text-align: center;
+    background-color: #323232;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .bestiaryName {
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    color: #b57ae2;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .bestiaryImage {
+    height: 100px;
+    border-radius: 10px;
+    padding: 1px;
+  }
+  
+  .bestiaryDescriptionLabel {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+  }
+  
+  .bestiaryDescription {
+    background-color: #323232;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .bestiaryNotesLabel {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  
+  .bestiaryNotes {
+    background-color: #323232;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .bestiaryStatisticsLabel {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  
+  .bestiaryStatistics {
+    background-color: #323232;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  #rightPageContainer {
+    width: 49%;
+    text-align: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px; 
+  }
+  
+  .bestiaryExpertiseLabel {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  
+  /* Style for achievement containers */
+  .achievementContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .achievementImageContainer {
+    position: relative;
+    margin-right: 5px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+/* This controls what the floating fish images look like */
+.fishImage {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  cursor: pointer; 
+  opacity: 1;
+  z-index: 50;
+  }
+
+  .floatingNumber {
+    position: absolute; /* Make them positionable over other elements */
+    font-size: 24px;    /* Adjust font size as needed */
+    font-weight: bold;
+    color: white;       /* Or another color that stands out */
+    z-index: 100;       /* Make sure they appear on top */
+    transition: top 1s ease-out, opacity 1s ease-out; /* Smooth transition */
+    opacity: 1;  /* Set the initial opacity */
+    /* Add other styles like box-shadow, background, etc. */
+  }
+  
+  .floatingNumber.gain {
+    color: green; /* Example: Green for resource gain */
+  }
+  
+  .floatingNumber.loss {
+    color: red; /* Example: Red for resource loss */
+  }
+
+/* ANIMATION GO HERE */
+.fishImage {
+  position: absolute;
+  transition: left 1s linear, top 1s linear, opacity 1s ease-out; /* Smoother transition for direction changes */
+}
+
+@keyframes fishSwimLeftRight {
+  0% { left: 0; }
+  100% { left: calc(100% - 75px); } /* Adjust end position based on image width */
+}
+
+@keyframes fishSwimRightLeft {
+  0% { left: calc(100% - 75px); }
+  100% { left: 0; }
+}
+
+@keyframes fishSwimUpDown {
+  0% { top: 0; }
+  100% { top: calc(100% - 75px); } /* Adjust end position based on image height */
+}
+
+@keyframes fishSwimDownUp {
+  0% { top: calc(100% - 75px); }
+  100% { top: 0; }
+}
+
+/* Diagonal Movements */
+@keyframes fishSwimDiagonalTopLeft {
+  0% { left: 0; top: 0; }
+  100% { left: calc(100% - 75px); top: calc(100% - 75px); } 
+}
+
+@keyframes fishSwimDiagonalTopRight {
+  0% { left: calc(100% - 75px); top: 0; }
+  100% { left: 0; top: calc(100% - 75px); } 
+}
+
+@keyframes fishBob {
+  0% { transform: translateY(50) rotate(0deg); }
+  50% { transform: translateY(-50px) rotate(-30deg); }  /* Adjust bobbing distance */
+  100% { transform: translateY(50) rotate(0deg); }
 }

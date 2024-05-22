@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "autoprefixer -o dist/style.css src/adventure_theme.css"
+    "build": "autoprefixer -o dist/style.css src/adventure_theme.css",
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,9 @@
     "autoprefixer": "^10.4.16"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^5.2.8"
   }
 }

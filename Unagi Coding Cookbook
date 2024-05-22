@@ -13,13 +13,13 @@ Node server.js - Use this when you want to start your personal server on your la
 
 CSS Reminders
 
-Selector, Property          Value
-P         Color:            Blue;
-Body      Background-color: Orange;
+Selector, Property Value
+P Color: Blue;
+Body Background-color: Orange;
 
 //Below is a rule
 .this-thing {
-    color: black;
+color: black;
 }
 
 [WHAT I DONT UNDERSTAND]
@@ -42,55 +42,55 @@ id="thisID" Needs to be unique when used
 Don't overuse these as they will help later with javascript
 class="golden" Does not need to be unique
 <a href="/"> [Use this to access local webpages]
+
 <details> <summary> </summary> </details>
 <figure> <figcaption> </figcaption> </figure>
 <span></span> [Use this to apply styles to part of a text]
 
-
-[CSS]   Example
-#id     #thisID
-.class  .golden
-padding -   Top     Right   Bottom  Left
-            12      3       6       9
-            North   East    South   West
-            20px    0       20px    0
+[CSS] Example
+#id #thisID
+.class .golden
+padding - Top Right Bottom Left
+12 3 6 9
+North East South West
+20px 0 20px 0
 
 To position content lower inside an element, add a top padding
 p {font-family: fantasy;} [THIS_IS_A_CSS_RULE]
 When you style a parent element some properties will only effect the parent
 div {
-    border: solid 1px black;
-    padding
-    margin
+border: solid 1px black;
+padding
+margin
 }
 CSS Classes let us override inherited properties.
 MARGIN - Increases the spacing around the element
 Gain a DEEP UNDERSTADING of the basics
 
-/* Keyword values */
+/_ Keyword values _/
 flex: auto;
 flex: initial;
 flex: none;
 
-/* One value, unitless number: flex-grow
-flex-basis is then equal to 0. */
+/_ One value, unitless number: flex-grow
+flex-basis is then equal to 0. _/
 flex: 2;
 
-/* One value, width/height: flex-basis */
+/_ One value, width/height: flex-basis _/
 flex: 10em;
 flex: 30%;
 flex: min-content;
 
-/* Two values: flex-grow | flex-basis */
+/_ Two values: flex-grow | flex-basis _/
 flex: 1 30px;
 
-/* Two values: flex-grow | flex-shrink */
+/_ Two values: flex-grow | flex-shrink _/
 flex: 2 2;
 
-/* Three values: flex-grow | flex-shrink | flex-basis */
+/_ Three values: flex-grow | flex-shrink | flex-basis _/
 flex: 2 2 10%;
 
-/* Global values */
+/_ Global values _/
 flex: inherit;
 flex: initial;
 flex: revert;
@@ -134,50 +134,89 @@ SAVE CODE HERE
 // Event listener for unknownEntityDialog() when the page loads.
 window.addEventListener('DOMContentLoaded', unknownEntityDialog);
 
+// function moveFish(fishImage) {
+const container = resourceContainerRef.current;
+if (container) {
+const containerRect = container.getBoundingClientRect();
+
+      // Function to move the fish
+      const moveFishInterval = setInterval(() => {
+        // Move the fish image randomly
+        let newLeft =
+          parseFloat(fishImage.style.left) + (Math.random() - 0.5) * 10;
+        let newTop =
+          parseFloat(fishImage.style.top) + (Math.random() - 0.5) * 10;
+
+        // Boundary check and image flipping (your existing code)
+        // ...
+
+        // Update the image position directly
+        fishImage.style.left = `${newLeft}px`;
+        fishImage.style.top = `${newTop}px`;
+      }, 100); // Move every 100ms (adjust as needed)
+
+      // Cleanup interval when image is removed
+      fishImage.addEventListener("animationend", () => {
+        clearInterval(moveFishInterval);
+      });
+    }
+
+}
+
+const fishImageElements = fishImages.map((fishImage, index) => (
+<img
+key={index} // Add a unique key for each image
+src={fishImage.src}
+className="fishImage"
+style={fishImage.style}
+alt="Fish"
+/>
+));
+
 TEST FUNCTIONS HERE
 //This space is for testing functions. It will be deleted later.
 
 Function testFunction() {
-    console.log("This is a test function");
+console.log("This is a test function");
 }
 
 //This function will increase the players energy by 1 every second
 //It will also only increase the players energy if it is less than the players current max energy
 function increaseEnergy() {
-    if (player.energy < player.maxEnergy) {
-        player.energy += 1;
-        updateEnergyDisplay();
-    }
+if (player.energy < player.maxEnergy) {
+player.energy += 1;
+updateEnergyDisplay();
+}
 }
 
 // This function is a wip of fixing the issue with the fish image going off screen
-  let containerForResourceIndicator = document.getElementById("containerForResourceIndicator");
-  containerForResourceIndicator.appendChild(fishImage);
+let containerForResourceIndicator = document.getElementById("containerForResourceIndicator");
+containerForResourceIndicator.appendChild(fishImage);
 
-  //Get the dimensions of the containerForResourceIndicator
-  let containerForResourceIndicatorWidth = containerForResourceIndicator.offsetWidth;
-  let containerForResourceIndicatorHeight = containerForResourceIndicator.offsetHeight;
+//Get the dimensions of the containerForResourceIndicator
+let containerForResourceIndicatorWidth = containerForResourceIndicator.offsetWidth;
+let containerForResourceIndicatorHeight = containerForResourceIndicator.offsetHeight;
 
-  //Get the dimensions of the fishImage
-  let fishImageWidth = fishImage.offsetWidth;
-  let fishImageHeight = fishImage.offsetHeight;
+//Get the dimensions of the fishImage
+let fishImageWidth = fishImage.offsetWidth;
+let fishImageHeight = fishImage.offsetHeight;
 
-  //Calculate the maximum position the fish image can have without overflowing the container
-  let maxLeft = containerForResourceIndicatorWidth - fishImageWidth;
-  let maxTop = containerForResourceIndicatorHeight - fishImageHeight;
+//Calculate the maximum position the fish image can have without overflowing the container
+let maxLeft = containerForResourceIndicatorWidth - fishImageWidth;
+let maxTop = containerForResourceIndicatorHeight - fishImageHeight;
 
-  //Generate random positions within the container
-  let randomLeft = Math.floor(Math.random() * maxLeft);
-  let randomTop = Math.floor(Math.random() * maxTop);
+//Generate random positions within the container
+let randomLeft = Math.floor(Math.random() _ maxLeft);
+let randomTop = Math.floor(Math.random() _ maxTop);
 
-  //Set the fish image position
-  fishImage.style.left = randomLeft + "px";
-  fishImage.style.top = randomTop + "px";
+//Set the fish image position
+fishImage.style.left = randomLeft + "px";
+fishImage.style.top = randomTop + "px";
 
 STORY, DIALOGUE, AND LORE GOES HERE
-You are in the spawning pool. 
-This is where the fish spawn. 
-The fish spawn in the saltwater and then swim up the river to the freshwater. 
+You are in the spawning pool.
+This is where the fish spawn.
+The fish spawn in the saltwater and then swim up the river to the freshwater.
 The fish spawn in the saltwater because the saltwater is where the fish are born.
 // The narrator will give lore about the current area.
 do certain actions.
@@ -211,4 +250,3 @@ magic.
 spells.
 curses.
 blessings.
-
