@@ -5,7 +5,6 @@ import ResourceDisplayItem from "./ResourceDisplayItem";
 import ActionButtonsComponent from "./ActionButtonsComponent.jsx";
 import InsightButtonsComponent from "./InsightButtonsComponent.jsx";
 import FloatingNumber from "./FloatingNumber.jsx";
-import "./dist/assets/index-Bpy7wPI-.js";
 
 function ExploreComponent({
   currentLocation,
