@@ -10,6 +10,8 @@ import EnergyComponent from "./Components/EnergyComponent";
 import LocationComponent from "./Components/LocationComponent";
 import BackgroundComponent from "./Components/BackgroundComponent";
 import BestiaryComponent from "./Components/BestiaryComponent";
+import "./index-Bpy7wPI-.js";
+import "./index-__YjFcs9.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
