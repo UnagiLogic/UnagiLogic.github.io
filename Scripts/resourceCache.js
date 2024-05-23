@@ -14,7 +14,7 @@ export function resourceCache(resources, setResources) {
 
 function createResourceImage() {
   const image = document.createElement("img");
-  image.src = "Images/Resources/levelOneSaltwaterResourceCache/resourceCache" + Math.floor(Math.random() * 5) + ".png";
+  image.src = "/Images/Resources/levelOneSaltwaterResourceCache/resourceCache" + Math.floor(Math.random() * 5) + ".png";
   image.classList.add("resourceCacheImage");
   document.getElementById("containerForResourceCacheImage").appendChild(image);
   return image;

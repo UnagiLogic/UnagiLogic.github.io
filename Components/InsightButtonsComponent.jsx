@@ -18,7 +18,7 @@ function InsightButtonsComponent({
       <div className="locationInsightSlot">
         <div id="locationInsightsButtonContainer">
           <img
-            src="Images/Icons/fishingInsight.png"
+            src="/Images/Icons/fishingInsight.png"
             width="150px"
             height="150px"
             id="fishingInsightActionButton"
@@ -41,14 +41,14 @@ function InsightButtonsComponent({
         </div>
         <div className="locationInsightButtonCost">
           <img
-            src="Images/Icons/energy.png"
+            src="/Images/Icons/energy.png"
             width="75px"
             height="75px"
             title="Energy: Used to perform actions"
           />
           <span id="searchActionEnergyCost">1</span>
           <img
-            src="Images/Resources/fish.png"
+            src="/Images/Resources/fish.png"
             width="75px"
             height="75px"
             title="Fish: Feed the entity to gain energy"

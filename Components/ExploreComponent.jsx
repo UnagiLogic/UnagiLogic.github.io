@@ -40,9 +40,9 @@ function ExploreComponent({
 
   function determineClickerImage() {
     if (currentLocation === "The Spawning Pool") {
-      return "Images/Buttons/saltwaterAreaFishClickerButton.png";
+      return "/Images/Buttons/saltwaterAreaFishClickerButton.png";
     } else if (currentLocation === "The Swamp Trail") {
-      return "Images/Buttons/swampAreaClickerButton.png";
+      return "/Images/Buttons/swampAreaClickerButton.png";
     }
   }
 
@@ -66,7 +66,7 @@ function ExploreComponent({
 
   function displayFishImage() {
     const fishImage = new Image(); // Create an Image element
-    fishImage.src = `Images/Resources/saltwaterFish/fish${Math.floor(
+    fishImage.src = `/Images/Resources/saltwaterFish/fish${Math.floor(
       Math.random() * 6
     )}.png`;
     fishImage.className = "fishImage";

@@ -9,7 +9,7 @@ function BestiaryComponent() {
   const beasts = {
     fish: {
       name: "FISH",
-      image: "Images/Resources/fish.png",
+      image: "/Images/Resources/fish.png",
       description: "It looks like a fish.",
       notes: [
         "Whoa! You can eat fish raw!!",
@@ -22,7 +22,7 @@ function BestiaryComponent() {
       ], // Make this dynamic later
       achievements: [
         {
-          image: "Images/Achievements/Bestiary Fish/fishCaught10.png",
+          image: "/Images/Achievements/Bestiary Fish/fishCaught10.png",
           name: "I caught 10!",
           title: "You can catch a new type of fish",
         },

@@ -129,7 +129,7 @@ function floatSearchCostNumber() {
 // The fishImage needs to be removed after a few seconds.
 function displayFishImage() {
   let fishImage = document.createElement("img");
-  fishImage.src = "Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
+  fishImage.src = "/Images/Resources/saltwaterFish/fish" + Math.floor(Math.random() * 6) + ".png";
   fishImage.classList.add("fishImage");
   document.getElementById("containerForResourceIndicator").appendChild(fishImage);
   fishImage.style.left = Math.floor(Math.random() * 100) + "%";
@@ -144,7 +144,7 @@ function displayFishImage() {
 // Create a function that displays an image in the containerForResourceIndicator each time the swampAreaClickerButton is pressed.
 function displayMudImage() {
   let mudImage = document.createElement("img");
-  mudImage.src = "Images/Resources/swampMud/mud" + Math.floor(Math.random() * 6) + ".png";
+  mudImage.src = "/Images/Resources/swampMud/mud" + Math.floor(Math.random() * 6) + ".png";
   mudImage.classList.add("mudImage");
   document.getElementById("containerForResourceIndicator").appendChild(mudImage);
   mudImage.style.left = Math.floor(Math.random() * 100) + "%";

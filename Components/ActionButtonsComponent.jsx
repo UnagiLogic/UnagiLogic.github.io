@@ -19,7 +19,7 @@ function ActionButtonsComponent({
       <div className="locationActionsButtonContainer">
         <div className="locationActionsButton">
           <img
-            src="Images/Icons/eat.png"
+            src="/Images/Icons/eat.png"
             width="150px"
             height="150px"
             id="feedActionButton"
@@ -38,7 +38,7 @@ function ActionButtonsComponent({
         </div>
         <div className="locationActionsButtonCost">
           <img
-            src="Images/Resources/fish.png"
+            src="/Images/Resources/fish.png"
             width="75px"
             height="75px"
             title="Fish: Feed the entity to gain energy"
@@ -51,7 +51,7 @@ function ActionButtonsComponent({
       <div className="locationActionsButtonContainer">
         <div className="locationActionsButton">
           <img
-            src="Images/Icons/search.png"
+            src="/Images/Icons/search.png"
             width="150px"
             height="150px"
             id="buySearchActionButton"
@@ -71,7 +71,7 @@ function ActionButtonsComponent({
         </div>
         <div className="locationActionsButtonCost">
           <img
-            src="Images/Icons/energy.png"
+            src="/Images/Icons/energy.png"
             width="75px"
             height="75px"
             title="Energy: Used to perform actions"

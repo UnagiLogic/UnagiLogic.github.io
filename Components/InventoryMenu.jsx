@@ -11,7 +11,7 @@ function InventoryMenu() {
         <div className="card" style={{ width: "10rem" }}>
           <div className="card-body">
             <img
-              src="Images/Resources/fish.png"
+              src="/Images/Resources/fish.png"
               className="inventoryImage fishBGC card-img-top"
               width="75px"
               height="75px"
@@ -26,7 +26,7 @@ function InventoryMenu() {
         <div className="card" style={{ width: "10rem" }}>
           <div className="card-body">
             <img
-              src="Images/Resources/clay.png"
+              src="/Images/Resources/clay.png"
               className="inventoryImage clayBGC"
               width="75px"
               height="75px"
@@ -41,7 +41,7 @@ function InventoryMenu() {
         <div className="card" style={{ width: "10rem" }}>
           <div className="card-body">
             <img
-              src="Images/Resources/mud.png"
+              src="/Images/Resources/mud.png"
               className="inventoryImage mudBGC"
               width="75px"
               height="75px"
@@ -56,7 +56,7 @@ function InventoryMenu() {
         <div className="card" style={{ width: "10rem" }}>
           <div className="card-body">
             <img
-              src="Images/Resources/stone.png"
+              src="/Images/Resources/stone.png"
               className="inventoryImage stoneBGC"
               width="75px"
               height="75px"
@@ -71,7 +71,7 @@ function InventoryMenu() {
         <div className="card" style={{ width: "10rem" }}>
           <div className="card-body">
             <img
-              src="Images/Resources/shrimp.png"
+              src="/Images/Resources/shrimp.png"
               className="inventoryImage shrimpBGC"
               width="75px"
               height="75px"
@@ -86,7 +86,7 @@ function InventoryMenu() {
         <div className="card" style={{ width: "10rem" }}>
           <div className="card-body">
             <img
-              src="Images/Resources/fish.png"
+              src="/Images/Resources/fish.png"
               className="card-img-top"
               alt="Fish"
             />
