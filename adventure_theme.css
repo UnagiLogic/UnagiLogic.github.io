@@ -5,6 +5,8 @@ z-index: 20 - used for containers and menus.
 z-index: 30 - used for buttons, energy indicator.
 z-index: 50 - used for floating images.
 z-index: 51 - used for resource cache image and message.
+z-index: 100 - used for characters
+z-index: 101 - used for the dialogue box
 z-index: 500 - used for the splash screen.
 z-index: 1000 - used for the in-game menu developer tools
 */
@@ -25,21 +27,6 @@ z-index: 1000 - used for the in-game menu developer tools
   border: 1px solid #C0C0C0;
   color: #fff;
   z-index: 20;
-}
-
-/* THIS IS THE DIALOGUE BOX */
-.dialogue-box {
-    background-color: #323232;
-    border: 1px solid #C0C0C0;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 83%;
-    left: 42%;
-    z-index: 20;
 }
 
 /* THIS IS THE SPLASH SCREEN */
@@ -195,8 +182,51 @@ div.card {
     border : 1px solid #C0C0C0;
 }
 
-/* THIS IS THE ADVENTURE MENU*/
+/* THIS IS THE STORY DISPLAY */
+.storyDisplayContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
 
+.story-display {
+  position: absolute; /* Use absolute for flexibility within its parent */
+  bottom: 0; /* Sticks to the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 500px;
+  max-width: 90%; /* Helps make it responsive to different screen sizes */
+  height: 120px;
+  background-color: #323232;
+  color: #b57ae2;
+  font-size: 22px;
+  font-weight: bold;
+  border: 1px solid var(--main-border-color);
+  padding: 1rem; /* Adds some padding for visual comfort */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  margin: 0 1rem;
+  z-index: 101;
+}
+
+.character-image {
+  width: 20%;
+  z-index: 9;
+}
+
+.character-left {
+  margin-right: 8rem;
+  z-index: 100;
+}
+
+.character-right {
+  margin-left: 8rem;
+  z-index: 100;
+}
+
+/* THIS IS THE ADVENTURE MENU*/
 #adventure-menu {
   max-width: 50%;
   background-color: #323232;
@@ -213,11 +243,13 @@ div.card {
   z-index: 20;
   position: relative;
   overflow: hidden;
-  cursor: url('Images/Cursors/hand-cursor.png'), auto;
 }
+
+
 
   #locationNameLabel {
     background-color: var(--main-bg-color);
+    text-align: center;
     font-weight: bold;
     color: #b57ae2;
     font-size: 35px;
@@ -889,11 +921,32 @@ div.card {
     padding: 10px;
   }
 
+  /* Style for adventure log */
+  #adventure-log {
+    background-color: #323232;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    padding: 5px;
+    z-index: 50;
+  }
+
+  #adventureLogLabel {
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #262626;
+    border: 1px solid var(--main-border-color);
+    color: #b57ae2;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  }
+
 /* This controls what the floating fish images look like */
 .fishImage {
   width: 100px; /* Adjust the width as needed */
   height: 100px; /* Adjust the height as needed */
-  cursor: pointer; 
   opacity: 1;
   z-index: 50;
   }
@@ -921,6 +974,7 @@ div.card {
 .fishImage {
   position: absolute;
   transition: left 1s linear, top 1s linear, opacity 1s ease-out; /* Smoother transition for direction changes */
+  cursor: pointer;
 }
 
 @keyframes fishSwimLeftRight {
