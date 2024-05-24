@@ -57,7 +57,7 @@ function App() {
   // State for current segment
   let [currentSegment, setCurrentSegment] = useState({
     text: "And it felt so nice~",
-    leftCharacter: "/public/Images/characters/character1.png",
+    leftCharacter: "/Images/characters/character1.png",
     rightCharacter: null,
   });
 
@@ -66,9 +66,8 @@ function App() {
   const handleNextSegment = () => {
     setCurrentSegment({
       text: "You did what with your butt!",
-      leftCharacter: "/public/Images/characters/character1.png", // New character on the left
-      rightCharacter:
-        "/public/Images/Characters/Character2/character2_shocked.png", // No character on the right
+      leftCharacter: "/Images/characters/character1.png", // New character on the left
+      rightCharacter: "/Images/Characters/Character2/character2_shocked.png", // No character on the right
     });
     setHasStarted(true);
   };
