@@ -66,7 +66,7 @@ function App() {
   const handleNextSegment = () => {
     setCurrentSegment({
       text: "Who are you!",
-      leftCharacter: "/Images/characters/character1.png", // New character on the left
+      leftCharacter: "/Images/Characters/character1.png", // New character on the left
       rightCharacter: "/Images/Characters/Character2/character2_shocked.png", // No character on the right
     });
     setHasStarted(true);

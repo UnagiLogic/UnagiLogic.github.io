@@ -1,15 +1,20 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ command, mode }) => {
-  const isBuild = command === 'build'; // Determine if it's a production build
-  const isDev = command === 'serve'; // Determine if it's a development server
+export default defineConfig(({ command }) => { 
+  const isDev = command   
+ === 'serve';
 
   return {
     plugins: [react()],
-    base: '/', // Set base path conditionally
+    base: isDev ? '/' : '/your-app-name/', // Base path for production
     server: {
-      host: isDev ? '0.0.0.0' : '192.168.50.175', // Use 0.0.0.0 for dev, specific IP for prod
+      host: true, // or '0.0.0.0' for clarity
+      port: 5173, // Explicitly set the port 
+    },
+    preview: { // Configuration for 'vite preview' command (simulates production)
+      host: '192.162.50.175', // Your production server IP
+      port: 80,               // Typical production port (adjust if needed)
     },
   };
 });
