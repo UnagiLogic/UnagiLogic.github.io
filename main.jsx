@@ -57,7 +57,7 @@ function App() {
   // State for current segment
   let [currentSegment, setCurrentSegment] = useState({
     text: "I wonder where I am?",
-    leftCharacter: "/Images/characters/character1.png",
+    leftCharacter: "/Images/Characters/character1.png",
     rightCharacter: null,
   });
 
