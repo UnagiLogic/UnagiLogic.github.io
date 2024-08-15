@@ -7,7 +7,7 @@ export default defineConfig(({ command }) => {
 
   return {
     plugins: [react()],
-    base: isDev ? '/' : '/your-app-name/', // Base path for production
+    base: isDev ? '/' : '/', // Base path for production
     server: {
       host: true, // or '0.0.0.0' for clarity
       port: 5173, // Explicitly set the port 
