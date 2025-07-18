@@ -11,6 +11,9 @@ export default defineConfig(({ command }) => {
     server: {
       host: true, // or '0.0.0.0' for clarity
       port: 5173, // Explicitly set the port 
+      mime: {
+        '.jsx': 'text/javascript',
+      },
     },
     preview: { // Configuration for 'vite preview' command (simulates production)
       host: '192.162.50.175', // Your production server IP

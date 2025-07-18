@@ -13,9 +13,9 @@ let searchActionCost = 1;
 // If the player has fish it will call the eatFish function.
 // If the player has shrimp it will call the eatShrimp function.
 // If the player has no food it will display a message that says "You have no food to eat."
-export function feedAction(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, playEnergyAnimation) {
+export function feedAction(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, playEnergyAnimation, showFloatingNumber) {
     if (resources.fish >= 1) {
-      eatFish(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, playEnergyAnimation);
+      eatFish(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, playEnergyAnimation, showFloatingNumber);
     } else if (resources.shrimp >= 1) {
       eatShrimp(resources, setResources);
     } else {
@@ -23,11 +23,11 @@ export function feedAction(resources, setResources, energy, setEnergy, maxEnergy
     }
   }
 
-export function buySearchAction(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, updateEnergyBar) {
+export function buySearchAction(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, updateEnergyBar, showFloatingNumber) {
     if (energy >= searchActionCost) {
       updateEnergy(-searchActionCost);
       updateEnergyBar()
-      floatSearchCostNumber();
+      showFloatingNumber(`-${searchActionCost}`, "loss");
       searchAction(resources, setResources);
     } else {
       console.log("You do not have enough energy to do this action.");
@@ -57,7 +57,7 @@ function searchAction(resources, setResources) {
 
 
 // Function to eat a fish and update energy
-function eatFish(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, playEnergyAnimation) {
+function eatFish(resources, setResources, energy, setEnergy, maxEnergy, updateEnergy, playEnergyAnimation, showFloatingNumber) {
 console.log("eatFish called, resources:", resources);
 
   if (animationInProgress) {
@@ -81,44 +81,12 @@ console.log("eatFish called, resources:", resources);
 
       console.log("Energy after update:", energy); 
       playEnergyAnimation(energy, 1);
-      floatEnergyGainNumber();
+      showFloatingNumber("+1", "gain");
       console.log("You ate a fish.");
     }
   } else {
     console.log("You have no fish to eat.");
   }
-}
-
-// Create a function that floats a number on the screen.
-// This function will create a p element with a number inside it.
-// The number represents the amount of any resource the player has gained.
-// The number will float on the screen for a few seconds.
-// The number will disappear after a few seconds.
-// The number will be placed next to the button that was clicked.
-function floatEnergyGainNumber() {
-  let number = document.createElement("p");
-  number.innerText = "+1";
-  number.classList.add("floatingNumber");
-  document.getElementById("containerForNumber").appendChild(number);
-  setTimeout(function() {
-    number.remove();
-  }, 3000);
-}
-
-// Create a function that floats the search cost number on the screen
-// This function will create a p element with a number inside it.
-// The number represents the cost of the search action.
-// The number will float on the screen for a few seconds.
-// The number will disappear after a few seconds.
-// The number will be placed next to the button that was clicked.
-function floatSearchCostNumber() {
-  let number = document.createElement("p");
-  number.innerText = "-10";
-  number.classList.add("floatingNumber");
-  document.getElementById("containerForNumber").appendChild(number);
-  setTimeout(function() {
-    number.remove();
-  }, 3000);
 }
 
 // This function is used to display an image in the containerForResourceIndicator each time the saltwaterAreaFishClickerButton (currentLocationButtonImage) is pressed.

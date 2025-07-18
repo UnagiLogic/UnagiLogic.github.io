@@ -1,6 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { useGameContext } from "../Context/GameContext";
 
-function InGameMenu() {
+function InGameMenu({ onToggleMenu }) {
+  const { onToggleSplash } = useGameContext() || {};
+
   return (
     <div id="in-game-menu" className="dropdown">
       <button
@@ -15,6 +19,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("adventure-menu explore-area")}
             data-container="adventure-menu explore-area"
             type="button"
           >
@@ -24,6 +29,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("inventory-menu")}
             data-container="inventory-menu"
             type="button"
           >
@@ -33,6 +39,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("character-menu")}
             data-container="character-menu"
             type="button"
           >
@@ -42,6 +49,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("locations-menu")}
             data-container="locations-menu"
             type="button"
           >
@@ -51,6 +59,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("actions-menu")}
             data-container="actions-menu"
             type="button"
           >
@@ -60,6 +69,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("insight-menu")}
             data-container="insight-menu"
             type="button"
           >
@@ -69,6 +79,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("bestiary-menu")}
             data-container="bestiary-menu"
             type="button"
           >
@@ -78,6 +89,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("skill-menu")}
             data-container="skill-menu"
             type="button"
           >
@@ -87,6 +99,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("stats-menu")}
             data-container="stats-menu"
             type="button"
           >
@@ -96,6 +109,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("adventure-log")}
             data-container="adventure-log"
             type="button"
           >
@@ -105,6 +119,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("save-menu")}
             data-container="save-menu"
             type="button"
           >
@@ -114,6 +129,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("load-menu")}
             data-container="load-menu"
             type="button"
           >
@@ -123,6 +139,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("developer-tools-menu")}
             data-container="developer-tools-menu"
             type="button"
           >
@@ -132,6 +149,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("settings-menu")}
             data-container="settings-menu"
             type="button"
           >
@@ -141,6 +159,7 @@ function InGameMenu() {
         <li>
           <button
             className="dropdown-item toggle-button"
+            onClick={() => onToggleMenu("exit-menu")}
             data-container="exit-menu"
             type="button"
           >
@@ -151,6 +170,7 @@ function InGameMenu() {
           <button
             className="dropdown-item toggle-button"
             data-container="splash-screen"
+            onClick={onToggleSplash}
             type="button"
           >
             SPLASH PAGE
@@ -160,5 +180,9 @@ function InGameMenu() {
     </div>
   );
 }
+
+InGameMenu.propTypes = {
+  onToggleMenu: PropTypes.func.isRequired,
+};
 
 export default InGameMenu;
